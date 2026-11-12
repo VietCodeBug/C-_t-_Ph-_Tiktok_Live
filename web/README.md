@@ -16,11 +16,12 @@ npm run dev
 
 ## Controls
 
-- **Tự chuyển**: overview → dice gesture → third-person chase → arrival → next seat.
+- **Tự chuyển**: overview → spinning die + character gesture → revealed result → third-person chase → arrival → next seat.
+- **Lắc**: roll early during the overview. A fair random result from 1–6 is revealed after 1.8 seconds of spinning; it stays visible for 0.95 seconds before movement starts. The character then traverses exactly that many tile edges, including through forks. Repeated clicks cannot reroll an active turn.
 - **Toàn bàn**: keep the aerial camera while characters take turns.
 - **Bám nhân vật**: third-person camera behind the character; the body remains visible.
 - Select A–J to change the active character; **Lượt tiếp** advances the seat.
-- Pause/resume with the button or Space; V switches aerial/chase; Right Arrow advances a seat.
+- Pause/resume with the button or Space; this freezes the die, result settling, movement and animation together. V switches aerial/chase; Right Arrow advances a seat.
 - Scroll over the map to adjust camera distance.
 - Switch Chợ Vỉa Hè / Phố Giao Hàng, change demo speed, enter fullscreen, or export a 1080×1920 map capture.
 
@@ -30,6 +31,7 @@ The source commit is `fb996c6c23433f14b465849510ba797ab6818bbe` on `assets/co-ty
 
 - Sprites: `assets/co-ty-phi-tiktok-live-v2`, including Idle revision 2.3 and locomotion revisions in the actual manifests.
 - Environment: `assets/co-ty-phi-tiktok-live-v1/assets/map/kit`.
+- Dice sound: the user's V1 `assets/audio/sfx/sfx_dice_roll.ogg`; enabled after the first pointer interaction, subject to browser autoplay rules.
 - Maps/graph: `assets/map` from the portrait-map work.
 
 Original asset files are not edited. The preparation script copies selected files and writes hashes to `runtime/provenance.json`. Each player uses a 256×256 canvas texture, a fixed foot pivot (128,218), metadata-defined crop rectangles, and S/E/N plus mirrored W art. Run frame progression follows traveled distance using `cycleTravelArtPx`; idle uses elapsed time with no root movement. The chase camera projects movement into camera-relative facing so its rear view uses the supplied back art.
@@ -38,14 +40,17 @@ The renderer batches static geometry and fades buildings between the camera and 
 
 Three.js is pinned to **0.180.0**. In 0.187.0, GLTFLoader interprets the pack's descriptive `extras.pivot: 'bottom-center'` as a numeric pivot container, producing nonfinite transforms. The compatible version loads the source metadata without modifying the GLBs. Recheck this when upgrading Three.js.
 
-This is a **visual/camera demo**, not the completed TikTok game: wallet values are preview values, turn/movement playback is deterministic, and no live chat, gifts, economy settlement or backend has been implemented.
+This is a **visual/camera demo**, not the completed TikTok game: wallet values are preview values, dice results use browser cryptographic randomness, fork choices follow the demo's seat/turn rule, and no live chat, gifts, economy settlement or backend has been implemented. Authoritative multiplayer dice would need a server.
 
 ## Validation
 
 `tests/browser-smoke.py` uses Python Playwright and Chromium to verify real asset loading, finite geometry, movement and frame advance, third-person position, camera switches, seat selection, pause, both maps, mobile 9:16 layout and image export. The retained report and screenshots are in `docs/`.
 
+`npm test` checks every die result on both maps, including both routes at each fork, pause, cancellation, invalid values and RNG rejection sampling. `tests/dice-browser.py` verifies the manual button, visible spin/reveal order, frozen spin/settling on pause, matching pips and actual tile counts. [Result screenshot](docs/dice-result-mobile.png) · [Dice browser report](docs/dice-browser.json).
+
 ```bash
 python web/tests/browser-smoke.py
+python web/tests/dice-browser.py
 ```
 
 The test renderer is Chromium's software WebGL fallback in this cloud instance. It is not evidence of FPS on the user's streaming hardware.

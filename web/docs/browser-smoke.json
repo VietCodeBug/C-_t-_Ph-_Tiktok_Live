@@ -14,7 +14,7 @@
       "test": "actor actually moves",
       "passed": true,
       "detail": {
-        "distance": 0.4079999999999995
+        "distance": 0.24479999999999968
       }
     },
     {
@@ -22,7 +22,7 @@
       "passed": true,
       "detail": {
         "before": 0,
-        "after": 7,
+        "after": 4,
         "clip": "run"
       }
     },
@@ -35,8 +35,8 @@
       "test": "third-person camera remains behind and outside the actor",
       "passed": true,
       "detail": {
-        "distance": 4.991873447140614,
-        "behind_dot": -4.059177413640013
+        "distance": 4.9662887596504275,
+        "behind_dot": -4.031476932467434
       }
     },
     {
@@ -119,9 +119,21 @@
     "paused": true,
     "speed": 1,
     "turn": 1,
-    "roll": 4,
-    "remaining": 4,
+    "roll": 0,
+    "remaining": 0,
     "node": "F02_L2",
+    "stepsCompleted": 0,
+    "visitedNodes": [
+      "F02_L2"
+    ],
+    "dice": {
+      "phase": "roll",
+      "elapsed": 0.16,
+      "value": 0,
+      "sequence": 3,
+      "seat": "H",
+      "paused": true
+    },
     "destination": "F02_L2",
     "tile": "KINH DOANH",
     "players": [
@@ -139,7 +151,7 @@
           -1
         ],
         "clip": "idle",
-        "frame": 1,
+        "frame": 3,
         "facing": "N"
       },
       {
@@ -156,7 +168,7 @@
           -0.9054589359588686
         ],
         "clip": "idle",
-        "frame": 2,
+        "frame": 4,
         "facing": "S"
       },
       {
@@ -173,7 +185,7 @@
           -0.9054589359588686
         ],
         "clip": "idle",
-        "frame": 2,
+        "frame": 5,
         "facing": "S"
       },
       {
@@ -190,7 +202,7 @@
           -1
         ],
         "clip": "idle",
-        "frame": 3,
+        "frame": 5,
         "facing": "S"
       },
       {
@@ -207,7 +219,7 @@
           0
         ],
         "clip": "idle",
-        "frame": 4,
+        "frame": 6,
         "facing": "S"
       },
       {
@@ -224,7 +236,7 @@
           1
         ],
         "clip": "idle",
-        "frame": 5,
+        "frame": 7,
         "facing": "S"
       },
       {
@@ -241,7 +253,7 @@
           0.9054589359588686
         ],
         "clip": "idle",
-        "frame": 6,
+        "frame": 0,
         "facing": "S"
       },
       {
@@ -275,7 +287,7 @@
           1
         ],
         "clip": "idle",
-        "frame": 0,
+        "frame": 2,
         "facing": "S"
       },
       {
@@ -292,22 +304,22 @@
           0
         ],
         "clip": "idle",
-        "frame": 1,
+        "frame": 3,
         "facing": "S"
       }
     ],
     "camera": {
       "position": [
-        -0.1292937758334823,
-        2.9000002338778845,
-        -1.757277065428275
+        -0.1500381948189354,
+        2.900000020222566,
+        -1.6435878393802343
       ],
       "target": [
-        1.9514745078728188,
-        0.57999999966603,
-        2.612396140397496
+        1.9285352370355766,
+        0.5799999999783491,
+        2.6418449790340484
       ],
-      "distanceToPlayer": 4.7260881137059005
+      "distanceToPlayer": 4.653330875128863
     },
     "spriteVersion": "2.3",
     "runtime": {

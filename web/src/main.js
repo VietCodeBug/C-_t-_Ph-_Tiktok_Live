@@ -3,6 +3,7 @@ import './style.css';
 import { TownWorld } from './world.js';
 import { Player, SEAT_COLORS } from './sprites.js';
 import { CameraDemo } from './demo.js';
+import { DiceOverlay, dieFaceSVG } from './dice.js';
 
 const icons = {
  dice: `<svg viewBox='0 0 24 24' fill='none'><rect x='3' y='3' width='18' height='18' rx='5' stroke='currentColor' stroke-width='1.8'/><circle cx='8' cy='8' r='1.5' fill='currentColor'/><circle cx='16' cy='8' r='1.5' fill='currentColor'/><circle cx='12' cy='12' r='1.5' fill='currentColor'/><circle cx='8' cy='16' r='1.5' fill='currentColor'/><circle cx='16' cy='16' r='1.5' fill='currentColor'/></svg>`,
@@ -35,7 +36,7 @@ app.innerHTML = `
         <div class='game-top'><div class='game-logo'>CỜ TÝ PHÍ<span>PHỐ ĐỒ CHƠI</span></div><div class='round-chip'>VÒNG DEMO <strong id='round-number'>01</strong></div></div>
         <div class='view-pill' id='view-pill'>${icons.grid}<span>Toàn bàn</span></div>
         <div class='turn-banner'><div class='turn-avatar' id='turn-avatar'></div><div><span class='eyebrow'>ĐẾN LƯỢT</span><strong id='turn-name'>Mít Tóc Xù</strong><small id='turn-action'>Camera đang nhìn toàn bàn</small></div><span class='turn-seat' id='turn-seat'>A</span></div>
-        <div class='bottom-hud'><div class='hud-info'><span class='mini-dice' id='roll-display'>${icons.dice}</span><div><b id='hud-title'>Cùng dạo một vòng phố</b><span id='hud-subtitle'>Toàn bàn → Theo sau nhân vật</span></div><span class='hud-status' id='hud-status'>TỰ ĐỘNG</span></div><div class='progress-track'><i id='turn-progress'></i></div></div>
+        <div class='bottom-hud'><div class='hud-info'><span class='mini-dice' id='roll-display'>${icons.dice}</span><div><b id='hud-title'>Sẵn sàng tung xúc xắc</b><span id='hud-subtitle'>Chốt số rồi mới di chuyển</span></div><span class='hud-status' id='hud-status'>SẴN SÀNG</span><button id='roll-dice' class='roll-button' aria-label='Lắc xúc xắc'>${icons.dice}<span>Lắc</span></button></div><div class='progress-track'><i id='turn-progress'></i></div></div>
         <button class='fullscreen icon-button' id='fullscreen' aria-label='Xem toàn màn hình'>${icons.expand}</button>
         <div class='loading' id='loading'><div class='loader-dice'>${icons.dice}</div><h2>Đang mở khu phố…</h2><p id='loading-text'>Chuẩn bị nhân vật và map</p><div class='load-track'><i id='load-progress'></i></div></div>
       </div>
@@ -68,7 +69,7 @@ app.innerHTML = `
 
 const $ = s => document.querySelector(s);
 const base = import.meta.env.BASE_URL + 'runtime/';
-let world, demo, lastSnapshot;
+let world, demo, lastSnapshot, diceOverlay;
 let loadingPct = 0;
 function progress(fraction, text) {
   loadingPct = Math.max(loadingPct, fraction);
@@ -85,15 +86,19 @@ function updateUI(s) {
   $('#map-title').textContent = s.map === 'CHO_VIA_HE' ? 'Chợ Vỉa Hè' : 'Phố Giao Hàng';
   const overview = s.cameraView === 'overview';
   $('#view-pill').innerHTML = (overview ? icons.grid : icons.camera) + `<span>${overview ? 'Toàn bàn' : 'Góc thứ ba · Theo sau'}</span>`;
-  const action = s.phase === 'moving' ? `Đang chạy · còn ${s.remaining} bước` : s.phase === 'roll' ? `Lắc xúc xắc · ${s.roll} bước` : s.phase === 'arrive' ? `Đã đến ô ${s.tile.toLowerCase()}` : 'Camera đang nhìn toàn bàn';
+  const action = s.phase === 'moving' ? `Đang chạy · còn ${s.remaining} bước` : s.phase === 'roll' ? 'Đang lắc xúc xắc…' : s.phase === 'roll-result' ? `Ra ${s.roll}! Chuẩn bị đi ${s.roll} bước` : s.phase === 'arrive' ? `Đã đi đủ ${s.roll} bước · ${s.tile.toLowerCase()}` : 'Camera đang nhìn toàn bàn';
   $('#turn-action').textContent = action;
-  $('#hud-title').textContent = s.phase === 'moving' ? `${s.name.split(' ')[0]} đang dạo phố` : s.phase === 'arrive' ? 'Đã đến nơi!' : s.phase === 'roll' ? `${s.roll} bước, đi thôi!` : 'Cùng dạo một vòng phố';
-  $('#hud-subtitle').textContent = s.phase === 'moving' ? 'Camera bám phía sau nhân vật' : s.phase === 'arrive' ? 'Chuẩn bị chuyển sang người tiếp theo' : 'Toàn bàn → Theo sau nhân vật';
-  $('#hud-status').textContent = s.paused ? 'TẠM DỪNG' : s.phase === 'moving' ? 'ĐANG CHẠY' : 'TỰ ĐỘNG';
+  $('#hud-title').textContent = s.phase === 'moving' ? `${s.name.split(' ')[0]}: ${s.stepsCompleted}/${s.roll} bước` : s.phase === 'arrive' ? `Đã đi đủ ${s.roll} bước!` : s.phase === 'roll' ? 'Đang lắc xúc xắc…' : s.phase === 'roll-result' ? `Ra ${s.roll}! Đi ${s.roll} bước` : 'Sẵn sàng tung xúc xắc';
+  $('#hud-subtitle').textContent = s.phase === 'moving' ? `Còn ${s.remaining} bước · Camera theo sau` : s.phase === 'arrive' ? 'Chuẩn bị chuyển sang người tiếp theo' : s.phase === 'roll' ? 'Chờ xúc xắc dừng' : s.phase === 'roll-result' ? 'Đã chốt kết quả · chuẩn bị di chuyển' : 'Bấm Lắc hoặc chờ lượt tự động';
+  $('#hud-status').textContent = s.paused ? 'TẠM DỪNG' : s.phase === 'moving' ? 'ĐANG ĐI' : s.phase === 'roll' ? 'ĐANG LẮC' : s.phase === 'roll-result' ? 'ĐÃ CHỐT' : 'SẴN SÀNG';
+  $('#roll-display').innerHTML = s.roll ? dieFaceSVG(s.roll) : icons.dice;
+  $('#roll-display').dataset.value = String(s.roll);
+  $('#roll-dice').disabled = s.phase !== 'overview' || s.paused;
+  $('#roll-dice span').textContent = s.phase === 'roll' ? 'Đang lắc' : s.roll ? `${s.roll} bước` : 'Lắc';
   $('#playback-text').textContent = s.paused ? 'Đã tạm dừng' : 'Đang chạy bản xem trước';
   $('#pause').innerHTML = s.paused ? icons.play : icons.pause;
   $('#pause').setAttribute('aria-label', s.paused ? 'Tiếp tục' : 'Tạm dừng');
-  $('#turn-progress').style.width = (s.phase === 'overview' ? 6 : s.phase === 'roll' ? 20 : s.phase === 'arrive' ? 100 : 20 + (1 - s.remaining / s.roll) * 75) + '%';
+  $('#turn-progress').style.width = (s.phase === 'overview' ? 6 : s.phase === 'roll' ? 12 : s.phase === 'roll-result' ? 20 : s.phase === 'arrive' ? 100 : 20 + (1 - s.remaining / s.roll) * 75) + '%';
   document.querySelectorAll('.player-row,.mobile-seat').forEach(el => {
     const active = Number(el.dataset.seat) === s.active;
     el.classList.toggle('active', active);
@@ -122,6 +127,7 @@ async function init() {
     $('#mobile-players').innerHTML = players.map((p,i) => `<button class='mobile-seat' data-seat='${i}' aria-label='Theo ghế ${p.seat}: ${p.data.name}' style='--seat:${SEAT_COLORS[i]}'><img src='${p.avatar}' alt=''><span>${p.seat}</span></button>`).join('');
     demo = new CameraDemo(world, players, boards.layouts, updateUI);
     await demo.changeMap('CHO_VIA_HE');
+    diceOverlay = new DiceOverlay($('#portrait'), base);
     progress(1, 'Khu phố đã sẵn sàng');
     $('#loading').classList.add('hidden');
     bind();
@@ -129,6 +135,7 @@ async function init() {
     function tick(now) {
       const dt = Math.min((now - last) / 1000, .08); last = now;
       demo.update(dt);
+      diceOverlay.update(demo.diceState());
       if (now - lastRender >= 1000 / 30 - 1) { world.render(); lastRender = now; }
       requestAnimationFrame(tick);
     }
@@ -137,6 +144,7 @@ async function init() {
       ready: true, snapshot: () => demo.snapshot(), select: i => demo.select(i),
       mode: mode => demo.setMode(mode), pause: value => demo.setPaused(value),
       changeMap: id => demo.changeMap(id), screenshot: () => world.screenshot(),
+      roll: () => demo.requestRoll(),
       provenance: { spriteVersion: pack.version, sourceCommit: pack.sourceCommit },
       geometryAudit: () => {
         const meshes = [];
@@ -163,6 +171,7 @@ function bind() {
   document.querySelectorAll('[data-mobile-mode]').forEach(el => el.addEventListener('click', () => demo.setMode(el.dataset.mobileMode)));
   $('#pause').onclick = () => demo.setPaused(!demo.paused);
   $('#next-turn').onclick = () => demo.nextTurn();
+  $('#roll-dice').onclick = () => demo.requestRoll();
   $('#restart').onclick = () => { demo.paused = false; demo.reset(); };
   $('#capture').onclick = () => world.screenshot();
   $('#fullscreen').onclick = async () => { if (!document.fullscreenElement) await $('#portrait').requestFullscreen(); else await document.exitFullscreen(); };

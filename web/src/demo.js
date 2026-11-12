@@ -1,11 +1,14 @@
 import * as THREE from 'three';
+import { rollDie, DICE_ROLL_SECONDS, DICE_RESULT_SECONDS } from './dice.js';
 
 export class CameraDemo {
-  constructor(world, players, layouts, onChange) {
+  constructor(world, players, layouts, onChange, { randomRoll = rollDie } = {}) {
     this.world = world; this.players = players; this.layouts = layouts; this.onChange = onChange;
     this.mode = 'auto'; this.paused = false; this.speed = 1;
     this.active = 0; this.turn = 1; this.phase = 'overview'; this.phaseTime = 0; this.clock = 0;
     this.remaining = 0; this.segment = null; this.mapId = 'CHO_VIA_HE';
+    this.randomRoll = randomRoll; this.rollSequence = 0;
+    this.clearRoll();
     players.forEach(p => world.playerGroup.add(p.group));
   }
 
@@ -23,6 +26,7 @@ export class CameraDemo {
 
   reset() {
     this.active = 0; this.turn = 1; this.phase = 'overview'; this.phaseTime = 0; this.segment = null;
+    this.clearRoll();
     const route = ['C00']; let current = 'C00';
     while (true) {
       const next = this.nodes.get(current).next[0];
@@ -43,6 +47,29 @@ export class CameraDemo {
   setMode(mode) { this.mode = mode; this.emit(); }
   setPaused(value) { this.paused = value; this.emit(); }
 
+  clearRoll() {
+    this.roll = 0; this.pendingRoll = 0; this.remaining = 0;
+    this.stepsCompleted = 0; this.visitedNodes = [];
+  }
+
+  requestRoll() {
+    if (this.loading || this.paused || this.phase !== 'overview') return false;
+    const value = this.randomRoll();
+    if (!Number.isInteger(value) || value < 1 || value > 6) throw new Error('Dice result must be 1–6');
+    this.clearRoll(); this.pendingRoll = value; this.rollSequence++;
+    this.phase = 'roll'; this.phaseTime = 0;
+    const player = this.players[this.active];
+    this.visitedNodes = [player.node];
+    player.setClip('roll_dice'); player.loadClip('run');
+    this.emit();
+    return true;
+  }
+
+  diceState() {
+    return { phase: this.loading ? 'loading' : this.phase, elapsed: this.phaseTime, value: this.roll,
+      sequence: this.rollSequence, seat: this.players[this.active].seat, paused: this.paused };
+  }
+
   select(index) {
     const old = this.players[this.active];
     if (this.segment) {
@@ -51,6 +78,7 @@ export class CameraDemo {
     }
     old.setClip('idle');
     this.active = index; this.segment = null; this.phase = 'overview';
+    this.clearRoll();
     this.phaseTime = this.mode === 'follow' ? 2.6 : 1.5;
     this.world.followHeading.copy(this.players[index].heading);
     this.emit();
@@ -75,13 +103,12 @@ export class CameraDemo {
     const player = this.players[this.active];
     if (!this.paused) {
       if (this.phase === 'overview' && this.phaseTime >= 2.7) {
-        this.phase = 'roll'; this.phaseTime = 0;
-        this.roll = 2 + ((this.active + this.turn) % 3);
-        this.remaining = this.roll;
-        player.setClip('roll_dice');
-        player.loadClip('run');
-        this.emit();
-      } else if (this.phase === 'roll' && this.phaseTime >= 1.2) {
+        this.requestRoll();
+      } else if (this.phase === 'roll' && this.phaseTime >= DICE_ROLL_SECONDS) {
+        this.roll = this.pendingRoll; this.pendingRoll = 0; this.remaining = this.roll;
+        this.phase = 'roll-result'; this.phaseTime = 0;
+        player.setClip('idle'); this.emit();
+      } else if (this.phase === 'roll-result' && this.phaseTime >= DICE_RESULT_SECONDS) {
         this.phase = 'moving'; this.phaseTime = 0;
         player.setClip('run');
         this.startSegment(); this.emit();
@@ -93,7 +120,8 @@ export class CameraDemo {
         player.distance += step;
         player.position.lerpVectors(this.segment.a, this.segment.b, this.segment.progress);
         if (this.segment.progress >= 1 - 1e-7) {
-          player.node = this.segment.to; this.segment = null; this.remaining--;
+          player.node = this.segment.to; this.segment = null; this.remaining--; this.stepsCompleted++;
+          this.visitedNodes.push(player.node);
           if (!this.remaining) {
             this.phase = 'arrive'; this.phaseTime = 0;
             player.setClip('happy'); this.emit();
@@ -104,7 +132,7 @@ export class CameraDemo {
         // Keep only the active movement/gesture bitmap in addition to each player's idle.
         for (const key of ['run', 'walk', 'roll_dice', 'happy']) player.images.delete(key);
         this.turn++; this.active = (this.active + 1) % 10;
-        this.phase = 'overview'; this.phaseTime = 0; this.emit();
+        this.phase = 'overview'; this.phaseTime = 0; this.clearRoll(); this.emit();
       }
     }
     this.cameraView = this.world.updateCamera(dt, this.players[this.active], this.mode, this.phase === 'overview');
@@ -120,6 +148,7 @@ export class CameraDemo {
     return { map: this.mapId, active: this.active, seat: p.seat, name: p.data.name, mode: this.mode,
       cameraView: this.cameraView || 'overview', phase: this.phase, paused: this.paused, speed: this.speed,
       turn: this.turn, roll: this.roll || 0, remaining: this.remaining, node: p.node,
+      stepsCompleted: this.stepsCompleted, visitedNodes: [...this.visitedNodes], dice: this.diceState(),
       destination: this.segment?.to || p.node, tile: this.world.types?.[p.node]?.name || 'ĐANG VÀO PHỐ',
       players: this.players.map(x => ({ seat: x.seat, name: x.data.name, position: x.position.toArray(), heading: x.heading.toArray(), clip: x.clip, frame: x.frame, facing: x.facing })),
       camera: { position: this.world.camera.position.toArray(), target: this.world.lookAt.toArray(),

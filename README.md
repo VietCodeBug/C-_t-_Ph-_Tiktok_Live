@@ -17,6 +17,7 @@ npm run dev
 `npm run build` xuất website tĩnh vào `web/dist`; `npm run preview` mở bản build. [Hướng dẫn và điều khiển](web/README.md).
 
 - Chuyển tự động / toàn bàn / bám nhân vật.
+- Xúc xắc 3D quay, chốt ngẫu nhiên 1–6 rồi nhân vật đi đúng số ô; có nút **Lắc** và âm thanh từ bộ asset.
 - Chọn một ghế, chuyển lượt, tạm dừng và đổi tốc độ xem.
 - Đổi Chợ Vỉa Hè / Phố Giao Hàng.
 - Nút chụp bản đồ 1080×1920.
@@ -36,5 +37,7 @@ Nhánh `gh-pages` chứa bản build sẵn. Nếu Pages chưa bật, vào Settin
 ## Kiểm tra
 
 [Browser smoke report](web/docs/browser-smoke.json): 18 kiểm tra đạt, gồm chuyển động/animation thật, camera thứ ba phía sau, chọn ghế, đổi map, pause, responsive 9:16 và xuất ảnh. Thử cả đường dẫn con như GitHub Pages. Không có lỗi ứng dụng hoặc request lỗi trong lần kiểm tra.
+
+[Kiểm tra xúc xắc](web/docs/dice-browser.json) và `cd web && npm test` kiểm tra thứ tự quay → hiện kết quả → đi đúng số ô, cả hai nhánh đường và các mặt 1–6. [Ảnh xúc xắc trên màn hình dọc](web/docs/dice-result-mobile.png).
 
 Đây là demo hình ảnh/camera, chưa phải game TikTok LIVE hoàn chỉnh. Chưa có backend kinh tế, chat/quà hoặc benchmark phần cứng phát LIVE. Prototype thú 3D/Bến Mây cũ không được dùng cho nhân vật của bản web.

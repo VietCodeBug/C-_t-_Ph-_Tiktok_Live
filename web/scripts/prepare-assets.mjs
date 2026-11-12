@@ -53,6 +53,7 @@ for (const [name, rel] of Object.entries(modelPaths)) {
   await copy(`${v1}/assets/map/kit/${rel}.glb`, `models/${name}.glb`);
 }
 await copy(`${v2}/README_V2_3.md`, 'SOURCE_V2_3.md');
+await copy(`${v1}/assets/audio/sfx/sfx_dice_roll.ogg`, 'audio/sfx_dice_roll.ogg');
 await mkdir(out, { recursive: true });
 await mkdir(path.join(out, 'licenses'), { recursive: true });
 await copyFile(path.join(root, 'web/node_modules/@fontsource-variable/nunito/LICENSE'), path.join(out, 'licenses/nunito-OFL.txt'));

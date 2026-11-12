@@ -1,0 +1,71 @@
+{
+  "tests": [
+    {
+      "test": "manual roll shows spinning die before movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "repeat roll is blocked while spinning",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "pause freezes spinning die and its game clock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "revealed 1–6 controls the actual remaining steps",
+      "passed": true,
+      "detail": {
+        "roll": 3
+      }
+    },
+    {
+      "test": "result caption and HUD agree with the die",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "pause also freezes the settling result",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "die clears only after result hold, before running",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "actor stops after exactly the revealed number of tiles",
+      "passed": true,
+      "detail": {
+        "roll": 3,
+        "path": [
+          "C00",
+          "C01",
+          "C02",
+          "F01_R1"
+        ]
+      }
+    },
+    {
+      "test": "dice sound file loads",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "no browser errors or failed requests",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "failed_requests": []
+      }
+    }
+  ],
+  "errors": [],
+  "failed_requests": [],
+  "roll": 3,
+  "status": "PASS"
+}
