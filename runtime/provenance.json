@@ -539,6 +539,13 @@
       "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
       "bytes": 1298,
       "sha256": "5bf76172a4d1e01a2c18dfb36659473bf783263e71696a444730564154361732"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/audio/sfx/sfx_dice_roll.ogg",
+      "to": "audio/sfx_dice_roll.ogg",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 12060,
+      "sha256": "64d270293c284cd01ba82cd8b71285b4a4db53c943a35b08e0da8332a277298f"
     }
   ]
 }
