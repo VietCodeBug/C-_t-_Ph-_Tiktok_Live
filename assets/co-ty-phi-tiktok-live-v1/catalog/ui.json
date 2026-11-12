@@ -1,0 +1,1214 @@
+{
+  "UI_HUD_SEAT_BADGE": {
+    "path": "assets/ui/core/hud_seat_badge.svg",
+    "name": "Badge ghế A–J",
+    "purpose": "seat",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": [
+      19,
+      18,
+      58,
+      50
+    ],
+    "style": "badge"
+  },
+  "UI_HUD_AVATAR_FRAME": {
+    "path": "assets/ui/core/hud_avatar_frame.svg",
+    "name": "Khung avatar",
+    "purpose": "avatar",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": [
+      16,
+      16,
+      64,
+      64
+    ],
+    "style": "frame"
+  },
+  "UI_HUD_AVATAR_DEFAULT": {
+    "path": "assets/ui/core/hud_avatar_default.webp",
+    "name": "Avatar mặc định",
+    "purpose": "avatar",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "avatar"
+  },
+  "UI_HUD_MONEY_CHIP": {
+    "path": "assets/ui/core/hud_money_chip.svg",
+    "name": "Chip số MONEY",
+    "purpose": "money",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_MONEY_PLUS": {
+    "path": "assets/ui/core/hud_money_plus.svg",
+    "name": "Thẻ + MONEY",
+    "purpose": "money",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_MONEY_MINUS": {
+    "path": "assets/ui/core/hud_money_minus.svg",
+    "name": "Thẻ − MONEY",
+    "purpose": "money",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_DICE_FACES": {
+    "path": "assets/ui/core/hud_dice_faces.svg",
+    "name": "6 mặt xúc xắc icon",
+    "purpose": "dice",
+    "dimensions": [
+      576,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "dice_set"
+  },
+  "UI_HUD_TURN_ACTIVE": {
+    "path": "assets/ui/core/hud_turn_active.svg",
+    "name": "Viền ghế đến lượt",
+    "purpose": "seat",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_TURN_TIMER": {
+    "path": "assets/ui/core/hud_turn_timer.svg",
+    "name": "Đồng hồ lượt",
+    "purpose": "time",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_PHASE_TIMER": {
+    "path": "assets/ui/core/hud_phase_timer.svg",
+    "name": "Đồng hồ sự kiện",
+    "purpose": "time",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_TOAST_SUCCESS": {
+    "path": "assets/ui/core/hud_toast_success.svg",
+    "name": "Thông báo lệnh hợp lệ",
+    "purpose": "chat",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_TOAST_EXPIRED": {
+    "path": "assets/ui/core/hud_toast_expired.svg",
+    "name": "Thông báo hết giờ",
+    "purpose": "chat",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_JOIN_BUTTON": {
+    "path": "assets/ui/core/hud_join_button.svg",
+    "name": "Lệnh CHƠI",
+    "purpose": "lobby",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_ROLL_BANNER": {
+    "path": "assets/ui/core/hud_roll_banner.svg",
+    "name": "Lệnh LẮC",
+    "purpose": "dice",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_ARROW_LEFT": {
+    "path": "assets/ui/core/hud_arrow_left.svg",
+    "name": "Mũi tên TRÁI",
+    "purpose": "fork",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_HUD_ARROW_RIGHT": {
+    "path": "assets/ui/core/hud_arrow_right.svg",
+    "name": "Mũi tên PHẢI",
+    "purpose": "fork",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_HUD_VOTE_LEFT": {
+    "path": "assets/ui/core/hud_vote_left.svg",
+    "name": "Phiếu trái",
+    "purpose": "vote",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_VOTE_RIGHT": {
+    "path": "assets/ui/core/hud_vote_right.svg",
+    "name": "Phiếu phải",
+    "purpose": "vote",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_HUD_VOTE_RESULT": {
+    "path": "assets/ui/core/hud_vote_result.svg",
+    "name": "Tỉ lệ vote",
+    "purpose": "vote",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_HUD_BRANCH_TILE_INFO": {
+    "path": "assets/ui/core/hud_branch_tile_info.svg",
+    "name": "Loại ô trước khi rẽ",
+    "purpose": "fork",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_HUD_LEADERBOARD_SMALL": {
+    "path": "assets/ui/core/hud_leaderboard_small.svg",
+    "name": "Top 3 + ghế tới lượt",
+    "purpose": "rank",
+    "dimensions": [
+      540,
+      206
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "leader2"
+  },
+  "UI_HUD_LEADERBOARD_FULL": {
+    "path": "assets/ui/core/hud_leaderboard_full.svg",
+    "name": "Bảng hạng A–J",
+    "purpose": "rank",
+    "dimensions": [
+      540,
+      720
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "leader10"
+  },
+  "UI_HUD_WIN_CUP": {
+    "path": "assets/ui/core/hud_win_cup.svg",
+    "name": "Cúp top 1",
+    "purpose": "rank",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_HUD_FOOTPRINT": {
+    "path": "assets/ui/core/hud_footprint.svg",
+    "name": "Chấm bước đi",
+    "purpose": "move",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_HUD_DISCONNECT": {
+    "path": "assets/ui/core/hud_disconnect.svg",
+    "name": "Đang nối lại chat",
+    "purpose": "system",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_TILE_ICON_START": {
+    "path": "assets/ui/tiles/tile_icon_start.svg",
+    "name": "Ga xuất phát",
+    "purpose": "start",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_MONEY": {
+    "path": "assets/ui/tiles/tile_icon_money.svg",
+    "name": "Nhặt tiền",
+    "purpose": "money",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_REST": {
+    "path": "assets/ui/tiles/tile_icon_rest.svg",
+    "name": "Nghỉ",
+    "purpose": "rest",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_BUSINESS": {
+    "path": "assets/ui/tiles/tile_icon_business.svg",
+    "name": "Kinh doanh",
+    "purpose": "biz",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_INVEST": {
+    "path": "assets/ui/tiles/tile_icon_invest.svg",
+    "name": "Đầu tư",
+    "purpose": "invest",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_INCIDENT": {
+    "path": "assets/ui/tiles/tile_icon_incident.svg",
+    "name": "Sự cố",
+    "purpose": "road",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_MINIGAME": {
+    "path": "assets/ui/tiles/tile_icon_minigame.svg",
+    "name": "Mini game",
+    "purpose": "mini",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_TILE_ICON_LIFE": {
+    "path": "assets/ui/tiles/tile_icon_life.svg",
+    "name": "Đời sống",
+    "purpose": "life",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_HOUSE": {
+    "path": "assets/ui/status/status_house.svg",
+    "name": "Đang có nhà",
+    "purpose": "HOME",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_DOG": {
+    "path": "assets/ui/status/status_dog.svg",
+    "name": "Đang nuôi chó",
+    "purpose": "PET",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_BABY": {
+    "path": "assets/ui/status/status_baby.svg",
+    "name": "Có em bé",
+    "purpose": "FAM",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_SHOP_OWNER": {
+    "path": "assets/ui/status/status_shop_owner.svg",
+    "name": "Chủ quầy",
+    "purpose": "shop",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_COIN": {
+    "path": "assets/ui/status/status_coin.svg",
+    "name": "Chờ Coin result",
+    "purpose": "WEB",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_SHIELD": {
+    "path": "assets/ui/status/status_shield.svg",
+    "name": "Ô che đơn đang giữ",
+    "purpose": "shield",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_CART_BONUS": {
+    "path": "assets/ui/status/status_cart_bonus.svg",
+    "name": "Bonus xe đẩy",
+    "purpose": "cart",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_STATUS_QUEUED": {
+    "path": "assets/ui/status/status_queued.svg",
+    "name": "Thẻ nối lượt sau",
+    "purpose": "event",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_SHOP_ORDER_SLOT_EMPTY": {
+    "path": "assets/ui/shop/shop_order_slot_empty.svg",
+    "name": "Ô đặt đơn trống",
+    "purpose": "order",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_SHOP_ORDER_SLOT_FILLED": {
+    "path": "assets/ui/shop/shop_order_slot_filled.svg",
+    "name": "Ô đặt đơn đã nhận",
+    "purpose": "order",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_SHOP_ORDER_RETURN": {
+    "path": "assets/ui/shop/shop_order_return.svg",
+    "name": "Đơn trả/BOM",
+    "purpose": "return",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_SHOP_ORDER_DELIVERED": {
+    "path": "assets/ui/shop/shop_order_delivered.svg",
+    "name": "Đơn thành công",
+    "purpose": "order",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_SHOP_TOTAL_PROFIT": {
+    "path": "assets/ui/shop/shop_total_profit.svg",
+    "name": "Bảng chốt lời lỗ",
+    "purpose": "money",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_SHOP_COUNTER_0_8": {
+    "path": "assets/ui/shop/shop_counter_0_8.svg",
+    "name": "Bộ đếm đơn 0–8",
+    "purpose": "order",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_SHOP_SALARY_CHOICE": {
+    "path": "assets/ui/shop/shop_salary_choice.svg",
+    "name": "Bán/Lương",
+    "purpose": "choice",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_SHOP_PURCHASE_CHOICE": {
+    "path": "assets/ui/shop/shop_purchase_choice.svg",
+    "name": "Mua/Bỏ",
+    "purpose": "choice",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_SHOP_FLAG_OWNER": {
+    "path": "assets/ui/shop/shop_flag_owner.svg",
+    "name": "Cờ chủ sở hữu",
+    "purpose": "shop",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_SHOP_VIEW_COUNT": {
+    "path": "assets/ui/shop/shop_view_count.svg",
+    "name": "Lượt xem quảng cáo",
+    "purpose": "ads",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_SHOP_REVIEW_STAR": {
+    "path": "assets/ui/shop/shop_review_star.svg",
+    "name": "Sao đánh giá",
+    "purpose": "review",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_EVENT_CARD_BASE": {
+    "path": "assets/ui/events/event_card_base.svg",
+    "name": "Thẻ sự kiện có tiêu đề",
+    "purpose": "event",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_EDU": {
+    "path": "assets/ui/events/event_card_edu.svg",
+    "name": "Thẻ học nghề",
+    "purpose": "EDU",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_HOME": {
+    "path": "assets/ui/events/event_card_home.svg",
+    "name": "Thẻ nhà",
+    "purpose": "HOME",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_FAMILY": {
+    "path": "assets/ui/events/event_card_family.svg",
+    "name": "Thẻ gia đình",
+    "purpose": "FAM",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_PET": {
+    "path": "assets/ui/events/event_card_pet.svg",
+    "name": "Thẻ thú cưng",
+    "purpose": "PET",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_BIZ": {
+    "path": "assets/ui/events/event_card_biz.svg",
+    "name": "Thẻ kinh doanh",
+    "purpose": "BIZ",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_WEB": {
+    "path": "assets/ui/events/event_card_web.svg",
+    "name": "Thẻ chuyện mạng",
+    "purpose": "WEB",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CARD_ROAD": {
+    "path": "assets/ui/events/event_card_road.svg",
+    "name": "Thẻ giao thông",
+    "purpose": "ROAD",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_CHOICE_2": {
+    "path": "assets/ui/events/event_choice_2.svg",
+    "name": "2 lựa chọn",
+    "purpose": "choice",
+    "dimensions": [
+      530,
+      164
+    ],
+    "dynamicTextBox": [
+      72,
+      13,
+      430,
+      45
+    ],
+    "style": "choice2"
+  },
+  "UI_EVENT_CHOICE_3": {
+    "path": "assets/ui/events/event_choice_3.svg",
+    "name": "3 lựa chọn",
+    "purpose": "choice",
+    "dimensions": [
+      530,
+      240
+    ],
+    "dynamicTextBox": [
+      72,
+      13,
+      430,
+      45
+    ],
+    "style": "choice3"
+  },
+  "UI_EVENT_EFFECT_PRICE": {
+    "path": "assets/ui/events/event_effect_price.svg",
+    "name": "Chi phí / thưởng",
+    "purpose": "money",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_EVENT_NEXT_TURN": {
+    "path": "assets/ui/events/event_next_turn.svg",
+    "name": "Đặt thẻ lượt sau",
+    "purpose": "queued",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_EVENT_HELP_VOTES": {
+    "path": "assets/ui/events/event_help_votes.svg",
+    "name": "Khán giả giúp đỡ",
+    "purpose": "chat",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_EVENT_RESULT": {
+    "path": "assets/ui/events/event_result.svg",
+    "name": "Kết quả sự kiện",
+    "purpose": "result",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_EVENT_WRONG_ANSWER": {
+    "path": "assets/ui/events/event_wrong_answer.svg",
+    "name": "Sai / hết giờ",
+    "purpose": "result",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_EVENT_SUCCESS_ANSWER": {
+    "path": "assets/ui/events/event_success_answer.svg",
+    "name": "Đúng",
+    "purpose": "result",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_MINI_PACK_ICONS": {
+    "path": "assets/ui/mini/mini_pack_icons.svg",
+    "name": "Hộp/Băng/Tem",
+    "purpose": "pack",
+    "dimensions": [
+      288,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "pack_set"
+  },
+  "UI_MINI_MILK_CUPS": {
+    "path": "assets/ui/mini/mini_milk_cups.svg",
+    "name": "3 ly trà sữa",
+    "purpose": "drink",
+    "dimensions": [
+      288,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "cup_set"
+  },
+  "UI_MINI_INVOICE_SUM": {
+    "path": "assets/ui/mini/mini_invoice_sum.svg",
+    "name": "3 đáp án hóa đơn",
+    "purpose": "invoice",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "style": "card"
+  },
+  "UI_MINI_HINT_MARK": {
+    "path": "assets/ui/mini/mini_hint_mark.svg",
+    "name": "Gạch đáp án sai",
+    "purpose": "hint",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_MINI_CORRECT_MARK": {
+    "path": "assets/ui/mini/mini_correct_mark.svg",
+    "name": "Kết quả đúng",
+    "purpose": "hint",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_MINI_ANSWER_TIMER": {
+    "path": "assets/ui/mini/mini_answer_timer.svg",
+    "name": "Đồng hồ câu đố",
+    "purpose": "time",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_GIFT_TARGET_SEAT": {
+    "path": "assets/ui/gifts/gift_target_seat.svg",
+    "name": "NHẮM ghế",
+    "purpose": "target",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_GIFT_BOMB_CHIP": {
+    "path": "assets/ui/gifts/gift_bomb_chip.svg",
+    "name": "Bom Xốp",
+    "purpose": "hit",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_GIFT_SHIELD_CHIP": {
+    "path": "assets/ui/gifts/gift_shield_chip.svg",
+    "name": "Ô Che Đơn",
+    "purpose": "shield",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_GIFT_CART_CHIP": {
+    "path": "assets/ui/gifts/gift_cart_chip.svg",
+    "name": "Xe Đẩy Sale",
+    "purpose": "cart",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_GIFT_COMBO_LOCK": {
+    "path": "assets/ui/gifts/gift_combo_lock.svg",
+    "name": "Đang khóa combo",
+    "purpose": "gift",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_GIFT_COSMETIC_ONLY": {
+    "path": "assets/ui/gifts/gift_cosmetic_only.svg",
+    "name": "Chỉ hiệu ứng",
+    "purpose": "gift",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_GIFT_BLOCKED": {
+    "path": "assets/ui/gifts/gift_blocked.svg",
+    "name": "Bom bị chặn",
+    "purpose": "shield",
+    "dimensions": [
+      96,
+      96
+    ],
+    "dynamicTextBox": null,
+    "style": "icon"
+  },
+  "UI_WEB_PHONE_FRAME": {
+    "path": "assets/ui/web/web_phone_frame.svg",
+    "name": "Khung điện thoại giả lập",
+    "purpose": "web",
+    "dimensions": [
+      286,
+      460
+    ],
+    "dynamicTextBox": [
+      32,
+      64,
+      220,
+      346
+    ],
+    "style": "phone"
+  },
+  "UI_WEB_CHAT_BUBBLE": {
+    "path": "assets/ui/web/web_chat_bubble.svg",
+    "name": "Bong bóng inbox",
+    "purpose": "web",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_WEB_COIN_UP_CHART": {
+    "path": "assets/ui/web/web_coin_up_chart.svg",
+    "name": "Biểu đồ tăng",
+    "purpose": "coin",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      94,
+      22,
+      412,
+      55
+    ],
+    "style": "chart"
+  },
+  "UI_WEB_COIN_DOWN_CHART": {
+    "path": "assets/ui/web/web_coin_down_chart.svg",
+    "name": "Biểu đồ giảm",
+    "purpose": "coin",
+    "dimensions": [
+      540,
+      326
+    ],
+    "dynamicTextBox": [
+      94,
+      22,
+      412,
+      55
+    ],
+    "style": "chart"
+  },
+  "UI_WEB_OTP_WARNING": {
+    "path": "assets/ui/web/web_otp_warning.svg",
+    "name": "Cảnh báo mã giả",
+    "purpose": "web",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  },
+  "UI_WEB_RECEIPT_ROW": {
+    "path": "assets/ui/web/web_receipt_row.svg",
+    "name": "Dòng giao dịch",
+    "purpose": "web",
+    "dimensions": [
+      360,
+      86
+    ],
+    "dynamicTextBox": [
+      84,
+      14,
+      250,
+      51
+    ],
+    "style": "pill"
+  }
+}

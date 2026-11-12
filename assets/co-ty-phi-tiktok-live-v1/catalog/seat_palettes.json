@@ -1,0 +1,82 @@
+{
+  "A": {
+    "seat": "A",
+    "accent": "#FF887D",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "B": {
+    "seat": "B",
+    "accent": "#83C9F4",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "C": {
+    "seat": "C",
+    "accent": "#FFD267",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "D": {
+    "seat": "D",
+    "accent": "#8ADFC3",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "E": {
+    "seat": "E",
+    "accent": "#AB9BF3",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "F": {
+    "seat": "F",
+    "accent": "#F6A7CF",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "G": {
+    "seat": "G",
+    "accent": "#F4A261",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "H": {
+    "seat": "H",
+    "accent": "#7DD3CF",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "I": {
+    "seat": "I",
+    "accent": "#B7C7FC",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  },
+  "J": {
+    "seat": "J",
+    "accent": "#D7B68F",
+    "background": "#FFF3DB",
+    "outline": "#35283E",
+    "badge": "assets/ui/core/hud_seat_badge.svg",
+    "style": "badge ký tự đậm"
+  }
+}

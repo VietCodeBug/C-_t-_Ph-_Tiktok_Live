@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "playable": 20,
+    "npcAndPet": 20,
+    "playableClips": 1040,
+    "allCharacterAtlases": 1108,
+    "characterFrames": 62670,
+    "mapScenes": 2,
+    "boardNodes": 48,
+    "individual3DModels": 184,
+    "maxTrianglesAnyScene": 70248,
+    "uiCatalogItems": 87,
+    "additionalEventCardSkins": 42,
+    "vfx": 67,
+    "audio": 79,
+    "events": 42,
+    "minigames": 3
+  },
+  "validated": [
+    "GLB headers/buffers/indices/bounds, unique model paths and positive model extents",
+    "GLB map nodes and adjacency",
+    "PNG RGBA atlas dimensions and frame rectangles; alpha present in each direction",
+    "Sprite socket ranges and cue indices",
+    "SVG well-formedness",
+    "Ogg/Vorbis metadata/durations",
+    "Full-file SHA-256; ZIP CRC",
+    "Blender import and sample render for both maps and 8 props"
+  ],
+  "limits": [
+    "Kiểm tra kỹ thuật trên file và ảnh mẫu; cần chạy thêm trong game để xác nhận collider, FPS, billboard và các cảnh gắn prop.",
+    "Một số pose dùng rig chung, các trang phục và shape đầu khác nhau. Giọng Việt tổng hợp dùng cho bản dựng v1."
+  ]
+}

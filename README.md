@@ -6,6 +6,10 @@ Bộ prototype cho game cờ tỷ phú dọc **9:16**: map, mascot, animation, �
 
 ![10 mascot prototype](assets/co-ty-phu/previews/mascot-roster.png)
 
+## Cờ Tý Phí TikTok LIVE v1
+
+[Bộ asset Phố Đồ Chơi](assets/co-ty-phi-tiktok-live-v1/README.md) gồm hai map GLB, 184 model rời, 20 nhân vật 2D chọn được, 20 NPC/thú cưng, UI, VFX và âm thanh. Mở [ảnh xem trước](assets/co-ty-phi-tiktok-live-v1/preview/Co_Ty_Phi_Preview.jpg) hoặc [bảng danh mục và tọa độ](assets/co-ty-phi-tiktok-live-v1/Danh_muc_va_toa_do_asset.xlsx).
+
 ## Bộ bàn giao
 
 - [Nguồn, công cụ và các phần đang chặn](docs/co-ty-phu/00-sources-and-status.md)

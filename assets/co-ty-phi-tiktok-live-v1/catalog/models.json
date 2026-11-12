@@ -1,0 +1,2946 @@
+{
+  "MAP_TILE_STRAIGHT": {
+    "name": "Mặt đường thẳng",
+    "key": "tile_straight",
+    "path": "assets/map/kit/core_tile/tile_straight.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.12,
+      2
+    ],
+    "triangleCount": 744,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_CORNER": {
+    "name": "Cua tròn",
+    "key": "tile_corner",
+    "path": "assets/map/kit/core_tile/tile_corner.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.12,
+      2
+    ],
+    "triangleCount": 524,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_FORK": {
+    "name": "Đường ngã rẽ 2 lối",
+    "key": "tile_fork",
+    "path": "assets/map/kit/core_tile/tile_fork.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      4,
+      0.12,
+      4
+    ],
+    "triangleCount": 616,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_MERGE": {
+    "name": "Ô nhập nhánh",
+    "key": "tile_merge",
+    "path": "assets/map/kit/core_tile/tile_merge.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      3,
+      0.12,
+      3
+    ],
+    "triangleCount": 616,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_CROSSWALK": {
+    "name": "Vạch người đi bộ",
+    "key": "tile_crosswalk",
+    "path": "assets/map/kit/core_tile/tile_crosswalk.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.15,
+      2
+    ],
+    "triangleCount": 992,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_STATION": {
+    "name": "Ga xuất phát",
+    "key": "tile_station",
+    "path": "assets/map/kit/core_tile/tile_station.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.16,
+      2
+    ],
+    "triangleCount": 992,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_MONEY": {
+    "name": "Ô nhặt tiền",
+    "key": "tile_money",
+    "path": "assets/map/kit/core_tile/tile_money.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 536,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_REST": {
+    "name": "Ô nghỉ",
+    "key": "tile_rest",
+    "path": "assets/map/kit/core_tile/tile_rest.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 620,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_BUSINESS": {
+    "name": "Ô kinh doanh",
+    "key": "tile_business",
+    "path": "assets/map/kit/core_tile/tile_business.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 1240,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_INVEST": {
+    "name": "Quầy đầu tư",
+    "key": "tile_invest",
+    "path": "assets/map/kit/core_tile/tile_invest.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 620,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_MISHAP": {
+    "name": "Ô sự cố",
+    "key": "tile_mishap",
+    "path": "assets/map/kit/core_tile/tile_mishap.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 508,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_MINIGAME": {
+    "name": "Ô mini game",
+    "key": "tile_minigame",
+    "path": "assets/map/kit/core_tile/tile_minigame.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 288,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_LIFE": {
+    "name": "Ô đời sống",
+    "key": "tile_life",
+    "path": "assets/map/kit/core_tile/tile_life.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.14,
+      2
+    ],
+    "triangleCount": 384,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_SELECT_GLOW": {
+    "name": "Vòng sáng chọn ô",
+    "key": "tile_select_glow",
+    "path": "assets/map/kit/core_tile/tile_select_glow.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      2,
+      0.02,
+      2
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_FOOT_MARK": {
+    "name": "Dấu chân di chuyển",
+    "key": "tile_foot_mark",
+    "path": "assets/map/kit/core_tile/tile_foot_mark.glb",
+    "pack": "CORE_TILE",
+    "size": [
+      0.3,
+      0.03,
+      0.45
+    ],
+    "triangleCount": 1984,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_MARKET_TENT": {
+    "name": "Lều bạt chợ",
+    "key": "market_tent",
+    "path": "assets/map/kit/cho_via_he/market_tent.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      2.3,
+      2.2,
+      1.5
+    ],
+    "triangleCount": 2356,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_STREET_STALL": {
+    "name": "Sạp chợ lắp ghép",
+    "key": "street_stall",
+    "path": "assets/map/kit/cho_via_he/street_stall.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      1.6,
+      1.2,
+      0.9
+    ],
+    "triangleCount": 2604,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_STOOL_PLASTIC": {
+    "name": "Ghế nhựa thấp",
+    "key": "stool_plastic",
+    "path": "assets/map/kit/cho_via_he/stool_plastic.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      0.4,
+      0.45,
+      0.4
+    ],
+    "triangleCount": 492,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_STREET_UMBRELLA": {
+    "name": "Ô dù che nắng",
+    "key": "street_umbrella",
+    "path": "assets/map/kit/cho_via_he/street_umbrella.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      1.2,
+      2.3,
+      1.2
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_HOUSE_MINT": {
+    "name": "Nhà mái bạc hà",
+    "key": "house_mint",
+    "path": "assets/map/kit/cho_via_he/house_mint.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      2.2,
+      2.5,
+      2
+    ],
+    "triangleCount": 1624,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_HOUSE_BLUE": {
+    "name": "Nhà mái trời",
+    "key": "house_blue",
+    "path": "assets/map/kit/cho_via_he/house_blue.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      2.2,
+      2.4,
+      2
+    ],
+    "triangleCount": 1624,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_FLOWER_CART": {
+    "name": "Xe đẩy hoa",
+    "key": "flower_cart",
+    "path": "assets/map/kit/cho_via_he/flower_cart.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      1.1,
+      1,
+      0.65
+    ],
+    "triangleCount": 24568,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_PLANT_POT": {
+    "name": "Chậu cây",
+    "key": "plant_pot",
+    "path": "assets/map/kit/cho_via_he/plant_pot.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      0.35,
+      0.6,
+      0.35
+    ],
+    "triangleCount": 1732,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_LAMP_STREET": {
+    "name": "Cột đèn phố",
+    "key": "lamp_street",
+    "path": "assets/map/kit/cho_via_he/lamp_street.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      0.25,
+      2.7,
+      0.25
+    ],
+    "triangleCount": 432,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_BENCH": {
+    "name": "Ghế nghỉ",
+    "key": "bench",
+    "path": "assets/map/kit/cho_via_he/bench.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      1.25,
+      0.5,
+      0.45
+    ],
+    "triangleCount": 1176,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TRASH_CAN": {
+    "name": "Thùng rác công cộng",
+    "key": "trash_can",
+    "path": "assets/map/kit/cho_via_he/trash_can.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      0.38,
+      0.7,
+      0.38
+    ],
+    "triangleCount": 1108,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_SEWER_COVER": {
+    "name": "Nắp cống xu bật",
+    "key": "sewer_cover",
+    "path": "assets/map/kit/cho_via_he/sewer_cover.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      0.7,
+      0.08,
+      0.7
+    ],
+    "triangleCount": 2852,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_MARKET_BANNER": {
+    "name": "Cổng chợ",
+    "key": "market_banner",
+    "path": "assets/map/kit/cho_via_he/market_banner.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      2.6,
+      2.6,
+      0.3
+    ],
+    "triangleCount": 336,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TRAFFIC_POST": {
+    "name": "Cọc chắn đường",
+    "key": "traffic_post",
+    "path": "assets/map/kit/cho_via_he/traffic_post.glb",
+    "pack": "CHO_VIA_HE",
+    "size": [
+      0.25,
+      0.9,
+      0.25
+    ],
+    "triangleCount": 588,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_WAREHOUSE_A": {
+    "name": "Kho kiện pastel A",
+    "key": "warehouse_a",
+    "path": "assets/map/kit/pho_giao_hang/warehouse_a.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2.5,
+      2.6,
+      2.2
+    ],
+    "triangleCount": 1364,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_WAREHOUSE_B": {
+    "name": "Kho kiện pastel B",
+    "key": "warehouse_b",
+    "path": "assets/map/kit/pho_giao_hang/warehouse_b.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2.5,
+      2.4,
+      2.2
+    ],
+    "triangleCount": 1364,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_CONVEYOR": {
+    "name": "Băng chuyền giao hàng",
+    "key": "conveyor",
+    "path": "assets/map/kit/pho_giao_hang/conveyor.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2.4,
+      0.9,
+      0.7
+    ],
+    "triangleCount": 1480,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_LOADING_DOCK": {
+    "name": "Sàn bốc dỡ",
+    "key": "loading_dock",
+    "path": "assets/map/kit/pho_giao_hang/loading_dock.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2.2,
+      0.4,
+      1.5
+    ],
+    "triangleCount": 744,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_DELIVERY_GATE": {
+    "name": "Cổng chuyển phát",
+    "key": "delivery_gate",
+    "path": "assets/map/kit/pho_giao_hang/delivery_gate.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2.6,
+      2.5,
+      0.4
+    ],
+    "triangleCount": 620,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_DELIVERY_SIGN": {
+    "name": "Biển kho",
+    "key": "delivery_sign",
+    "path": "assets/map/kit/pho_giao_hang/delivery_sign.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      1.6,
+      0.5,
+      0.1
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_PALLET": {
+    "name": "Pallet gỗ",
+    "key": "pallet",
+    "path": "assets/map/kit/pho_giao_hang/pallet.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      0.9,
+      0.16,
+      0.9
+    ],
+    "triangleCount": 992,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_SECURITY_BOOTH": {
+    "name": "Bốt bảo vệ",
+    "key": "security_booth",
+    "path": "assets/map/kit/pho_giao_hang/security_booth.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      1.2,
+      1.7,
+      1.2
+    ],
+    "triangleCount": 1624,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_PARKING_SHELTER": {
+    "name": "Mái để xe",
+    "key": "parking_shelter",
+    "path": "assets/map/kit/pho_giao_hang/parking_shelter.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2,
+      1.8,
+      1.3
+    ],
+    "triangleCount": 2356,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_STACK_BOXES": {
+    "name": "Chồng thùng",
+    "key": "stack_boxes",
+    "path": "assets/map/kit/pho_giao_hang/stack_boxes.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      1.3,
+      1.6,
+      1.1
+    ],
+    "triangleCount": 2004,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_BOLLARD": {
+    "name": "Trụ mềm",
+    "key": "bollard",
+    "path": "assets/map/kit/pho_giao_hang/bollard.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      0.3,
+      0.7,
+      0.3
+    ],
+    "triangleCount": 588,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TRAFFIC_CONE": {
+    "name": "Cọc tiêu",
+    "key": "traffic_cone",
+    "path": "assets/map/kit/pho_giao_hang/traffic_cone.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      0.3,
+      0.6,
+      0.3
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_BRIDGE_TOY": {
+    "name": "Cầu đồ chơi thấp",
+    "key": "bridge_toy",
+    "path": "assets/map/kit/pho_giao_hang/bridge_toy.glb",
+    "pack": "PHO_GIAO_HANG",
+    "size": [
+      2.4,
+      0.4,
+      2
+    ],
+    "triangleCount": 1736,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_GROUND_ISLAND": {
+    "name": "Nền bàn cờ bo góc",
+    "key": "ground_island",
+    "path": "assets/map/kit/common_env/ground_island.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      18,
+      0.35,
+      10
+    ],
+    "triangleCount": 248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_GRASS_PATCH": {
+    "name": "Mảng cỏ",
+    "key": "grass_patch",
+    "path": "assets/map/kit/common_env/grass_patch.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      1.8,
+      0.05,
+      1.3
+    ],
+    "triangleCount": 248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_SIDEWALK": {
+    "name": "Vỉa hè",
+    "key": "sidewalk",
+    "path": "assets/map/kit/common_env/sidewalk.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      2,
+      0.2,
+      0.75
+    ],
+    "triangleCount": 744,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_STREET_TREE": {
+    "name": "Cây tròn kiểu đồ chơi",
+    "key": "street_tree",
+    "path": "assets/map/kit/common_env/street_tree.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.9,
+      2.2,
+      0.9
+    ],
+    "triangleCount": 972,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_BUSH_BALL": {
+    "name": "Bụi cây tròn",
+    "key": "bush_ball",
+    "path": "assets/map/kit/common_env/bush_ball.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.5,
+      0.55,
+      0.5
+    ],
+    "triangleCount": 1060,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_CLOUD_PROP": {
+    "name": "Mây mô hình",
+    "key": "cloud_prop",
+    "path": "assets/map/kit/common_env/cloud_prop.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      2,
+      0.6,
+      0.8
+    ],
+    "triangleCount": 1060,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_GATE_START": {
+    "name": "Cổng ga MONEY",
+    "key": "gate_start",
+    "path": "assets/map/kit/common_env/gate_start.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      2.3,
+      1.2,
+      0.4
+    ],
+    "triangleCount": 660,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_POINTER_LEFT": {
+    "name": "Biển hướng TRÁI trống text",
+    "key": "pointer_left",
+    "path": "assets/map/kit/common_env/pointer_left.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.9,
+      0.75,
+      0.2
+    ],
+    "triangleCount": 28,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_POINTER_RIGHT": {
+    "name": "Biển hướng PHẢI trống text",
+    "key": "pointer_right",
+    "path": "assets/map/kit/common_env/pointer_right.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.9,
+      0.75,
+      0.2
+    ],
+    "triangleCount": 28,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_ROUTE_MARKER": {
+    "name": "Chân đế ô sáng",
+    "key": "route_marker",
+    "path": "assets/map/kit/common_env/route_marker.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      1.8,
+      0.1,
+      1.8
+    ],
+    "triangleCount": 412,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TILE_TYPE_BADGE": {
+    "name": "Bệ icon loại ô",
+    "key": "tile_type_badge",
+    "path": "assets/map/kit/common_env/tile_type_badge.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.7,
+      0.2,
+      0.2
+    ],
+    "triangleCount": 248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_SHADOW_ELLIPSE": {
+    "name": "Bóng ellipse (geometry)",
+    "key": "shadow_ellipse",
+    "path": "assets/map/kit/common_env/shadow_ellipse.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.58,
+      0.01,
+      0.32
+    ],
+    "triangleCount": 156,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_PODIUM_1": {
+    "name": "Bục nhất",
+    "key": "podium_1",
+    "path": "assets/map/kit/common_env/podium_1.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      1.8,
+      1.1,
+      1.3
+    ],
+    "triangleCount": 412,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_PODIUM_2": {
+    "name": "Bục nhì",
+    "key": "podium_2",
+    "path": "assets/map/kit/common_env/podium_2.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      1.4,
+      0.7,
+      1.1
+    ],
+    "triangleCount": 412,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_PODIUM_3": {
+    "name": "Bục ba",
+    "key": "podium_3",
+    "path": "assets/map/kit/common_env/podium_3.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      1.4,
+      0.5,
+      1.1
+    ],
+    "triangleCount": 412,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_TROPHY_GOLD": {
+    "name": "Cúp vàng đồ chơi",
+    "key": "trophy_gold",
+    "path": "assets/map/kit/common_env/trophy_gold.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      0.7,
+      0.9,
+      0.7
+    ],
+    "triangleCount": 1344,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "MAP_SCORE_BOARD_FRAME": {
+    "name": "Khung kết quả",
+    "key": "score_board_frame",
+    "path": "assets/map/kit/common_env/score_board_frame.glb",
+    "pack": "COMMON_ENV",
+    "size": [
+      2.2,
+      2,
+      0.18
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "2 ô = 2 world units; không có ký tự/text baked; node pivot ở chân"
+  },
+  "P_SHOP_BASE": {
+    "name": "Quầy hàng chung",
+    "key": "shop_base",
+    "path": "assets/props/shop_core/shop_base.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      1.65,
+      1.4,
+      1
+    ],
+    "triangleCount": 2852,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SHOP_SIGN_BLANK": {
+    "name": "Biển tên để trống",
+    "key": "shop_sign_blank",
+    "path": "assets/props/shop_core/shop_sign_blank.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      1.5,
+      0.5,
+      0.12
+    ],
+    "triangleCount": 248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ORDER_SLOT": {
+    "name": "Kệ 8 ô đơn hàng",
+    "key": "order_slot",
+    "path": "assets/props/shop_core/order_slot.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      1.5,
+      0.35,
+      0.4
+    ],
+    "triangleCount": 620,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SALE_CART": {
+    "name": "Xe đẩy sale",
+    "key": "sale_cart",
+    "path": "assets/props/shop_core/sale_cart.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      1.15,
+      1,
+      0.7
+    ],
+    "triangleCount": 2136,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PACKAGE_SMALL": {
+    "name": "Hộp nhỏ",
+    "key": "package_small",
+    "path": "assets/props/shop_core/package_small.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.35,
+      0.3,
+      0.25
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PACKAGE_MEDIUM": {
+    "name": "Hộp vừa",
+    "key": "package_medium",
+    "path": "assets/props/shop_core/package_medium.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.5,
+      0.45,
+      0.45
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PACKAGE_LARGE": {
+    "name": "Hộp lớn",
+    "key": "package_large",
+    "path": "assets/props/shop_core/package_large.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.7,
+      0.65,
+      0.6
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PACKING_TAPE": {
+    "name": "Cuộn băng dính",
+    "key": "packing_tape",
+    "path": "assets/props/shop_core/packing_tape.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.22,
+      0.14,
+      0.22
+    ],
+    "triangleCount": 560,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DELIVERY_LABEL": {
+    "name": "Tem gửi hàng trống chữ",
+    "key": "delivery_label",
+    "path": "assets/props/shop_core/delivery_label.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.2,
+      0.02,
+      0.15
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SHOPPING_BAG": {
+    "name": "Túi mua sắm",
+    "key": "shopping_bag",
+    "path": "assets/props/shop_core/shopping_bag.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.35,
+      0.55,
+      0.2
+    ],
+    "triangleCount": 1088,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RETURN_BIN": {
+    "name": "Thùng nhận trả đơn",
+    "key": "return_bin",
+    "path": "assets/props/shop_core/return_bin.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.75,
+      0.65,
+      0.6
+    ],
+    "triangleCount": 1108,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_CASH_REGISTER": {
+    "name": "Máy tính tiền",
+    "key": "cash_register",
+    "path": "assets/props/shop_core/cash_register.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.52,
+      0.35,
+      0.4
+    ],
+    "triangleCount": 1984,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DICE_CUBE": {
+    "name": "Xúc xắc 6 mặt",
+    "key": "dice_cube",
+    "path": "assets/props/shop_core/dice_cube.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.38,
+      0.38,
+      0.38
+    ],
+    "triangleCount": 3820,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SHOP_FLAG": {
+    "name": "Cờ chủ quầy",
+    "key": "shop_flag",
+    "path": "assets/props/shop_core/shop_flag.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.35,
+      1,
+      0.12
+    ],
+    "triangleCount": 380,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_OWNERSHIP_SIGN": {
+    "name": "Biển giá 150",
+    "key": "ownership_sign",
+    "path": "assets/props/shop_core/ownership_sign.glb",
+    "pack": "SHOP_CORE",
+    "size": [
+      0.6,
+      0.75,
+      0.15
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SCHOOL_DESK": {
+    "name": "Bàn học",
+    "key": "school_desk",
+    "path": "assets/props/education/school_desk.glb",
+    "pack": "EDUCATION",
+    "size": [
+      1.15,
+      0.65,
+      0.7
+    ],
+    "triangleCount": 992,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SCHOOL_CHAIR": {
+    "name": "Ghế học",
+    "key": "school_chair",
+    "path": "assets/props/education/school_chair.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.5,
+      0.6,
+      0.5
+    ],
+    "triangleCount": 740,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SCHOOL_BACKPACK": {
+    "name": "Cặp sách",
+    "key": "school_backpack",
+    "path": "assets/props/education/school_backpack.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.45,
+      0.6,
+      0.25
+    ],
+    "triangleCount": 1088,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SCHOOL_BOARD": {
+    "name": "Bảng bài tập trống chữ",
+    "key": "school_board",
+    "path": "assets/props/education/school_board.glb",
+    "pack": "EDUCATION",
+    "size": [
+      1.5,
+      1.2,
+      0.15
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TEST_PAPER": {
+    "name": "Tờ đề thi",
+    "key": "test_paper",
+    "path": "assets/props/education/test_paper.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.25,
+      0.01,
+      0.35
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_GRADUATION_HAT": {
+    "name": "Mũ tốt nghiệp",
+    "key": "graduation_hat",
+    "path": "assets/props/education/graduation_hat.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.4,
+      0.22,
+      0.4
+    ],
+    "triangleCount": 432,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_CERTIFICATE": {
+    "name": "Tấm bằng",
+    "key": "certificate",
+    "path": "assets/props/education/certificate.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.5,
+      0.32,
+      0.04
+    ],
+    "triangleCount": 308,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BRIEFCASE": {
+    "name": "Cặp đi làm",
+    "key": "briefcase",
+    "path": "assets/props/education/briefcase.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.45,
+      0.34,
+      0.17
+    ],
+    "triangleCount": 652,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_LAPTOP": {
+    "name": "Laptop",
+    "key": "laptop",
+    "path": "assets/props/education/laptop.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.72,
+      0.4,
+      0.48
+    ],
+    "triangleCount": 3100,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DOCUMENT_STACK": {
+    "name": "Chồng hồ sơ",
+    "key": "document_stack",
+    "path": "assets/props/education/document_stack.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.5,
+      0.25,
+      0.35
+    ],
+    "triangleCount": 552,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_AWARD_MEDAL": {
+    "name": "Huy chương học bổng",
+    "key": "award_medal",
+    "path": "assets/props/education/award_medal.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.35,
+      0.45,
+      0.1
+    ],
+    "triangleCount": 536,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PENCIL": {
+    "name": "Bút chì",
+    "key": "pencil",
+    "path": "assets/props/education/pencil.glb",
+    "pack": "EDUCATION",
+    "size": [
+      0.03,
+      0.02,
+      0.28
+    ],
+    "triangleCount": 476,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_STARTER_HOUSE": {
+    "name": "Nhà lắp ghép",
+    "key": "starter_house",
+    "path": "assets/props/home/starter_house.glb",
+    "pack": "HOME",
+    "size": [
+      2.1,
+      2.2,
+      1.7
+    ],
+    "triangleCount": 2616,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_HOUSE_ROOF": {
+    "name": "Mái tách node",
+    "key": "house_roof",
+    "path": "assets/props/home/house_roof.glb",
+    "pack": "HOME",
+    "size": [
+      2.3,
+      0.6,
+      1.9
+    ],
+    "triangleCount": 1500,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_HOUSE_DOOR": {
+    "name": "Cửa mở riêng",
+    "key": "house_door",
+    "path": "assets/props/home/house_door.glb",
+    "pack": "HOME",
+    "size": [
+      0.72,
+      1.25,
+      0.12
+    ],
+    "triangleCount": 620,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_HOUSE_KEY": {
+    "name": "Chìa khóa",
+    "key": "house_key",
+    "path": "assets/props/home/house_key.glb",
+    "pack": "HOME",
+    "size": [
+      0.13,
+      0.05,
+      0.34
+    ],
+    "triangleCount": 652,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_HOUSE_PRICE_TAG": {
+    "name": "Bảng bán nhà trống chữ",
+    "key": "house_price_tag",
+    "path": "assets/props/home/house_price_tag.glb",
+    "pack": "HOME",
+    "size": [
+      0.65,
+      0.85,
+      0.13
+    ],
+    "triangleCount": 308,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RENT_ENVELOPE": {
+    "name": "Phong bì tiền thuê",
+    "key": "rent_envelope",
+    "path": "assets/props/home/rent_envelope.glb",
+    "pack": "HOME",
+    "size": [
+      0.35,
+      0.04,
+      0.2
+    ],
+    "triangleCount": 260,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WATER_PIPE": {
+    "name": "Ống nước hỏng",
+    "key": "water_pipe",
+    "path": "assets/props/home/water_pipe.glb",
+    "pack": "HOME",
+    "size": [
+      0.9,
+      0.4,
+      0.2
+    ],
+    "triangleCount": 432,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WATER_VALVE": {
+    "name": "Van nước 3 lựa chọn",
+    "key": "water_valve",
+    "path": "assets/props/home/water_valve.glb",
+    "pack": "HOME",
+    "size": [
+      0.2,
+      0.2,
+      0.2
+    ],
+    "triangleCount": 776,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PIPE_WRENCH": {
+    "name": "Cờ lê nước",
+    "key": "pipe_wrench",
+    "path": "assets/props/home/pipe_wrench.glb",
+    "pack": "HOME",
+    "size": [
+      0.07,
+      0.07,
+      0.4
+    ],
+    "triangleCount": 528,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_MOVING_BOX": {
+    "name": "Thùng chuyển trọ",
+    "key": "moving_box",
+    "path": "assets/props/home/moving_box.glb",
+    "pack": "HOME",
+    "size": [
+      0.65,
+      0.6,
+      0.6
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BALCONY": {
+    "name": "Ban công gắn nhà",
+    "key": "balcony",
+    "path": "assets/props/home/balcony.glb",
+    "pack": "HOME",
+    "size": [
+      1,
+      0.65,
+      0.5
+    ],
+    "triangleCount": 868,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_FLOWER_POT": {
+    "name": "Chậu hoa ban công",
+    "key": "flower_pot",
+    "path": "assets/props/home/flower_pot.glb",
+    "pack": "HOME",
+    "size": [
+      0.3,
+      0.45,
+      0.3
+    ],
+    "triangleCount": 7684,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BROOM": {
+    "name": "Chổi quét",
+    "key": "broom",
+    "path": "assets/props/home/broom.glb",
+    "pack": "HOME",
+    "size": [
+      0.08,
+      1.2,
+      0.26
+    ],
+    "triangleCount": 860,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_OLD_FURNITURE": {
+    "name": "Đồ cũ thanh lý",
+    "key": "old_furniture",
+    "path": "assets/props/home/old_furniture.glb",
+    "pack": "HOME",
+    "size": [
+      0.8,
+      0.9,
+      0.6
+    ],
+    "triangleCount": 740,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WEDDING_ARCH": {
+    "name": "Cổng cưới",
+    "key": "wedding_arch",
+    "path": "assets/props/family/wedding_arch.glb",
+    "pack": "FAMILY",
+    "size": [
+      2.4,
+      2.5,
+      0.45
+    ],
+    "triangleCount": 3348,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WEDDING_RING": {
+    "name": "Nhẫn tròn",
+    "key": "wedding_ring",
+    "path": "assets/props/family/wedding_ring.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.2,
+      0.07,
+      0.2
+    ],
+    "triangleCount": 420,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WEDDING_TABLE": {
+    "name": "Bàn cưới",
+    "key": "wedding_table",
+    "path": "assets/props/family/wedding_table.glb",
+    "pack": "FAMILY",
+    "size": [
+      1.1,
+      0.72,
+      0.9
+    ],
+    "triangleCount": 992,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WEDDING_GIFT": {
+    "name": "Quà cưới",
+    "key": "wedding_gift",
+    "path": "assets/props/family/wedding_gift.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.5,
+      0.45,
+      0.5
+    ],
+    "triangleCount": 1304,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RED_ENVELOPE": {
+    "name": "Phong bì mừng",
+    "key": "red_envelope",
+    "path": "assets/props/family/red_envelope.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.3,
+      0.03,
+      0.18
+    ],
+    "triangleCount": 260,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WEDDING_CAKE": {
+    "name": "Bánh cưới",
+    "key": "wedding_cake",
+    "path": "assets/props/family/wedding_cake.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.85,
+      1,
+      0.85
+    ],
+    "triangleCount": 4248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BABY_STROLLER": {
+    "name": "Xe nôi",
+    "key": "baby_stroller",
+    "path": "assets/props/family/baby_stroller.glb",
+    "pack": "FAMILY",
+    "size": [
+      1,
+      1,
+      0.65
+    ],
+    "triangleCount": 1888,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BABY_BOTTLE": {
+    "name": "Bình sữa",
+    "key": "baby_bottle",
+    "path": "assets/props/family/baby_bottle.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.14,
+      0.36,
+      0.14
+    ],
+    "triangleCount": 656,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BABY_BED": {
+    "name": "Nôi em bé",
+    "key": "baby_bed",
+    "path": "assets/props/family/baby_bed.glb",
+    "pack": "FAMILY",
+    "size": [
+      1.2,
+      0.65,
+      0.7
+    ],
+    "triangleCount": 2356,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BIRTHDAY_CAKE": {
+    "name": "Bánh sinh nhật",
+    "key": "birthday_cake",
+    "path": "assets/props/family/birthday_cake.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.7,
+      0.45,
+      0.7
+    ],
+    "triangleCount": 5364,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BIRTHDAY_CANDLE": {
+    "name": "Nến",
+    "key": "birthday_candle",
+    "path": "assets/props/family/birthday_candle.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.05,
+      0.24,
+      0.05
+    ],
+    "triangleCount": 712,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BIRTHDAY_GIFT": {
+    "name": "Hộp quà sinh nhật",
+    "key": "birthday_gift",
+    "path": "assets/props/family/birthday_gift.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.52,
+      0.5,
+      0.52
+    ],
+    "triangleCount": 1304,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TET_TREE": {
+    "name": "Cây Tết mini",
+    "key": "tet_tree",
+    "path": "assets/props/family/tet_tree.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.75,
+      1.35,
+      0.75
+    ],
+    "triangleCount": 2956,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TET_LANTERN": {
+    "name": "Lồng đèn",
+    "key": "tet_lantern",
+    "path": "assets/props/family/tet_lantern.glb",
+    "pack": "FAMILY",
+    "size": [
+      0.38,
+      0.5,
+      0.38
+    ],
+    "triangleCount": 3048,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PARTY_BUNTING": {
+    "name": "Dây cờ tiệc",
+    "key": "party_bunting",
+    "path": "assets/props/family/party_bunting.glb",
+    "pack": "FAMILY",
+    "size": [
+      2.3,
+      0.25,
+      0.15
+    ],
+    "triangleCount": 336,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DOG_BOWL": {
+    "name": "Bát ăn chó",
+    "key": "dog_bowl",
+    "path": "assets/props/pets/dog_bowl.glb",
+    "pack": "PETS",
+    "size": [
+      0.42,
+      0.15,
+      0.42
+    ],
+    "triangleCount": 528,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DOG_BED": {
+    "name": "Đệm chó",
+    "key": "dog_bed",
+    "path": "assets/props/pets/dog_bed.glb",
+    "pack": "PETS",
+    "size": [
+      0.8,
+      0.2,
+      0.65
+    ],
+    "triangleCount": 620,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DOG_TOY_BALL": {
+    "name": "Bóng chó",
+    "key": "dog_toy_ball",
+    "path": "assets/props/pets/dog_toy_ball.glb",
+    "pack": "PETS",
+    "size": [
+      0.25,
+      0.25,
+      0.25
+    ],
+    "triangleCount": 492,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_DOG_LEASH": {
+    "name": "Dây dắt",
+    "key": "dog_leash",
+    "path": "assets/props/pets/dog_leash.glb",
+    "pack": "PETS",
+    "size": [
+      0.03,
+      0.03,
+      0.85
+    ],
+    "triangleCount": 1120,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_LOST_SLIPPER": {
+    "name": "Dép bị giấu",
+    "key": "lost_slipper",
+    "path": "assets/props/pets/lost_slipper.glb",
+    "pack": "PETS",
+    "size": [
+      0.3,
+      0.1,
+      0.5
+    ],
+    "triangleCount": 432,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PET_MED_BAG": {
+    "name": "Túi y tế thú cưng",
+    "key": "pet_med_bag",
+    "path": "assets/props/pets/pet_med_bag.glb",
+    "pack": "PETS",
+    "size": [
+      0.45,
+      0.38,
+      0.2
+    ],
+    "triangleCount": 900,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_VET_TABLE": {
+    "name": "Bàn khám thú y",
+    "key": "vet_table",
+    "path": "assets/props/pets/vet_table.glb",
+    "pack": "PETS",
+    "size": [
+      1.2,
+      0.75,
+      0.75
+    ],
+    "triangleCount": 868,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PET_THERMOMETER": {
+    "name": "Nhiệt kế cute",
+    "key": "pet_thermometer",
+    "path": "assets/props/pets/pet_thermometer.glb",
+    "pack": "PETS",
+    "size": [
+      0.1,
+      0.3,
+      0.05
+    ],
+    "triangleCount": 340,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PET_WARDROBE": {
+    "name": "Tủ đựng đồ chó",
+    "key": "pet_wardrobe",
+    "path": "assets/props/pets/pet_wardrobe.glb",
+    "pack": "PETS",
+    "size": [
+      0.6,
+      1.1,
+      0.5
+    ],
+    "triangleCount": 744,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RESCUE_LADDER": {
+    "name": "Thang cứu mèo",
+    "key": "rescue_ladder",
+    "path": "assets/props/pets/rescue_ladder.glb",
+    "pack": "PETS",
+    "size": [
+      0.4,
+      2.2,
+      0.4
+    ],
+    "triangleCount": 708,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_HOUSE_AWNING": {
+    "name": "Mái hiên mèo mắc",
+    "key": "house_awning",
+    "path": "assets/props/pets/house_awning.glb",
+    "pack": "PETS",
+    "size": [
+      1.8,
+      1.5,
+      0.9
+    ],
+    "triangleCount": 1736,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PET_TROPHY": {
+    "name": "Cúp chó thi tài",
+    "key": "pet_trophy",
+    "path": "assets/props/pets/pet_trophy.glb",
+    "pack": "PETS",
+    "size": [
+      0.5,
+      0.65,
+      0.5
+    ],
+    "triangleCount": 1344,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SAUSAGE_STALL": {
+    "name": "Quầy xúc xích",
+    "key": "sausage_stall",
+    "path": "assets/props/street_food/sausage_stall.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      1.55,
+      1.25,
+      0.85
+    ],
+    "triangleCount": 3220,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SAUSAGE_GRILL": {
+    "name": "Bếp nướng mini",
+    "key": "sausage_grill",
+    "path": "assets/props/street_food/sausage_grill.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.8,
+      0.6,
+      0.5
+    ],
+    "triangleCount": 892,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SAUSAGE_RAW": {
+    "name": "Xúc xích sống",
+    "key": "sausage_raw",
+    "path": "assets/props/street_food/sausage_raw.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.25,
+      0.05,
+      0.08
+    ],
+    "triangleCount": 652,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SAUSAGE_COOKED": {
+    "name": "Xúc xích nướng",
+    "key": "sausage_cooked",
+    "path": "assets/props/street_food/sausage_cooked.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.25,
+      0.05,
+      0.08
+    ],
+    "triangleCount": 652,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SAUSAGE_SKEWER": {
+    "name": "Que xúc xích",
+    "key": "sausage_skewer",
+    "path": "assets/props/street_food/sausage_skewer.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.36,
+      0.04,
+      0.05
+    ],
+    "triangleCount": 744,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TONGS": {
+    "name": "Kẹp gắp",
+    "key": "tongs",
+    "path": "assets/props/street_food/tongs.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.05,
+      0.05,
+      0.35
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SERVING_TRAY": {
+    "name": "Khay món",
+    "key": "serving_tray",
+    "path": "assets/props/street_food/serving_tray.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.52,
+      0.05,
+      0.35
+    ],
+    "triangleCount": 248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SAUCE_BOTTLE": {
+    "name": "Chai tương",
+    "key": "sauce_bottle",
+    "path": "assets/props/street_food/sauce_bottle.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.15,
+      0.4,
+      0.15
+    ],
+    "triangleCount": 408,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_MENU_SIGN_BLANK": {
+    "name": "Bảng menu trống chữ",
+    "key": "menu_sign_blank",
+    "path": "assets/props/street_food/menu_sign_blank.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.72,
+      0.85,
+      0.12
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_MILK_TEA_COUNTER": {
+    "name": "Quầy trà sữa",
+    "key": "milk_tea_counter",
+    "path": "assets/props/street_food/milk_tea_counter.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      1.3,
+      1.1,
+      0.8
+    ],
+    "triangleCount": 3500,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_MILK_TEA_CUP_1": {
+    "name": "Ly 1",
+    "key": "milk_tea_cup_1",
+    "path": "assets/props/street_food/milk_tea_cup_1.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.2,
+      0.48,
+      0.2
+    ],
+    "triangleCount": 1704,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_MILK_TEA_CUP_2": {
+    "name": "Ly 2",
+    "key": "milk_tea_cup_2",
+    "path": "assets/props/street_food/milk_tea_cup_2.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.2,
+      0.48,
+      0.2
+    ],
+    "triangleCount": 1704,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_MILK_TEA_CUP_3": {
+    "name": "Ly 3",
+    "key": "milk_tea_cup_3",
+    "path": "assets/props/street_food/milk_tea_cup_3.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.2,
+      0.48,
+      0.2
+    ],
+    "triangleCount": 1704,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BOBA_TOPPING": {
+    "name": "Khay trân châu",
+    "key": "boba_topping",
+    "path": "assets/props/street_food/boba_topping.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.3,
+      0.12,
+      0.3
+    ],
+    "triangleCount": 1696,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ICE_BOX": {
+    "name": "Hộp đá",
+    "key": "ice_box",
+    "path": "assets/props/street_food/ice_box.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.4,
+      0.3,
+      0.32
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_STRAW": {
+    "name": "Ống hút",
+    "key": "straw",
+    "path": "assets/props/street_food/straw.glb",
+    "pack": "STREET_FOOD",
+    "size": [
+      0.03,
+      0.44,
+      0.03
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SMARTPHONE_BLANK": {
+    "name": "Smartphone màn trống",
+    "key": "smartphone_blank",
+    "path": "assets/props/web/smartphone_blank.glb",
+    "pack": "WEB",
+    "size": [
+      0.3,
+      0.6,
+      0.07
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PHONE_STAND": {
+    "name": "Đế dựng phone",
+    "key": "phone_stand",
+    "path": "assets/props/web/phone_stand.glb",
+    "pack": "WEB",
+    "size": [
+      0.35,
+      0.36,
+      0.24
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TABLET_DASHBOARD": {
+    "name": "Bảng biểu đồ rỗng",
+    "key": "tablet_dashboard",
+    "path": "assets/props/web/tablet_dashboard.glb",
+    "pack": "WEB",
+    "size": [
+      0.9,
+      0.55,
+      0.08
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_COIN_BANH": {
+    "name": "Bánh Coin vật phẩm giả lập",
+    "key": "coin_banh",
+    "path": "assets/props/web/coin_banh.glb",
+    "pack": "WEB",
+    "size": [
+      0.35,
+      0.08,
+      0.35
+    ],
+    "triangleCount": 288,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_COIN_PILE": {
+    "name": "Chồng Bánh Coin",
+    "key": "coin_pile",
+    "path": "assets/props/web/coin_pile.glb",
+    "pack": "WEB",
+    "size": [
+      0.5,
+      0.4,
+      0.5
+    ],
+    "triangleCount": 1728,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_WALLET_TOY": {
+    "name": "Ví đồ chơi",
+    "key": "wallet_toy",
+    "path": "assets/props/web/wallet_toy.glb",
+    "pack": "WEB",
+    "size": [
+      0.4,
+      0.28,
+      0.13
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_FAKE_PRIZE_BOX": {
+    "name": "Hộp trúng thưởng giả",
+    "key": "fake_prize_box",
+    "path": "assets/props/web/fake_prize_box.glb",
+    "pack": "WEB",
+    "size": [
+      0.6,
+      0.55,
+      0.55
+    ],
+    "triangleCount": 1304,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_OTP_CARD_BLANK": {
+    "name": "Thẻ mã giả lập trống text",
+    "key": "otp_card_blank",
+    "path": "assets/props/web/otp_card_blank.glb",
+    "pack": "WEB",
+    "size": [
+      0.35,
+      0.01,
+      0.2
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PAYMENT_RECEIPT": {
+    "name": "Hóa đơn giao dịch",
+    "key": "payment_receipt",
+    "path": "assets/props/web/payment_receipt.glb",
+    "pack": "WEB",
+    "size": [
+      0.4,
+      0.02,
+      0.6
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ADS_CAMERA": {
+    "name": "Máy quay quảng cáo",
+    "key": "ads_camera",
+    "path": "assets/props/web/ads_camera.glb",
+    "pack": "WEB",
+    "size": [
+      0.5,
+      0.56,
+      0.48
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ADS_RING_LIGHT": {
+    "name": "Đèn vòng quay clip",
+    "key": "ads_ring_light",
+    "path": "assets/props/web/ads_ring_light.glb",
+    "pack": "WEB",
+    "size": [
+      0.65,
+      1.25,
+      0.55
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RATING_STAND": {
+    "name": "Bảng đánh giá trống",
+    "key": "rating_stand",
+    "path": "assets/props/web/rating_stand.glb",
+    "pack": "WEB",
+    "size": [
+      0.7,
+      0.82,
+      0.08
+    ],
+    "triangleCount": 616,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TRAFFIC_LIGHT": {
+    "name": "Đèn đỏ xanh",
+    "key": "traffic_light",
+    "path": "assets/props/road/traffic_light.glb",
+    "pack": "ROAD",
+    "size": [
+      0.33,
+      1.9,
+      0.33
+    ],
+    "triangleCount": 1084,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TRAFFIC_SIGN": {
+    "name": "Biển hiệu giao thông",
+    "key": "traffic_sign",
+    "path": "assets/props/road/traffic_sign.glb",
+    "pack": "ROAD",
+    "size": [
+      0.6,
+      1.35,
+      0.15
+    ],
+    "triangleCount": 464,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_POLICE_WHISTLE": {
+    "name": "Còi công an",
+    "key": "police_whistle",
+    "path": "assets/props/road/police_whistle.glb",
+    "pack": "ROAD",
+    "size": [
+      0.15,
+      0.12,
+      0.09
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TICKET_PAPER": {
+    "name": "Biên bản",
+    "key": "ticket_paper",
+    "path": "assets/props/road/ticket_paper.glb",
+    "pack": "ROAD",
+    "size": [
+      0.4,
+      0.02,
+      0.5
+    ],
+    "triangleCount": 184,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_TOY_SCOOTER": {
+    "name": "Xe tay ga toy",
+    "key": "toy_scooter",
+    "path": "assets/props/road/toy_scooter.glb",
+    "pack": "ROAD",
+    "size": [
+      1.15,
+      0.85,
+      0.65
+    ],
+    "triangleCount": 1300,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SCOOTER_WHEEL": {
+    "name": "Bánh xe quay riêng",
+    "key": "scooter_wheel",
+    "path": "assets/props/road/scooter_wheel.glb",
+    "pack": "ROAD",
+    "size": [
+      0.3,
+      0.3,
+      0.12
+    ],
+    "triangleCount": 248,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_REPAIR_WRENCH": {
+    "name": "Cờ lê sửa xe",
+    "key": "repair_wrench",
+    "path": "assets/props/road/repair_wrench.glb",
+    "pack": "ROAD",
+    "size": [
+      0.08,
+      0.08,
+      0.38
+    ],
+    "triangleCount": 404,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RAINCOAT": {
+    "name": "Áo mưa vật phẩm",
+    "key": "raincoat",
+    "path": "assets/props/road/raincoat.glb",
+    "pack": "ROAD",
+    "size": [
+      0.8,
+      1,
+      0.15
+    ],
+    "triangleCount": 452,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_UMBRELLA": {
+    "name": "Ô mưa mở",
+    "key": "umbrella",
+    "path": "assets/props/road/umbrella.glb",
+    "pack": "ROAD",
+    "size": [
+      1,
+      1.35,
+      1
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RAIN_PUDDLE": {
+    "name": "Vũng nước",
+    "key": "rain_puddle",
+    "path": "assets/props/road/rain_puddle.glb",
+    "pack": "ROAD",
+    "size": [
+      0.9,
+      0.02,
+      0.65
+    ],
+    "triangleCount": 576,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ROAD_BARRIER": {
+    "name": "Rào chắn hội chợ",
+    "key": "road_barrier",
+    "path": "assets/props/road/road_barrier.glb",
+    "pack": "ROAD",
+    "size": [
+      1.3,
+      0.8,
+      0.2
+    ],
+    "triangleCount": 1488,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ROAD_MAP_FOLDED": {
+    "name": "Bản đồ hẻm",
+    "key": "road_map_folded",
+    "path": "assets/props/road/road_map_folded.glb",
+    "pack": "ROAD",
+    "size": [
+      0.5,
+      0.03,
+      0.45
+    ],
+    "triangleCount": 868,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_LOST_WALLET": {
+    "name": "Ví nhặt được",
+    "key": "lost_wallet",
+    "path": "assets/props/road/lost_wallet.glb",
+    "pack": "ROAD",
+    "size": [
+      0.4,
+      0.25,
+      0.15
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_FESTIVAL_STALL": {
+    "name": "Gian hội chợ chắn lối",
+    "key": "festival_stall",
+    "path": "assets/props/road/festival_stall.glb",
+    "pack": "ROAD",
+    "size": [
+      1.5,
+      1.35,
+      0.8
+    ],
+    "triangleCount": 2852,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_STREET_BOX_WET": {
+    "name": "Thùng ướt",
+    "key": "street_box_wet",
+    "path": "assets/props/road/street_box_wet.glb",
+    "pack": "ROAD",
+    "size": [
+      0.55,
+      0.5,
+      0.5
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_FOAM_BOMB_3D": {
+    "name": "Bom xốp dễ thương",
+    "key": "foam_bomb_3d",
+    "path": "assets/props/gifts/foam_bomb_3d.glb",
+    "pack": "GIFTS",
+    "size": [
+      0.55,
+      0.55,
+      0.55
+    ],
+    "triangleCount": 1192,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_FOAM_CRATE": {
+    "name": "Thùng xốp vỡ tách node",
+    "key": "foam_crate",
+    "path": "assets/props/gifts/foam_crate.glb",
+    "pack": "GIFTS",
+    "size": [
+      0.75,
+      0.7,
+      0.7
+    ],
+    "triangleCount": 1728,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PROTECT_UMBRELLA": {
+    "name": "Ô che đơn khớp socket",
+    "key": "protect_umbrella",
+    "path": "assets/props/gifts/protect_umbrella.glb",
+    "pack": "GIFTS",
+    "size": [
+      1.2,
+      1.1,
+      1.2
+    ],
+    "triangleCount": 372,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_SALE_TROLLEY": {
+    "name": "Xe đẩy sale",
+    "key": "sale_trolley",
+    "path": "assets/props/gifts/sale_trolley.glb",
+    "pack": "GIFTS",
+    "size": [
+      1.15,
+      0.9,
+      0.65
+    ],
+    "triangleCount": 2136,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_GIFT_BOX_TOY": {
+    "name": "Hộp quà giả lập",
+    "key": "gift_box_toy",
+    "path": "assets/props/gifts/gift_box_toy.glb",
+    "pack": "GIFTS",
+    "size": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "triangleCount": 1304,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_BADGE_TARGET_POLE": {
+    "name": "Cọc hiệu ghế nhắm",
+    "key": "badge_target_pole",
+    "path": "assets/props/gifts/badge_target_pole.glb",
+    "pack": "GIFTS",
+    "size": [
+      0.4,
+      0.8,
+      0.2
+    ],
+    "triangleCount": 380,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "yes",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_PACKING_TABLE": {
+    "name": "Bàn đóng gói",
+    "key": "packing_table",
+    "path": "assets/props/minigames/packing_table.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      1.25,
+      0.7,
+      0.75
+    ],
+    "triangleCount": 744,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ITEM_BOX": {
+    "name": "Hộp đề bài",
+    "key": "item_box",
+    "path": "assets/props/minigames/item_box.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      0.4,
+      0.3,
+      0.35
+    ],
+    "triangleCount": 668,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ITEM_TAPE": {
+    "name": "Băng dính đề bài",
+    "key": "item_tape",
+    "path": "assets/props/minigames/item_tape.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      0.22,
+      0.14,
+      0.22
+    ],
+    "triangleCount": 560,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ITEM_STAMP": {
+    "name": "Tem đề bài",
+    "key": "item_stamp",
+    "path": "assets/props/minigames/item_stamp.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      0.23,
+      0.02,
+      0.2
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ITEM_CUP": {
+    "name": "Ly đề bài",
+    "key": "item_cup",
+    "path": "assets/props/minigames/item_cup.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      0.2,
+      0.42,
+      0.2
+    ],
+    "triangleCount": 1704,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ITEM_TOPPING": {
+    "name": "Topping đề bài",
+    "key": "item_topping",
+    "path": "assets/props/minigames/item_topping.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      0.26,
+      0.18,
+      0.26
+    ],
+    "triangleCount": 1696,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_RECEIPT_BOARD": {
+    "name": "Bảng hóa đơn",
+    "key": "receipt_board",
+    "path": "assets/props/minigames/receipt_board.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      1,
+      0.85,
+      0.11
+    ],
+    "triangleCount": 496,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  },
+  "P_ANSWER_PEDESTAL": {
+    "name": "Bệ đáp án 1/2/3",
+    "key": "answer_pedestal",
+    "path": "assets/props/minigames/answer_pedestal.glb",
+    "pack": "MINIGAMES",
+    "size": [
+      0.6,
+      0.55,
+      0.55
+    ],
+    "triangleCount": 412,
+    "pivot": "bottom-center",
+    "rotation": "0,0,0",
+    "collider": "no",
+    "notes": "Đạo cụ là 3D, có socket/marker; vật phẩm gần tay phải căn theo ANIM_COORDS"
+  }
+}

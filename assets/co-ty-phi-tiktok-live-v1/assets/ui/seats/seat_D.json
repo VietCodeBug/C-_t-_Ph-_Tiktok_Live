@@ -1,0 +1,8 @@
+{
+  "seat": "D",
+  "accent": "#8ADFC3",
+  "background": "#FFF3DB",
+  "outline": "#35283E",
+  "badge": "assets/ui/core/hud_seat_badge.svg",
+  "style": "badge ký tự đậm"
+}
