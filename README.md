@@ -1,28 +1,40 @@
-# Cờ Tý Phí TikTok LIVE — Map 10 ghế · 9:16
+# Cờ Tý Phí — Web demo camera · Asset v2.3
 
-**Phạm vi hiện tại: chỉ dựng map. Người dùng tự tạo nhân vật, props, UI và âm thanh.**
+Bản web 3D dọc 9:16 cho 10 nhân vật từ bộ sprite v2.3 trong Git. Camera tự chuyển từ nhìn toàn bàn sang góc thứ ba bám phía sau nhân vật, rồi lần lượt qua các ghế A–J.
 
-Hai map 3D theo XLSX/DOCX tải lên: **Chợ Vỉa Hè** và **Phố Giao Hàng**. Mỗi map có 24 node, hai ga C00/C08, hai ngã rẽ F01/F02. Ảnh là render 1080×1920 từ hình học thật, có marker A–J minh họa 10 vị trí, không phải concept sinh ảnh.
+![Web demo — toàn bàn](web/docs/overview.png)
 
-## Xem map
+[Xem góc thứ ba trên điện thoại](web/docs/third-person-mobile.png)
 
-### Chợ Vỉa Hè
+## Chạy bản web
 
-![Chợ Vỉa Hè — 10 ghế](assets/map/previews/cho_via_he_10_seats_1080x1920.png)
+```bash
+cd web
+npm ci
+npm run dev
+```
 
-### Phố Giao Hàng
+`npm run build` xuất website tĩnh vào `web/dist`; `npm run preview` mở bản build. [Hướng dẫn và điều khiển](web/README.md).
 
-![Phố Giao Hàng — 10 ghế](assets/map/previews/pho_giao_hang_10_seats_1080x1920.png)
+- Chuyển tự động / toàn bàn / bám nhân vật.
+- Chọn một ghế, chuyển lượt, tạm dừng và đổi tốc độ xem.
+- Đổi Chợ Vỉa Hè / Phố Giao Hàng.
+- Nút chụp bản đồ 1080×1920.
 
-## Tệp bàn giao
+## Asset thật được dùng
 
-- [Chợ Vỉa Hè GLB](assets/map/cho_via_he.glb) · [nguồn Blender](assets/map/source/cho_via_he.blend)
-- [Phố Giao Hàng GLB](assets/map/pho_giao_hang.glb) · [nguồn Blender](assets/map/source/pho_giao_hang.blend)
-- [Graph, spawn, camera và collider đề xuất](assets/map/board_layouts.json)
-- [Quy cách thay asset và điểm gắn](assets/map/README.md)
-- [Báo cáo kiểm tra map](assets/map/validation.json)
-- [Nguồn và đối chiếu phạm vi](docs/co-ty-phu/07-master-source-reconciliation.md)
+- Sprite V2.3: [assets/co-ty-phi-tiktok-live-v2](assets/co-ty-phi-tiktok-live-v2/README_V2_3.md), nguồn commit `fb996c6`.
+- Nhà, cây, quầy, cổng và đạo cụ: [bộ môi trường v1](assets/co-ty-phi-tiktok-live-v1/README.md).
+- Map và graph dọc: [assets/map](assets/map/README.md).
 
-Tọa độ đề xuất trong sheet được xoay/căn giữa và giãn dọc để hợp 9:16; giữ nguyên graph, độ rộng ô 2 wu và số bước. Các vị trí cũ/new đều giữ trong JSON. Không có nhân vật hay đạo cụ tự sản xuất trong GLB này; các slot chờ asset của người dùng. Marker A–J chỉ thuộc ảnh kiểm tra.
+File gốc được giữ nguyên. Manifest crop/pivot/animation được đọc từ gói; sprite chạy theo quãng đường và đổi S/E/N/W theo hướng nhìn camera. Hướng sau dùng artwork quay lưng, không phải góc nhìn thứ nhất.
 
-Các tệp ở `assets/co-ty-phu/` và tài liệu 01–06 là lịch sử prototype trước khi có nguồn; không tính chúng là map hiện hành. Chưa triển khai gameplay, mạng hoặc benchmark FPS.
+## Mở qua GitHub Pages
+
+Nhánh `gh-pages` chứa bản build sẵn. Nếu Pages chưa bật, vào Settings → Pages → Deploy from a branch → gh-pages → /(root), rồi Save. URL dự kiến: `https://vietcodebug.github.io/C-_t-_Ph-_Tiktok_Live/`. Trạng thái bật site chưa xác nhận được từ cloud hiện tại; xem [deployment receipt](web/docs/deployment.json).
+
+## Kiểm tra
+
+[Browser smoke report](web/docs/browser-smoke.json): 18 kiểm tra đạt, gồm chuyển động/animation thật, camera thứ ba phía sau, chọn ghế, đổi map, pause, responsive 9:16 và xuất ảnh. Thử cả đường dẫn con như GitHub Pages. Không có lỗi ứng dụng hoặc request lỗi trong lần kiểm tra.
+
+Đây là demo hình ảnh/camera, chưa phải game TikTok LIVE hoàn chỉnh. Chưa có backend kinh tế, chat/quà hoặc benchmark phần cứng phát LIVE. Prototype thú 3D/Bến Mây cũ không được dùng cho nhân vật của bản web.

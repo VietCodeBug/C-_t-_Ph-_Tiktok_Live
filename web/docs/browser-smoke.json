@@ -1,0 +1,319 @@
+{
+  "tests": [
+    {
+      "test": "real v2.3 assets and ten sprites",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "no invalid geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "actor actually moves",
+      "passed": true,
+      "detail": {
+        "distance": 0.4079999999999995
+      }
+    },
+    {
+      "test": "animation advances while moving",
+      "passed": true,
+      "detail": {
+        "before": 0,
+        "after": 7,
+        "clip": "run"
+      }
+    },
+    {
+      "test": "automatic mode enters third-person view",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "third-person camera remains behind and outside the actor",
+      "passed": true,
+      "detail": {
+        "distance": 4.991873447140614,
+        "behind_dot": -4.059177413640013
+      }
+    },
+    {
+      "test": "overview camera control",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "pause stops root motion and animation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "seat selection uses the real character",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "next-turn button advances seat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "second map loads with valid geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "portrait viewport keeps 9:16",
+      "passed": true,
+      "detail": {
+        "x": 23.3125,
+        "y": 97,
+        "width": 343.375,
+        "height": 612
+      }
+    },
+    {
+      "test": "mobile has no horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "mobile third-person control works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "mobile character selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "screenshot export is exactly 1080x1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "test": "no browser app errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "test": "no failed requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "failed_requests": [],
+  "renderer": "headless Chromium with software WebGL fallback; not target-device FPS evidence",
+  "final_snapshot": {
+    "map": "CHO_VIA_HE",
+    "active": 7,
+    "seat": "H",
+    "name": "Sữa Đeo Ba Lô",
+    "mode": "follow",
+    "cameraView": "follow",
+    "phase": "roll",
+    "paused": true,
+    "speed": 1,
+    "turn": 1,
+    "roll": 4,
+    "remaining": 4,
+    "node": "F02_L2",
+    "destination": "F02_L2",
+    "tile": "KINH DOANH",
+    "players": [
+      {
+        "seat": "A",
+        "name": "Mít Tóc Xù",
+        "position": [
+          -3,
+          0,
+          8
+        ],
+        "heading": [
+          0,
+          0,
+          -1
+        ],
+        "clip": "idle",
+        "frame": 1,
+        "facing": "N"
+      },
+      {
+        "seat": "B",
+        "name": "Na Kẹp Sao",
+        "position": [
+          -3,
+          0,
+          4.800000000000001
+        ],
+        "heading": [
+          -0.4244338762307196,
+          0,
+          -0.9054589359588686
+        ],
+        "clip": "idle",
+        "frame": 2,
+        "facing": "S"
+      },
+      {
+        "seat": "C",
+        "name": "Bắp Nón Lưỡi Trai",
+        "position": [
+          -4.5,
+          0,
+          -1.6
+        ],
+        "heading": [
+          0.4244338762307196,
+          0,
+          -0.9054589359588686
+        ],
+        "clip": "idle",
+        "frame": 2,
+        "facing": "S"
+      },
+      {
+        "seat": "D",
+        "name": "Cà Rốt Kính Tròn",
+        "position": [
+          -3,
+          0,
+          -8
+        ],
+        "heading": [
+          0,
+          0,
+          -1
+        ],
+        "clip": "idle",
+        "frame": 3,
+        "facing": "S"
+      },
+      {
+        "seat": "E",
+        "name": "Bơ Tóc Hai Búi",
+        "position": [
+          -1,
+          0,
+          -11.200000000000001
+        ],
+        "heading": [
+          1,
+          0,
+          0
+        ],
+        "clip": "idle",
+        "frame": 4,
+        "facing": "S"
+      },
+      {
+        "seat": "F",
+        "name": "Khoai Áo Yếm",
+        "position": [
+          3,
+          0,
+          -11.200000000000001
+        ],
+        "heading": [
+          0,
+          0,
+          1
+        ],
+        "clip": "idle",
+        "frame": 5,
+        "facing": "S"
+      },
+      {
+        "seat": "G",
+        "name": "Đào Tóc Dài",
+        "position": [
+          3,
+          0,
+          -4.800000000000001
+        ],
+        "heading": [
+          -0.4244338762307196,
+          0,
+          0.9054589359588686
+        ],
+        "clip": "idle",
+        "frame": 6,
+        "facing": "S"
+      },
+      {
+        "seat": "H",
+        "name": "Sữa Đeo Ba Lô",
+        "position": [
+          1.5,
+          0,
+          1.6
+        ],
+        "heading": [
+          0.4244338762307196,
+          0,
+          0.9054589359588686
+        ],
+        "clip": "roll_dice",
+        "frame": 3,
+        "facing": "S"
+      },
+      {
+        "seat": "I",
+        "name": "Me Mái Bằng",
+        "position": [
+          3,
+          0,
+          8
+        ],
+        "heading": [
+          0,
+          0,
+          1
+        ],
+        "clip": "idle",
+        "frame": 0,
+        "facing": "S"
+      },
+      {
+        "seat": "J",
+        "name": "Tí Mặt Tàn Nhang",
+        "position": [
+          1,
+          0,
+          11.200000000000001
+        ],
+        "heading": [
+          -1,
+          0,
+          0
+        ],
+        "clip": "idle",
+        "frame": 1,
+        "facing": "S"
+      }
+    ],
+    "camera": {
+      "position": [
+        -0.1292937758334823,
+        2.9000002338778845,
+        -1.757277065428275
+      ],
+      "target": [
+        1.9514745078728188,
+        0.57999999966603,
+        2.612396140397496
+      ],
+      "distanceToPlayer": 4.7260881137059005
+    },
+    "spriteVersion": "2.3",
+    "runtime": {
+      "calls": 15,
+      "triangles": 111104
+    }
+  },
+  "status": "PASS"
+}
