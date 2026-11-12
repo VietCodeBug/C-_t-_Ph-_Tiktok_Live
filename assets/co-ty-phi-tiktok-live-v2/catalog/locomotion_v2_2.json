@@ -1,0 +1,610 @@
+{
+  "version": "2.2",
+  "base": "Cờ Tý Phí Sprite V2",
+  "counts": {
+    "characters": 26,
+    "atlases": 67,
+    "frames": 4020
+  },
+  "uniqueSpriteDirections": [
+    "S",
+    "E",
+    "N"
+  ],
+  "mirroredDirection": {
+    "W": "E"
+  },
+  "cameraDirectionRule": "Use the dominant axis of the movement vector after projecting onto camera right and camera down. Choose E or W on ties. Zero velocity keeps the previous facing.",
+  "projection": {
+    "s": 0,
+    "e": 90,
+    "n": 180,
+    "w": 270,
+    "floorDepthScale": 0.52
+  },
+  "compatibilityRows": {
+    "S": "S",
+    "SE": "E",
+    "E": "E",
+    "NE": "E",
+    "N": "N"
+  },
+  "legacyMirroredRows": {
+    "W": "E",
+    "NW": "E",
+    "SW": "E"
+  },
+  "shoeOrientation": {
+    "S": "toe toward viewer",
+    "N": "heel toward viewer",
+    "E": "both toes right",
+    "W": "both toes left"
+  },
+  "normalWalkPhases": [
+    {
+      "phase": 0,
+      "state": "leading foot contacts"
+    },
+    {
+      "phase": 0.1,
+      "state": "weight accepted; both feet on floor"
+    },
+    {
+      "phase": 0.35,
+      "state": "support leg carries weight as the other foot passes"
+    },
+    {
+      "phase": 0.5,
+      "state": "opposite foot contacts"
+    },
+    {
+      "phase": 0.625,
+      "state": "previous support lifts after the new support is on floor"
+    }
+  ],
+  "timing": "Use distance travelled to advance phase. cycleTravelArtPx is root motion per full cycle before camera projection. The locked stance foot moves back in sprite-local coordinates as the token travels forward in world coordinates.",
+  "refinement": {
+    "clips": [
+      "walk",
+      "rain_walk"
+    ],
+    "characters": 24,
+    "atlasCount": 44,
+    "description": "Reduced knee flex and foot lift. Shoulder roots and sleeve silhouettes pulled in slightly."
+  },
+  "data": {
+    "ch01": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 79.04,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch01/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 115.44,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch01/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 72.8,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch01/rain_walk.png"
+      }
+    },
+    "ch02": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 69.92,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch02/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 102.12,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch02/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 64.4,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch02/rain_walk.png"
+      }
+    },
+    "ch03": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 85.88,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch03/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 125.43,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch03/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 79.1,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch03/rain_walk.png"
+      }
+    },
+    "ch04": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 60.8,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch04/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 88.8,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch04/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 56.0,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch04/rain_walk.png"
+      }
+    },
+    "ch05": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 80.56,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch05/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 117.66,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch05/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 74.2,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch05/rain_walk.png"
+      }
+    },
+    "ch06": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 63.84,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch06/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 93.24,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch06/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 58.8,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch06/rain_walk.png"
+      }
+    },
+    "ch07": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 85.12,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch07/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 124.32,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch07/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 78.4,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch07/rain_walk.png"
+      }
+    },
+    "ch08": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 68.4,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch08/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 99.9,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch08/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 63.0,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch08/rain_walk.png"
+      }
+    },
+    "ch09": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 74.48,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch09/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 108.78,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch09/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 68.6,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch09/rain_walk.png"
+      }
+    },
+    "ch10": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 79.04,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch10/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 115.44,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch10/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 72.8,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch10/rain_walk.png"
+      }
+    },
+    "ch11": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 66.88,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch11/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 97.68,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch11/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 61.6,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch11/rain_walk.png"
+      }
+    },
+    "ch12": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 59.28,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch12/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 86.58,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch12/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 54.6,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch12/rain_walk.png"
+      }
+    },
+    "ch13": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 67.64,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch13/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 98.79,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch13/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 62.3,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch13/rain_walk.png"
+      }
+    },
+    "ch14": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 76.0,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch14/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 111.0,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch14/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 70.0,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch14/rain_walk.png"
+      }
+    },
+    "ch15": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 69.16,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch15/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 101.01,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch15/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 63.7,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch15/rain_walk.png"
+      }
+    },
+    "ch16": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 85.88,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch16/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 125.43,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch16/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 79.1,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch16/rain_walk.png"
+      }
+    },
+    "ch17": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 70.68,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch17/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 103.23,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch17/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 65.1,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch17/rain_walk.png"
+      }
+    },
+    "ch18": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 76.0,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch18/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 111.0,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch18/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 70.0,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch18/rain_walk.png"
+      }
+    },
+    "ch19": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 60.8,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch19/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 88.8,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch19/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 56.0,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch19/rain_walk.png"
+      }
+    },
+    "ch20": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 79.8,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/ch20/walk.png"
+      },
+      "run": {
+        "frameCount": 12,
+        "fps": 18,
+        "cycleTravelArtPx": 116.55,
+        "stanceFraction": 0.42,
+        "path": "assets/characters/ch20/run.png"
+      },
+      "rain_walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 73.5,
+        "stanceFraction": 0.65,
+        "path": "assets/characters/ch20/rain_walk.png"
+      }
+    },
+    "npc03": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 85.88,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/npc/npc03/walk.png"
+      }
+    },
+    "npc04": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 65.36,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/npc/npc04/walk.png"
+      }
+    },
+    "npc11": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 70.68,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/npc/npc11/walk.png"
+      }
+    },
+    "npc15": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 72.2,
+        "stanceFraction": 0.625,
+        "path": "assets/characters/npc/npc15/walk.png"
+      }
+    },
+    "pet_cat": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 39,
+        "stanceFraction": 0.7,
+        "path": "assets/characters/npc/pet_cat/walk.png"
+      }
+    },
+    "pet_dog": {
+      "walk": {
+        "frameCount": 12,
+        "fps": 16,
+        "cycleTravelArtPx": 39,
+        "stanceFraction": 0.7,
+        "path": "assets/characters/npc/pet_dog/walk.png"
+      },
+      "fetch": {
+        "frameCount": 12,
+        "fps": 12,
+        "cycleTravelArtPx": 59,
+        "stanceFraction": 0.47,
+        "path": "assets/characters/npc/pet_dog/fetch.png"
+      }
+    }
+  },
+  "qa": {
+    "maxFootDriftOnPlantedIntervalPx": 0.0,
+    "maxLegLengthErrorPx": 0.0,
+    "samplesPerCycle": 720,
+    "stanceFraction": {
+      "walk": 0.625,
+      "run": 0.42,
+      "rain_walk": 0.65,
+      "pet_walk": 0.7,
+      "fetch": 0.47
+    }
+  }
+}

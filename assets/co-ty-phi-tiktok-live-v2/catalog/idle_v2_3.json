@@ -1,0 +1,1414 @@
+{
+  "version": "2.3",
+  "animation": "idle",
+  "clock": "elapsedSeconds",
+  "cycleTravelArtPx": 0,
+  "defaultFacing": "S",
+  "onStop": "Keep the last movement facing.",
+  "directions": {
+    "S": {
+      "row": 0
+    },
+    "E": {
+      "row": 2
+    },
+    "W": {
+      "row": 2,
+      "flipX": true
+    },
+    "N": {
+      "row": 4
+    }
+  },
+  "rowArt": {
+    "S": "S",
+    "SE": "E",
+    "E": "E",
+    "NE": "E",
+    "N": "N"
+  },
+  "frameSize": [
+    256,
+    256
+  ],
+  "pivot": [
+    128,
+    218
+  ],
+  "characters": {
+    "ch01": {
+      "atlas": "assets/characters/ch01/idle.png",
+      "manifest": "assets/characters/ch01/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch02": {
+      "atlas": "assets/characters/ch02/idle.png",
+      "manifest": "assets/characters/ch02/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch03": {
+      "atlas": "assets/characters/ch03/idle.png",
+      "manifest": "assets/characters/ch03/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch04": {
+      "atlas": "assets/characters/ch04/idle.png",
+      "manifest": "assets/characters/ch04/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch05": {
+      "atlas": "assets/characters/ch05/idle.png",
+      "manifest": "assets/characters/ch05/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch06": {
+      "atlas": "assets/characters/ch06/idle.png",
+      "manifest": "assets/characters/ch06/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch07": {
+      "atlas": "assets/characters/ch07/idle.png",
+      "manifest": "assets/characters/ch07/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch08": {
+      "atlas": "assets/characters/ch08/idle.png",
+      "manifest": "assets/characters/ch08/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch09": {
+      "atlas": "assets/characters/ch09/idle.png",
+      "manifest": "assets/characters/ch09/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch10": {
+      "atlas": "assets/characters/ch10/idle.png",
+      "manifest": "assets/characters/ch10/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch11": {
+      "atlas": "assets/characters/ch11/idle.png",
+      "manifest": "assets/characters/ch11/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch12": {
+      "atlas": "assets/characters/ch12/idle.png",
+      "manifest": "assets/characters/ch12/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch13": {
+      "atlas": "assets/characters/ch13/idle.png",
+      "manifest": "assets/characters/ch13/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch14": {
+      "atlas": "assets/characters/ch14/idle.png",
+      "manifest": "assets/characters/ch14/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch15": {
+      "atlas": "assets/characters/ch15/idle.png",
+      "manifest": "assets/characters/ch15/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch16": {
+      "atlas": "assets/characters/ch16/idle.png",
+      "manifest": "assets/characters/ch16/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch17": {
+      "atlas": "assets/characters/ch17/idle.png",
+      "manifest": "assets/characters/ch17/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch18": {
+      "atlas": "assets/characters/ch18/idle.png",
+      "manifest": "assets/characters/ch18/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch19": {
+      "atlas": "assets/characters/ch19/idle.png",
+      "manifest": "assets/characters/ch19/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "ch20": {
+      "atlas": "assets/characters/ch20/idle.png",
+      "manifest": "assets/characters/ch20/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc01": {
+      "atlas": "assets/characters/npc/npc01/idle.png",
+      "manifest": "assets/characters/npc/npc01/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": null
+    },
+    "npc02": {
+      "atlas": "assets/characters/npc/npc02/idle.png",
+      "manifest": "assets/characters/npc/npc02/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc03": {
+      "atlas": "assets/characters/npc/npc03/idle.png",
+      "manifest": "assets/characters/npc/npc03/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc04": {
+      "atlas": "assets/characters/npc/npc04/idle.png",
+      "manifest": "assets/characters/npc/npc04/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc05": {
+      "atlas": "assets/characters/npc/npc05/idle.png",
+      "manifest": "assets/characters/npc/npc05/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc06": {
+      "atlas": "assets/characters/npc/npc06/idle.png",
+      "manifest": "assets/characters/npc/npc06/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc07": {
+      "atlas": "assets/characters/npc/npc07/idle.png",
+      "manifest": "assets/characters/npc/npc07/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc08": {
+      "atlas": "assets/characters/npc/npc08/idle.png",
+      "manifest": "assets/characters/npc/npc08/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc09": {
+      "atlas": "assets/characters/npc/npc09/idle.png",
+      "manifest": "assets/characters/npc/npc09/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc10": {
+      "atlas": "assets/characters/npc/npc10/idle.png",
+      "manifest": "assets/characters/npc/npc10/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc11": {
+      "atlas": "assets/characters/npc/npc11/idle.png",
+      "manifest": "assets/characters/npc/npc11/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc12": {
+      "atlas": "assets/characters/npc/npc12/idle.png",
+      "manifest": "assets/characters/npc/npc12/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc13": {
+      "atlas": "assets/characters/npc/npc13/idle.png",
+      "manifest": "assets/characters/npc/npc13/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc14": {
+      "atlas": "assets/characters/npc/npc14/idle.png",
+      "manifest": "assets/characters/npc/npc14/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc15": {
+      "atlas": "assets/characters/npc/npc15/idle.png",
+      "manifest": "assets/characters/npc/npc15/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": {
+        "S": [
+          [
+            114,
+            219
+          ],
+          [
+            142,
+            217
+          ]
+        ],
+        "E": [
+          [
+            129,
+            225
+          ],
+          [
+            127,
+            211
+          ]
+        ],
+        "N": [
+          [
+            142,
+            217
+          ],
+          [
+            114,
+            219
+          ]
+        ]
+      }
+    },
+    "npc16": {
+      "atlas": "assets/characters/npc/npc16/idle.png",
+      "manifest": "assets/characters/npc/npc16/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": null
+    },
+    "pet_baby": {
+      "atlas": "assets/characters/npc/pet_baby/idle.png",
+      "manifest": "assets/characters/npc/pet_baby/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": null
+    },
+    "pet_bird": {
+      "atlas": "assets/characters/npc/pet_bird/idle.png",
+      "manifest": "assets/characters/npc/pet_bird/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": null
+    },
+    "pet_cat": {
+      "atlas": "assets/characters/npc/pet_cat/idle.png",
+      "manifest": "assets/characters/npc/pet_cat/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": null
+    },
+    "pet_dog": {
+      "atlas": "assets/characters/npc/pet_dog/idle.png",
+      "manifest": "assets/characters/npc/pet_dog/animations.json",
+      "framesPerDirection": 8,
+      "fps": 8,
+      "loop": true,
+      "plantedFootSockets": null
+    }
+  }
+}

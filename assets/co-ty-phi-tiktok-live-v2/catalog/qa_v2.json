@@ -1,0 +1,298 @@
+{
+  "summary": {
+    "characters": 40,
+    "playerClips": 1040,
+    "nonPlayerClips": 68,
+    "frameCount": 62670,
+    "paddingExceptions": 0
+  },
+  "characters": {
+    "ch01": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 31,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch02": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch03": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 28,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch04": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch05": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 31,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch06": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch07": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch08": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch09": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch10": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch11": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 31,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch12": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch13": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch14": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch15": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 29,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch16": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch17": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch18": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch19": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 28,
+      "framesWithPaddingBelow8": 0
+    },
+    "ch20": {
+      "kind": "player",
+      "clipCount": 52,
+      "frames": 2960,
+      "heldFrames": 27,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc01": {
+      "kind": "beast",
+      "clipCount": 4,
+      "frames": 220,
+      "heldFrames": 8,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc02": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 150,
+      "heldFrames": 20,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc03": {
+      "kind": "npc",
+      "clipCount": 4,
+      "frames": 200,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc04": {
+      "kind": "npc",
+      "clipCount": 4,
+      "frames": 190,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc05": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 150,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc06": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 150,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc07": {
+      "kind": "npc",
+      "clipCount": 2,
+      "frames": 100,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc08": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 140,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc09": {
+      "kind": "npc",
+      "clipCount": 2,
+      "frames": 90,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc10": {
+      "kind": "npc",
+      "clipCount": 2,
+      "frames": 100,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc11": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 150,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc12": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 170,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc13": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 150,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc14": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 160,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc15": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 150,
+      "heldFrames": 15,
+      "framesWithPaddingBelow8": 0
+    },
+    "npc16": {
+      "kind": "npc",
+      "clipCount": 3,
+      "frames": 140,
+      "heldFrames": 0,
+      "framesWithPaddingBelow8": 0
+    },
+    "pet_dog": {
+      "kind": "beast",
+      "clipCount": 8,
+      "frames": 430,
+      "heldFrames": 48,
+      "framesWithPaddingBelow8": 0
+    },
+    "pet_cat": {
+      "kind": "beast",
+      "clipCount": 5,
+      "frames": 270,
+      "heldFrames": 25,
+      "framesWithPaddingBelow8": 0
+    },
+    "pet_baby": {
+      "kind": "beast",
+      "clipCount": 4,
+      "frames": 200,
+      "heldFrames": 0,
+      "framesWithPaddingBelow8": 0
+    },
+    "pet_bird": {
+      "kind": "beast",
+      "clipCount": 3,
+      "frames": 160,
+      "heldFrames": 0,
+      "framesWithPaddingBelow8": 0
+    }
+  },
+  "validation": [
+    "PNG RGBA, cell dimensions and rectangles",
+    "animation count, FPS, loop flags and cue parity",
+    "every direction has different frames and all five rows differ",
+    "socket coordinates are inside the frame",
+    "all 1108 v2 atlases differ from their v1 counterpart"
+  ]
+}
