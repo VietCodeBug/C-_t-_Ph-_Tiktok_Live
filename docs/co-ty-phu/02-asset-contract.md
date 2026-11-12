@@ -1,5 +1,7 @@
 # Quy cách asset
 
+> SUPERSEDED: quy cách dưới đây chỉ mô tả prototype thú 3D trước khi nhận tài liệu. Master yêu cầu nhân vật người 2D, frame 256×256, 5 hướng, pivot (128,218). Không dùng thông số cũ để sản xuất; xem [Master](07-master-source-reconciliation.md).
+
 10 species khác silhouette: thỏ, capybara, cú, gấu trúc đỏ, rùa, cáo, ếch, nhím, chim cánh cụt, kỳ giông. Có tai/mai/gai/đuôi/mang/cánh và trang phục hình học riêng, không chỉ đổi màu. Số tam giác và ID ổn định ở `assets/co-ty-phu/roster.json`.
 
 Mỗi nhân vật có GLB skin 7 xương, một mesh primitive/material, vertex color; file `.blend` nguồn; 4 animation; 48 PNG RGBA 128×128. Spritesheet 1536×512 gồm 12 cột × 4 hàng theo thứ tự dưới đây.

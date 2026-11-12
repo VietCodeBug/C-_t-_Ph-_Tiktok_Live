@@ -1,0 +1,209 @@
+{
+  "sheet": "17_SOCKETS_WORLD",
+  "records": [
+    {
+      "source_row": 2,
+      "cells": {
+        "Socket ID": "PLAYER_ROOT",
+        "Offset XYZ wu": "0,0,0",
+        "Sprite px": "128,218",
+        "Clip / hướng": "all",
+        "Mục đích": "Tile center + slot offset",
+        "Hệ tọa độ": "100% game world",
+        "Ghi chú bind": "Giữ token root đứng y=0"
+      }
+    },
+    {
+      "source_row": 3,
+      "cells": {
+        "Socket ID": "SHADOW",
+        "Offset XYZ wu": "0,0.01,0",
+        "Sprite px": "128,218",
+        "Clip / hướng": "all",
+        "Mục đích": "Ellipse 3D κάτω chân, không bake",
+        "Hệ tọa độ": "world",
+        "Ghi chú bind": "scale (0.58,0.01,0.32)"
+      }
+    },
+    {
+      "source_row": 4,
+      "cells": {
+        "Socket ID": "HEAD_BADGE",
+        "Offset XYZ wu": "0,1.35,0",
+        "Sprite px": "128,22",
+        "Clip / hướng": "all",
+        "Mục đích": "Billboard tên/avatar đứng trên đầu",
+        "Hệ tọa độ": "HUD anchor",
+        "Ghi chú bind": "tùy chiều cao tóc +0.08"
+      }
+    },
+    {
+      "source_row": 5,
+      "cells": {
+        "Socket ID": "HAND_RIGHT",
+        "Offset XYZ wu": "0.24,0.67,0.06",
+        "Sprite px": "165,145",
+        "Clip / hướng": "S",
+        "Mục đích": "Đồ vật tương tác 3D",
+        "Hệ tọa độ": "3D socket",
+        "Ghi chú bind": "driven by 05_ANIM_COORDS RH every frame"
+      }
+    },
+    {
+      "source_row": 6,
+      "cells": {
+        "Socket ID": "HAND_LEFT",
+        "Offset XYZ wu": "-0.24,0.67,0.06",
+        "Sprite px": "91,145",
+        "Clip / hướng": "S",
+        "Mục đích": "Đồ vật tương tác 3D",
+        "Hệ tọa độ": "3D socket",
+        "Ghi chú bind": "driven by 05_ANIM_COORDS LH every frame"
+      }
+    },
+    {
+      "source_row": 7,
+      "cells": {
+        "Socket ID": "FRONT_CENTER",
+        "Offset XYZ wu": "0,0.60,0.20",
+        "Sprite px": "128,156",
+        "Clip / hướng": "S",
+        "Mục đích": "Hộp bế, bé, hộp giao hàng",
+        "Hệ tọa độ": "3D socket",
+        "Ghi chú bind": "2 tay hỗ trợ HOLD"
+      }
+    },
+    {
+      "source_row": 8,
+      "cells": {
+        "Socket ID": "DICE_THROW",
+        "Offset XYZ wu": "0.27,0.70,0.13",
+        "Sprite px": "RH at f8",
+        "Clip / hướng": "roll_dice",
+        "Mục đích": "Spawn dice world at animation frame 8",
+        "Hệ tọa độ": "event hook",
+        "Ghi chú bind": "velocity by physics/game logic"
+      }
+    },
+    {
+      "source_row": 9,
+      "cells": {
+        "Socket ID": "SHOP_ITEM",
+        "Offset XYZ wu": "0.28,0.72,0.26",
+        "Sprite px": "RH around f6",
+        "Clip / hướng": "sell",
+        "Mục đích": "Prop 3D xuất hiện từ tray vào tay",
+        "Hệ tọa độ": "event hook",
+        "Ghi chú bind": "despawn when delivered"
+      }
+    },
+    {
+      "source_row": 10,
+      "cells": {
+        "Socket ID": "KEY_TIP",
+        "Offset XYZ wu": "0.31,0.68,0.25",
+        "Sprite px": "RH around f7",
+        "Clip / hướng": "unlock_house",
+        "Mục đích": "Chìa tới ổ khóa; set target door offset",
+        "Hệ tọa độ": "event hook",
+        "Ghi chú bind": "snap to door node if near"
+      }
+    },
+    {
+      "source_row": 11,
+      "cells": {
+        "Socket ID": "WRENCH",
+        "Offset XYZ wu": "0.25,0.69,0.10",
+        "Sprite px": "RH",
+        "Clip / hướng": "repair_pipe,repair_vehicle",
+        "Mục đích": "Tool node theo tay player",
+        "Hệ tọa độ": "event hook",
+        "Ghi chú bind": "align rotation Y to actor yaw"
+      }
+    },
+    {
+      "source_row": 12,
+      "cells": {
+        "Socket ID": "UMB_HANDLE",
+        "Offset XYZ wu": "0.25,0.82,0.08",
+        "Sprite px": "RH",
+        "Clip / hướng": "rain_walk",
+        "Mục đích": "Cán ô 3D lên tay",
+        "Hệ tọa độ": "event hook",
+        "Ghi chú bind": "ô không che UI"
+      }
+    },
+    {
+      "source_row": 13,
+      "cells": {
+        "Socket ID": "BABY_OVERLAY",
+        "Offset XYZ wu": "0,0.58,0.23",
+        "Sprite px": "128,146",
+        "Clip / hướng": "hold_baby",
+        "Mục đích": "Em bé là 2D overlay, không mesh 3D",
+        "Hệ tọa độ": "2D child sprite",
+        "Ghi chú bind": "scale ~0.28wu"
+      }
+    },
+    {
+      "source_row": 14,
+      "cells": {
+        "Socket ID": "DOG_FOLLOW",
+        "Offset XYZ wu": "-0.55,0,0.40",
+        "Sprite px": "128,218",
+        "Clip / hướng": "PET01 onward",
+        "Mục đích": "Dog sprite 2D cách token ~0.55wu",
+        "Hệ tọa độ": "world follow",
+        "Ghi chú bind": "Lerp theo player movement; tránh occlusion"
+      }
+    },
+    {
+      "source_row": 15,
+      "cells": {
+        "Socket ID": "POLICE_STOP",
+        "Offset XYZ wu": "0.75,0,0.35",
+        "Sprite px": "independent",
+        "Clip / hướng": "ROAD01",
+        "Mục đích": "NPC công an đứng cạnh xe 3D",
+        "Hệ tọa độ": "world static",
+        "Ghi chú bind": "không dịch chuyển token logic"
+      }
+    },
+    {
+      "source_row": 16,
+      "cells": {
+        "Socket ID": "SHOP_PLACE",
+        "Offset XYZ wu": "0.95,0,0.30",
+        "Sprite px": "independent",
+        "Clip / hướng": "BIZ01/BIZ02",
+        "Mục đích": "Quầy 3D xuất hiện kế token, không che chân",
+        "Hệ tọa độ": "world static",
+        "Ghi chú bind": "quầy = 1.65wu, không nằm trên tile trung tâm"
+      }
+    },
+    {
+      "source_row": 17,
+      "cells": {
+        "Socket ID": "FOAM_IMPACT",
+        "Offset XYZ wu": "0,1.10,0",
+        "Sprite px": "128,56",
+        "Clip / hướng": "hit",
+        "Mục đích": "FX bom xốp xuất hiện trên đầu",
+        "Hệ tọa độ": "world FX",
+        "Ghi chú bind": "trigger f4"
+      }
+    },
+    {
+      "source_row": 18,
+      "cells": {
+        "Socket ID": "PODIUM_WIN",
+        "Offset XYZ wu": "0,1.1,0",
+        "Sprite px": "128,218",
+        "Clip / hướng": "celebrate",
+        "Mục đích": "Player đứng trên bục ở chân thế giới mới",
+        "Hệ tọa độ": "scene transform",
+        "Ghi chú bind": "tạm khác board scene; giữ sprite scale"
+      }
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "sheet": "16_CAMERA_CUES",
+  "records": [
+    {
+      "source_row": 2,
+      "cells": {
+        "Cam ID": "CAM01",
+        "Key": "BOARD_OVERVIEW",
+        "Góc máy": "Toàn bàn",
+        "Angle °": "55–60",
+        "Position offset xyz": "0,14,10",
+        "LookAt xyz": "7,0,3",
+        "Transition s": 2.5,
+        "Orthographic fit": "ortho = 12.5",
+        "Composition": "hai ga + 10 ghế",
+        "Cảnh lưu ý": "giữ 2–3 s",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 3,
+      "cells": {
+        "Cam ID": "CAM02",
+        "Key": "TURN_ROLL",
+        "Góc máy": "Cận lắc",
+        "Angle °": "50",
+        "Position offset xyz": "token + (1.0,2.6,3.0)",
+        "LookAt xyz": "token + (0,0.5,0)",
+        "Transition s": 0.6,
+        "Orthographic fit": "ortho = 3.2",
+        "Composition": "token ~25–30% frame",
+        "Cảnh lưu ý": "tung xúc xắc f8",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 4,
+      "cells": {
+        "Cam ID": "CAM03",
+        "Key": "FOLLOW_TOKEN",
+        "Góc máy": "Bám quân",
+        "Angle °": "55",
+        "Position offset xyz": "token + (0,3.2,3.8)",
+        "LookAt xyz": "token + (0,0.45,0)",
+        "Transition s": 0.32,
+        "Orthographic fit": "ortho = 4.7",
+        "Composition": "thấy ô đích + các token",
+        "Cảnh lưu ý": "di chuyển bằng easing",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 5,
+      "cells": {
+        "Cam ID": "CAM04",
+        "Key": "FORK_TOP",
+        "Góc máy": "Ngã rẽ",
+        "Angle °": "62",
+        "Position offset xyz": "fork + (0,5.8,5.0)",
+        "LookAt xyz": "fork",
+        "Transition s": 0.55,
+        "Orthographic fit": "ortho = 5.8",
+        "Composition": "cả 2 nhánh trong hình",
+        "Cảnh lưu ý": "bảo đảm TRÁI/PHẢI là screen direction",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 6,
+      "cells": {
+        "Cam ID": "CAM05",
+        "Key": "EVENT_CLOSE",
+        "Góc máy": "Sự kiện đời sống",
+        "Angle °": "50",
+        "Position offset xyz": "token + (1.2,2.8,3.5)",
+        "LookAt xyz": "token + (0,0.65,0)",
+        "Transition s": 0.55,
+        "Orthographic fit": "ortho = 3.7",
+        "Composition": "nhân vật giữa, prop bên trái",
+        "Cảnh lưu ý": "đủ chỗ HUD",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 7,
+      "cells": {
+        "Cam ID": "CAM06",
+        "Key": "SHOP_WIDE",
+        "Góc máy": "Shop online",
+        "Angle °": "52",
+        "Position offset xyz": "shop + (0.7,3.4,4.2)",
+        "LookAt xyz": "shop + (0,0.7,0)",
+        "Transition s": 0.6,
+        "Orthographic fit": "ortho = 4.9",
+        "Composition": "player/quầy/8 đơn",
+        "Cảnh lưu ý": "không lấp return icons",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 8,
+      "cells": {
+        "Cam ID": "CAM07",
+        "Key": "FOLLOWUP_CLOSE",
+        "Góc máy": "Thẻ nối tiếp",
+        "Angle °": "50",
+        "Position offset xyz": "token + (1,2.4,3.0)",
+        "LookAt xyz": "token + (0,0.65,0)",
+        "Transition s": 0.35,
+        "Orthographic fit": "ortho = 3.5",
+        "Composition": "nhịp ngắn",
+        "Cảnh lưu ý": "2–4s trước khi lắc",
+        "Ưu tiên": "GIAI ĐOẠN 2"
+      }
+    },
+    {
+      "source_row": 9,
+      "cells": {
+        "Cam ID": "CAM08",
+        "Key": "ROAD_EVENT",
+        "Góc máy": "Giao thông",
+        "Angle °": "55",
+        "Position offset xyz": "token + (1.4,3.2,4.0)",
+        "LookAt xyz": "token + (0,0.5,0)",
+        "Transition s": 0.5,
+        "Orthographic fit": "ortho = 4.7",
+        "Composition": "có xe + công an",
+        "Cảnh lưu ý": "không thay world tile",
+        "Ưu tiên": "GIAI ĐOẠN 2"
+      }
+    },
+    {
+      "source_row": 10,
+      "cells": {
+        "Cam ID": "CAM09",
+        "Key": "PET_CLOSE",
+        "Góc máy": "Thú cưng",
+        "Angle °": "43",
+        "Position offset xyz": "token + (1.0,2.2,3.0)",
+        "LookAt xyz": "token + (0,0.45,0)",
+        "Transition s": 0.5,
+        "Orthographic fit": "ortho = 3.0",
+        "Composition": "full player + chó",
+        "Cảnh lưu ý": "chó scale 45% player",
+        "Ưu tiên": "GIAI ĐOẠN 2"
+      }
+    },
+    {
+      "source_row": 11,
+      "cells": {
+        "Cam ID": "CAM10",
+        "Key": "CELEBRATE",
+        "Góc máy": "Bục vinh danh",
+        "Angle °": "48",
+        "Position offset xyz": "podium + (0,3.8,5)",
+        "LookAt xyz": "podium + (0,0.7,0)",
+        "Transition s": 0.75,
+        "Orthographic fit": "ortho = 5.3",
+        "Composition": "cúp + winner + MONEY",
+        "Cảnh lưu ý": "10s end screen",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 12,
+      "cells": {
+        "Cam ID": "CAM11",
+        "Key": "MINIGAME",
+        "Góc máy": "Mini game",
+        "Angle °": "51",
+        "Position offset xyz": "table + (0,2.6,3.5)",
+        "LookAt xyz": "table + (0,0.5,0)",
+        "Transition s": 0.5,
+        "Orthographic fit": "ortho = 3.9",
+        "Composition": "thấy đồ vật 1/2/3",
+        "Cảnh lưu ý": "không che cue của chat",
+        "Ưu tiên": "MVP"
+      }
+    },
+    {
+      "source_row": 13,
+      "cells": {
+        "Cam ID": "CAM12",
+        "Key": "GIFT_IMPACT",
+        "Góc máy": "Nhắm chiêu",
+        "Angle °": "51",
+        "Position offset xyz": "target + (0.8,3.0,3.0)",
+        "LookAt xyz": "target + (0,0.6,0)",
+        "Transition s": 0.45,
+        "Orthographic fit": "ortho = 3.6",
+        "Composition": "target nằm giữa khung",
+        "Cảnh lưu ý": "FX trigger theo animation",
+        "Ưu tiên": "MVP"
+      }
+    }
+  ]
+}

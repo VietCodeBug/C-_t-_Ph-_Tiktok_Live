@@ -1,0 +1,492 @@
+{
+  "status": "map-static-checks-passed",
+  "scope": "map only; ten temporary seat markers in PNG previews",
+  "maps": [
+    {
+      "layout": "CHO_VIA_HE",
+      "file": "cho_via_he.glb",
+      "sha256": "5e68bd6044bab246d80063d578a6ecdd3b1ebebb11c350ba6f3bb954e00cf087",
+      "nodes": 24,
+      "spawn_slots": 10,
+      "branch_paths": [
+        {
+          "f01": "F01_L1",
+          "f02": "F02_L1",
+          "steps": 20,
+          "station_steps": 10
+        },
+        {
+          "f01": "F01_L1",
+          "f02": "F02_R1",
+          "steps": 20,
+          "station_steps": 10
+        },
+        {
+          "f01": "F01_R1",
+          "f02": "F02_L1",
+          "steps": 20,
+          "station_steps": 10
+        },
+        {
+          "f01": "F01_R1",
+          "f02": "F02_R1",
+          "steps": 20,
+          "station_steps": 10
+        }
+      ],
+      "tile_face_overlap": "none",
+      "tile_base_separation_and_y0_top": "passed",
+      "exported_anchors": "matched source-derived JSON",
+      "preview_dimensions": [
+        1080,
+        1920
+      ],
+      "preview_modes": [
+        "10_seats",
+        "spawn"
+      ],
+      "no_preview_markers_in_glb": true,
+      "sampled_tile_faces": [
+        {
+          "id": "C00",
+          "face_sample_rgb": [
+            201,
+            169,
+            109
+          ]
+        },
+        {
+          "id": "C01",
+          "face_sample_rgb": [
+            199,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "C02",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "C03",
+          "face_sample_rgb": [
+            195,
+            194,
+            188
+          ]
+        },
+        {
+          "id": "C04",
+          "face_sample_rgb": [
+            193,
+            193,
+            186
+          ]
+        },
+        {
+          "id": "C05",
+          "face_sample_rgb": [
+            192,
+            191,
+            185
+          ]
+        },
+        {
+          "id": "C06",
+          "face_sample_rgb": [
+            192,
+            191,
+            185
+          ]
+        },
+        {
+          "id": "C07",
+          "face_sample_rgb": [
+            193,
+            191,
+            186
+          ]
+        },
+        {
+          "id": "C08",
+          "face_sample_rgb": [
+            205,
+            169,
+            110
+          ]
+        },
+        {
+          "id": "C09",
+          "face_sample_rgb": [
+            197,
+            195,
+            189
+          ]
+        },
+        {
+          "id": "C10",
+          "face_sample_rgb": [
+            198,
+            195,
+            189
+          ]
+        },
+        {
+          "id": "C11",
+          "face_sample_rgb": [
+            199,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "C12",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "C13",
+          "face_sample_rgb": [
+            197,
+            195,
+            189
+          ]
+        },
+        {
+          "id": "C14",
+          "face_sample_rgb": [
+            195,
+            194,
+            188
+          ]
+        },
+        {
+          "id": "C15",
+          "face_sample_rgb": [
+            197,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F01_L1",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F01_L2",
+          "face_sample_rgb": [
+            197,
+            195,
+            189
+          ]
+        },
+        {
+          "id": "F01_R1",
+          "face_sample_rgb": [
+            198,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "F01_R2",
+          "face_sample_rgb": [
+            198,
+            195,
+            189
+          ]
+        },
+        {
+          "id": "F02_L1",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F02_L2",
+          "face_sample_rgb": [
+            198,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "F02_R1",
+          "face_sample_rgb": [
+            199,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "F02_R2",
+          "face_sample_rgb": [
+            199,
+            197,
+            191
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "PHO_GIAO_HANG",
+      "file": "pho_giao_hang.glb",
+      "sha256": "08f76aafd885e6fb8723765cb91dde483ae85a340aa2750a8afd1e1722714944",
+      "nodes": 24,
+      "spawn_slots": 10,
+      "branch_paths": [
+        {
+          "f01": "F01_L1",
+          "f02": "F02_L1",
+          "steps": 20,
+          "station_steps": 10
+        },
+        {
+          "f01": "F01_L1",
+          "f02": "F02_R1",
+          "steps": 20,
+          "station_steps": 10
+        },
+        {
+          "f01": "F01_R1",
+          "f02": "F02_L1",
+          "steps": 20,
+          "station_steps": 10
+        },
+        {
+          "f01": "F01_R1",
+          "f02": "F02_R1",
+          "steps": 20,
+          "station_steps": 10
+        }
+      ],
+      "tile_face_overlap": "none",
+      "tile_base_separation_and_y0_top": "passed",
+      "exported_anchors": "matched source-derived JSON",
+      "preview_dimensions": [
+        1080,
+        1920
+      ],
+      "preview_modes": [
+        "10_seats",
+        "spawn"
+      ],
+      "no_preview_markers_in_glb": true,
+      "sampled_tile_faces": [
+        {
+          "id": "C00",
+          "face_sample_rgb": [
+            197,
+            152,
+            78
+          ]
+        },
+        {
+          "id": "C01",
+          "face_sample_rgb": [
+            200,
+            198,
+            192
+          ]
+        },
+        {
+          "id": "C02",
+          "face_sample_rgb": [
+            199,
+            198,
+            192
+          ]
+        },
+        {
+          "id": "C03",
+          "face_sample_rgb": [
+            195,
+            193,
+            187
+          ]
+        },
+        {
+          "id": "C04",
+          "face_sample_rgb": [
+            194,
+            193,
+            187
+          ]
+        },
+        {
+          "id": "C05",
+          "face_sample_rgb": [
+            191,
+            190,
+            184
+          ]
+        },
+        {
+          "id": "C06",
+          "face_sample_rgb": [
+            190,
+            189,
+            183
+          ]
+        },
+        {
+          "id": "C07",
+          "face_sample_rgb": [
+            194,
+            193,
+            187
+          ]
+        },
+        {
+          "id": "C08",
+          "face_sample_rgb": [
+            202,
+            172,
+            114
+          ]
+        },
+        {
+          "id": "C09",
+          "face_sample_rgb": [
+            197,
+            195,
+            189
+          ]
+        },
+        {
+          "id": "C10",
+          "face_sample_rgb": [
+            199,
+            197,
+            190
+          ]
+        },
+        {
+          "id": "C11",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "C12",
+          "face_sample_rgb": [
+            197,
+            196,
+            191
+          ]
+        },
+        {
+          "id": "C13",
+          "face_sample_rgb": [
+            195,
+            194,
+            188
+          ]
+        },
+        {
+          "id": "C14",
+          "face_sample_rgb": [
+            196,
+            194,
+            187
+          ]
+        },
+        {
+          "id": "C15",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F01_L1",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F01_L2",
+          "face_sample_rgb": [
+            197,
+            195,
+            188
+          ]
+        },
+        {
+          "id": "F01_R1",
+          "face_sample_rgb": [
+            199,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "F01_R2",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F02_L1",
+          "face_sample_rgb": [
+            198,
+            196,
+            190
+          ]
+        },
+        {
+          "id": "F02_L2",
+          "face_sample_rgb": [
+            198,
+            197,
+            191
+          ]
+        },
+        {
+          "id": "F02_R1",
+          "face_sample_rgb": [
+            199,
+            197,
+            190
+          ]
+        },
+        {
+          "id": "F02_R2",
+          "face_sample_rgb": [
+            199,
+            197,
+            191
+          ]
+        }
+      ]
+    }
+  ],
+  "render": "Blender Cycles CPU",
+  "not_tested": [
+    "gameplay",
+    "network clients",
+    "runtime FPS",
+    "user-provided replacement assets"
+  ],
+  "source_position_adaptation": "documented in board_layouts.json; graph and tile width unchanged"
+}

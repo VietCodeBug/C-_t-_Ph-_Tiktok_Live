@@ -1,5 +1,7 @@
 # Nghiên cứu bố cục map 9:16
 
+> LỊCH SỬ THỬ NGHIỆM: không dùng map 40 ô này làm thiết kế Master. Nguồn mới quy định hai layout 24 node, hai ngã rẽ; xem [đối chiếu nguồn](07-master-source-reconciliation.md).
+
 Phân tích thiết kế nội bộ; chưa đối chiếu sheet hoặc nguồn web ngoài.
 
 ## Vì sao v01 bị loại

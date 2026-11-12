@@ -1,12 +1,16 @@
 # Chưa hoàn thành full asset
 
+> PHẠM VI ĐÃ THAY ĐỔI: người dùng chỉ yêu cầu dựng map và tự làm asset. Checklist full asset dưới đây là lịch sử, không phải công việc hiện tại. Xem assets/map/README.md và tài liệu 07 cho bàn giao map 10 ghế dọc 9:16.
+
 **Trạng thái bàn giao: PROTOTYPE / INCOMPLETE.** Không phải bộ asset cuối theo sheet. Không được dùng việc có model, ảnh concept hoặc tệp giải mã được để đánh dấu toàn dự án đã hoàn tất.
+
+> Đã nhận và đọc hai tệp tải lên. Checklist chính xác theo Master ở [07-master-source-reconciliation.md](07-master-source-reconciliation.md) và `design/master-v1/coverage.json`. Prototype cũ không được tính đạt các yêu cầu đó.
 
 ## Phần đã có và giới hạn
 
 | Hạng mục | Hiện có | Còn thiếu trước bàn giao cuối |
 |---|---|---|
-| Thiết kế theo sheet | Có URL, chưa đọc được dữ liệu | Trích yêu cầu từng tab/hàng; xác định đầy đủ loại/số lượng asset |
+| Thiết kế theo sheet | Đã đọc 22 tab XLSX và DOCX tải lên, giữ hàng nguồn | Review khác biệt số frame/cue giữa hai nguồn trước xuất hàng loạt |
 | Map | Concept và blockout 3D, graph 40 ô minh họa | Bố cục theo sheet, mỹ thuật hoàn thiện, sửa che khuất/tương phản, nghiệm thu 9:16 |
 | Môi trường | Hình khối nằm trong scene map | Bộ module tái sử dụng riêng: ô/đất/nhà/landmark/cầu/trang trí theo danh mục đã chốt |
 | Nhân vật | 10 model prototype, nguồn Blender | Hoàn thiện hình dáng/chất liệu theo art direction được duyệt; kiểm tra scale/rig trong engine |

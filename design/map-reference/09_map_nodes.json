@@ -1,0 +1,917 @@
+{
+  "sheet": "09_MAP_NODES",
+  "records": [
+    {
+      "source_row": 2,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C00",
+        "World X wu": 0,
+        "World Y wu": 0,
+        "World Z wu": 0,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "GA",
+        "Next node(s)": "C01",
+        "Ngã rẽ?": "no",
+        "Ga?": "yes",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 3,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C01",
+        "World X wu": 2,
+        "World Y wu": 0,
+        "World Z wu": 0,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C02",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 4,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C02",
+        "World X wu": 4,
+        "World Y wu": 0,
+        "World Z wu": 0,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "F01_L1 | F01_R1",
+        "Ngã rẽ?": "yes",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 5,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C03",
+        "World X wu": 10,
+        "World Y wu": 0,
+        "World Z wu": 0,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C04",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 6,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C04",
+        "World X wu": 12,
+        "World Y wu": 0,
+        "World Z wu": 0,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C05",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 7,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C05",
+        "World X wu": 14,
+        "World Y wu": 0,
+        "World Z wu": 0,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C06",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 8,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C06",
+        "World X wu": 14,
+        "World Y wu": 0,
+        "World Z wu": 2,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C07",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 9,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C07",
+        "World X wu": 14,
+        "World Y wu": 0,
+        "World Z wu": 4,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C08",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 10,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C08",
+        "World X wu": 14,
+        "World Y wu": 0,
+        "World Z wu": 6,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "GA",
+        "Next node(s)": "C09",
+        "Ngã rẽ?": "no",
+        "Ga?": "yes",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 11,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C09",
+        "World X wu": 12,
+        "World Y wu": 0,
+        "World Z wu": 6,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C10",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 12,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C10",
+        "World X wu": 10,
+        "World Y wu": 0,
+        "World Z wu": 6,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "F02_L1 | F02_R1",
+        "Ngã rẽ?": "yes",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 13,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C11",
+        "World X wu": 4,
+        "World Y wu": 0,
+        "World Z wu": 6,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C12",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 14,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C12",
+        "World X wu": 2,
+        "World Y wu": 0,
+        "World Z wu": 6,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C13",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 15,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C13",
+        "World X wu": 0,
+        "World Y wu": 0,
+        "World Z wu": 6,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C14",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 16,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C14",
+        "World X wu": 0,
+        "World Y wu": 0,
+        "World Z wu": 4,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C15",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 17,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "C15",
+        "World X wu": 0,
+        "World Y wu": 0,
+        "World Z wu": 2,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C00",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 18,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F01_L1",
+        "World X wu": 6,
+        "World Y wu": 0,
+        "World Z wu": -1.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F01_L2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 19,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F01_L2",
+        "World X wu": 8,
+        "World Y wu": 0,
+        "World Z wu": -1.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C03",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 20,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F01_R1",
+        "World X wu": 6,
+        "World Y wu": 0,
+        "World Z wu": 1.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F01_R2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 21,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F01_R2",
+        "World X wu": 8,
+        "World Y wu": 0,
+        "World Z wu": 1.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C03",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 22,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F02_L1",
+        "World X wu": 8,
+        "World Y wu": 0,
+        "World Z wu": 4.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F02_L2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 23,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F02_L2",
+        "World X wu": 6,
+        "World Y wu": 0,
+        "World Z wu": 4.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C11",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 24,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F02_R1",
+        "World X wu": 8,
+        "World Y wu": 0,
+        "World Z wu": 7.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F02_R2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 25,
+      "cells": {
+        "Layout": "CHO_VIA_HE",
+        "Node ID": "F02_R2",
+        "World X wu": 6,
+        "World Y wu": 0,
+        "World Z wu": 7.5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C11",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 26,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C00",
+        "World X wu": -3.36,
+        "World Y wu": 0,
+        "World Z wu": 7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "GA",
+        "Next node(s)": "C01",
+        "Ngã rẽ?": "no",
+        "Ga?": "yes",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 27,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C01",
+        "World X wu": -3.36,
+        "World Y wu": 0,
+        "World Z wu": 5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C02",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 28,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C02",
+        "World X wu": -3.36,
+        "World Y wu": 0,
+        "World Z wu": 3,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "F01_L1 | F01_R1",
+        "Ngã rẽ?": "yes",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 29,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C03",
+        "World X wu": -3.36,
+        "World Y wu": 0,
+        "World Z wu": -3,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C04",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 30,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C04",
+        "World X wu": -3.36,
+        "World Y wu": 0,
+        "World Z wu": -5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C05",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 31,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C05",
+        "World X wu": -3.36,
+        "World Y wu": 0,
+        "World Z wu": -7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C06",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 32,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C06",
+        "World X wu": -1.12,
+        "World Y wu": 0,
+        "World Z wu": -7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C07",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 33,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C07",
+        "World X wu": 1.12,
+        "World Y wu": 0,
+        "World Z wu": -7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C08",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 34,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C08",
+        "World X wu": 3.36,
+        "World Y wu": 0,
+        "World Z wu": -7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "GA",
+        "Next node(s)": "C09",
+        "Ngã rẽ?": "no",
+        "Ga?": "yes",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 35,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C09",
+        "World X wu": 3.36,
+        "World Y wu": 0,
+        "World Z wu": -5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C10",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 36,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C10",
+        "World X wu": 3.36,
+        "World Y wu": 0,
+        "World Z wu": -3,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "F02_L1 | F02_R1",
+        "Ngã rẽ?": "yes",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 37,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C11",
+        "World X wu": 3.36,
+        "World Y wu": 0,
+        "World Z wu": 3,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C12",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 38,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C12",
+        "World X wu": 3.36,
+        "World Y wu": 0,
+        "World Z wu": 5,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C13",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 39,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C13",
+        "World X wu": 3.36,
+        "World Y wu": 0,
+        "World Z wu": 7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C14",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 40,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C14",
+        "World X wu": 1.12,
+        "World Y wu": 0,
+        "World Z wu": 7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C15",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 41,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "C15",
+        "World X wu": -1.12,
+        "World Y wu": 0,
+        "World Z wu": 7,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "DYNAMIC",
+        "Next node(s)": "C00",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 42,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F01_L1",
+        "World X wu": -5.04,
+        "World Y wu": 0,
+        "World Z wu": 1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F01_L2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 43,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F01_L2",
+        "World X wu": -5.04,
+        "World Y wu": 0,
+        "World Z wu": -1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C03",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 44,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F01_R1",
+        "World X wu": -1.68,
+        "World Y wu": 0,
+        "World Z wu": 1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F01_R2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 45,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F01_R2",
+        "World X wu": -1.68,
+        "World Y wu": 0,
+        "World Z wu": -1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C03",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 46,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F02_L1",
+        "World X wu": 1.68,
+        "World Y wu": 0,
+        "World Z wu": -1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F02_L2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 47,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F02_L2",
+        "World X wu": 1.68,
+        "World Y wu": 0,
+        "World Z wu": 1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C11",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 48,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F02_R1",
+        "World X wu": 5.04,
+        "World Y wu": 0,
+        "World Z wu": -1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "F02_R2",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    },
+    {
+      "source_row": 49,
+      "cells": {
+        "Layout": "PHO_GIAO_HANG",
+        "Node ID": "F02_R2",
+        "World X wu": 5.04,
+        "World Y wu": 0,
+        "World Z wu": 1,
+        "Ô rộng wu": 2,
+        "Loại mặc định": "BRANCH_DYNAMIC",
+        "Next node(s)": "C11",
+        "Ngã rẽ?": "no",
+        "Ga?": "no",
+        "Token offset": "0,0,0",
+        "Camera look offset": "0,1.5,0",
+        "Loại ô runtime": "Theo boardSeed",
+        "Ghi chú tọa độ": "Đề xuất tọa độ layout, phải test 3D collider/overlap và trái-phải trên màn"
+      }
+    }
+  ]
+}

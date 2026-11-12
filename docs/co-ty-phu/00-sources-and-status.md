@@ -1,5 +1,7 @@
 # Nguồn và tình trạng
 
+> Cập nhật: đã đọc được XLSX/DOCX người dùng tải trực tiếp. Phần không đọc được Drive dưới đây là lịch sử kiểm tra mạng, không còn chặn việc đọc thiết kế. Nguồn và yêu cầu hiện tại ở [Master reconciliation](07-master-source-reconciliation.md). Bến Mây/thú 3D bên dưới là thử nghiệm cũ, không đạt Master.
+
 ## Phạm vi người dùng yêu cầu
 
 Cờ tỷ phú dọc 9:16; map phong phú, mascot cute khác nhau về dáng, animation đồng bộ, model/asset/âm thanh và kế hoạch trong Git. Không triển khai mã gameplay ở đợt này. Cần nghiên cứu mức 1/10/20/100 người. Map v01 đã bị người dùng loại; v02 là concept sửa, **chưa được duyệt**.

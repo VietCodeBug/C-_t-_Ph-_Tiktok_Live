@@ -1,0 +1,38 @@
+{
+  "project_style": "Phố Đồ Chơi",
+  "scope": "map geometry and reference palette only; user supplies art assets",
+  "palette": {
+    "cream": "#FFF3DB",
+    "mint": "#8ADFC3",
+    "sky": "#83C9F4",
+    "coral": "#FF887D",
+    "gold": "#FFD267",
+    "purple": "#AB9BF3",
+    "plum": "#35283E"
+  },
+  "seat_marker_colors": {
+    "A": "#FF887D",
+    "B": "#83C9F4",
+    "C": "#FFD267",
+    "D": "#8ADFC3",
+    "E": "#AB9BF3",
+    "F": "#F6A7CF",
+    "G": "#F4A261",
+    "H": "#7DD3CF",
+    "I": "#B7C7FC",
+    "J": "#D7B68F"
+  },
+  "material": "rough matte PBR, vertex colors COLOR_0",
+  "world_up": "+Y",
+  "ground_axes": [
+    "X",
+    "Z"
+  ],
+  "tile_width": 2,
+  "character_height_reference": 1.15,
+  "preview_resolution": [
+    1080,
+    1920
+  ],
+  "preview_markers_are_not_character_assets": true
+}

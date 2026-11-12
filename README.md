@@ -1,26 +1,28 @@
-# Cờ tỷ phú — Bến Mây · Asset & Design
+# Cờ Tý Phí TikTok LIVE — Map 10 ghế · 9:16
 
-Bộ prototype cho game cờ tỷ phú dọc **9:16**: map, mascot, animation, âm thanh và kế hoạch. Chưa có mã game/server.
+**Phạm vi hiện tại: chỉ dựng map. Người dùng tự tạo nhân vật, props, UI và âm thanh.**
 
-![Bến Mây v02](assets/co-ty-phu/concepts/ben-may-v02.png)
+Hai map 3D theo XLSX/DOCX tải lên: **Chợ Vỉa Hè** và **Phố Giao Hàng**. Mỗi map có 24 node, hai ga C00/C08, hai ngã rẽ F01/F02. Ảnh là render 1080×1920 từ hình học thật, có marker A–J minh họa 10 vị trí, không phải concept sinh ảnh.
 
-![10 mascot prototype](assets/co-ty-phu/previews/mascot-roster.png)
+## Xem map
 
-## Bộ bàn giao
+### Chợ Vỉa Hè
 
-- [Nguồn, công cụ và các phần đang chặn](docs/co-ty-phu/00-sources-and-status.md)
-- [Nghiên cứu và hướng sửa map](docs/co-ty-phu/01-map-study.md)
-- [Quy cách nhân vật, animation, sprite và âm thanh](docs/co-ty-phu/02-asset-contract.md)
-- [Kế hoạch logic / triển khai](docs/co-ty-phu/03-implementation-plan.md)
-- [Kế hoạch 1 / 10 / 20 / 100 người](docs/co-ty-phu/04-scale-test-plan.md)
-- [Báo cáo kiểm tra thực tế](docs/co-ty-phu/05-validation.json)
-- [Danh sách model](assets/co-ty-phu/roster.json) · [Audio](assets/co-ty-phu/audio/manifest.json)
-- [Preview walk từ GLB export/reimport](assets/co-ty-phu/previews/walk-preview.webm)
-- [Map 3D tách lớp — Blender](assets/co-ty-phu/map/ben-may-blockout.blend) · [GLB](assets/co-ty-phu/map/ben-may-blockout.glb) · [Graph đề xuất](assets/co-ty-phu/map/layout.proposed.json)
-- Ảnh bố trí token: [1](assets/co-ty-phu/previews/occupancy-001.png) / [10](assets/co-ty-phu/previews/occupancy-010.png) / [20](assets/co-ty-phu/previews/occupancy-020.png) / [100](assets/co-ty-phu/previews/occupancy-100.png)
+![Chợ Vỉa Hè — 10 ghế](assets/map/previews/cho_via_he_10_seats_1080x1920.png)
 
-Có 10 model GLB + file Blender nguồn, 40 animation, 480 frame sprite RGBA và 10 spritesheet, 12 SFX WAV nguyên bản. Các model là prototype hình học có thể chỉnh sửa; chưa phải final art khớp hoàn toàn concept.
+### Phố Giao Hàng
 
-Concept v02 là ảnh gộp gần 9:16; bản 3D đi kèm là blockout tách lớp với chu trình **40 ô minh họa**, chưa phải số ô đã chốt theo sheet. Bốn ảnh token là render bố trí tĩnh, không phải client mạng hoặc benchmark. V01 bị người dùng loại. Sheet thiết kế chưa đọc được do proxy 403; các đề xuất chưa được gán là yêu cầu từ sheet.
+![Phố Giao Hàng — 10 ghế](assets/map/previews/pho_giao_hang_10_seats_1080x1920.png)
 
-Đã dùng ImageGen gốc, Blender và công cụ cục bộ. **Chưa dùng được AutoSprite / Software Notion hoặc CLI Game Development Studio** vì phiên không cung cấp công cụ tương ứng. Chưa có đo hiệu năng game 100 người, engine import hoặc canonical package. Xem báo cáo để phân biệt việc đã chạy với kế hoạch.
+## Tệp bàn giao
+
+- [Chợ Vỉa Hè GLB](assets/map/cho_via_he.glb) · [nguồn Blender](assets/map/source/cho_via_he.blend)
+- [Phố Giao Hàng GLB](assets/map/pho_giao_hang.glb) · [nguồn Blender](assets/map/source/pho_giao_hang.blend)
+- [Graph, spawn, camera và collider đề xuất](assets/map/board_layouts.json)
+- [Quy cách thay asset và điểm gắn](assets/map/README.md)
+- [Báo cáo kiểm tra map](assets/map/validation.json)
+- [Nguồn và đối chiếu phạm vi](docs/co-ty-phu/07-master-source-reconciliation.md)
+
+Tọa độ đề xuất trong sheet được xoay/căn giữa và giãn dọc để hợp 9:16; giữ nguyên graph, độ rộng ô 2 wu và số bước. Các vị trí cũ/new đều giữ trong JSON. Không có nhân vật hay đạo cụ tự sản xuất trong GLB này; các slot chờ asset của người dùng. Marker A–J chỉ thuộc ảnh kiểm tra.
+
+Các tệp ở `assets/co-ty-phu/` và tài liệu 01–06 là lịch sử prototype trước khi có nguồn; không tính chúng là map hiện hành. Chưa triển khai gameplay, mạng hoặc benchmark FPS.

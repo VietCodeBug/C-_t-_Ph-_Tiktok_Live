@@ -1,5 +1,7 @@
 # Kế hoạch 1 / 10 / 20 / 100 người
 
+> Nguồn mới xác định 10 ghế + 100 khán giả. Các bài 20/100 token dưới đây là thử nghiệm bố trí cũ, không phải room size sản phẩm. Xem [Master](07-master-source-reconciliation.md).
+
 **Chưa chạy game benchmark.** Không có số đo FPS/p95/latency thực. Render offline và kiểm tra asset không chứng minh phòng 100 người chạy mượt.
 
 Đã dựng riêng bốn bài **bố trí tĩnh** với 1/10/20/100 mesh token thật trên map blockout. Cùng camera 540×960, phân bố round-robin trên 40 ô minh họa; tối đa lần lượt 1/1/1/3 token mỗi ô. Ảnh trong `assets/co-ty-phu/previews/occupancy-*.png`, metadata tại `map/spatial-preview.json`. Đây là kiểm tra hình ảnh/bố cục, không có client mạng, gameplay, token animation hoặc số đo FPS. Chưa thử toàn bộ token cùng một ô.

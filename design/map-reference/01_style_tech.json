@@ -1,0 +1,413 @@
+{
+  "sheet": "01_STYLE_TECH",
+  "records": [
+    {
+      "source_row": 2,
+      "cells": {
+        "Nhóm": "Gameplay",
+        "Thuộc tính": "Map",
+        "Giá trị / quy cách": "3D low-poly toy city, stylized Việt Nam, rounded roof, matte pastel, GLB/gltf",
+        "Đơn vị": "GLB",
+        "Thành phần": "Three.js",
+        "Ghi chú triển khai": "Chỉ map + đường + quầy/đạo cụ là 3D",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 3,
+      "cells": {
+        "Nhóm": "Gameplay",
+        "Thuộc tính": "Player",
+        "Giá trị / quy cách": "2D chibi sprites billboard camera trong không gian Three.js",
+        "Đơn vị": "PNG RGBA",
+        "Thành phần": "SpriteMaterial",
+        "Ghi chú triển khai": "Không sử dụng mesh nhân vật 3D",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 4,
+      "cells": {
+        "Nhóm": "Gameplay",
+        "Thuộc tính": "NPC + pets",
+        "Giá trị / quy cách": "2D sprite 5 hướng, cùng rig chibi, tỉ lệ tương ứng",
+        "Đơn vị": "PNG RGBA",
+        "Thành phần": "SpriteMaterial",
+        "Ghi chú triển khai": "NPC là 2D; em bé/chó/mèo cũng là 2D",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 5,
+      "cells": {
+        "Nhóm": "Render",
+        "Thuộc tính": "Output",
+        "Giá trị / quy cách": "1080x1920, 9:16, 30 FPS",
+        "Đơn vị": "px",
+        "Thành phần": "OBS/TikTok",
+        "Ghi chú triển khai": "Test 720x1280 khi máy yếu",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 6,
+      "cells": {
+        "Nhóm": "Render",
+        "Thuộc tính": "Camera",
+        "Giá trị / quy cách": "Orthographic / map top down 55–60° / camera theo quân",
+        "Đơn vị": "độ",
+        "Thành phần": "Three.js",
+        "Ghi chú triển khai": "HUD overlay bằng DOM/CSS",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 7,
+      "cells": {
+        "Nhóm": "Map",
+        "Thuộc tính": "Tile width",
+        "Giá trị / quy cách": "2 world units / ô, XZ mặt đất; Y cao lên",
+        "Đơn vị": "wu",
+        "Thành phần": "glTF + Three.js",
+        "Ghi chú triển khai": "Trục +Y trên, +X/+Z trên mặt đường",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 8,
+      "cells": {
+        "Nhóm": "Player",
+        "Thuộc tính": "Visible height",
+        "Giá trị / quy cách": "1.15 world units / 1 quân (cao ≈ 2.5 đầu)",
+        "Đơn vị": "wu",
+        "Thành phần": "Sprite.scale",
+        "Ghi chú triển khai": "Không đổi giữa các clip",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 9,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Cell",
+        "Giá trị / quy cách": "256 x 256 pixel, transparent sRGB PNG, non-premultiplied",
+        "Đơn vị": "px",
+        "Thành phần": "sprite atlas",
+        "Ghi chú triển khai": "Mỗi frame chừa ≥8 px viền trống",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 10,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Direction rows",
+        "Giá trị / quy cách": "row0 S; row1 SE; row2 E; row3 NE; row4 N",
+        "Đơn vị": "0-based",
+        "Thành phần": "atlas",
+        "Ghi chú triển khai": "SW/W/NW mirror SE/E/NE; kiểm tra phụ kiện bất đối xứng",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 11,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Pivot foot",
+        "Giá trị / quy cách": "x=128, y=218 từ góc trên trái, cố định trong mọi frame",
+        "Đơn vị": "px",
+        "Thành phần": "texture crop",
+        "Ghi chú triển khai": "Anchor chung, foot root luôn ở ground y=0",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 12,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Head nominal",
+        "Giá trị / quy cách": "x=128 y=60, top head ~16, hair max 8px margin",
+        "Đơn vị": "px",
+        "Thành phần": "rig guide",
+        "Ghi chú triển khai": "Cùng độ lớn đầu ở mọi skin; mũ điều chỉnh trong padding",
+        "Mức": "MẪU THIẾT KẾ"
+      }
+    },
+    {
+      "source_row": 13,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Hands nominal",
+        "Giá trị / quy cách": "LH=(91,145), RH=(165,145) khi facing S",
+        "Đơn vị": "px",
+        "Thành phần": "socket props",
+        "Ghi chú triển khai": "Tọa độ chuẩn để vẽ; refine sau khi chốt nhân vật mẫu",
+        "Mức": "MẪU THIẾT KẾ"
+      }
+    },
+    {
+      "source_row": 14,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Feet nominal",
+        "Giá trị / quy cách": "LF=(111,218), RF=(145,218) khi facing S",
+        "Đơn vị": "px",
+        "Thành phần": "contact guide",
+        "Ghi chú triển khai": "Foot contact y=218; chân swing nâng lên không đổi pivot root",
+        "Mức": "MẪU THIẾT KẾ"
+      }
+    },
+    {
+      "source_row": 15,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Outline",
+        "Giá trị / quy cách": "~4px viền plum #35283E; shading 2 tone, matte",
+        "Đơn vị": "px",
+        "Thành phần": "draw pipeline",
+        "Ghi chú triển khai": "Không dùng pixel-art, không photorealistic",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 16,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Motion",
+        "Giá trị / quy cách": "8–18fps / clip; game 30fps interpolate root world movement",
+        "Đơn vị": "fps",
+        "Thành phần": "AnimationMixer custom",
+        "Ghi chú triển khai": "Blend sprite pose qua transition/mask; frame sequencing consistent",
+        "Mức": "KHUYẾN NGHỊ"
+      }
+    },
+    {
+      "source_row": 17,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Export",
+        "Giá trị / quy cách": "5 rows x N columns; canvas = (256*N)x1280, không trim từng frame",
+        "Đơn vị": "px",
+        "Thành phần": "atlas",
+        "Ghi chú triển khai": "Tên file <character>/<clip>.png",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 18,
+      "cells": {
+        "Nhóm": "Sprite",
+        "Thuộc tính": "Skin system",
+        "Giá trị / quy cách": "20 selectable playable character designs; 10 seat palette overrides",
+        "Đơn vị": "variant",
+        "Thành phần": "render build",
+        "Ghi chú triển khai": "Cùng khung và anchors, thay tóc/áo/phụ kiện/da nhân vật",
+        "Mức": "ĐỀ XUẤT"
+      }
+    },
+    {
+      "source_row": 19,
+      "cells": {
+        "Nhóm": "3D Props",
+        "Thuộc tính": "Prop origin",
+        "Giá trị / quy cách": "Pivot tại chân/đáy hoặc mặt tiếp xúc, không âm vào nền",
+        "Đơn vị": "wu",
+        "Thành phần": "GLB",
+        "Ghi chú triển khai": "Prefab reusable, tách meshes tương tác",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 20,
+      "cells": {
+        "Nhóm": "Lighting",
+        "Thuộc tính": "Illumination",
+        "Giá trị / quy cách": "Key light từ trên-trái, shadow ellipse mềm dưới 2D character",
+        "Đơn vị": "-",
+        "Thành phần": "three.js",
+        "Ghi chú triển khai": "Không bake shadow vào sprite",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 21,
+      "cells": {
+        "Nhóm": "UI",
+        "Thuộc tính": "Safe area",
+        "Giá trị / quy cách": "Lề thử 12% trên, 26% dưới, 12% phải",
+        "Đơn vị": "%",
+        "Thành phần": "CSS",
+        "Ghi chú triển khai": "Chỉnh trên preview điện thoại",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 22,
+      "cells": {
+        "Nhóm": "UI",
+        "Thuộc tính": "Text",
+        "Giá trị / quy cách": "Nunito Vietnamese; 36–44px cho lệnh chính/MONEY trên 1080p",
+        "Đơn vị": "px",
+        "Thành phần": "DOM overlay",
+        "Ghi chú triển khai": "Text/runtime name không vẽ chết vào PNG",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 23,
+      "cells": {
+        "Nhóm": "Game",
+        "Thuộc tính": "Players",
+        "Giá trị / quy cách": "A–J, 10 ghế, mỗi ghế ban đầu 1000 MONEY, 2 vòng lượt",
+        "Đơn vị": "-",
+        "Thành phần": "backend",
+        "Ghi chú triển khai": "Avatar + seat badge HUD, skin tách độc lập với mã ghế",
+        "Mức": "SOURCE"
+      }
+    },
+    {
+      "source_row": 24,
+      "cells": {
+        "Nhóm": "Game",
+        "Thuộc tính": "Map topology",
+        "Giá trị / quy cách": "24 ô logic: 16 C00–C15 + 8 ô nhánh; 2 ga C00/C08",
+        "Đơn vị": "node",
+        "Thành phần": "board_layouts.json",
+        "Ghi chú triển khai": "F01 sau C02; F02 sau C10; mỗi nhánh 2 ô",
+        "Mức": "SOURCE"
+      }
+    },
+    {
+      "source_row": 25,
+      "cells": {
+        "Nhóm": "Game",
+        "Thuộc tính": "Variants",
+        "Giá trị / quy cách": "Chợ Vỉa Hè / Phố Giao Hàng",
+        "Đơn vị": "GLB",
+        "Thành phần": "scene graph",
+        "Ghi chú triển khai": "Lưu layoutId + boardSeed và đổi type tile mỗi ván",
+        "Mức": "SOURCE"
+      }
+    },
+    {
+      "source_row": 26,
+      "cells": {
+        "Nhóm": "Production",
+        "Thuộc tính": "Coordinates disclaimer",
+        "Giá trị / quy cách": "Tọa độ frame/hand/feet trong sheet là rig spec để vẽ, KHÔNG phải tracking từ ảnh sprite thực tế",
+        "Đơn vị": "-",
+        "Thành phần": "artist/dev",
+        "Ghi chú triển khai": "Tinh chỉnh socket khi chốt mẫu, nhưng giữ pivot/canvas nguyên",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 27,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "KEM",
+        "Giá trị / quy cách": "#FFF3DB",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "nền",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 28,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "BAC_HA",
+        "Giá trị / quy cách": "#8ADFC3",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "tài sản, thành công",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 29,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "XANH_TROI",
+        "Giá trị / quy cách": "#83C9F4",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "trời, trung tính",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 30,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "SAN_HO",
+        "Giá trị / quy cách": "#FF887D",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "thua, phí, bom đơn",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 31,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "VANG_XU",
+        "Giá trị / quy cách": "#FFD267",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "MONEY",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 32,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "TIM",
+        "Giá trị / quy cách": "#AB9BF3",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "hỗ trợ",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 33,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "MAN",
+        "Giá trị / quy cách": "#35283E",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "chữ, viền",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 34,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "TRANG",
+        "Giá trị / quy cách": "#FFFFFF",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "mắt, nền phụ",
+        "Mức": "BẮT BUỘC"
+      }
+    },
+    {
+      "source_row": 35,
+      "cells": {
+        "Nhóm": "Palette",
+        "Thuộc tính": "THAN",
+        "Giá trị / quy cách": "#6F7182",
+        "Đơn vị": "HEX",
+        "Thành phần": "global",
+        "Ghi chú triển khai": "bóng mềm",
+        "Mức": "BẮT BUỘC"
+      }
+    }
+  ]
+}

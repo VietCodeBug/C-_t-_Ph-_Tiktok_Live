@@ -1,0 +1,14 @@
+{
+  "scope": "map-only, user produces character/prop/audio/UI assets",
+  "sources": [
+    {
+      "file": "Co_Ty_Phi_TikTok_LIVE_Asset_Sprite_3D_2D_Master_v1.xlsx",
+      "sha256": "fb30b6f101ae59b5d67f164b695118555bbad43a483f8654b5c07f27213d8720"
+    },
+    {
+      "file": "Cờ Tý Phí TikTok LIVE — Kế hoạch phát triển và kịch bản (1).docx",
+      "sha256": "1e16030a55598f85646c55720bda6c9fd6637fe91fa51391c44e95b56ab49ffc"
+    }
+  ],
+  "embedded_instructions_executed": false
+}

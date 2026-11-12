@@ -1,5 +1,7 @@
 # Kế hoạch triển khai và bàn giao
 
+> Kế hoạch suy đoán trước khi nhận tài liệu. Yêu cầu có nguồn đã được cập nhật tại [Master](07-master-source-reconciliation.md); dùng DOCX/worksheet thay các giả định P0 bên dưới.
+
 Không viết mã game/server trong đợt asset này.
 
 ## P0 · Khóa yêu cầu

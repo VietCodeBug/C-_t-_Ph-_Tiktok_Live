@@ -1,0 +1,19 @@
+[
+  {
+    "layout": "CHO_VIA_HE",
+    "GLB_roundtrip_import": "passed",
+    "anchors": 24,
+    "meshes": 120,
+    "vertex_colors": "present"
+  },
+  {
+    "layout": "PHO_GIAO_HANG",
+    "GLB_roundtrip_import": "passed",
+    "anchors": 24,
+    "meshes": 133,
+    "vertex_colors": "present"
+  },
+  {
+    "source_blend_debug_markers": "A-J exactly once in each editable source"
+  }
+]
