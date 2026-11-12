@@ -1,0 +1,44 @@
+{
+  "counts": {
+    "characters": 40,
+    "atlas": 1108,
+    "frames": 62670,
+    "idleV23": 40,
+    "movementV22": 67
+  },
+  "animalAnimations": {
+    "npc01": [
+      "idle",
+      "point_question",
+      "celebrate",
+      "wave"
+    ],
+    "pet_bird": [
+      "idle",
+      "flap",
+      "fly"
+    ],
+    "pet_cat": [
+      "idle",
+      "walk",
+      "sit",
+      "jump",
+      "meow"
+    ],
+    "pet_dog": [
+      "idle",
+      "walk",
+      "sit",
+      "bark",
+      "sick",
+      "roll",
+      "fetch",
+      "sleep"
+    ]
+  },
+  "checks": [
+    "SHA-256 and byte lengths matched both source manifests",
+    "Every animation points to a valid RGBA PNG with the declared dimensions",
+    "Idle V2.3 present for every character"
+  ]
+}

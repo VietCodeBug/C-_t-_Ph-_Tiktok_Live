@@ -1,0 +1,4814 @@
+{
+  "README.md": {
+    "bytes": 1526,
+    "sha256": "14bfa89de26998dd026a2710edd78f9ef80d02f1533f318a7be11c98edd78ad6"
+  },
+  "README_V2_3.md": {
+    "bytes": 1298,
+    "sha256": "5bf76172a4d1e01a2c18dfb36659473bf783263e71696a444730564154361732"
+  },
+  "Toa_Do_Di_Chuyen_V2_2.csv": {
+    "bytes": 432765,
+    "sha256": "492b246344e71a2ca05504df89904cfbb67fec35fd8149536067746dea332d38"
+  },
+  "Toa_Do_Idle_V2_3.csv": {
+    "bytes": 126340,
+    "sha256": "a6b32147baaf95c6990102636100295d0b9e7007edcda0e22f8ad89571b13f20"
+  },
+  "Toa_Do_Sprite_V2.xlsx": {
+    "bytes": 4952416,
+    "sha256": "f387527424690dcc323c036f204c45d81b1c2728a26b385d85f5ffe45f970746"
+  },
+  "assets/characters/ch01/adopt_dog.png": {
+    "bytes": 1066783,
+    "sha256": "da1b5500035e95a652ef9ba13d874f90cb68594cb2f4f9f88984ca30c488a798"
+  },
+  "assets/characters/ch01/advertise.png": {
+    "bytes": 452067,
+    "sha256": "e5e4b9131316c05839703c68a1f9b403f01fe33ebbb36fb1ac6ee3bf5ed31e4a"
+  },
+  "assets/characters/ch01/animations.json": {
+    "bytes": 434929,
+    "sha256": "149050d214f1eb68aa35a6d95692e1a5aa3dabead1a363d23ab5381a75b6b62f"
+  },
+  "assets/characters/ch01/birthday.png": {
+    "bytes": 1332800,
+    "sha256": "35ec233ccced4ea4df3461a54c356666a289ffc6fba3c8116018cca9e7113d5c"
+  },
+  "assets/characters/ch01/care_pet.png": {
+    "bytes": 433745,
+    "sha256": "bcbcfb0237e718c2752c58d2965932c941ed13c757be5c96311e61fdc373dda2"
+  },
+  "assets/characters/ch01/celebrate.png": {
+    "bytes": 1009297,
+    "sha256": "ef4f7af10c9923524b61cb17b7d3f9e2bf61c5e16f18fe81754e5cffef0c86f1"
+  },
+  "assets/characters/ch01/choose_left.png": {
+    "bytes": 352887,
+    "sha256": "449ae63e7784d8d03bba0a80aaf170362bcac45f8c45bb23577d65c85accc2fd"
+  },
+  "assets/characters/ch01/choose_right.png": {
+    "bytes": 348916,
+    "sha256": "7935b7dbe31b1bbf54c1567d3c9a12f667d5784334f3ff2c67f90342e3467824"
+  },
+  "assets/characters/ch01/clean_house.png": {
+    "bytes": 994267,
+    "sha256": "d20afe200184260929b72c3815251ed0849b72fc58381e029dbab4457a3b8510"
+  },
+  "assets/characters/ch01/coin_buy.png": {
+    "bytes": 391757,
+    "sha256": "835cb1254883f0c2e50875409a7c684a97ca2d5d582e1fb7de8a6898a4dc16ac"
+  },
+  "assets/characters/ch01/coin_lose.png": {
+    "bytes": 734642,
+    "sha256": "563ea8a1a7cd3a1ec20c3170feb162241af31e80ac18f44c6197c0702341a31f"
+  },
+  "assets/characters/ch01/coin_win.png": {
+    "bytes": 775950,
+    "sha256": "f6636e88ce72ee148682a172ca4db40e5e069ae920b4a639aa9677eaf00b9c2f"
+  },
+  "assets/characters/ch01/cook_sausage.png": {
+    "bytes": 453137,
+    "sha256": "f902890ac572823576776a24c5001d9c2cd18ea8abc388f0c01d22a086fc61a1"
+  },
+  "assets/characters/ch01/dance.png": {
+    "bytes": 871023,
+    "sha256": "fc24379394039721e46aa03268fff05c25ad53a8a571e4a297e5f16d15405622"
+  },
+  "assets/characters/ch01/graduate.png": {
+    "bytes": 388286,
+    "sha256": "2da6c703804c0ac2630891c7ea78837cf15f4a3166a4af1fa22a100e21f2c585"
+  },
+  "assets/characters/ch01/happy.png": {
+    "bytes": 692699,
+    "sha256": "880a08b89ad59e3d20c7d6b2709432b51200e0ac6baf219c6586aa680df8c79c"
+  },
+  "assets/characters/ch01/hit.png": {
+    "bytes": 1028310,
+    "sha256": "dbf4293b97d35df65354060d6afae01ef43fa11cdd810fe4a6c150852204ce08"
+  },
+  "assets/characters/ch01/hold_baby.png": {
+    "bytes": 361373,
+    "sha256": "6c509e299867170002a19d3c8b7c177a43d6d0eef61ed2857ec19affd63c5512"
+  },
+  "assets/characters/ch01/hold_trophy.png": {
+    "bytes": 350806,
+    "sha256": "598fa01bf306f5b76ec008d1465a2a61374bd18e711ee434dc3a5abc77064d79"
+  },
+  "assets/characters/ch01/idle.png": {
+    "bytes": 453852,
+    "sha256": "102f4ebdf9d199130c1aa666662c5f02738883013f138703ae02375484005e0d"
+  },
+  "assets/characters/ch01/interview.png": {
+    "bytes": 462066,
+    "sha256": "91a8362b7de519bbad030c53dc4ecf0114a1cf0ef0fdce2697e2941700a89667"
+  },
+  "assets/characters/ch01/lift_box.png": {
+    "bytes": 503752,
+    "sha256": "bcf024d1427deef96af3e4d9d79d8e70094954bf323d36869c9ac8b9b792faad"
+  },
+  "assets/characters/ch01/pack_box.png": {
+    "bytes": 424138,
+    "sha256": "e971bb6bfd47a93e1ec5a38dbba25b01be8f37c16e51c26fb95abed56a194d04"
+  },
+  "assets/characters/ch01/pet_dog.png": {
+    "bytes": 1751686,
+    "sha256": "8f788a592e60dc5c7fd2531b34053295fe70ccd6afa4ce6b2d50c26d81b450c7"
+  },
+  "assets/characters/ch01/phone_read.png": {
+    "bytes": 358281,
+    "sha256": "8dd918826ff016b717b8000d133bc204c7fff47d549c6705cb162a684f3fa4d9"
+  },
+  "assets/characters/ch01/phone_tap.png": {
+    "bytes": 917422,
+    "sha256": "40eadc284ca13879f547d81a95026353d5f9bd7be57e2adeca1f3fb538f52fc1"
+  },
+  "assets/characters/ch01/point_question.png": {
+    "bytes": 403443,
+    "sha256": "f1f5a7f6e28e37e8877f86d814bc3df707f012cf9d9549c7c9a7ed5807d37232"
+  },
+  "assets/characters/ch01/police_stop.png": {
+    "bytes": 508627,
+    "sha256": "a5f4b643818e59781c0824ff796a00feb335692fc5e2dd4b708e8c7e57d2811a"
+  },
+  "assets/characters/ch01/portrait.png": {
+    "bytes": 35974,
+    "sha256": "57135bcb7c206e342311e8afaccf6c56533112bfa29e308b86e85e2f5c6ccbb2"
+  },
+  "assets/characters/ch01/push_cart.png": {
+    "bytes": 466474,
+    "sha256": "555bcdf6d7805b9ffdad701ed7719f5d7adbae1c3908958deae2b336af846ec4"
+  },
+  "assets/characters/ch01/rain_walk.png": {
+    "bytes": 974354,
+    "sha256": "7cd1ee60ff8b67282112423a9fb5b80b69531ac76c5696b4330422ca6a617702"
+  },
+  "assets/characters/ch01/receive_salary.png": {
+    "bytes": 388781,
+    "sha256": "841a1d550d6a6de7d4c1dc1865f4318494027769652550a457474cf091155806"
+  },
+  "assets/characters/ch01/repair_pipe.png": {
+    "bytes": 951368,
+    "sha256": "4edcf5ef842d22cc071a65caf338bbcf562942a7a68788d07556fe622b3ec420"
+  },
+  "assets/characters/ch01/repair_vehicle.png": {
+    "bytes": 608394,
+    "sha256": "ffae4716f1eb003bf9819e1878bca3f2eb887e1c424252d004f3b970cc7b6ae1"
+  },
+  "assets/characters/ch01/ride_scooter.png": {
+    "bytes": 774411,
+    "sha256": "59c8a575f498e16e9af02de3d2b590954cf4822dfb690caab3053d5b87b53674"
+  },
+  "assets/characters/ch01/roll_dice.png": {
+    "bytes": 1061624,
+    "sha256": "f2021c9d9163a8f3a98e16873d2b7a8034330f053be44dce5fd0c90b650143d6"
+  },
+  "assets/characters/ch01/run.png": {
+    "bytes": 922870,
+    "sha256": "3c4219e52932a68dc51db21ab493df3f87e46a1b8df9ad71c54ebb56e0630b9d"
+  },
+  "assets/characters/ch01/sad.png": {
+    "bytes": 702716,
+    "sha256": "1fbddd57a9e226a4bdf26cf8fe0dcb0c139bf4fad457acb0eab2c5b439c85d90"
+  },
+  "assets/characters/ch01/search_map.png": {
+    "bytes": 377163,
+    "sha256": "16de6f7f7c13291d4192faf882e3cc9edef44ef5906c7ae141d455c4e8c314e2"
+  },
+  "assets/characters/ch01/sell.png": {
+    "bytes": 431681,
+    "sha256": "9a8280d823aa54e8a7fafd1ad5000d41779e6577cc8c745cdca6d0a88964d73e"
+  },
+  "assets/characters/ch01/serve_drink.png": {
+    "bytes": 415440,
+    "sha256": "640abc89d510195dbbaa04a306e3b6d2735ad30238403625003b08a570c7f8fc"
+  },
+  "assets/characters/ch01/shield_block.png": {
+    "bytes": 391349,
+    "sha256": "61b342a9ed01226939490dd2eead49082a5c8666f0a08207084af49f2ed21d59"
+  },
+  "assets/characters/ch01/ship_order.png": {
+    "bytes": 484964,
+    "sha256": "48db422032220b0c670f008a505f7763ef75403c21fd9e2ccd298ad6df04e814"
+  },
+  "assets/characters/ch01/shocked.png": {
+    "bytes": 823082,
+    "sha256": "53a6ea15734055b6918dd7791cc4f8ee44fa1556ecaacb4b74ac3442996f900a"
+  },
+  "assets/characters/ch01/sit.png": {
+    "bytes": 953614,
+    "sha256": "dd19ee87c4044ec9a5576a2419958b7b97333710af9ef2343faf442beaed6ae6"
+  },
+  "assets/characters/ch01/sleep.png": {
+    "bytes": 697470,
+    "sha256": "185a7a4bced1bc273041cd32cef4f9cef6fa443f397c70d86458ec7f9792c6bd"
+  },
+  "assets/characters/ch01/study.png": {
+    "bytes": 433445,
+    "sha256": "36f81a81f85bc2da040da8641da7db6bb85a25d8c0c14bd53b4d98c96cd01bdf"
+  },
+  "assets/characters/ch01/sweep_street.png": {
+    "bytes": 1170418,
+    "sha256": "c1bcc6d6fa94e7717c0a2be3f6db028864ac96424639bdbf34dd87735382bc23"
+  },
+  "assets/characters/ch01/thank_you.png": {
+    "bytes": 1097449,
+    "sha256": "26b5039a49d7d9046e678186eab3896344abde6ac3f6e423a5182e07f6a31267"
+  },
+  "assets/characters/ch01/type_keyboard.png": {
+    "bytes": 410491,
+    "sha256": "13930678a8cc7ed529bd5e9c67e4d712220e61e3bf456ade7cdba8b491b37c74"
+  },
+  "assets/characters/ch01/unlock_house.png": {
+    "bytes": 384003,
+    "sha256": "07b9d8cee1a5fa2c5815e3789fca76f52f1641b6b05a53e9a8f4b4b6c19f827f"
+  },
+  "assets/characters/ch01/walk.png": {
+    "bytes": 1174260,
+    "sha256": "abd446c22d742351ede500f97eb22183232e81c919febf4c5bf5c796e7602e42"
+  },
+  "assets/characters/ch01/wave.png": {
+    "bytes": 421047,
+    "sha256": "7f010cff9c26e9357d87ed7f5e23e03dd26cd9fd591a1689d96cf1cbcdcd5bb0"
+  },
+  "assets/characters/ch01/wedding.png": {
+    "bytes": 459208,
+    "sha256": "2e08ddfbc090ffc9cf32c9ee16a71806c3d966feb0efa8d96de2c62a058dac90"
+  },
+  "assets/characters/ch02/adopt_dog.png": {
+    "bytes": 974250,
+    "sha256": "05e637d5e138625c41c46e9eeebe48267cc2bd1bc61e3a20a3bd0cb669a57f39"
+  },
+  "assets/characters/ch02/advertise.png": {
+    "bytes": 440091,
+    "sha256": "03fcb8c2133af359825e2ef586e7b78861aa08a54828cd7096eac21caeee3611"
+  },
+  "assets/characters/ch02/animations.json": {
+    "bytes": 434934,
+    "sha256": "ed29de7fe2d993da73e65faa7f2e5ec6ce5676e9625d50e30edb453a0580281c"
+  },
+  "assets/characters/ch02/birthday.png": {
+    "bytes": 1204695,
+    "sha256": "2c4135a01f3d77e7bda0141d6b55e4fd3080169fe0ea925ad7017c04a5c18f2b"
+  },
+  "assets/characters/ch02/care_pet.png": {
+    "bytes": 412811,
+    "sha256": "62a7c47487bbd0f41cc3b3ca7379c29560966a59e66f359f7f1fe11c8b746a73"
+  },
+  "assets/characters/ch02/celebrate.png": {
+    "bytes": 1109939,
+    "sha256": "551d116e47682d59d95995d943819de9436773eeadedf136c3059bafc8b509cd"
+  },
+  "assets/characters/ch02/choose_left.png": {
+    "bytes": 336105,
+    "sha256": "796a96093b069a5f72b02ea32314edbcd566b0722eb2b9cec82edbc2fc93b57f"
+  },
+  "assets/characters/ch02/choose_right.png": {
+    "bytes": 332828,
+    "sha256": "cd948aa7d993351abc5d13e01e37e64b96b141ee3bb00e76d23ff9dec0b77849"
+  },
+  "assets/characters/ch02/clean_house.png": {
+    "bytes": 928172,
+    "sha256": "ed677c7b247ddd41b26f1a1767b95cb299b5afe389c9aaa32a00432c2092ba21"
+  },
+  "assets/characters/ch02/coin_buy.png": {
+    "bytes": 371832,
+    "sha256": "da6b216613da094d8398c66445afd28c3342a35f62bce706f5cbb9b9f5f948be"
+  },
+  "assets/characters/ch02/coin_lose.png": {
+    "bytes": 662434,
+    "sha256": "9cff932e4708f056976bffb5a6b2ae7ecb3d07d17912d51ee0ac04e053a16021"
+  },
+  "assets/characters/ch02/coin_win.png": {
+    "bytes": 806680,
+    "sha256": "74c053ead33d38ed603753c916a418e2180c303125a7703c3023251a1a1cb2f5"
+  },
+  "assets/characters/ch02/cook_sausage.png": {
+    "bytes": 436221,
+    "sha256": "34450c8a063135e155102008d68e74493ac8d93b8d5933c3fc9168c23a37d479"
+  },
+  "assets/characters/ch02/dance.png": {
+    "bytes": 925799,
+    "sha256": "b61ae66cc5b6dbcf1e3dbaaa9cc317fdf76ab27b94ea298487b3aea171bcece9"
+  },
+  "assets/characters/ch02/graduate.png": {
+    "bytes": 354829,
+    "sha256": "14eae11dfc8c64825cc8e8c3e39b5a21905c60a0213387a25c144df551b3b738"
+  },
+  "assets/characters/ch02/happy.png": {
+    "bytes": 806747,
+    "sha256": "9e8f6a2228d314d878c9c266a04157a4159b37ba4d6e8d80c88da303e4827116"
+  },
+  "assets/characters/ch02/hit.png": {
+    "bytes": 958613,
+    "sha256": "1c6cb627f0f2b40b61daece5877a4591b0c0fb24d8881a71739e0c3f15ffce23"
+  },
+  "assets/characters/ch02/hold_baby.png": {
+    "bytes": 351056,
+    "sha256": "b4f8325912d7dd7be5d84c40aa4752f74f5fd1cd264dc46eae8b55766e24bd3d"
+  },
+  "assets/characters/ch02/hold_trophy.png": {
+    "bytes": 338334,
+    "sha256": "9a6d1350a45cd4537498c0f243c6303a3cb4bbcf97e2388a51f188b7c579245c"
+  },
+  "assets/characters/ch02/idle.png": {
+    "bytes": 419931,
+    "sha256": "9d0d0ed082aa179d25012d7d64e24299c87b4f4e927102fe0972e72fdbeeed63"
+  },
+  "assets/characters/ch02/interview.png": {
+    "bytes": 452161,
+    "sha256": "88dce19392388a034f8df71dc8c3a3d3e9134945862b1c2988109372ac706a0a"
+  },
+  "assets/characters/ch02/lift_box.png": {
+    "bytes": 477984,
+    "sha256": "f909c94291421066479f4eff9c74a11a6c4957ffd9b8a989d5f45966ca32cab4"
+  },
+  "assets/characters/ch02/pack_box.png": {
+    "bytes": 406341,
+    "sha256": "3ac1047aec0a3b7150486a8e1dcb20a9aa2228c2ec99236b1f2b1a8e6ab18045"
+  },
+  "assets/characters/ch02/pet_dog.png": {
+    "bytes": 1606062,
+    "sha256": "aa1576b57eec0f6ca3daaa35e15441efe8ff7c11ad0227af9fffe336678ac6c7"
+  },
+  "assets/characters/ch02/phone_read.png": {
+    "bytes": 337343,
+    "sha256": "1764ae8a5ba14691c7e2e2708c539efad22c5700395ceafdf8527216afc2f171"
+  },
+  "assets/characters/ch02/phone_tap.png": {
+    "bytes": 856172,
+    "sha256": "8cb159009cf39bb66324880b93ae7bc67302a28798caef001f36529b49cb6a05"
+  },
+  "assets/characters/ch02/point_question.png": {
+    "bytes": 389971,
+    "sha256": "b63ecd9f5edf5b6b009f609bbff18a60be0827f789d25728cc26aebeef6a04dc"
+  },
+  "assets/characters/ch02/police_stop.png": {
+    "bytes": 474459,
+    "sha256": "ad2bedd2dba14a521e31a01ef2e3e7ebdc0dd5b59b5414655d3315e8c0e851bc"
+  },
+  "assets/characters/ch02/portrait.png": {
+    "bytes": 35066,
+    "sha256": "e9f65d26fcac7c4c8702dfbe166d5639420d4e9e9eb63a69e93055a4ac8a7b8d"
+  },
+  "assets/characters/ch02/push_cart.png": {
+    "bytes": 452264,
+    "sha256": "3e533bf43ea3c383fdaae189a4f0ce93fe94ee5028462103f64063c9fef99d73"
+  },
+  "assets/characters/ch02/rain_walk.png": {
+    "bytes": 956577,
+    "sha256": "ac510e51c95f1cac5241725468ad3cbc1241dea3f9dcb5ec84c8563d8eb01b4d"
+  },
+  "assets/characters/ch02/receive_salary.png": {
+    "bytes": 377228,
+    "sha256": "11178f03866cdcecc6de215f8ca64aa8301fc55d001e8c1b3f9638e3b41517a9"
+  },
+  "assets/characters/ch02/repair_pipe.png": {
+    "bytes": 890680,
+    "sha256": "ac59c81a767ebc98ca5e408058b9c016c8e4970d347609ab5938b96ea2a2d730"
+  },
+  "assets/characters/ch02/repair_vehicle.png": {
+    "bytes": 602605,
+    "sha256": "e714246f74a460b5b9980b83e6b3787781cf4592536bbd54381660b538abe46f"
+  },
+  "assets/characters/ch02/ride_scooter.png": {
+    "bytes": 748512,
+    "sha256": "0a5aaf311aa72556f4332e0bbb97cb21869342bbc0e2311d27945b2007079993"
+  },
+  "assets/characters/ch02/roll_dice.png": {
+    "bytes": 997800,
+    "sha256": "db3ea106fc2bbcb9ea31ba068fbebf12082ba71ad37875af8ccd8ed253be1e3d"
+  },
+  "assets/characters/ch02/run.png": {
+    "bytes": 850313,
+    "sha256": "b8ce3aa09776d89db73b8364ca4542769afbe7dbe032fd22c07d68a5ef442cb8"
+  },
+  "assets/characters/ch02/sad.png": {
+    "bytes": 654323,
+    "sha256": "76b9ddd0cd698febd5a022bdf0fd1478ffabeccc84a85266abe9f0efa7e5a283"
+  },
+  "assets/characters/ch02/search_map.png": {
+    "bytes": 372718,
+    "sha256": "33c99a5a6a9ff83ccba90dfcbda53e0e62dd54be32d78fd58b30bc1024583740"
+  },
+  "assets/characters/ch02/sell.png": {
+    "bytes": 414465,
+    "sha256": "508377ca6a927a8314e939639e714375a73de3a119c3d6392eca60630e3df205"
+  },
+  "assets/characters/ch02/serve_drink.png": {
+    "bytes": 386456,
+    "sha256": "599dbb2cb866fc6a3368ae116c6c4654fdb66dec9ce6be8a0fdf72c3f3d6e909"
+  },
+  "assets/characters/ch02/shield_block.png": {
+    "bytes": 355707,
+    "sha256": "ba1eb0049743172a8490c020e8456190c802b6f9e3f1d145ce88b7f385548f7f"
+  },
+  "assets/characters/ch02/ship_order.png": {
+    "bytes": 462682,
+    "sha256": "05dfa2da60ffe0909f44758a7d40edb35ddf4563546119157bb8f853c35f2e5e"
+  },
+  "assets/characters/ch02/shocked.png": {
+    "bytes": 754105,
+    "sha256": "5811eebef32ab1bc54e364a1e7ae5277eb73c537757cff8477b607d56be8a175"
+  },
+  "assets/characters/ch02/sit.png": {
+    "bytes": 881251,
+    "sha256": "85f61118cd4ec23d54ca891a91c979432b65aa83f43aae3ab3cb9efb6d5a77a2"
+  },
+  "assets/characters/ch02/sleep.png": {
+    "bytes": 648219,
+    "sha256": "e6a42541c13dcb6ce5d59a5af56ceabcb40c0b8c4aa04f7f45e0c5937d554afa"
+  },
+  "assets/characters/ch02/study.png": {
+    "bytes": 419414,
+    "sha256": "a9eb852fe19811b12d8c87534b189e49a1cfcfb4dca483cf0abfa0f23fdab1b0"
+  },
+  "assets/characters/ch02/sweep_street.png": {
+    "bytes": 1233879,
+    "sha256": "c68702d1bb49708070da2f16a68c233a30ac18a5cf85edc94c5353ac5b153c24"
+  },
+  "assets/characters/ch02/thank_you.png": {
+    "bytes": 1005268,
+    "sha256": "7e4bc6f79b5322315029341ff843750d7e98734cb61e151c0a932cb5b8aee826"
+  },
+  "assets/characters/ch02/type_keyboard.png": {
+    "bytes": 387068,
+    "sha256": "2aba42a7f9eb77777da2f1aadfc7be364d65d4dec8b8119d1029c6c64aaa4e2f"
+  },
+  "assets/characters/ch02/unlock_house.png": {
+    "bytes": 375768,
+    "sha256": "7226d904b3626e3c0959d188690999f8276f0cff476f64aeb951d9dbd507bd08"
+  },
+  "assets/characters/ch02/walk.png": {
+    "bytes": 1039340,
+    "sha256": "f5a6f0a7b4b5553474c2198f3275391e5ae6cbf29cf3cb746ea5158565ccf14b"
+  },
+  "assets/characters/ch02/wave.png": {
+    "bytes": 380413,
+    "sha256": "6d88fadc9bc969989f94ae4228eddd72fad8959fdf6a078963857af9552909d1"
+  },
+  "assets/characters/ch02/wedding.png": {
+    "bytes": 403976,
+    "sha256": "6a1795f4ab5d9d98a06dd6713ed3839a9ad5ec2b714695d98cd1393df6012b43"
+  },
+  "assets/characters/ch03/adopt_dog.png": {
+    "bytes": 930099,
+    "sha256": "4d40750b688c790305a2448a8c6902bcc7fdb17047db3164cb3c96ab1aaf0ab0"
+  },
+  "assets/characters/ch03/advertise.png": {
+    "bytes": 404702,
+    "sha256": "14ca62965ab6ee8e09c41dfbcad56d1e623e9f6d564ff59ac6236551edf8eebe"
+  },
+  "assets/characters/ch03/animations.json": {
+    "bytes": 434927,
+    "sha256": "30d85d1e64d9d03b5212728c1afd5ce8b6767e1dbc347b952f447d9bf6f0173b"
+  },
+  "assets/characters/ch03/birthday.png": {
+    "bytes": 1126760,
+    "sha256": "78e638e938b5523a3c25ae8348dbfbe02c4f0e094d0f07631ba49861db06e2de"
+  },
+  "assets/characters/ch03/care_pet.png": {
+    "bytes": 382443,
+    "sha256": "68732052dfded5a38f1290caf2a200735a1cb96e5086658807318c0a3a70b177"
+  },
+  "assets/characters/ch03/celebrate.png": {
+    "bytes": 1124356,
+    "sha256": "83023b810b21aedcd56980f7ec27a76b36605ae73652945dd311f79c1971da71"
+  },
+  "assets/characters/ch03/choose_left.png": {
+    "bytes": 314153,
+    "sha256": "248a75db01d0557575619d29f2a3627bfc5d65d5755111ec9ae67b3054878ce1"
+  },
+  "assets/characters/ch03/choose_right.png": {
+    "bytes": 312387,
+    "sha256": "e666fba1401d8c401e4a0144aaa22c968ad97fe49cd504343d9ab1b7d500530d"
+  },
+  "assets/characters/ch03/clean_house.png": {
+    "bytes": 877171,
+    "sha256": "f5bc5dd5f2051c9fc4d3af28f830b3f03e0f370fbb0dca2c243c8f7060a721ec"
+  },
+  "assets/characters/ch03/coin_buy.png": {
+    "bytes": 355541,
+    "sha256": "51f8cddaa040219dd68cac1b7150b193865f21912609957b1ea1e756b9146aa8"
+  },
+  "assets/characters/ch03/coin_lose.png": {
+    "bytes": 656610,
+    "sha256": "285fca9da3e156cbf47939f85b059bbca4bec7287fc92df38dcaf476c5122a96"
+  },
+  "assets/characters/ch03/coin_win.png": {
+    "bytes": 808572,
+    "sha256": "529ca6e278b6098d80430402be9d14d87ef132625a95007579c4a07b60f01443"
+  },
+  "assets/characters/ch03/cook_sausage.png": {
+    "bytes": 410172,
+    "sha256": "95da086bb9c98258f623b0dab446ca20dde7bc90b0f0ed2bff8d0a803e742d66"
+  },
+  "assets/characters/ch03/dance.png": {
+    "bytes": 971123,
+    "sha256": "0d9630cecf7724323d6fab2b4ae9a8f3cb39b1dc7e1c38c949cbaf034110ef88"
+  },
+  "assets/characters/ch03/graduate.png": {
+    "bytes": 362048,
+    "sha256": "a70fedeb0b40fe32a3f9a2a19e1659aef66dd37fd103257bead90ab708b86058"
+  },
+  "assets/characters/ch03/happy.png": {
+    "bytes": 720904,
+    "sha256": "20dee13a3d5f3762a5a9f8e4c9f6432c34e3e5eba0fcf4e43074138da2661817"
+  },
+  "assets/characters/ch03/hit.png": {
+    "bytes": 893011,
+    "sha256": "1e9f91329f3ffde461c6e2403171adade0e460ed26d085f992129fed6030fbab"
+  },
+  "assets/characters/ch03/hold_baby.png": {
+    "bytes": 321861,
+    "sha256": "1e7e5365e7143e86377aeac5381103f667080c5d2200703aec379197dc50d501"
+  },
+  "assets/characters/ch03/hold_trophy.png": {
+    "bytes": 316222,
+    "sha256": "9695a11c4e61ac3a4549df58aa469074dfbdf0107a1a4889275031d5fb376e53"
+  },
+  "assets/characters/ch03/idle.png": {
+    "bytes": 396606,
+    "sha256": "a381fe28375a7314858cf852e7712d26ba36dc91c1d1425e96978fc32016514f"
+  },
+  "assets/characters/ch03/interview.png": {
+    "bytes": 418193,
+    "sha256": "e97da6bb24eb732053ea7edc56bb54c40668e862349e98c801deaf4329254424"
+  },
+  "assets/characters/ch03/lift_box.png": {
+    "bytes": 445663,
+    "sha256": "ffd64015e1f4fea3042978d246a16d515e63c739983918d057f4331c5cb7efbf"
+  },
+  "assets/characters/ch03/pack_box.png": {
+    "bytes": 376407,
+    "sha256": "9a6fe3bf4f22b4317546b399fab64c495bb95c37f324dd60fc2fc80b0d9fd1de"
+  },
+  "assets/characters/ch03/pet_dog.png": {
+    "bytes": 1516974,
+    "sha256": "3062d62db0cf4a77034059438ed0a4bb20bac35769aff241732961d8a20c21fe"
+  },
+  "assets/characters/ch03/phone_read.png": {
+    "bytes": 320054,
+    "sha256": "6750909c4b7b308c1e9a524303f4924f071ead17beb3baae1f4e0e9fbebfd863"
+  },
+  "assets/characters/ch03/phone_tap.png": {
+    "bytes": 825693,
+    "sha256": "ee95b0350bcc0e7137b942bdfd76fa07ec5dfaa5ef7c3e423d6b2dfdcea3fedc"
+  },
+  "assets/characters/ch03/point_question.png": {
+    "bytes": 365479,
+    "sha256": "b2662f41c3dbf66a556d7a7f5a2e4e62e73462a8ed48da3e8a78b7642b9e5b98"
+  },
+  "assets/characters/ch03/police_stop.png": {
+    "bytes": 451005,
+    "sha256": "54afc1c5e73cdda5630f4f94d4a8da440351ce73c19c9f70b9f7780b5b99fba4"
+  },
+  "assets/characters/ch03/portrait.png": {
+    "bytes": 32659,
+    "sha256": "ea10bc41aa5c9d2099ac2144fbc81b971f30d82922e4e4592cd6143c73c987c6"
+  },
+  "assets/characters/ch03/push_cart.png": {
+    "bytes": 429915,
+    "sha256": "89304561e8ea4c5b0d28f9ac1df3db190cf48035015a530f0b85fabe2d55df2d"
+  },
+  "assets/characters/ch03/rain_walk.png": {
+    "bytes": 1024509,
+    "sha256": "87041ba99aa0a89360450ca5339e3ef21b16ef263c49db020654c2521fef26e4"
+  },
+  "assets/characters/ch03/receive_salary.png": {
+    "bytes": 348972,
+    "sha256": "6356dafe818356aaf5bf5a28ec19c83f159fd2635f09743e41cd3ec6294f4fff"
+  },
+  "assets/characters/ch03/repair_pipe.png": {
+    "bytes": 850783,
+    "sha256": "f82e990d88147797124d292ff0c4b20e2eb266cbd7aec1e2764a20af4e615d14"
+  },
+  "assets/characters/ch03/repair_vehicle.png": {
+    "bytes": 533301,
+    "sha256": "89a6681f362b80ba4e9dcef3091f1a4558bf218941e82d84a7f3528d133441d0"
+  },
+  "assets/characters/ch03/ride_scooter.png": {
+    "bytes": 706501,
+    "sha256": "c9e759fd32b1a011a444ce1ea1e4b69872a4488c555aadc1a20f1a2341d83ccd"
+  },
+  "assets/characters/ch03/roll_dice.png": {
+    "bytes": 948679,
+    "sha256": "06337f601d14493e716f81bb912a2b1cb4ebd00b18a9b8a3a7406219f4ac9b68"
+  },
+  "assets/characters/ch03/run.png": {
+    "bytes": 844072,
+    "sha256": "705d954598fb44d70c9544f2d0667723a26d7e3b92474c15fd7a8920046e1063"
+  },
+  "assets/characters/ch03/sad.png": {
+    "bytes": 608289,
+    "sha256": "0d5ab86af25f4f31cfbcc623c8538ff2cd4ff66e9a9e6729ed165d50d9cb81cc"
+  },
+  "assets/characters/ch03/search_map.png": {
+    "bytes": 339261,
+    "sha256": "62052e73758b58ebc16f0c27ad274955141c8579cc045c426bc8339eb97452d6"
+  },
+  "assets/characters/ch03/sell.png": {
+    "bytes": 395411,
+    "sha256": "ed50e22b0d8bfbbcf28c0d4518b53f8d2e305305cd605706078c0c900bf6e2f4"
+  },
+  "assets/characters/ch03/serve_drink.png": {
+    "bytes": 381717,
+    "sha256": "e7048b90e0ca6c6aa41a22db781bb33abfb2f32c802c3788efcd39f606cbb03f"
+  },
+  "assets/characters/ch03/shield_block.png": {
+    "bytes": 360859,
+    "sha256": "6c77f382405c38c79c2d54e3185f0ab27b66d8983112b4d4ba3c5c62ee72c9f2"
+  },
+  "assets/characters/ch03/ship_order.png": {
+    "bytes": 440262,
+    "sha256": "eab5a3df5afd335dc17001ed4a3500a80af2d0c2c12e20d9f404bab9ddf3df1a"
+  },
+  "assets/characters/ch03/shocked.png": {
+    "bytes": 710234,
+    "sha256": "7625070c9e03478d65e77044bbfae64ec6bc81b51a7853666f33e427007bfe99"
+  },
+  "assets/characters/ch03/sit.png": {
+    "bytes": 817905,
+    "sha256": "02e49621104e58476695637b90a40d5f383ecb8d462b8ac83eb2023bda8efd18"
+  },
+  "assets/characters/ch03/sleep.png": {
+    "bytes": 606706,
+    "sha256": "9906c301354c3ced89be8058e357bfc5ff62b0d12d321ffaa4a8625f6524d536"
+  },
+  "assets/characters/ch03/study.png": {
+    "bytes": 383266,
+    "sha256": "8755758f738ff3ea5b533f5227e62e12bbd1b8d2e1cd486600e96b3a17845890"
+  },
+  "assets/characters/ch03/sweep_street.png": {
+    "bytes": 1166412,
+    "sha256": "9c8cbfdceb8772a6bfa8a45722e099a28a6c17ef13e933f68dae86ecfe00bd15"
+  },
+  "assets/characters/ch03/thank_you.png": {
+    "bytes": 940073,
+    "sha256": "bb75264e1f833e2eb90b039df30e1c3db83f533c316fa0c42adf34a78077127d"
+  },
+  "assets/characters/ch03/type_keyboard.png": {
+    "bytes": 359379,
+    "sha256": "4d7d11c3634c0066f9def04a3abee23dc5abc8430b4edf7c2bf72f484497f427"
+  },
+  "assets/characters/ch03/unlock_house.png": {
+    "bytes": 348843,
+    "sha256": "1a43a6d9f377b9cdadc451270143cadef7a228eedec593748bd13490c0da9f54"
+  },
+  "assets/characters/ch03/walk.png": {
+    "bytes": 951666,
+    "sha256": "0283ce02ef9741b6223ce6221ad1a9125d53ad1f3eeb660443147e392b6304c0"
+  },
+  "assets/characters/ch03/wave.png": {
+    "bytes": 395720,
+    "sha256": "d6d2e4ddf5fc9df9f1cbaad8bf8b18c5aa3c6a2c969753ff2fde6d17926c5dd3"
+  },
+  "assets/characters/ch03/wedding.png": {
+    "bytes": 434531,
+    "sha256": "df6b84d4c838ed1690fc6b0c6317d8dfd13e1eff0fbf9d328c99511c83939e8f"
+  },
+  "assets/characters/ch04/adopt_dog.png": {
+    "bytes": 936097,
+    "sha256": "c3430a6bd17960af86581313f36c06dc352ad12f7d83e93e82c4707d1ab70dfa"
+  },
+  "assets/characters/ch04/advertise.png": {
+    "bytes": 411352,
+    "sha256": "bbfab5d189c668027ad77cf7482918d4d41d79d43b254d088ed59e719e345957"
+  },
+  "assets/characters/ch04/animations.json": {
+    "bytes": 434940,
+    "sha256": "dbfa2d5552653c840725b4f9507706849964f9e05f90feadf9b6403a020306a1"
+  },
+  "assets/characters/ch04/birthday.png": {
+    "bytes": 1127645,
+    "sha256": "d4313313a86d486559d07d45439e3825c6e5e12c94b74648826bb7bd13c3f266"
+  },
+  "assets/characters/ch04/care_pet.png": {
+    "bytes": 390097,
+    "sha256": "bc5f5fe68f40b1aa9178a5725bfbfe3108d598c981e900e78971798607c602f4"
+  },
+  "assets/characters/ch04/celebrate.png": {
+    "bytes": 1123060,
+    "sha256": "996367cc710da7986310d7688ed84a146be31a8b58dad0ac6b8d1fa77d9415c5"
+  },
+  "assets/characters/ch04/choose_left.png": {
+    "bytes": 315171,
+    "sha256": "2c821fe01eba3b614b7a9863e1842237e2dc4a0c1150a569fb27c36590697072"
+  },
+  "assets/characters/ch04/choose_right.png": {
+    "bytes": 313986,
+    "sha256": "a5ad2ff9fc9e478988c398d81a015784750c39588d6fe88a260cfa037882dd54"
+  },
+  "assets/characters/ch04/clean_house.png": {
+    "bytes": 888494,
+    "sha256": "99dae5a9f89a398d28bd36ae0e4a762dfbbcbb2bc1bda6d9632296b4756e0891"
+  },
+  "assets/characters/ch04/coin_buy.png": {
+    "bytes": 362774,
+    "sha256": "5b72637fc4908b21656be8997213aa0845f6148e052bccc52fedd2d6e4c28e2e"
+  },
+  "assets/characters/ch04/coin_lose.png": {
+    "bytes": 674504,
+    "sha256": "15db46e546a5bf8eb494d71535920a0b03dd177e7e66c8abb2efbdec240073a5"
+  },
+  "assets/characters/ch04/coin_win.png": {
+    "bytes": 811624,
+    "sha256": "86b0f56f15b9bc8423700b271b0ae94f31769502c29f28ce2718d51bb11a6729"
+  },
+  "assets/characters/ch04/cook_sausage.png": {
+    "bytes": 420471,
+    "sha256": "5f0f9d5864f785ca7da238691164c5d7586bdb3c34c5e1fdecce338d7da447ad"
+  },
+  "assets/characters/ch04/dance.png": {
+    "bytes": 969674,
+    "sha256": "97edaf5b93d790751a0456ac4a22e574a49d26f45a9fa0be86c6f202c27b0f03"
+  },
+  "assets/characters/ch04/graduate.png": {
+    "bytes": 360248,
+    "sha256": "bc23d53ef43d046cc8e3e07d4658a998d0ec3821dd3cec7f4f0d8d5e6d6f9645"
+  },
+  "assets/characters/ch04/happy.png": {
+    "bytes": 729349,
+    "sha256": "6d76ca48305af567ba43602c02df7df6d6522e1c17dccfeee2a1eed6d13135cb"
+  },
+  "assets/characters/ch04/hit.png": {
+    "bytes": 914042,
+    "sha256": "39179ce49686dc2b1a14cda224cec57502c1bbd50cd1d5675bbe836990891260"
+  },
+  "assets/characters/ch04/hold_baby.png": {
+    "bytes": 332200,
+    "sha256": "655b1ef0a9e472f1a4f1b038a8434cc0a923c9aec83cddcfdf797b83f87ec75a"
+  },
+  "assets/characters/ch04/hold_trophy.png": {
+    "bytes": 320918,
+    "sha256": "18fc74974f604053a272ea57968e56e06d2b06084c6f57a881df3e6f13f5e700"
+  },
+  "assets/characters/ch04/idle.png": {
+    "bytes": 398939,
+    "sha256": "58b93e8dc9ec3916cea0c10c2ae6068bebf9ffaa465780a7ca89fbb275bf8e8c"
+  },
+  "assets/characters/ch04/interview.png": {
+    "bytes": 433994,
+    "sha256": "3f3f36a5bbf73565bb936bd3b5c699c0b21f10a35d4f4e6cee4282cdb2e496c1"
+  },
+  "assets/characters/ch04/lift_box.png": {
+    "bytes": 460419,
+    "sha256": "15763ca4c21d367e51e6af2bdf492f3b6dc6a94a2f4dc53c7c2926e330c65366"
+  },
+  "assets/characters/ch04/pack_box.png": {
+    "bytes": 387922,
+    "sha256": "383d2d9509a6d1a1aafd1a8a99a867586efd0eaef3faf131e6ba2207bde3cad2"
+  },
+  "assets/characters/ch04/pet_dog.png": {
+    "bytes": 1276261,
+    "sha256": "3b3687c67d1eb189cc673954a59a811e1df57b4aebf447952bd1b7bf226b7b5d"
+  },
+  "assets/characters/ch04/phone_read.png": {
+    "bytes": 330264,
+    "sha256": "d019d5bc5aec27c23797a9a5aeb191f3195959979f12b528298bfec47003fd52"
+  },
+  "assets/characters/ch04/phone_tap.png": {
+    "bytes": 825937,
+    "sha256": "23b67d913ad5b4b76d1749eaf7205c873906d355417b2303434c015d46e60587"
+  },
+  "assets/characters/ch04/point_question.png": {
+    "bytes": 369974,
+    "sha256": "ed854855c7125e586264ca17a36b15a6360f3f7d02e8029433edddd1068e3885"
+  },
+  "assets/characters/ch04/police_stop.png": {
+    "bytes": 461777,
+    "sha256": "1585a032786a10b0f1907d39e1a2ac31973be49b6c14cb3796b88d4b56bd2659"
+  },
+  "assets/characters/ch04/portrait.png": {
+    "bytes": 32993,
+    "sha256": "0548772bc21c7a31eea1ca789963c23798599777a0bc268790a9677ff0c786d7"
+  },
+  "assets/characters/ch04/push_cart.png": {
+    "bytes": 440054,
+    "sha256": "295d245520deb4a3e596473a965755841301b7485486c187cecc95f9a1a3b2e5"
+  },
+  "assets/characters/ch04/rain_walk.png": {
+    "bytes": 905950,
+    "sha256": "ef38a6a4b8815bb4be00a2725538c7776a8cdbac49fbf1ec1ce90544ac6837ee"
+  },
+  "assets/characters/ch04/receive_salary.png": {
+    "bytes": 358655,
+    "sha256": "2fc009474614934e64054b01ee905c4847d368a5aad22a32dfcf99d24a81256d"
+  },
+  "assets/characters/ch04/repair_pipe.png": {
+    "bytes": 859055,
+    "sha256": "d7b87fb3b7f739ef226829551f6bd9e4e7b0e0696f232ee600c6944bc651b674"
+  },
+  "assets/characters/ch04/repair_vehicle.png": {
+    "bytes": 573383,
+    "sha256": "4536580c62161756d0f7f34d694952f5bd629ed08f800bd7a1d071202031591f"
+  },
+  "assets/characters/ch04/ride_scooter.png": {
+    "bytes": 704581,
+    "sha256": "833acd11fcea9db9954c463a289712939a520d35dc332a74f00f5c40abb7ea51"
+  },
+  "assets/characters/ch04/roll_dice.png": {
+    "bytes": 911558,
+    "sha256": "9f89c38b0b2d8439add39b6e99a555701b22666ee1cd7cf72501f0c42e0283e7"
+  },
+  "assets/characters/ch04/run.png": {
+    "bytes": 841259,
+    "sha256": "6db7d838c3d1e76ea4757e780c1cbd6b459556471d74b6b41de7f20a72f13242"
+  },
+  "assets/characters/ch04/sad.png": {
+    "bytes": 606584,
+    "sha256": "bfb8bb6f51089c259a29bb40574420f05b26fc60b052f8360976a18016f0c104"
+  },
+  "assets/characters/ch04/search_map.png": {
+    "bytes": 347841,
+    "sha256": "5a151d63ea8bf767a0d4a82c3f1a04ef55e3542f24e9d4f382cae71a2b8fd922"
+  },
+  "assets/characters/ch04/sell.png": {
+    "bytes": 399417,
+    "sha256": "81157e8b6e4033c368e1b484ca7abc0498249a24bb2a9e7722062267adffdcc6"
+  },
+  "assets/characters/ch04/serve_drink.png": {
+    "bytes": 387898,
+    "sha256": "78d88deebfbb0d490a59981efe91a27be752d518069c4c4b635de2e08373ef77"
+  },
+  "assets/characters/ch04/shield_block.png": {
+    "bytes": 360862,
+    "sha256": "49ca41cf57147ee0c0045c14679d37feb1934ef8b9e36369c13bf2b8be9ed0cf"
+  },
+  "assets/characters/ch04/ship_order.png": {
+    "bytes": 454632,
+    "sha256": "29c582ecab250f64f7262f8788ab5c1600d8cb35aee15f8f101fbd0976f3cd99"
+  },
+  "assets/characters/ch04/shocked.png": {
+    "bytes": 721231,
+    "sha256": "b29353aa7ceac96f63803ba13b9ce184e73cfabeb9d13362509326e6e85e469c"
+  },
+  "assets/characters/ch04/sit.png": {
+    "bytes": 852254,
+    "sha256": "1f7814090d1301396e3953884dbe76e00f15ef8aa3cd9d2bd5e0e6dfa8bb4c5f"
+  },
+  "assets/characters/ch04/sleep.png": {
+    "bytes": 603462,
+    "sha256": "9fee0b0735308fb0f1e1e89461147a5fa6807ea093e698490b756b5d8a5fb237"
+  },
+  "assets/characters/ch04/study.png": {
+    "bytes": 397610,
+    "sha256": "2eb8de4272a7583e10bdd37a7f8880cf20dc589c7b2aaa4cca1dd1d4ba086327"
+  },
+  "assets/characters/ch04/sweep_street.png": {
+    "bytes": 995723,
+    "sha256": "f898d056850ac6a2768171ba3a036e26f2867e67dccfe549c5e1e63116713871"
+  },
+  "assets/characters/ch04/thank_you.png": {
+    "bytes": 936308,
+    "sha256": "ffc6573acb03917a146592da0eed2f4b6d0dad679a3e82b9f318f779995edd4a"
+  },
+  "assets/characters/ch04/type_keyboard.png": {
+    "bytes": 373001,
+    "sha256": "405cd1d2b0e4680017d77e5a7aca07a80e23327c2ecf3230589b7f11cc3d9c46"
+  },
+  "assets/characters/ch04/unlock_house.png": {
+    "bytes": 354649,
+    "sha256": "7a084b02fce3329c415eeb4cc1e068623bb841023e0220379065566cfff8991d"
+  },
+  "assets/characters/ch04/walk.png": {
+    "bytes": 966061,
+    "sha256": "d962fd7b9acc43843521b5ad10f5cfe921fdc2753afe6a7cf7a6dc7c49ecbf1e"
+  },
+  "assets/characters/ch04/wave.png": {
+    "bytes": 396530,
+    "sha256": "fc0768a6da570cf9013dd2e34c320ada462b9e5ef8658510b738784cc9c05d8f"
+  },
+  "assets/characters/ch04/wedding.png": {
+    "bytes": 429334,
+    "sha256": "819c6e6755142f58d659e547fe6a8df30e644075760142614159a6f52454c9f1"
+  },
+  "assets/characters/ch05/adopt_dog.png": {
+    "bytes": 1075509,
+    "sha256": "210ead18ef08a217ba876ddd8dbecd07893c44fcb53f2f52a97b79a0416ecb92"
+  },
+  "assets/characters/ch05/advertise.png": {
+    "bytes": 478191,
+    "sha256": "84b3c91bebda62137b943bff9eb3bab54b873fb6e15d95084e396e4748650e83"
+  },
+  "assets/characters/ch05/animations.json": {
+    "bytes": 434933,
+    "sha256": "6005e425827eee0d29549f2833bfd6eef3b4457c6113188cdb7bfc10641a3e3c"
+  },
+  "assets/characters/ch05/birthday.png": {
+    "bytes": 1340073,
+    "sha256": "562f94a70bc1eb7598f889ba9a27ede04f1c2bb01b91040c24239f5c36d143c5"
+  },
+  "assets/characters/ch05/care_pet.png": {
+    "bytes": 437432,
+    "sha256": "c69f2bdb3e3a7486fc1a1b336909b0a4feb8eb954e05609f564e7b12a50a0c7c"
+  },
+  "assets/characters/ch05/celebrate.png": {
+    "bytes": 1005109,
+    "sha256": "0df2396c20483b70607dc9f8c8164d5cf5a3a118d78aca17f77c3b226c81a64f"
+  },
+  "assets/characters/ch05/choose_left.png": {
+    "bytes": 354372,
+    "sha256": "936e800ff28539f516164c4c556080b69dcdcee57eb1f0a18bf1015c1025a007"
+  },
+  "assets/characters/ch05/choose_right.png": {
+    "bytes": 354080,
+    "sha256": "7e27239362cc74ccb72273a298babfa2cf8959670ebb74ce95f9e37ade44edaf"
+  },
+  "assets/characters/ch05/clean_house.png": {
+    "bytes": 992699,
+    "sha256": "23ef495b4916d5193cbfb0bf8e515f0130216d6ccb178bee4679b4f6c12b2b50"
+  },
+  "assets/characters/ch05/coin_buy.png": {
+    "bytes": 407627,
+    "sha256": "6ec2bad1c8a2bfa8bb620985225b805b89620eeb69b9e4d0a26d81efe382a68b"
+  },
+  "assets/characters/ch05/coin_lose.png": {
+    "bytes": 769259,
+    "sha256": "fe7fb8153df3d66cb907e1e3a5b6cc9092f2b00990dd3399078c5ba0ec1d8c1b"
+  },
+  "assets/characters/ch05/coin_win.png": {
+    "bytes": 776850,
+    "sha256": "003adf5c83e1714999c6ef48e8ee0361680113640a8754673122c265f24a7c39"
+  },
+  "assets/characters/ch05/cook_sausage.png": {
+    "bytes": 466190,
+    "sha256": "c108f0f96d31d364b2705122a18e67b6bfeeee697db26ba36277d30289e90965"
+  },
+  "assets/characters/ch05/dance.png": {
+    "bytes": 889405,
+    "sha256": "c38a0901d636bdf4f89d215bffb2f99dadb352330a0069f2d4b3d49d8607fcf7"
+  },
+  "assets/characters/ch05/graduate.png": {
+    "bytes": 395378,
+    "sha256": "88548b162ff7b295f6df8711e6d806a6b254f23ef5c05c06b675d57804c27429"
+  },
+  "assets/characters/ch05/happy.png": {
+    "bytes": 699494,
+    "sha256": "20731ba99b67e3e36e779a52e3c80dd532622ce219d85ab5dfaeaa5779adf32a"
+  },
+  "assets/characters/ch05/hit.png": {
+    "bytes": 1017010,
+    "sha256": "92f2553c9650a47b2d0198585fc93d0c60c273e79516940d56de146295ee6a3b"
+  },
+  "assets/characters/ch05/hold_baby.png": {
+    "bytes": 377304,
+    "sha256": "9a884a3ff561a033d653b08dace6e9d709e89ababf51d0d24472bedc4ad5fe11"
+  },
+  "assets/characters/ch05/hold_trophy.png": {
+    "bytes": 360676,
+    "sha256": "c914fc095fc0ad101a169f13f131f0af42aa30e453c91ca991c015daa31027c2"
+  },
+  "assets/characters/ch05/idle.png": {
+    "bytes": 449903,
+    "sha256": "9317205416f030e47817c48357cd95b56c5b3503a6ae6c387cfdff65ba771f12"
+  },
+  "assets/characters/ch05/interview.png": {
+    "bytes": 504064,
+    "sha256": "34ca4b5aa1d0e53501dc81cbf4e20d3f362ec661978b85cf1cb4f64022df2e0a"
+  },
+  "assets/characters/ch05/lift_box.png": {
+    "bytes": 510458,
+    "sha256": "57f4a72ea3edcc029270c4e360088f8c3839f390245d7288af1058afd71a5351"
+  },
+  "assets/characters/ch05/pack_box.png": {
+    "bytes": 432341,
+    "sha256": "e727f37f9d2aa8be4d783e7d7e9bc09a4d0d33783ad35e33ba648a54f0c9dbef"
+  },
+  "assets/characters/ch05/pet_dog.png": {
+    "bytes": 1770690,
+    "sha256": "5aab42ba167fba879c1092fbdbac1712fa38533e87ce5d44f1ae117d92a84eda"
+  },
+  "assets/characters/ch05/phone_read.png": {
+    "bytes": 377746,
+    "sha256": "7cc01830dd65062aac219d5875a4929015a008cf4ffe8f92213be1032866ce62"
+  },
+  "assets/characters/ch05/phone_tap.png": {
+    "bytes": 939990,
+    "sha256": "ceace038d11d2797386894e87bb987b2306a49781597deb0aa95e1a02b804d7f"
+  },
+  "assets/characters/ch05/point_question.png": {
+    "bytes": 419184,
+    "sha256": "945ad22b35bc2e1e3a5bdd4667ec663746fd506b14f0af9ad0b8d7aec7e45513"
+  },
+  "assets/characters/ch05/police_stop.png": {
+    "bytes": 528164,
+    "sha256": "f6c09db523fe4cf23e86b04c44732674eb8f207f65a542abe3c0e4083648d124"
+  },
+  "assets/characters/ch05/portrait.png": {
+    "bytes": 39017,
+    "sha256": "381b3e3649aba39c6c47f06531cd56b9f264736f5d180342c2a3531cab4fc4c2"
+  },
+  "assets/characters/ch05/push_cart.png": {
+    "bytes": 477335,
+    "sha256": "36db1bb9b162bc5a1dcad5dff45a917c79f3e4e86f644d20ce7357e0f67299d2"
+  },
+  "assets/characters/ch05/rain_walk.png": {
+    "bytes": 1070032,
+    "sha256": "ecb631b38dccd32ef80f24ae9959880a5fa91535b9ca1d53786540f529cbdb9e"
+  },
+  "assets/characters/ch05/receive_salary.png": {
+    "bytes": 403226,
+    "sha256": "c57cd747cb450c9c04c5ae98e9cd54c7d7ab595380509713761753e93ff5edd2"
+  },
+  "assets/characters/ch05/repair_pipe.png": {
+    "bytes": 967658,
+    "sha256": "dd5b7c6976067261d66e8fba6ffbe2e3872ab967d7e456b3135116ac0446fb40"
+  },
+  "assets/characters/ch05/repair_vehicle.png": {
+    "bytes": 632332,
+    "sha256": "69d3765b6d75235c5bdde05ba9a8cd8489cd79602d84e35cd7eebcd1b168277a"
+  },
+  "assets/characters/ch05/ride_scooter.png": {
+    "bytes": 792206,
+    "sha256": "ce21b098923ae86a4fce422ae908785a18a6daf8b8602c4ef44a63f6e05c6b42"
+  },
+  "assets/characters/ch05/roll_dice.png": {
+    "bytes": 1089043,
+    "sha256": "de27cf9dc89c3e62af25fab0ab3cca1218edcda6804c8ad3dec78748cf5002dc"
+  },
+  "assets/characters/ch05/run.png": {
+    "bytes": 935772,
+    "sha256": "9ce6c869ca4092aaa8c95b1052a2fb23de9c017a09aaeb0d3cee4fff33d101da"
+  },
+  "assets/characters/ch05/sad.png": {
+    "bytes": 729471,
+    "sha256": "3a6f53ec29534cce4eb7dff6faeb397886d042ccb24bdea9381c9a4026f8164f"
+  },
+  "assets/characters/ch05/search_map.png": {
+    "bytes": 393703,
+    "sha256": "29fce4dfe8d55bce568c2c85dcd640346b3daf8621f1659449f2539732b4b1ee"
+  },
+  "assets/characters/ch05/sell.png": {
+    "bytes": 448926,
+    "sha256": "e3a83b566b8ba8100f2f72128a02f06b66e47091d7b5299ec9eff4ee9f695c75"
+  },
+  "assets/characters/ch05/serve_drink.png": {
+    "bytes": 433785,
+    "sha256": "793af5190008beae28be41134861456db4013f2ff35685ef431298cb52aefa99"
+  },
+  "assets/characters/ch05/shield_block.png": {
+    "bytes": 396839,
+    "sha256": "2ebe557d680eaebd37382143613ce98a64f3a5a9142acad02e5e90037e10273d"
+  },
+  "assets/characters/ch05/ship_order.png": {
+    "bytes": 486560,
+    "sha256": "f9da7ab344a97dd2a315ac0047d268567d58e74d667f93be56f012aa29389a89"
+  },
+  "assets/characters/ch05/shocked.png": {
+    "bytes": 810839,
+    "sha256": "48987d13b971287e5bb6571766096a476fc23c86c7e530d16fc7cf552f49f7e3"
+  },
+  "assets/characters/ch05/sit.png": {
+    "bytes": 1010409,
+    "sha256": "c30c42154de161476d3f49c1aa4b288d93d4afa97f0663a44b714d22606a4647"
+  },
+  "assets/characters/ch05/sleep.png": {
+    "bytes": 722900,
+    "sha256": "abe40a33763d3a12d19fa16b3f79fa9ceec316edee75d2b903aa16d87b76eff3"
+  },
+  "assets/characters/ch05/study.png": {
+    "bytes": 451296,
+    "sha256": "4df36f7ddc6f75a14d235434d8966b931f9e9700523eaa97d6102ddd548659f3"
+  },
+  "assets/characters/ch05/sweep_street.png": {
+    "bytes": 1208891,
+    "sha256": "44f8c401d61e64666b936be473a2e81f92095a7247254b7deb1cc4af8511d89e"
+  },
+  "assets/characters/ch05/thank_you.png": {
+    "bytes": 1119997,
+    "sha256": "b2f85d7cbfd97adefc5a242e6854175d58c791c4a1239df402cbdc80b5fd6cf4"
+  },
+  "assets/characters/ch05/type_keyboard.png": {
+    "bytes": 414245,
+    "sha256": "68783cd9dbb6f5dd8f6c1da6fbb71a0aec3295d8f5b166a9f01cb48c87b93883"
+  },
+  "assets/characters/ch05/unlock_house.png": {
+    "bytes": 403331,
+    "sha256": "5981bcefba5c4665a3330e3055293531f84ed1804595fb19f26f8463f82c3d59"
+  },
+  "assets/characters/ch05/walk.png": {
+    "bytes": 1017504,
+    "sha256": "604c78d0b9df8bbfb3f0caf48ba394487e4fac424f63b3e3e0b88434c565b779"
+  },
+  "assets/characters/ch05/wave.png": {
+    "bytes": 432384,
+    "sha256": "1b2cfe551a849ad45f7f3c1bc5cf407cd4d9bb26b55520da712f9a596b29cc97"
+  },
+  "assets/characters/ch05/wedding.png": {
+    "bytes": 473325,
+    "sha256": "8d8b8a4f132fcb83a307670b3d6bccdb669f60fadc815bc30c287435b0834270"
+  },
+  "assets/characters/ch06/adopt_dog.png": {
+    "bytes": 925399,
+    "sha256": "9e03c4cff124d2bf5351b5454a69d47a5345d51862578179c366287848a83a99"
+  },
+  "assets/characters/ch06/advertise.png": {
+    "bytes": 399276,
+    "sha256": "018a34f2fef27f4043306467da0d3223df6d699a550cb25d5074e0d25c00a13b"
+  },
+  "assets/characters/ch06/animations.json": {
+    "bytes": 434936,
+    "sha256": "f085e683900e1027203fab5350098fb0c7fc8d852acdb1892b1c134b2ea3361a"
+  },
+  "assets/characters/ch06/birthday.png": {
+    "bytes": 1094543,
+    "sha256": "d14713d42c41aebe8a1e00a6b94667ba20ad211ff08f3148f7c201e9223092f4"
+  },
+  "assets/characters/ch06/care_pet.png": {
+    "bytes": 379904,
+    "sha256": "701e56d3ed29f89ebe2e7354237ca3b4b1fdc6358c18d2578f2e0319c9f240fb"
+  },
+  "assets/characters/ch06/celebrate.png": {
+    "bytes": 1105133,
+    "sha256": "667af642eef6dcb4ab3d9f395b498ab468b199c8f8297fc019af402b2c189108"
+  },
+  "assets/characters/ch06/choose_left.png": {
+    "bytes": 312498,
+    "sha256": "3182b12d20da8a7bb7da744110b94dbc92ea06defa282368cc6af5c35d4f6dc2"
+  },
+  "assets/characters/ch06/choose_right.png": {
+    "bytes": 309148,
+    "sha256": "5f45fd5a3a9fae62d12f2aa51f0397355a451e752b9e09f883bd68a688752b20"
+  },
+  "assets/characters/ch06/clean_house.png": {
+    "bytes": 893988,
+    "sha256": "bf2775740efc88f59ed9e01ae666c9899cb7688fddfee8bd744812af12382596"
+  },
+  "assets/characters/ch06/coin_buy.png": {
+    "bytes": 349247,
+    "sha256": "fbaf64c0f2250743f11681eb5c5c344fdb2ab25e78be7130f82a5c6232281b2e"
+  },
+  "assets/characters/ch06/coin_lose.png": {
+    "bytes": 643886,
+    "sha256": "e85d37e25c4311e6e2c6456962dd3dea76f37ea7abf6d15bb0a6e0409ffce118"
+  },
+  "assets/characters/ch06/coin_win.png": {
+    "bytes": 803780,
+    "sha256": "dfc3580217ddc73113cb01ca381ef9e43a2abd3c27258535de8eaed70b23d5cf"
+  },
+  "assets/characters/ch06/cook_sausage.png": {
+    "bytes": 403591,
+    "sha256": "2be32755a2c267cea3fa97f726e40bc30c9fe80d5c677baa2395321e31c3dde4"
+  },
+  "assets/characters/ch06/dance.png": {
+    "bytes": 950848,
+    "sha256": "5bd77019948a266feb8bf29ab457dc69e8b68ebed908deddbb0284cedf25b6eb"
+  },
+  "assets/characters/ch06/graduate.png": {
+    "bytes": 345583,
+    "sha256": "0364da60897a1e3926a97d7fd8d0bc64f42d9a98550295c1fb449714f95d95f3"
+  },
+  "assets/characters/ch06/happy.png": {
+    "bytes": 718298,
+    "sha256": "5de6bbe4893d4e0de57bd9cd11d38995c03a5deb65f36b9f3c535f6da6dcf796"
+  },
+  "assets/characters/ch06/hit.png": {
+    "bytes": 899695,
+    "sha256": "acc3c6f89e725053e34ba1b488f383ceec2f5e92c3b1cde1d4e157b9ddf1a23d"
+  },
+  "assets/characters/ch06/hold_baby.png": {
+    "bytes": 320706,
+    "sha256": "325415f76e714aff84a8154aafa81ec736da88409e36171ae11ce8f30bf7fed6"
+  },
+  "assets/characters/ch06/hold_trophy.png": {
+    "bytes": 314933,
+    "sha256": "4ffb27d1dcd415d311040258b8141e5ae8da42d7fcbb2221cf376692869bef0e"
+  },
+  "assets/characters/ch06/idle.png": {
+    "bytes": 390781,
+    "sha256": "3b316895b5305a43718b92e99abf7eba80fd811f107022e34b4b2c7e6d4ce9d5"
+  },
+  "assets/characters/ch06/interview.png": {
+    "bytes": 398334,
+    "sha256": "d9d0659f3c9effd63aece9181c6473d58f41d9c38b0e05242afe3753d8a66561"
+  },
+  "assets/characters/ch06/lift_box.png": {
+    "bytes": 434271,
+    "sha256": "a994353721cdde9a66b337a422fd53de7df34df14bb1a13eb17efc1f68fe9d8e"
+  },
+  "assets/characters/ch06/pack_box.png": {
+    "bytes": 375270,
+    "sha256": "6a9aa17e957a345ac3bf0f94c941a3d5201f327656793fa5ff1c5997f27c251d"
+  },
+  "assets/characters/ch06/pet_dog.png": {
+    "bytes": 1259500,
+    "sha256": "761959c108ed2d650690dd3cd2d51e716aae8dfdca2d849a93bd5899870a9961"
+  },
+  "assets/characters/ch06/phone_read.png": {
+    "bytes": 313324,
+    "sha256": "ce6fc30d66c9a83fb777dfa949c120879e6a47e943256f207081f4a848bf7043"
+  },
+  "assets/characters/ch06/phone_tap.png": {
+    "bytes": 823949,
+    "sha256": "be1f2684a1df8afc2c7a5fae3a825e85697a63222e28ff92d4bb1c886eb53343"
+  },
+  "assets/characters/ch06/point_question.png": {
+    "bytes": 358787,
+    "sha256": "f0157629ea1bb8fd86b5964b559bd606919e0f738868b6a62fa0854e6a7f9caf"
+  },
+  "assets/characters/ch06/police_stop.png": {
+    "bytes": 448835,
+    "sha256": "caf57e77cf9bde26e0c846545e3c15ea5c2306b48932953dab8c76618f8cdbb1"
+  },
+  "assets/characters/ch06/portrait.png": {
+    "bytes": 32189,
+    "sha256": "37c165e49eb84d22b8792cca6b85cdfa93e4228af13590bb24caa3e85872948b"
+  },
+  "assets/characters/ch06/push_cart.png": {
+    "bytes": 428503,
+    "sha256": "6e4a42bae4930d4d99923379f9c38ed42204da312d1fdd1878956b555d58bb9f"
+  },
+  "assets/characters/ch06/rain_walk.png": {
+    "bytes": 901131,
+    "sha256": "7e64d2a75a2ec145ae9526ad73c6a5a2ae83eeb76ff69c4021ead22da3e4a8e4"
+  },
+  "assets/characters/ch06/receive_salary.png": {
+    "bytes": 349637,
+    "sha256": "1ed639b064e5aa123137827f721fe07b785ccfd97c3ae603922647856455933f"
+  },
+  "assets/characters/ch06/repair_pipe.png": {
+    "bytes": 858157,
+    "sha256": "6d191f4e5e7da91719d922c08c02ccf114b8a567bdefec7a734e3adae6d41ecb"
+  },
+  "assets/characters/ch06/repair_vehicle.png": {
+    "bytes": 525130,
+    "sha256": "fe0562bb7e036af0f67faa3f0b792360bedf47c4a506a0bf13e77bbd2327b3f9"
+  },
+  "assets/characters/ch06/ride_scooter.png": {
+    "bytes": 699539,
+    "sha256": "6d1ef71fbcef6149df7b3d3ff849c5a58fbec079589167a1d7a14d7f2a11529c"
+  },
+  "assets/characters/ch06/roll_dice.png": {
+    "bytes": 902846,
+    "sha256": "d647e13930511befc85e4f034764e872e2567d19bb5b3d6e8b3e256c295f41d7"
+  },
+  "assets/characters/ch06/run.png": {
+    "bytes": 823820,
+    "sha256": "7f10c9c0efbbcb87ef24a8eef685b69907461686084d795f6d19eb7f55553cb1"
+  },
+  "assets/characters/ch06/sad.png": {
+    "bytes": 599759,
+    "sha256": "8501577f29d5f0ead92810d1baa62b8e4c123775f98d251acf84098ca826a0dc"
+  },
+  "assets/characters/ch06/search_map.png": {
+    "bytes": 342055,
+    "sha256": "1a3c725211cfcf075a9eab5b80b952911997a66521bb92b14e31d0f2b075fb4d"
+  },
+  "assets/characters/ch06/sell.png": {
+    "bytes": 383987,
+    "sha256": "af7bb813ed11be8b7413b0f4d1066e50736b75d7a452156b3aa88a7bb5169878"
+  },
+  "assets/characters/ch06/serve_drink.png": {
+    "bytes": 368602,
+    "sha256": "6a185e03daa22fb6aa23bbd25146525b3a5d7aea303f0738d766836d7e98a553"
+  },
+  "assets/characters/ch06/shield_block.png": {
+    "bytes": 346466,
+    "sha256": "30fda92616463a04542c20faa7408c6f97ada8980a5f0488b706004ade2c1442"
+  },
+  "assets/characters/ch06/ship_order.png": {
+    "bytes": 440852,
+    "sha256": "0019efed1dc6857be258863dcf6f4683d4c33e7f6be20714ead6f86f05473053"
+  },
+  "assets/characters/ch06/shocked.png": {
+    "bytes": 712249,
+    "sha256": "56ffd8292d375ac96c4163e10935c1e9e5d05536770ac8b647836930cfedfeb4"
+  },
+  "assets/characters/ch06/sit.png": {
+    "bytes": 805079,
+    "sha256": "cd91069664241efaaa893117b26a2350d92857ff35c6bfc65184d30746d48d47"
+  },
+  "assets/characters/ch06/sleep.png": {
+    "bytes": 594586,
+    "sha256": "55c72433b22b64b8b1b55a49768c422d03bdaccc366e9fa0df60f88a0e33a0bb"
+  },
+  "assets/characters/ch06/study.png": {
+    "bytes": 370441,
+    "sha256": "8154f1cbc5c85be5b368fc9774420ff993ebdd7c93141579463c8a0edfcc6f17"
+  },
+  "assets/characters/ch06/sweep_street.png": {
+    "bytes": 996004,
+    "sha256": "8f6489fc3a14460b2955d3362f87d9eb3d6d0fba966c6fb83fe5386749220db8"
+  },
+  "assets/characters/ch06/thank_you.png": {
+    "bytes": 931709,
+    "sha256": "e65a4660c3889d7a30b3e4f990eca17fc30d1e6fd40ac56e5915071d02ecdd60"
+  },
+  "assets/characters/ch06/type_keyboard.png": {
+    "bytes": 357487,
+    "sha256": "69bb1e73b6cbf6f33a2e75d7750a01af77e56cd566863e03eed2b436dee8ee68"
+  },
+  "assets/characters/ch06/unlock_house.png": {
+    "bytes": 346181,
+    "sha256": "4d0a8b4d1e9db21209e19d4db42f9ebe2872f7059208836e9ecef4986769827b"
+  },
+  "assets/characters/ch06/walk.png": {
+    "bytes": 965877,
+    "sha256": "ee94ad08cd1561768280d70091d026952bd0a5daec818c2a1c11b4f8d25c7541"
+  },
+  "assets/characters/ch06/wave.png": {
+    "bytes": 378635,
+    "sha256": "77e3d0c0a8d6e133a07efe91174d9cc3fc68ab29c0599a3de7d6e90b4b2e9c36"
+  },
+  "assets/characters/ch06/wedding.png": {
+    "bytes": 414318,
+    "sha256": "ca64658142f13136df99a5864e02baf1ab1b5139f91fea36d1c16a37feb0ec82"
+  },
+  "assets/characters/ch07/adopt_dog.png": {
+    "bytes": 1038683,
+    "sha256": "5e486f054e3d804cfa616bf33c95bae8c1a7eeb077a64fbf68f508ef282e3b4e"
+  },
+  "assets/characters/ch07/advertise.png": {
+    "bytes": 466145,
+    "sha256": "adc2d10c536d379cf25c55ad382064774e0651ac0b1447c7912774d4fee2f881"
+  },
+  "assets/characters/ch07/animations.json": {
+    "bytes": 434919,
+    "sha256": "58219d11ad96952b226f3d7df59a2a779b4dbcfa15dfd004cc1940c1838a2ae4"
+  },
+  "assets/characters/ch07/birthday.png": {
+    "bytes": 1281909,
+    "sha256": "613dfe9181aa89614fdd14c635da13d80adef7ca5e1b4bb61a796426170deaff"
+  },
+  "assets/characters/ch07/care_pet.png": {
+    "bytes": 441619,
+    "sha256": "b7613bb903fc24d6ea02117955bea11868188c217258b8dd3f11fb4f0c5d0668"
+  },
+  "assets/characters/ch07/celebrate.png": {
+    "bytes": 1051415,
+    "sha256": "3bc0d3d671b813c6c7d68147442b02f7f5a4300cfb9bd3e86fbf4875843a7f12"
+  },
+  "assets/characters/ch07/choose_left.png": {
+    "bytes": 351674,
+    "sha256": "452a93f5d5109103dc0994c14794c74c3458708275d4c36f1fdd1d10dca604ae"
+  },
+  "assets/characters/ch07/choose_right.png": {
+    "bytes": 348287,
+    "sha256": "b0c4d64ffdb32bab0648f4bc03ccd741468851822545acb899b1fb93ea8822c6"
+  },
+  "assets/characters/ch07/clean_house.png": {
+    "bytes": 980907,
+    "sha256": "1b48c29c1eec6e07674d795dae1eac30fd74aca2575d254f593bd7d4a9526d02"
+  },
+  "assets/characters/ch07/coin_buy.png": {
+    "bytes": 392434,
+    "sha256": "cd3b775651aaaa057cf25f8a095a061443d615740aca678d85e4bfd9331928d1"
+  },
+  "assets/characters/ch07/coin_lose.png": {
+    "bytes": 698616,
+    "sha256": "463b68310fc4dd47057387076c87a0a196ccdc03664a7a997c13fa24cbcf07fb"
+  },
+  "assets/characters/ch07/coin_win.png": {
+    "bytes": 735574,
+    "sha256": "2ad0d0a3801c2c2e8cc32945d40f9e834b1d12ad8d57eabeaa7db6f30db73250"
+  },
+  "assets/characters/ch07/cook_sausage.png": {
+    "bytes": 462240,
+    "sha256": "36a398318e54221460140db7a960e5ca83c8ce5bb192f0ce835a5ee813eb71f1"
+  },
+  "assets/characters/ch07/dance.png": {
+    "bytes": 862429,
+    "sha256": "1b7f40f65a7449b41a148b065a8f577bfd9a8f1a7b8baf9ea9899bddb0689146"
+  },
+  "assets/characters/ch07/graduate.png": {
+    "bytes": 380036,
+    "sha256": "d7b3503561cb112436eba5fbd0ac5f9103a0e34c80d599cd6ec6156af5787da4"
+  },
+  "assets/characters/ch07/happy.png": {
+    "bytes": 661796,
+    "sha256": "dc112a59842be366ea70182a2816f67dae0c3f46bc763c07cea86677d124e56a"
+  },
+  "assets/characters/ch07/hit.png": {
+    "bytes": 1006268,
+    "sha256": "3983951bef25c4610ed1d04b4a673a05b9ea2a5b86cf9e9a13f6a05db0b051d7"
+  },
+  "assets/characters/ch07/hold_baby.png": {
+    "bytes": 369444,
+    "sha256": "307a1dc83c6f39732c93b44e4a3cb0bfa145e13f071f76176dda8e54a9f372e5"
+  },
+  "assets/characters/ch07/hold_trophy.png": {
+    "bytes": 346375,
+    "sha256": "e16f106546f97437f4c0b648b09b478365d121d044757cac57c1e7f7a365a292"
+  },
+  "assets/characters/ch07/idle.png": {
+    "bytes": 445653,
+    "sha256": "05640431928c3bd299a9100b4ce696f20cd6e2ec39b6c1f058d0089a3bb64afd"
+  },
+  "assets/characters/ch07/interview.png": {
+    "bytes": 464219,
+    "sha256": "055a5affb43d2ea1332de306dd18b6f7cb04e8ed49241731d89904e9f3e5198a"
+  },
+  "assets/characters/ch07/lift_box.png": {
+    "bytes": 513824,
+    "sha256": "f66dca3a8667a8f01899e5fc767d7df5fa7a4a5b7d7fc5413bd8c137e32bc667"
+  },
+  "assets/characters/ch07/pack_box.png": {
+    "bytes": 432413,
+    "sha256": "7cfaea06bb8272b0d433c5d08ffae4d072d840db04c2ed241a3b3e3e469c965d"
+  },
+  "assets/characters/ch07/pet_dog.png": {
+    "bytes": 1698488,
+    "sha256": "cdb923330a8ca239c0468a51346cd6844a0c8f109144514da7ad59413c78d3fa"
+  },
+  "assets/characters/ch07/phone_read.png": {
+    "bytes": 356065,
+    "sha256": "d2c273b2f4e10059cf0f2df2e7b868488e6b91a25de8845652ba77b60f9a7ba9"
+  },
+  "assets/characters/ch07/phone_tap.png": {
+    "bytes": 905967,
+    "sha256": "35798cd684605ef1a8abe5ee5c446a0b5390339252515d691d130d6cac398fa5"
+  },
+  "assets/characters/ch07/point_question.png": {
+    "bytes": 411435,
+    "sha256": "ecf5b5d79efac463d59339c4ebabc0c31057a7ace3dcba9b0017f61228f5b71f"
+  },
+  "assets/characters/ch07/police_stop.png": {
+    "bytes": 494105,
+    "sha256": "b6e3053935f5e3d64077d1c33c5adf8e6ff9a2ef46f13130d03e1610cad00568"
+  },
+  "assets/characters/ch07/portrait.png": {
+    "bytes": 37122,
+    "sha256": "07b36b59dd2501f8dbeac14e54b225542e6b0a18964e9510fcfb41dafe9040c9"
+  },
+  "assets/characters/ch07/push_cart.png": {
+    "bytes": 467351,
+    "sha256": "43f3dc526915530fd88fe831dd2c06040bded928597479c72ecada3681e6dbe5"
+  },
+  "assets/characters/ch07/rain_walk.png": {
+    "bytes": 997579,
+    "sha256": "07d3556f8e32cf413a51fc43f792b6623ea94e442b1f7a0cd11255beb84b499b"
+  },
+  "assets/characters/ch07/receive_salary.png": {
+    "bytes": 389349,
+    "sha256": "673bd42897a9e3ab3e0833702e79c3291e87761564ca0c7192ea57ae6541dfa7"
+  },
+  "assets/characters/ch07/repair_pipe.png": {
+    "bytes": 941570,
+    "sha256": "dc8733cacd54700ce3be9fd62be4c0bea0966647f73c77a841e8b966dc3d9ef1"
+  },
+  "assets/characters/ch07/repair_vehicle.png": {
+    "bytes": 641294,
+    "sha256": "20134df9869225a2632ac11131219945b1a86636f8ef107a316422a0f28f054d"
+  },
+  "assets/characters/ch07/ride_scooter.png": {
+    "bytes": 755518,
+    "sha256": "af9691d564273b067ab4070dfe44fc9316e2cd120b8e5875413f6262d7b5fbd4"
+  },
+  "assets/characters/ch07/roll_dice.png": {
+    "bytes": 1059875,
+    "sha256": "6614f7d44e7f6e6c98cd19b54aff203a80e75ff8a415f55adc3ce00ac0b61137"
+  },
+  "assets/characters/ch07/run.png": {
+    "bytes": 906766,
+    "sha256": "088ce613868b8c3cb26bb0ffd4cce9fa72899f4dcfcf713e63e8dcbfa833d62c"
+  },
+  "assets/characters/ch07/sad.png": {
+    "bytes": 686467,
+    "sha256": "db94868d536d91ae2e7c1f85220007d15463f68012684bd8898acaccdc8e37e0"
+  },
+  "assets/characters/ch07/search_map.png": {
+    "bytes": 383135,
+    "sha256": "974f4599757feb08ae7ad0230e7be365dadefa1309dc74eecf916338cd9cdc1f"
+  },
+  "assets/characters/ch07/sell.png": {
+    "bytes": 442798,
+    "sha256": "7b594e32f5c6a59db63c022dd72df0b4cff1042091a9e771101f1ec0fe933c57"
+  },
+  "assets/characters/ch07/serve_drink.png": {
+    "bytes": 414237,
+    "sha256": "596a409f88a49da6249d9225a8695294660d9e0b14ced14ebe98cf238510ff88"
+  },
+  "assets/characters/ch07/shield_block.png": {
+    "bytes": 381570,
+    "sha256": "035ee4ccb79e4bc01efe7efc4365413c5972be7e335f0f85c0f36d1c04bcf37a"
+  },
+  "assets/characters/ch07/ship_order.png": {
+    "bytes": 487105,
+    "sha256": "1b221fe7d3b16d09508ff59d00bd902d7e11d42169cb167c9bec38c221b712c3"
+  },
+  "assets/characters/ch07/shocked.png": {
+    "bytes": 777276,
+    "sha256": "8db2f37470eaa5c81a755d6c8f6708d52f91ac0fc22275013920b2cde1e47c33"
+  },
+  "assets/characters/ch07/sit.png": {
+    "bytes": 933613,
+    "sha256": "03c50ea6450f0d5ae9f654445cf568f4ae7e83aa9b8c90110ce70487efbf3969"
+  },
+  "assets/characters/ch07/sleep.png": {
+    "bytes": 676588,
+    "sha256": "84b766f022ebd4a271f791010719c91521f7440147fe48fd00510b25ebbd5e60"
+  },
+  "assets/characters/ch07/study.png": {
+    "bytes": 451372,
+    "sha256": "c854368c549a4f12a9dd0840d1944386b22126bc36150e8dfbd476ef0c12b4c8"
+  },
+  "assets/characters/ch07/sweep_street.png": {
+    "bytes": 1307771,
+    "sha256": "5e87125434e41315f996f8afbf95210108cc6a2aba71991e0800cc9c9307ce0e"
+  },
+  "assets/characters/ch07/thank_you.png": {
+    "bytes": 1062515,
+    "sha256": "6dc15cea73ffff64c94501df5c5cb2ad5e01b2937233ef39b85582d351f2d701"
+  },
+  "assets/characters/ch07/type_keyboard.png": {
+    "bytes": 417284,
+    "sha256": "ea8da8c95dbaa861bd0ce55718f2917ab0639673d6b05541ed520cf1625f5722"
+  },
+  "assets/characters/ch07/unlock_house.png": {
+    "bytes": 395732,
+    "sha256": "793b28d9bd94ede37875dc8d30b4eceb824bcec3f2906910dc28ab391775f29b"
+  },
+  "assets/characters/ch07/walk.png": {
+    "bytes": 1045363,
+    "sha256": "daa4751a4826eb2a7b485c44a11766b435d580e261a4f5db510f4a28ab620c3a"
+  },
+  "assets/characters/ch07/wave.png": {
+    "bytes": 414811,
+    "sha256": "13a04baad5136d96f88883d3a40a57678426cdf2a5f69ef97b2f3318f4018236"
+  },
+  "assets/characters/ch07/wedding.png": {
+    "bytes": 422680,
+    "sha256": "eb640795dd16170003b062dc1a67fef3aae602a348ee61971133eca5f0f741d9"
+  },
+  "assets/characters/ch08/adopt_dog.png": {
+    "bytes": 891039,
+    "sha256": "663f793fe1e990d8f4b167d4237cb2afb3956da2042b24a15426293eb3aa4f38"
+  },
+  "assets/characters/ch08/advertise.png": {
+    "bytes": 407051,
+    "sha256": "67386f63fec0cb13014aca9d338d6a43597da3e1aa2fc1d8a2b61200bc8d5bc3"
+  },
+  "assets/characters/ch08/animations.json": {
+    "bytes": 434936,
+    "sha256": "dcbf91f817e63e96baee83bfa6f1b9855a16836ebafdd7308a9909d4a3d085f8"
+  },
+  "assets/characters/ch08/birthday.png": {
+    "bytes": 1061568,
+    "sha256": "449bab7e0a767e53fb69de96f0882474c6af65f14b86c6a15ffc5ee70e6bce30"
+  },
+  "assets/characters/ch08/care_pet.png": {
+    "bytes": 384901,
+    "sha256": "d854a4c13d349a9820589ab9dd13023031b9928eec58808d3710134ff189ef66"
+  },
+  "assets/characters/ch08/celebrate.png": {
+    "bytes": 1092189,
+    "sha256": "db531c8743936489a77a5b2de5083014a68c31f464c844951355ec43548bf423"
+  },
+  "assets/characters/ch08/choose_left.png": {
+    "bytes": 316507,
+    "sha256": "1d983496d021d82a789d986c4b9fd2231d61490cdecf0afc056715fd637e07b7"
+  },
+  "assets/characters/ch08/choose_right.png": {
+    "bytes": 313571,
+    "sha256": "1d38b2ae82e1a2d71b8e72791f797079710942c2f576284b1dfa39a46ee3fd72"
+  },
+  "assets/characters/ch08/clean_house.png": {
+    "bytes": 643174,
+    "sha256": "b2b17029d318698e5b0789bc73852c3c566dcd80979b73ba4d0e8f1792161a54"
+  },
+  "assets/characters/ch08/coin_buy.png": {
+    "bytes": 356283,
+    "sha256": "a854c22bd3e504954b5b47104992a30425041973c1436d46764906a5875eff1f"
+  },
+  "assets/characters/ch08/coin_lose.png": {
+    "bytes": 652758,
+    "sha256": "72d00ff610f554e8af253988744876841f8a159fc2dc402c9252088332fe2571"
+  },
+  "assets/characters/ch08/coin_win.png": {
+    "bytes": 800795,
+    "sha256": "2aea7bdf3709cc48b1c1d5ffefd8b6bd4d427857218ff253c58ae206871e8d0a"
+  },
+  "assets/characters/ch08/cook_sausage.png": {
+    "bytes": 407126,
+    "sha256": "5bfbaff0ad61f5dde0a54b355ca107c83b85446076e7f18c0c01d733cf2b65d6"
+  },
+  "assets/characters/ch08/dance.png": {
+    "bytes": 942105,
+    "sha256": "0e3d0419da4e7bc2d94aa67dc14420adc67529fec6434a6c87d989f3d42e0a25"
+  },
+  "assets/characters/ch08/graduate.png": {
+    "bytes": 353599,
+    "sha256": "2bbfbea7a22bec103d50ed22b62c142b14805fbe4dd7399df61f648a361e8677"
+  },
+  "assets/characters/ch08/happy.png": {
+    "bytes": 719687,
+    "sha256": "37f7f9fdecacc27debd84c394763898009d04350fcce5638584df6e205cf1d3c"
+  },
+  "assets/characters/ch08/hit.png": {
+    "bytes": 866983,
+    "sha256": "1dd765b5c5e69a5d3ac4cebd0fec4ec3f66b76717f45942054cd3fe158d41a81"
+  },
+  "assets/characters/ch08/hold_baby.png": {
+    "bytes": 326747,
+    "sha256": "0fc057e3e9ae03afdefd17063bbeaeb8cc7730cfe54c7a01a42748f115aa3882"
+  },
+  "assets/characters/ch08/hold_trophy.png": {
+    "bytes": 318494,
+    "sha256": "f1e21094a1b9e1e0a99a4ac7e0b47230be698a668b65bc633807e7760aaac972"
+  },
+  "assets/characters/ch08/idle.png": {
+    "bytes": 409427,
+    "sha256": "f3d2ecbaca1d6e90e1c43e456725b638084375cb33c397a60a81a9903c040c82"
+  },
+  "assets/characters/ch08/interview.png": {
+    "bytes": 400574,
+    "sha256": "9d04bbe9f4dec86f9289dd6cda6064c6718ef20c15e62c1e99aea47da6215e8d"
+  },
+  "assets/characters/ch08/lift_box.png": {
+    "bytes": 459014,
+    "sha256": "33e7463228760ed637521972002439beacce4a40ff9f876b4cace1ce509365b3"
+  },
+  "assets/characters/ch08/pack_box.png": {
+    "bytes": 382411,
+    "sha256": "d4e82b15a86499ef51124a974d13574524ed3b5d9e0fb1962187127587697ef3"
+  },
+  "assets/characters/ch08/pet_dog.png": {
+    "bytes": 1036975,
+    "sha256": "25c188a5c7dcec26422c6c81cc76b2bf513ce2821822e4e2f73f3f17d15ba903"
+  },
+  "assets/characters/ch08/phone_read.png": {
+    "bytes": 327766,
+    "sha256": "87feab7e7ae8b5875be68de773e95824566732152c3bc9a2ecec4ef401d4bba9"
+  },
+  "assets/characters/ch08/phone_tap.png": {
+    "bytes": 570412,
+    "sha256": "fdbd6c0008dc8d0cfee2babc6fbd58070d07dc68768d888209d7d918a07d03dc"
+  },
+  "assets/characters/ch08/point_question.png": {
+    "bytes": 368882,
+    "sha256": "ca0a94489fb02124518a4baf91200fbce9b6219b41cd2108d8d9cb176af33175"
+  },
+  "assets/characters/ch08/police_stop.png": {
+    "bytes": 455235,
+    "sha256": "aa64e781b20624e7f20ea5c136d89bdac16cee05f51ee4c92776d88ed6de486a"
+  },
+  "assets/characters/ch08/portrait.png": {
+    "bytes": 31469,
+    "sha256": "3bfcc3fd3fec96c187a9b0c8b0c970aa230b43fda0a25be942cc3263cf16f94b"
+  },
+  "assets/characters/ch08/push_cart.png": {
+    "bytes": 434323,
+    "sha256": "044be95ba26b9c7bbd2eaa5b415eaf7f038d7ddf40e73e7d51c7cb50bf678e13"
+  },
+  "assets/characters/ch08/rain_walk.png": {
+    "bytes": 910475,
+    "sha256": "715e2344d4aa85670937cbb22d126f4a0f9e211d04c27be23417c8ce2e36451b"
+  },
+  "assets/characters/ch08/receive_salary.png": {
+    "bytes": 355626,
+    "sha256": "fedb2877ff79a7c4b0f29647c78012c43114917ccaf4131e8d6959b7226b20af"
+  },
+  "assets/characters/ch08/repair_pipe.png": {
+    "bytes": 594913,
+    "sha256": "d9252df23d5871bcac1733ed0758beaacf372c06384a9ad15fac10cd06ab534a"
+  },
+  "assets/characters/ch08/repair_vehicle.png": {
+    "bytes": 527874,
+    "sha256": "29bb84100765cb8757c8981345d90273e57ddc206066a81eb16907f53b751078"
+  },
+  "assets/characters/ch08/ride_scooter.png": {
+    "bytes": 702589,
+    "sha256": "b40782bc7e18a6efead9f4237c64ead433021815265c363a5778191f11ba6484"
+  },
+  "assets/characters/ch08/roll_dice.png": {
+    "bytes": 651305,
+    "sha256": "e696665c365c17ce2ea6e7d2ba05fd8c61c22758e58ebe868135cb433f53c961"
+  },
+  "assets/characters/ch08/run.png": {
+    "bytes": 835815,
+    "sha256": "7b7e5e6c90a5e6b0dc82dfa98ee5a12d617b2db9308532eda89dfdce0a2cf6b9"
+  },
+  "assets/characters/ch08/sad.png": {
+    "bytes": 587993,
+    "sha256": "ab93962210fac477a66f28231ca6234a25b5da721fc51b25325b2db9259c34f7"
+  },
+  "assets/characters/ch08/search_map.png": {
+    "bytes": 346984,
+    "sha256": "e3a5cfca23c581684b030243b1e08699068b262a8235b073ad6e2b1e12187443"
+  },
+  "assets/characters/ch08/sell.png": {
+    "bytes": 385895,
+    "sha256": "a563a1003c249b7266c72940aef2b353bc28f44d58b1d0205ebd841e36a745f1"
+  },
+  "assets/characters/ch08/serve_drink.png": {
+    "bytes": 374424,
+    "sha256": "54e3a5683d88ba9d4e3d3ed8f9aa64fba8d5612d07e18df8da92dea473032e3c"
+  },
+  "assets/characters/ch08/shield_block.png": {
+    "bytes": 354199,
+    "sha256": "8e34f5822e823576300ff8cf8fb01833288e75b1fd309b805f77285090ee78e1"
+  },
+  "assets/characters/ch08/ship_order.png": {
+    "bytes": 444652,
+    "sha256": "f8ce484c31c9de59b8e2c6236b2b06c0836ff22f2a8a7268a8bbe231a8d43e12"
+  },
+  "assets/characters/ch08/shocked.png": {
+    "bytes": 689618,
+    "sha256": "32a36926b6c7837e816c6446bdb00f3c154e95424bb29f758bf8986e237d8710"
+  },
+  "assets/characters/ch08/sit.png": {
+    "bytes": 808875,
+    "sha256": "eb81a4e52207d0a84c5349f2b7775df0330375587dc274a562423623eaca4cdc"
+  },
+  "assets/characters/ch08/sleep.png": {
+    "bytes": 585523,
+    "sha256": "ce8153fcb24d09387750b9a54d4fdf0afc9724f735c7ae7a598c04c4bd6793b9"
+  },
+  "assets/characters/ch08/study.png": {
+    "bytes": 377716,
+    "sha256": "91fd737b20c644cc74761b43b9d49038099418354e6a5e54e4a09d490ff35ec6"
+  },
+  "assets/characters/ch08/sweep_street.png": {
+    "bytes": 918918,
+    "sha256": "bf7d30ebcf56e11ccbd5d21d05965c18358232c6c3dbbb0ed8677d67ade08fa6"
+  },
+  "assets/characters/ch08/thank_you.png": {
+    "bytes": 893241,
+    "sha256": "3935b708aff4a92a640e20e807c6c7608fc937249ff73c06f865e49c75f48f93"
+  },
+  "assets/characters/ch08/type_keyboard.png": {
+    "bytes": 363020,
+    "sha256": "ae4142f39f9c2762f3de4bd9cce28fea6648c172944fc3bbe27ae739bf5d9951"
+  },
+  "assets/characters/ch08/unlock_house.png": {
+    "bytes": 351456,
+    "sha256": "02dd60a8b0981da47c2dad1dde225f46f3efc688f4f78b94331e6b3c83e33f5a"
+  },
+  "assets/characters/ch08/walk.png": {
+    "bytes": 969215,
+    "sha256": "154efa86d525868eebd08c68ed8ab63e57a5ed867d98902403006b71e034c0d0"
+  },
+  "assets/characters/ch08/wave.png": {
+    "bytes": 390192,
+    "sha256": "c5277a09c55beb433d1728365ee346c995914cd6e02613cdeb573fc60fa9707a"
+  },
+  "assets/characters/ch08/wedding.png": {
+    "bytes": 418551,
+    "sha256": "9e1d192de789a43aca59ee533200c86bfe8eb6cbe2cf1a24abc2593f0fbc965e"
+  },
+  "assets/characters/ch09/adopt_dog.png": {
+    "bytes": 937410,
+    "sha256": "353d38a275c1df876e83f5b70fa0671f729a761c8631b3645063f407561cefe1"
+  },
+  "assets/characters/ch09/advertise.png": {
+    "bytes": 392144,
+    "sha256": "9ea594a898c97b121030583b57bf84bc80cbbd67a28f1462dea32eb4381a2241"
+  },
+  "assets/characters/ch09/animations.json": {
+    "bytes": 434930,
+    "sha256": "c9dcce484d3ff2e9b33fabf3bf68f875dcba9abac8296913c6a5ef5499fe2ba9"
+  },
+  "assets/characters/ch09/birthday.png": {
+    "bytes": 1111896,
+    "sha256": "daa8d4edb5d9e3d328110fca2e849d0c1040bcb5e587fd5cef6ab1007b67870b"
+  },
+  "assets/characters/ch09/care_pet.png": {
+    "bytes": 375123,
+    "sha256": "ec75e1872a729ef502db037583959221a123e2910883dd7aab5cca72b9ce03d7"
+  },
+  "assets/characters/ch09/celebrate.png": {
+    "bytes": 1032791,
+    "sha256": "ae8f7a9d9504f5429f4be230c725c62ac1ea6bb2641d9160ae164ca8303fe5c8"
+  },
+  "assets/characters/ch09/choose_left.png": {
+    "bytes": 305433,
+    "sha256": "4b8b31ccdccc6f67ae200e1742a01b5b759f031da63b304aace16a8b21363924"
+  },
+  "assets/characters/ch09/choose_right.png": {
+    "bytes": 303458,
+    "sha256": "4cbf9db52219262b1f88d8eb1f07c8c7677313f4b8719b9951baeda0b40e4638"
+  },
+  "assets/characters/ch09/clean_house.png": {
+    "bytes": 867882,
+    "sha256": "061fa86e2281b868c490a7d2f9e7697bb28edb85a0c8b5b49be278864d79712c"
+  },
+  "assets/characters/ch09/coin_buy.png": {
+    "bytes": 346934,
+    "sha256": "12ca61afe6064846b8104a2dc7c3aaf75e2a5f0533fe62e130a05f4243b9bc82"
+  },
+  "assets/characters/ch09/coin_lose.png": {
+    "bytes": 605448,
+    "sha256": "f59f247717963240c7bef13174b71a5bf096d70d7835e5f907567f364e1bad77"
+  },
+  "assets/characters/ch09/coin_win.png": {
+    "bytes": 748927,
+    "sha256": "af3c69cb0dd3126098f790985090e4c4d3e4f87871d0ed5f5997cd95f7d70bac"
+  },
+  "assets/characters/ch09/cook_sausage.png": {
+    "bytes": 404913,
+    "sha256": "c62edfc855f47828072b15fdb095b1ede09eb83e97316d79c30189d67927a3db"
+  },
+  "assets/characters/ch09/dance.png": {
+    "bytes": 872459,
+    "sha256": "08f22178e4b3f5cec01e57aca1cbd28ee1a5744289157365256375cb7d2848f8"
+  },
+  "assets/characters/ch09/graduate.png": {
+    "bytes": 333405,
+    "sha256": "32ea067a483ca5b80916599092889bdf9d7149306c771324f7dee96f67f6602b"
+  },
+  "assets/characters/ch09/happy.png": {
+    "bytes": 669171,
+    "sha256": "cb200daa60d139ce30f9292f4282893fac156a75aa14b8a8b8d2a3d7226eeeee"
+  },
+  "assets/characters/ch09/hit.png": {
+    "bytes": 895565,
+    "sha256": "113575b1284aab261c69048d88a42029f3dce1a74fdd13a32b2c8a8a2f75a404"
+  },
+  "assets/characters/ch09/hold_baby.png": {
+    "bytes": 318431,
+    "sha256": "bd350c64b0477b4afeb98718f876595054cc3457ae82c98a2665ca87ffa8cd4b"
+  },
+  "assets/characters/ch09/hold_trophy.png": {
+    "bytes": 307616,
+    "sha256": "7fd31ee921f89f144b2aa6ef2127b9db986fb3864bd9f437c8d9d1e0c2663534"
+  },
+  "assets/characters/ch09/idle.png": {
+    "bytes": 389346,
+    "sha256": "ab6fc952733ac32e911eed6c932253b50c187c81a33e971d58f7267ad8ba42ed"
+  },
+  "assets/characters/ch09/interview.png": {
+    "bytes": 403876,
+    "sha256": "0f11e0729455f748578b98d064fd031bb75bc00eeb55e3fb88fa7011cb27ae5f"
+  },
+  "assets/characters/ch09/lift_box.png": {
+    "bytes": 446906,
+    "sha256": "9866b0e4bd3501663a15df43e53fe94e8efabfa4b7dee9aacabe4897f3f9f32e"
+  },
+  "assets/characters/ch09/pack_box.png": {
+    "bytes": 374121,
+    "sha256": "ea16e87bc62a168d14bf3a9feba83f3695c6d698b7b3deae09613187a33ac72b"
+  },
+  "assets/characters/ch09/pet_dog.png": {
+    "bytes": 1500618,
+    "sha256": "14827325339ecf22c6c3d2463caa972e60803789ad15d79b12df9083eba79770"
+  },
+  "assets/characters/ch09/phone_read.png": {
+    "bytes": 315593,
+    "sha256": "38f5294a603a23ad1549d2569e541ddb04a5fa9e0a50a333dd996ad0be0bed84"
+  },
+  "assets/characters/ch09/phone_tap.png": {
+    "bytes": 810456,
+    "sha256": "99bb38958ccdb9e1a3ad4181c1ff5da8dc31cbe4749f571c36066927cd8a190a"
+  },
+  "assets/characters/ch09/point_question.png": {
+    "bytes": 356220,
+    "sha256": "c44bd8859ad2426b8492367a3107f586e9a5b4f5d484984e69cf9445fd4fc3a4"
+  },
+  "assets/characters/ch09/police_stop.png": {
+    "bytes": 426828,
+    "sha256": "e71cc9124ade647dfba1ef1e03f7bc2cf3f232e018cdafb174bb380ba2b49e2d"
+  },
+  "assets/characters/ch09/portrait.png": {
+    "bytes": 33604,
+    "sha256": "7f781086d5eb63bb7d9249881f1889c36a6545cebc0fa047cfaa598cf924e69b"
+  },
+  "assets/characters/ch09/push_cart.png": {
+    "bytes": 425298,
+    "sha256": "6fbff4c2a2fa2523519ded04ab395cd0f86f74af33259bcc47b55c5779fa79c2"
+  },
+  "assets/characters/ch09/rain_walk.png": {
+    "bytes": 944364,
+    "sha256": "267be1d474836133dc88328b32cff0a8e0928848e4b7ac3b6b5552098616d999"
+  },
+  "assets/characters/ch09/receive_salary.png": {
+    "bytes": 346794,
+    "sha256": "36858e79ceb14b64816459e8b64e0e2eb9c81ceca4d60df960d6f1e50865b0c7"
+  },
+  "assets/characters/ch09/repair_pipe.png": {
+    "bytes": 836333,
+    "sha256": "c829dbd4abcca9658f45395ad7432448d3b3cdd7c585b16a221b71bfeac5de80"
+  },
+  "assets/characters/ch09/repair_vehicle.png": {
+    "bytes": 528937,
+    "sha256": "b8bf880355132ab279da6727c078575204af2b8d9e5f894811a312e967ec8dcf"
+  },
+  "assets/characters/ch09/ride_scooter.png": {
+    "bytes": 686574,
+    "sha256": "8bc51b4940f455c01a6352b12ae71a3e2119d2c822897f4b28a7f750eaf0f749"
+  },
+  "assets/characters/ch09/roll_dice.png": {
+    "bytes": 913391,
+    "sha256": "ae27fdd6d35c5bf7e495fe21f3025b2518d9c06d12445118b6a4fd095240c37a"
+  },
+  "assets/characters/ch09/run.png": {
+    "bytes": 835069,
+    "sha256": "a34ad606d48caba25bc58c4637ea4bb0171ff62ac8bf4d61387ef4ead07bd3b5"
+  },
+  "assets/characters/ch09/sad.png": {
+    "bytes": 589831,
+    "sha256": "25eb274489a72628206bb9e5b0ce0975201a97741cb53ae9651d330fa81b180b"
+  },
+  "assets/characters/ch09/search_map.png": {
+    "bytes": 331077,
+    "sha256": "8b28990425ed447e31ba4d6e0d6a94eb26f944d4fd2f93bf0e79cbe341eff918"
+  },
+  "assets/characters/ch09/sell.png": {
+    "bytes": 387042,
+    "sha256": "07fe897163c1aba95d839c641d999723a239dffe4defc78ee09834f0141ea402"
+  },
+  "assets/characters/ch09/serve_drink.png": {
+    "bytes": 367116,
+    "sha256": "5ca3432d81e5e2062589d3012a55aa913ddad1e9bff3c87460f1cde6cd9e757c"
+  },
+  "assets/characters/ch09/shield_block.png": {
+    "bytes": 335801,
+    "sha256": "25fae25e506cbf2e99d370fb2c274190cf64b84e86c6e0d70a3ab13251264557"
+  },
+  "assets/characters/ch09/ship_order.png": {
+    "bytes": 439672,
+    "sha256": "d2fdd46c51a97b5b8dce72d8b62ff5981ba9080ac9890806b7cf97d92171a17b"
+  },
+  "assets/characters/ch09/shocked.png": {
+    "bytes": 693577,
+    "sha256": "317b6a3c3b827f28284579accb46facbd7778b56bb2e06f6ac67972cd0fafd1b"
+  },
+  "assets/characters/ch09/sit.png": {
+    "bytes": 836362,
+    "sha256": "a0f12473e550dedb8be68717c35706224b7d60d26bc43d35530e2a2c74c86afd"
+  },
+  "assets/characters/ch09/sleep.png": {
+    "bytes": 585180,
+    "sha256": "6090bd08533875dee1be372f9bcc40c0f202fbaa6aa352a01afcc8b349190010"
+  },
+  "assets/characters/ch09/study.png": {
+    "bytes": 367533,
+    "sha256": "b1609ff156ca23f37d943424ad87e1b7a37205ed811c96a630318307951f5ed5"
+  },
+  "assets/characters/ch09/sweep_street.png": {
+    "bytes": 1156912,
+    "sha256": "e3906aa725300d08f1eba5f3afa9949320d8000ec1aa9da447918376a88dd46f"
+  },
+  "assets/characters/ch09/thank_you.png": {
+    "bytes": 932022,
+    "sha256": "695296b075a2429d8ac03e119a92581252f0070d4f38314ed8d5669a5fea534d"
+  },
+  "assets/characters/ch09/type_keyboard.png": {
+    "bytes": 356771,
+    "sha256": "7fa8e18a504242174fcc3903164500b3b5ef1c29183931368998bed51af50612"
+  },
+  "assets/characters/ch09/unlock_house.png": {
+    "bytes": 344060,
+    "sha256": "8c45bb66bbebc41f1e69e6766ee1a37d2fa77017ceaf9770ff6618444700c3d7"
+  },
+  "assets/characters/ch09/walk.png": {
+    "bytes": 863718,
+    "sha256": "2f955608d4c020c4f14a84ceda5cf626afbcaca6e8ca27456ff9fff23c0de4ae"
+  },
+  "assets/characters/ch09/wave.png": {
+    "bytes": 353219,
+    "sha256": "e024d9b080788389049474704d026579ea589045350a71365aa518432abb862f"
+  },
+  "assets/characters/ch09/wedding.png": {
+    "bytes": 396698,
+    "sha256": "a4490b8ba53cc3d21b6f5d712b5d2558059cb77944d7466bc7de0034e0268569"
+  },
+  "assets/characters/ch10/adopt_dog.png": {
+    "bytes": 968059,
+    "sha256": "ba5161a2571ea0daccb7fde1b58513579738b3af3a14449bcd89070899f7de26"
+  },
+  "assets/characters/ch10/advertise.png": {
+    "bytes": 409659,
+    "sha256": "cbd61c28f5d682d32560e065f18490637292eab9fbecb6548e16239d5b6c722b"
+  },
+  "assets/characters/ch10/animations.json": {
+    "bytes": 434936,
+    "sha256": "cd796cb8c3cb14de629ab834362f89ed5a7a608afe02fa64d2f9a1f8416920a6"
+  },
+  "assets/characters/ch10/birthday.png": {
+    "bytes": 1119226,
+    "sha256": "79005e1632430d3879868a08ef54e5e71c2d8bb3fe26df32f70477b4e744ce6e"
+  },
+  "assets/characters/ch10/care_pet.png": {
+    "bytes": 403083,
+    "sha256": "ad69877e5dc64691f8a550bf1b39f4e1a2f55a7f2fe65c9fe71952029bc342cd"
+  },
+  "assets/characters/ch10/celebrate.png": {
+    "bytes": 1129446,
+    "sha256": "ca6396547cc62853b42187cd90bcfc27e6a359c2d0f7af2012afec62bd9e860a"
+  },
+  "assets/characters/ch10/choose_left.png": {
+    "bytes": 321330,
+    "sha256": "6ee2fb49cee323df224d5ab2b3bcb1040bc15e199790264eec0b739aa526815e"
+  },
+  "assets/characters/ch10/choose_right.png": {
+    "bytes": 319642,
+    "sha256": "92603303e891d3c3fdb8c4c728fb1bcf279cd3cf008d5061a3c7abdacab9ff5d"
+  },
+  "assets/characters/ch10/clean_house.png": {
+    "bytes": 888558,
+    "sha256": "f43cdb5b893b105b46cd5353c6ad548b36d645c57eb17c20dfb1e362cadf10c9"
+  },
+  "assets/characters/ch10/coin_buy.png": {
+    "bytes": 369480,
+    "sha256": "4b279e4f003b9541b1dbf99d3f2284dc59461cabe9bed07e7b29b566f6f06894"
+  },
+  "assets/characters/ch10/coin_lose.png": {
+    "bytes": 670119,
+    "sha256": "1038dc3dc4a5082817d77838ff6714c734a6c7bd5da16dfe81bf7a1c9768cfea"
+  },
+  "assets/characters/ch10/coin_win.png": {
+    "bytes": 821642,
+    "sha256": "5d8b77fe3d6e7afdc199ede5f81e337572c74e4c8f26222000f528fa39904294"
+  },
+  "assets/characters/ch10/cook_sausage.png": {
+    "bytes": 429656,
+    "sha256": "2670d02f4c4d15e9416213a16833af92b4e3d67b2c87f847e13d6bd51ee4c78b"
+  },
+  "assets/characters/ch10/dance.png": {
+    "bytes": 988588,
+    "sha256": "c7c15f4e1c476e135afd474ea42806df80a50dab862cb984f33a87fe3d344207"
+  },
+  "assets/characters/ch10/graduate.png": {
+    "bytes": 366119,
+    "sha256": "b152a3214fa94f1bc11930967e6533dab7d3b4dfa4e73a759f95cd17d0aab0cf"
+  },
+  "assets/characters/ch10/happy.png": {
+    "bytes": 738995,
+    "sha256": "f3d48dd43928560a605252dfbade08456bf70e59ca548cb2ecc706c98cbb94d9"
+  },
+  "assets/characters/ch10/hit.png": {
+    "bytes": 905567,
+    "sha256": "4856c2b0ff02077d00af98540df819521b242aea99e687e19168ae39d0c090e0"
+  },
+  "assets/characters/ch10/hold_baby.png": {
+    "bytes": 341668,
+    "sha256": "e868fd7973fd1b24c4df66cfbb8a7b7fcc83caa136b13c383179799132c6baa7"
+  },
+  "assets/characters/ch10/hold_trophy.png": {
+    "bytes": 329912,
+    "sha256": "0308ff6d95c9a3c5597797310871a49f17112f52a4a6b67501d5534126e77865"
+  },
+  "assets/characters/ch10/idle.png": {
+    "bytes": 399948,
+    "sha256": "430da4caa1203945adc9e827b5693674b24a276e788b9edc111394a1b8457f40"
+  },
+  "assets/characters/ch10/interview.png": {
+    "bytes": 423205,
+    "sha256": "96739f4162beb93034c80dc709f746f024c581d9a5309b7faaaa66622ab043c9"
+  },
+  "assets/characters/ch10/lift_box.png": {
+    "bytes": 465739,
+    "sha256": "3b5d6f44ff1a99570ee93b56244077279561a32c4b37ec3e27cfce060f0e799c"
+  },
+  "assets/characters/ch10/pack_box.png": {
+    "bytes": 398805,
+    "sha256": "2bccbea5507e6430931039f4a513c81f2ebe284e9b9e45f1b6ccde57a757c362"
+  },
+  "assets/characters/ch10/pet_dog.png": {
+    "bytes": 1532488,
+    "sha256": "187b4a5ff9fb44760e4d3ec47c3ea456af2dfde0059f2d1268f531d1bcfadbd0"
+  },
+  "assets/characters/ch10/phone_read.png": {
+    "bytes": 334476,
+    "sha256": "445dad79c9435313634a8d761cba46293cfbe6f890bc9e39fca0ccac3d5c63bb"
+  },
+  "assets/characters/ch10/phone_tap.png": {
+    "bytes": 823295,
+    "sha256": "45e424b1579db948fcb9a0e5c95f0aba144defbb933c40b7dc9ed317df519907"
+  },
+  "assets/characters/ch10/point_question.png": {
+    "bytes": 378324,
+    "sha256": "712d19edb0e2efdd31bfc0e7c2f67b5536ade46eb13d0082fd64c6471d419054"
+  },
+  "assets/characters/ch10/police_stop.png": {
+    "bytes": 471738,
+    "sha256": "f2e0c19d69d9f682b55b73c857035c831e64597b18a563f202fdc20d539fb3c1"
+  },
+  "assets/characters/ch10/portrait.png": {
+    "bytes": 33863,
+    "sha256": "2cbfdc7f61e88f65ce4cf3694bd81fa987d8f9bc16f9b401ddb611d95c952568"
+  },
+  "assets/characters/ch10/push_cart.png": {
+    "bytes": 446660,
+    "sha256": "2876bec52f4e9d00642e22edbf9a73aa92fe5e61e30c61be76a6d2fbd567115f"
+  },
+  "assets/characters/ch10/rain_walk.png": {
+    "bytes": 874370,
+    "sha256": "775fb2515e0085d999b99af5560f62ae75fa78b429fa2bb7b103f36dc264c3b8"
+  },
+  "assets/characters/ch10/receive_salary.png": {
+    "bytes": 365922,
+    "sha256": "f1105305bc944b5272fa0e5cd8766b94966fbe975a32571a2dd65fd4ca3d24bd"
+  },
+  "assets/characters/ch10/repair_pipe.png": {
+    "bytes": 856509,
+    "sha256": "522eb20372d3456dd8fbb9b7cd7c97875512b32f39cc3dc555e063c149abfd42"
+  },
+  "assets/characters/ch10/repair_vehicle.png": {
+    "bytes": 552154,
+    "sha256": "61da8430f4611cbef4d1324017c47fb60e77afc21c736401f4c65d6bb17e9427"
+  },
+  "assets/characters/ch10/ride_scooter.png": {
+    "bytes": 727136,
+    "sha256": "368ec34e4b7788b9244990c253dd2294d355ad016cd559041282f5f18b0c289f"
+  },
+  "assets/characters/ch10/roll_dice.png": {
+    "bytes": 958229,
+    "sha256": "99e64d01b81373e0382cf4aee7239010c1b57f8b29091557e02b689a0367c3ab"
+  },
+  "assets/characters/ch10/run.png": {
+    "bytes": 856338,
+    "sha256": "46dc374419ae11b025fa31f2b070cfee3e673959cb7c3ab002c18a41c83260e1"
+  },
+  "assets/characters/ch10/sad.png": {
+    "bytes": 614273,
+    "sha256": "4922fbee79444bc441a19c92186427038d4ca2934ad2d070796c290939234441"
+  },
+  "assets/characters/ch10/search_map.png": {
+    "bytes": 357464,
+    "sha256": "cfe8bdc0d7db64ab4e32ca089b3beab7efb80f9b5cbe94b16fd711dfb2343c48"
+  },
+  "assets/characters/ch10/sell.png": {
+    "bytes": 405990,
+    "sha256": "6d90bb7553e0dafc73d7840202b516a4c4803a1f319c9d3dbe2379a733da3ef4"
+  },
+  "assets/characters/ch10/serve_drink.png": {
+    "bytes": 394501,
+    "sha256": "c2906cde8398f9c5aa6c97d5bce15130c2bb6e11597db183c9f7413ad035911d"
+  },
+  "assets/characters/ch10/shield_block.png": {
+    "bytes": 366762,
+    "sha256": "bd47c8142fb6ebad823871ed943333850062558bd1503c19f4127183d8794102"
+  },
+  "assets/characters/ch10/ship_order.png": {
+    "bytes": 461093,
+    "sha256": "486e6cd5baafec0c7cf73e7288bff1b86067cfc0e0a8f6d81973d57a9c0383fb"
+  },
+  "assets/characters/ch10/shocked.png": {
+    "bytes": 710363,
+    "sha256": "120650e5a910c9339289b71a1dff3f71026a6d1ac74c5617d74480f71a65a7d4"
+  },
+  "assets/characters/ch10/sit.png": {
+    "bytes": 851551,
+    "sha256": "aa974a106ef27a959bae39f9c83c39f55fffab9afc41ae1f5d8bb7abad4848cd"
+  },
+  "assets/characters/ch10/sleep.png": {
+    "bytes": 607079,
+    "sha256": "e12d4d609162717e7cbebdcdcddfbd3f89c9d4202b55216b9d699721dbfe0f0b"
+  },
+  "assets/characters/ch10/study.png": {
+    "bytes": 393059,
+    "sha256": "50682055a43af83ba60995c37229b4b558632713350fbae98ad75234fb8e3b31"
+  },
+  "assets/characters/ch10/sweep_street.png": {
+    "bytes": 1187981,
+    "sha256": "9dcb74030c92408eb6a97d0b33c7cd7be4a887a554814ec75a4b5b1702b19771"
+  },
+  "assets/characters/ch10/thank_you.png": {
+    "bytes": 943622,
+    "sha256": "455a2efeae3e06b3c857ee314e8254558b33486fb05181c6c75b95c53d2feb3a"
+  },
+  "assets/characters/ch10/type_keyboard.png": {
+    "bytes": 383162,
+    "sha256": "514f3d0e3eb106faac8c24169bce4c19fc73b3a5c2240dbfbfbf39e5cf29b2a0"
+  },
+  "assets/characters/ch10/unlock_house.png": {
+    "bytes": 361010,
+    "sha256": "97588d3689be50cf3f2a2f389247547f2881eac75fbf62d9128fb74161412854"
+  },
+  "assets/characters/ch10/walk.png": {
+    "bytes": 1040708,
+    "sha256": "569588ba0500d31a234490e53b7e9bc3b45f4483d982f265d82eeb8aeff95180"
+  },
+  "assets/characters/ch10/wave.png": {
+    "bytes": 405070,
+    "sha256": "95045cf8400a7a5611cc7639386fc9e402eb65c7f8ce0c00baf8e1c252a304f6"
+  },
+  "assets/characters/ch10/wedding.png": {
+    "bytes": 435244,
+    "sha256": "9e8706ac4e8196bbf7d6cb78553c698475cd7133bb54d6a6f8a79f27d1deee3d"
+  },
+  "assets/characters/ch11/adopt_dog.png": {
+    "bytes": 1027961,
+    "sha256": "816d828e979d264bfd6290543759cb8bf183636e3bcb0d43451d0ccc076a1e24"
+  },
+  "assets/characters/ch11/advertise.png": {
+    "bytes": 455325,
+    "sha256": "38f67428bfffee23a380a816debb8310be627aa813fbf0aa440e0f8ac6834a23"
+  },
+  "assets/characters/ch11/animations.json": {
+    "bytes": 434935,
+    "sha256": "5641544388e681b2da25b1280acbc09f19c90c0e6b52a73da636b995186dcb9f"
+  },
+  "assets/characters/ch11/birthday.png": {
+    "bytes": 1258754,
+    "sha256": "602705751a31ec4abfdd50f918945f5db31dfb557c81ec504653ca8e5433af13"
+  },
+  "assets/characters/ch11/care_pet.png": {
+    "bytes": 426666,
+    "sha256": "7a3c880b26a83480e18c8b5bf2c9550461e88f258a77bde04ce7b0cd025ad30d"
+  },
+  "assets/characters/ch11/celebrate.png": {
+    "bytes": 889742,
+    "sha256": "8a4b45a6af83f7687969c8c08416adf66721813297c67f3e70e2e8231bbb1a76"
+  },
+  "assets/characters/ch11/choose_left.png": {
+    "bytes": 344699,
+    "sha256": "c4bcf9b11b4c65fb48b46c44f6f95bdbc9a51cb5e1782774387468b9d1fc8608"
+  },
+  "assets/characters/ch11/choose_right.png": {
+    "bytes": 342474,
+    "sha256": "df20945c11a9a5f9372acebc10691f47f3442dbef194861a56dc7b9c206d1ee2"
+  },
+  "assets/characters/ch11/clean_house.png": {
+    "bytes": 989071,
+    "sha256": "842d89f8c8c97d1437082f7609f8315f18141fcf31c55ad6326dde128ba90b9e"
+  },
+  "assets/characters/ch11/coin_buy.png": {
+    "bytes": 390594,
+    "sha256": "4ed33de1b6a504e7785fe1190851c1d84d936b64fb5fe22655208f11c590f999"
+  },
+  "assets/characters/ch11/coin_lose.png": {
+    "bytes": 668398,
+    "sha256": "872d98e3e37f34af4e4477afe58db6bf9340d896ec93d1896f7728cba6043130"
+  },
+  "assets/characters/ch11/coin_win.png": {
+    "bytes": 666370,
+    "sha256": "277e38788dc2b156bd98bc01530dc92ce3d80c0a6a1605645c3c41cb5902e9c3"
+  },
+  "assets/characters/ch11/cook_sausage.png": {
+    "bytes": 452332,
+    "sha256": "2425863640a2308265fcd0222ad0cd985f24fce5f4841e120669fcb0377461af"
+  },
+  "assets/characters/ch11/dance.png": {
+    "bytes": 780542,
+    "sha256": "69a01c02c4a99c9dae59fd4a549d03a0f66dd93f674b04b153bb78645ebde88b"
+  },
+  "assets/characters/ch11/graduate.png": {
+    "bytes": 372110,
+    "sha256": "4231befda0fb61e67ce5d3b95e2d04eb02055a524dcd2369b6b2a872add292a8"
+  },
+  "assets/characters/ch11/happy.png": {
+    "bytes": 602227,
+    "sha256": "55b4e86cd11f93d6c932f57fa81e46ae719f6f1cf8260cc306741c694554e2c5"
+  },
+  "assets/characters/ch11/hit.png": {
+    "bytes": 964890,
+    "sha256": "4306fb8683fcddf29deec700ed06252475208f62064c7cb4212d7f204af8066c"
+  },
+  "assets/characters/ch11/hold_baby.png": {
+    "bytes": 366207,
+    "sha256": "4347b9dbd8841277835bc1baa588bb3635ae65f4ac93a3d2ec2c1ee05aaf5208"
+  },
+  "assets/characters/ch11/hold_trophy.png": {
+    "bytes": 347981,
+    "sha256": "003ec69da9ec24275b4fe4a51abd3b13709ffc27ba01cc787bdfa138614a50f6"
+  },
+  "assets/characters/ch11/idle.png": {
+    "bytes": 436185,
+    "sha256": "092f41b821b5e086cb4f37cb5eb470719b8817f0d45be59cdf8a6809c449e4ce"
+  },
+  "assets/characters/ch11/interview.png": {
+    "bytes": 464345,
+    "sha256": "9d3e42cb22a7e4811c662f1284098b3802b4a60fed0302be9b4b1d913576b4a5"
+  },
+  "assets/characters/ch11/lift_box.png": {
+    "bytes": 495372,
+    "sha256": "3de8e270c0d4a03fdfa3528e3a8b56715490c7062b231ba6baeeacbbe4653d5b"
+  },
+  "assets/characters/ch11/pack_box.png": {
+    "bytes": 420149,
+    "sha256": "e93db18aaab2cec06073e419dd103dc0513266ddf69e5aa32d3b6f7d1be9e860"
+  },
+  "assets/characters/ch11/pet_dog.png": {
+    "bytes": 1423447,
+    "sha256": "c1bcccffc43cc2374f90f37f5da705d22b6a5e3cfe2a777995425b080dc2fcc4"
+  },
+  "assets/characters/ch11/phone_read.png": {
+    "bytes": 361259,
+    "sha256": "fb530565e22c505a42b96aef9f7a0d906c3d14dc84a596f040608dbe34f60e00"
+  },
+  "assets/characters/ch11/phone_tap.png": {
+    "bytes": 922688,
+    "sha256": "68893e808fe246a2abe09711fc7c6ec2ec3902750df7c4a97d5b7e6efc55448e"
+  },
+  "assets/characters/ch11/point_question.png": {
+    "bytes": 405439,
+    "sha256": "db860e7fc63b5f19ddd168d6ef369c2178324517570e46b03c040f26eb0934bd"
+  },
+  "assets/characters/ch11/police_stop.png": {
+    "bytes": 479092,
+    "sha256": "5d99defd145506663339a6317f40459fa02cb3bab2330a9ca53e85fdad68801e"
+  },
+  "assets/characters/ch11/portrait.png": {
+    "bytes": 35272,
+    "sha256": "7ff9626cd74d948542394e21467a89fd12f94ae44f7da3af9bffc5b3410c837a"
+  },
+  "assets/characters/ch11/push_cart.png": {
+    "bytes": 460050,
+    "sha256": "ebc67cb80cd172f2c860b25715d047db521ec8dd3647cce826038d58b32dfdf0"
+  },
+  "assets/characters/ch11/rain_walk.png": {
+    "bytes": 972490,
+    "sha256": "58e13d40db76ddbb45b90cbe19183a5f2bc473b4155e0fae96769fe2f8ac7e27"
+  },
+  "assets/characters/ch11/receive_salary.png": {
+    "bytes": 390524,
+    "sha256": "6c39ca248c593d460aa226224dc23bcc8ca072a7b13c1ee41ca0d6aa2a5a5087"
+  },
+  "assets/characters/ch11/repair_pipe.png": {
+    "bytes": 959741,
+    "sha256": "625b9863f8cd2b186afdb0a267e766c5316912ca992a6d48b6a75da7d39803c0"
+  },
+  "assets/characters/ch11/repair_vehicle.png": {
+    "bytes": 607120,
+    "sha256": "2131dcadcce358f8a4cbdc8fc10aa2f80671464349e66c89cfd8741041c3f1ab"
+  },
+  "assets/characters/ch11/ride_scooter.png": {
+    "bytes": 757204,
+    "sha256": "022549eddbe13af69202e40f57c4c319c722e3945a83d4725258f0d1c0b8f9a5"
+  },
+  "assets/characters/ch11/roll_dice.png": {
+    "bytes": 997380,
+    "sha256": "fbcfb8fca0fedba1dc83eefcb41e845f58f621772b99bb2fa89137eea3076178"
+  },
+  "assets/characters/ch11/run.png": {
+    "bytes": 898095,
+    "sha256": "b3c55f02c2ff2c1a8c4b0dc627325205e57f224e687fff1d9bd77c958ec1b45e"
+  },
+  "assets/characters/ch11/sad.png": {
+    "bytes": 667945,
+    "sha256": "e75e5755d6e1940bf61abb64b7da93ec71084fa179dde97f66ea0938e89a93d9"
+  },
+  "assets/characters/ch11/search_map.png": {
+    "bytes": 382474,
+    "sha256": "86057f859d9fc878042b451680b3793d14523830d030a08bc7775c7978c3e1bd"
+  },
+  "assets/characters/ch11/sell.png": {
+    "bytes": 433101,
+    "sha256": "97a761f029630c353fd636d590ef3f6dfc42ce90c2996b615f59d7c7c1e2366f"
+  },
+  "assets/characters/ch11/serve_drink.png": {
+    "bytes": 412478,
+    "sha256": "ff66f7174561be0e2c84befb18ccc8fd47c6542f8d8f3c103a16f55cac9300f5"
+  },
+  "assets/characters/ch11/shield_block.png": {
+    "bytes": 374107,
+    "sha256": "4eab6aff8518bc7ebbcb39d5875cad737e7a5260e2820d65c69eae3a7be8db9d"
+  },
+  "assets/characters/ch11/ship_order.png": {
+    "bytes": 476285,
+    "sha256": "7f1a8d2b0acbc3a0558ddfc2d411c53731d785b99f15111dae884ece403132ae"
+  },
+  "assets/characters/ch11/shocked.png": {
+    "bytes": 760852,
+    "sha256": "efa70408ba678015d5810e14e71ae5c2c4e4a86d241b0d99547ed1c96ba30d3f"
+  },
+  "assets/characters/ch11/sit.png": {
+    "bytes": 923855,
+    "sha256": "95923d740f5abd24edc2ed2bbe08426ca304a52082293f3ffe1287849cd4dcbd"
+  },
+  "assets/characters/ch11/sleep.png": {
+    "bytes": 665374,
+    "sha256": "9af1aecfbeba6fcbcf202d4aee976b0a8946446bad30c0361a56a0cf4ee390f5"
+  },
+  "assets/characters/ch11/study.png": {
+    "bytes": 431933,
+    "sha256": "9d647452145993325da66687241c448b0bb139eaf5fd812d6e44fa8e366d368a"
+  },
+  "assets/characters/ch11/sweep_street.png": {
+    "bytes": 1091829,
+    "sha256": "f1f60c277bc6516234d9597f97679f4773a5b47b2d40956d6c6ad3233e79313a"
+  },
+  "assets/characters/ch11/thank_you.png": {
+    "bytes": 1044614,
+    "sha256": "d80ecf2c6e82cc26308866fc38b8e5c6e4a1e0794ddaf0de1e86317fb75c1742"
+  },
+  "assets/characters/ch11/type_keyboard.png": {
+    "bytes": 408018,
+    "sha256": "c187d0e3b3afd0ebe3520df49b1fb231bb92c8501ee02934be7a25c96f8fabff"
+  },
+  "assets/characters/ch11/unlock_house.png": {
+    "bytes": 388117,
+    "sha256": "a5ef3cacf7032e1fd2c4a6eb85e8cb421248f4f3deb7378cf1246ec139e4d11e"
+  },
+  "assets/characters/ch11/walk.png": {
+    "bytes": 1034595,
+    "sha256": "730ab75981dc510a9dbffa98eae0ebd890a3e247e100545160ffe68942d4413d"
+  },
+  "assets/characters/ch11/wave.png": {
+    "bytes": 395686,
+    "sha256": "0a8945bb8ce4a3816f409be3b83d8d7574b6ddc526c6f4ca3c36503e7e71d978"
+  },
+  "assets/characters/ch11/wedding.png": {
+    "bytes": 431954,
+    "sha256": "cc010bc65fd0677013fafc850ffedf2f61a30a35582d975359e8b261de5810b1"
+  },
+  "assets/characters/ch12/adopt_dog.png": {
+    "bytes": 919419,
+    "sha256": "8f4a30c5ddf560dc0231a0291e44b2720a084e4654aab895faddf85508457230"
+  },
+  "assets/characters/ch12/advertise.png": {
+    "bytes": 403242,
+    "sha256": "6de770057724b94bb59a7c906f4e904b1bc1a3b879f6f9b2ddcfa28a65d0432d"
+  },
+  "assets/characters/ch12/animations.json": {
+    "bytes": 434939,
+    "sha256": "36e9e112719232021692a2f1889cfba8d3be5a86011c0e1b73e6654b6cdb2970"
+  },
+  "assets/characters/ch12/birthday.png": {
+    "bytes": 1068551,
+    "sha256": "ed4918dfef9dd9605ac49c4ca9584fadc863c40048a43437ae28aa1fb04bd922"
+  },
+  "assets/characters/ch12/care_pet.png": {
+    "bytes": 384536,
+    "sha256": "ce2ccc54d4a7d00a4bf21eb87927df6cf19d70760a3a7483fbd1a9944732aa71"
+  },
+  "assets/characters/ch12/celebrate.png": {
+    "bytes": 1105498,
+    "sha256": "c2a5e8da4a2f196c7b614df3a0b3a9e77cea4548506d6fa288c24cafbbb6f54b"
+  },
+  "assets/characters/ch12/choose_left.png": {
+    "bytes": 311243,
+    "sha256": "bc3079511c51299649499e729d1e5fb91932ed360f29d561de70f2e0f3aec39b"
+  },
+  "assets/characters/ch12/choose_right.png": {
+    "bytes": 307445,
+    "sha256": "b5e342f92a49a5bf06318d91d98313650b4b9f3968ef880bab0ef93ca5fedf70"
+  },
+  "assets/characters/ch12/clean_house.png": {
+    "bytes": 642944,
+    "sha256": "124bbb64b3ba2ac2f335697136e72da6ec2ef30b8e898d6bbb80aa46f8827469"
+  },
+  "assets/characters/ch12/coin_buy.png": {
+    "bytes": 358178,
+    "sha256": "2cd31f30f47139cbc920645478840be130d8e38ddd308a518b0000485c2eed51"
+  },
+  "assets/characters/ch12/coin_lose.png": {
+    "bytes": 660711,
+    "sha256": "9d1454b83f81ea819a52e0c943ca7de610999f4098a06c11abe706e360a7d548"
+  },
+  "assets/characters/ch12/coin_win.png": {
+    "bytes": 814280,
+    "sha256": "af723595275deabd1a12827a12b4be01801b3a5b04eaed1f1c8b42a96d67cb13"
+  },
+  "assets/characters/ch12/cook_sausage.png": {
+    "bytes": 413862,
+    "sha256": "eb09e1ecea7a4c4c1b97546d3ae7c9b8def8ee12e9b2bd98726e6ce3e2a04032"
+  },
+  "assets/characters/ch12/dance.png": {
+    "bytes": 969228,
+    "sha256": "1d22e971e250c58733f59bf00f3335fc55b7c5f7ccbb6599c97e1609fe779d17"
+  },
+  "assets/characters/ch12/graduate.png": {
+    "bytes": 357877,
+    "sha256": "bae72f01a7d68c22b2e147c90f1586db71d20676be4fe483a7c63aa4aea5438e"
+  },
+  "assets/characters/ch12/happy.png": {
+    "bytes": 738274,
+    "sha256": "88bbc7557470c1c818dd8f0bfeafa426db0563c29b23393c81edd3f470476947"
+  },
+  "assets/characters/ch12/hit.png": {
+    "bytes": 888264,
+    "sha256": "fd49dcb0577a00e59ca32a94728493c9c96fe9c6bdc1e4ffdf93a77a64bf8e76"
+  },
+  "assets/characters/ch12/hold_baby.png": {
+    "bytes": 325907,
+    "sha256": "59b20979e7cf9a9512a29444c4d634d6781b2cb864303c3011303665b2537500"
+  },
+  "assets/characters/ch12/hold_trophy.png": {
+    "bytes": 313354,
+    "sha256": "10d1ff1f2ba54a3be448c9d3572f208bef91f0c126651ca016d507ae9bcffd67"
+  },
+  "assets/characters/ch12/idle.png": {
+    "bytes": 391801,
+    "sha256": "f8ea5d5abfbab6562746821c386271f1ab233a7385d3f5549114dfd5073a99ea"
+  },
+  "assets/characters/ch12/interview.png": {
+    "bytes": 404855,
+    "sha256": "18e27cb1e495aadaa564aea29975718d8aaac3259573d4332afd21d531ccda47"
+  },
+  "assets/characters/ch12/lift_box.png": {
+    "bytes": 450267,
+    "sha256": "21b5ab2c6078071eee7277bfa92ad9668559edf380e37c0706a92a2db6f0b414"
+  },
+  "assets/characters/ch12/pack_box.png": {
+    "bytes": 383374,
+    "sha256": "abbf084c05a4454526fbe0a8025e226a6a3a2869795ff9096f0bd2a9f47812b0"
+  },
+  "assets/characters/ch12/pet_dog.png": {
+    "bytes": 1038371,
+    "sha256": "6a13409d4ee7a36ba2df191dd233e785ed9f52bc0cdbc378740ebc2e4e42b609"
+  },
+  "assets/characters/ch12/phone_read.png": {
+    "bytes": 321134,
+    "sha256": "73b1e7c99f1273bc2ac174c25aed67c5225bd421c38a07b466e918dad6a84283"
+  },
+  "assets/characters/ch12/phone_tap.png": {
+    "bytes": 577097,
+    "sha256": "79784d4e036cf492036bea490f0c7fc86c1915ed7f91d6f0e11d4fcdb528cfaa"
+  },
+  "assets/characters/ch12/point_question.png": {
+    "bytes": 362306,
+    "sha256": "80d57c063f84cbace7ccc99cb1df1ecac48bbdf61d3b5b760be45edae40206b9"
+  },
+  "assets/characters/ch12/police_stop.png": {
+    "bytes": 455514,
+    "sha256": "9c23c0b588e1c3966b0f608bbc2126fc5fdba98f156a3287637315d4b92a3d39"
+  },
+  "assets/characters/ch12/portrait.png": {
+    "bytes": 32151,
+    "sha256": "29c135cb388ee57fc492261c86e2b11efeed4b7cb079a178f7138e477e242f13"
+  },
+  "assets/characters/ch12/push_cart.png": {
+    "bytes": 433695,
+    "sha256": "98b82ec27ef68866fed706a70dfd6844200808cee76fa821d10a38fcf646a475"
+  },
+  "assets/characters/ch12/rain_walk.png": {
+    "bytes": 903640,
+    "sha256": "b0ef9997899874185350a9bb316263714c0a1fd87954e14830c034e3b315a7a5"
+  },
+  "assets/characters/ch12/receive_salary.png": {
+    "bytes": 351512,
+    "sha256": "6080eb1e12144d88532ba6efb9fceacb3fcf17a5bf78d83cde2e22a780e8a511"
+  },
+  "assets/characters/ch12/repair_pipe.png": {
+    "bytes": 607340,
+    "sha256": "05fb883c7198755d22bfe439ea8dfd83c0025752a92c80c8a4a63bdc6969cff6"
+  },
+  "assets/characters/ch12/repair_vehicle.png": {
+    "bytes": 520066,
+    "sha256": "e0bf2fcecf0cda1d127d21c540929c32801914b477688eb32dd022a8dbb46148"
+  },
+  "assets/characters/ch12/ride_scooter.png": {
+    "bytes": 697581,
+    "sha256": "e3d66569208e31c3f840d46b366a957755a98132538ac5c7e7e39b315e5127cb"
+  },
+  "assets/characters/ch12/roll_dice.png": {
+    "bytes": 660680,
+    "sha256": "6dc0a12e3ed488b9f1759ef5baa3055e6f62e59f3843273ed28badc3930961a4"
+  },
+  "assets/characters/ch12/run.png": {
+    "bytes": 836338,
+    "sha256": "a1a022bcc90b728421e6ecc25c4af51af8218fa0a93c970c03b3243555138207"
+  },
+  "assets/characters/ch12/sad.png": {
+    "bytes": 586849,
+    "sha256": "c73f7e67dd44313a7bf507c45a19bed30cf35fc27726e7b7034e10506406cb90"
+  },
+  "assets/characters/ch12/search_map.png": {
+    "bytes": 342331,
+    "sha256": "4aa4db25015d700ae90395ad95c468153c4ca1860e0f9bd50e79bb4a093c92ff"
+  },
+  "assets/characters/ch12/sell.png": {
+    "bytes": 394140,
+    "sha256": "64b61f5a3b8011ea08f9d3de5c2b5251d9895b7f213509436fc8e7a8ad563ca1"
+  },
+  "assets/characters/ch12/serve_drink.png": {
+    "bytes": 386075,
+    "sha256": "c4ec14b83c0b9ab91f7fe8bf7f601afc04cbef2a4b0935d4a82c5ebc82fd4ae7"
+  },
+  "assets/characters/ch12/shield_block.png": {
+    "bytes": 358459,
+    "sha256": "efbe41a9b2f74a6b629ee7a231247f9dcdf2826b28c8dea27bde15171628af3b"
+  },
+  "assets/characters/ch12/ship_order.png": {
+    "bytes": 451168,
+    "sha256": "d9426607104cab266c9ae9011d9a8435e9bbc51a33c826fb0884b23f5bd97124"
+  },
+  "assets/characters/ch12/shocked.png": {
+    "bytes": 702940,
+    "sha256": "d40633e30c249f60cc904a12bf10acfe727ca244cab5342b0b67aba260d25e70"
+  },
+  "assets/characters/ch12/sit.png": {
+    "bytes": 825090,
+    "sha256": "ed09fd0c89d1a52f924573685877f0eb5d46f9a9584acdf65a4e1e5a00437fd6"
+  },
+  "assets/characters/ch12/sleep.png": {
+    "bytes": 584165,
+    "sha256": "a9027391b93aaaf308f192f16ea394fd530827417faafcec956c9fc72bb7da0b"
+  },
+  "assets/characters/ch12/study.png": {
+    "bytes": 384139,
+    "sha256": "be027bf01401255ee1bca5f39c4b971f15904982d72f75290315634ab7564f8e"
+  },
+  "assets/characters/ch12/sweep_street.png": {
+    "bytes": 925496,
+    "sha256": "263333e0e1c54f570a6d3c8cddd3489322f65fa4e2102582130177315ea2f9d2"
+  },
+  "assets/characters/ch12/thank_you.png": {
+    "bytes": 905970,
+    "sha256": "56a64e1d900d0428bc4ce45bdecff71790e768cf77405f3ad9080664067efb9e"
+  },
+  "assets/characters/ch12/type_keyboard.png": {
+    "bytes": 366619,
+    "sha256": "2a3d02cb31afe8532175941d6bed9c1e3def43eebcdbcffebb9ff26232b5d529"
+  },
+  "assets/characters/ch12/unlock_house.png": {
+    "bytes": 349321,
+    "sha256": "4290e7f9114b97e758d7d4f355abacc19c41a4d5c5c58fbf9950af017d988e98"
+  },
+  "assets/characters/ch12/walk.png": {
+    "bytes": 955474,
+    "sha256": "02253e9e374a7997dac33b8d3011737903d727e913fa46043112818b156bb0af"
+  },
+  "assets/characters/ch12/wave.png": {
+    "bytes": 393052,
+    "sha256": "d4b14f21b70df3766a5517ac6f4c3db6abb18fc37820d5318077af985478ce59"
+  },
+  "assets/characters/ch12/wedding.png": {
+    "bytes": 428660,
+    "sha256": "7938e9c759badf813f27ae0c77b82a05d1346741287ad74cb428cd474ce0a8d1"
+  },
+  "assets/characters/ch13/adopt_dog.png": {
+    "bytes": 990369,
+    "sha256": "1abef3710e0c5081a66fc2e7a53af2043235ad6b0e73dcb23500a04d7df5b0a3"
+  },
+  "assets/characters/ch13/advertise.png": {
+    "bytes": 423607,
+    "sha256": "6e87e3fdc313b8a1145aa29a7c0fa51957ac1621a6496a25b5c528b8afc1cebb"
+  },
+  "assets/characters/ch13/animations.json": {
+    "bytes": 434936,
+    "sha256": "1981c1a189f22664381f320947ed61c5a352d63b8b1189f9066ff6168d343f01"
+  },
+  "assets/characters/ch13/birthday.png": {
+    "bytes": 1229732,
+    "sha256": "7eae5079d8d4259f5e481a33adece75ac53c7a6f4c4ee0fa9ee8204767a93f0a"
+  },
+  "assets/characters/ch13/care_pet.png": {
+    "bytes": 409692,
+    "sha256": "7a277fa344e8b96aadaf565d059ed5dd86e519ee1ca6a5f424da67f15d605130"
+  },
+  "assets/characters/ch13/celebrate.png": {
+    "bytes": 1162261,
+    "sha256": "2ef887b2fc0a5793d069f3d1452e9017cc0aec9e4b2d8867e6ed4517a37df0bb"
+  },
+  "assets/characters/ch13/choose_left.png": {
+    "bytes": 335807,
+    "sha256": "7cd6acdc10bbc271c8e244f89e07159fb04cb096535da95a60832dbdfc6137d3"
+  },
+  "assets/characters/ch13/choose_right.png": {
+    "bytes": 334104,
+    "sha256": "906c76e1be734ec6ba2a17d30bdd9cc1c0247e0e11f1bf70d90380c0cb324a06"
+  },
+  "assets/characters/ch13/clean_house.png": {
+    "bytes": 702420,
+    "sha256": "ce6d2802e8b42d78b4d5a0c752087a4f1b1bf98830900767b96f37de61575575"
+  },
+  "assets/characters/ch13/coin_buy.png": {
+    "bytes": 379243,
+    "sha256": "67799e67e3e27853957ad109d3f3b43309654de4ca1c2a7a936a43fdac26b26f"
+  },
+  "assets/characters/ch13/coin_lose.png": {
+    "bytes": 716245,
+    "sha256": "4dc5732758584e8ea05cf0fd41785db3c5bd0709afa63dfb159cebb49f906966"
+  },
+  "assets/characters/ch13/coin_win.png": {
+    "bytes": 846440,
+    "sha256": "242859e5bc24ab7815e50041639b42155ffc8ff2308a8526e307dbcab78d8c99"
+  },
+  "assets/characters/ch13/cook_sausage.png": {
+    "bytes": 440004,
+    "sha256": "a76236bea7d5d60f8edb272dd01e4670c4ad5e4c6bb17d52517f87f1a0ded4e1"
+  },
+  "assets/characters/ch13/dance.png": {
+    "bytes": 983923,
+    "sha256": "fc55c8b13e46b8bcdb694a0ebe0883793a69deafe1c84889303e27ca463d3d1f"
+  },
+  "assets/characters/ch13/graduate.png": {
+    "bytes": 371248,
+    "sha256": "abe1bcb8931247991322115da896598d1710fc91ac9ac6f1a869cdc253f1c1ec"
+  },
+  "assets/characters/ch13/happy.png": {
+    "bytes": 755159,
+    "sha256": "2e287820f07f50c34cacb6cd854cdc4f847e4850ab9847afddf81b76a938b496"
+  },
+  "assets/characters/ch13/hit.png": {
+    "bytes": 981316,
+    "sha256": "b3eea6f0921bf038ca2eaf295ec502663af9c77f14da5374cfc0d1fd4afe0762"
+  },
+  "assets/characters/ch13/hold_baby.png": {
+    "bytes": 353675,
+    "sha256": "22b68e9a70ee9af001e69526219ca8e61bced521691348c1327979266a56636e"
+  },
+  "assets/characters/ch13/hold_trophy.png": {
+    "bytes": 343749,
+    "sha256": "e2d18fb7ebb2287b2db230c3cc6f24fd4488e3f2d87e834273b85eccb5953847"
+  },
+  "assets/characters/ch13/idle.png": {
+    "bytes": 428215,
+    "sha256": "121e418d60289d30a08fca2a5cd2a4526b004048a20e387b330606eb29db6c11"
+  },
+  "assets/characters/ch13/interview.png": {
+    "bytes": 448617,
+    "sha256": "21579fa797fb7674ba2b5ad4c242016ae7f1b669676a30c49043ddea9fdb522b"
+  },
+  "assets/characters/ch13/lift_box.png": {
+    "bytes": 474648,
+    "sha256": "cb64e0d77b0c798f0db43d0ad144ff45294e89ef8a3cad50004ef6150eb035d5"
+  },
+  "assets/characters/ch13/pack_box.png": {
+    "bytes": 407201,
+    "sha256": "0343021220b5fcf5132b4b5b5af57d30da1a680680bf6da16ed033afc17920a2"
+  },
+  "assets/characters/ch13/pet_dog.png": {
+    "bytes": 1181347,
+    "sha256": "504b6f7d88fd728caf11d4135c928f0f344631e4b82d663820c23c73dcb6902d"
+  },
+  "assets/characters/ch13/phone_read.png": {
+    "bytes": 349388,
+    "sha256": "b5eba5511f2c0b726de56332008e95176e9a150573e9dc5aa4d0fabd1824d16b"
+  },
+  "assets/characters/ch13/phone_tap.png": {
+    "bytes": 637261,
+    "sha256": "d349680833768b5fdf61dee71c9fb41b10f07a6bd55f5461a76ff9d59752550e"
+  },
+  "assets/characters/ch13/point_question.png": {
+    "bytes": 391467,
+    "sha256": "2626b4bbeda307486b440bf9e0a9e06e8e18bd5b6b2a764b591a249368dd96fb"
+  },
+  "assets/characters/ch13/police_stop.png": {
+    "bytes": 481033,
+    "sha256": "80d489d927443d6eac2f62f49dfda209e53a2166352b9840aebdac7bd456cbeb"
+  },
+  "assets/characters/ch13/portrait.png": {
+    "bytes": 35148,
+    "sha256": "629a32a52ff1ae8210751bf4e202492a188a885cbf0c71f3554d175dfa8b8a61"
+  },
+  "assets/characters/ch13/push_cart.png": {
+    "bytes": 452548,
+    "sha256": "77a9556b700ca568df93a1fa396d7e9f0221f46ecb399c88d235257c0eedf852"
+  },
+  "assets/characters/ch13/rain_walk.png": {
+    "bytes": 961462,
+    "sha256": "3cf5d2dca7196753924c5f2ddf9f8c29258e450d447f3232e6b475e26f9c8d3c"
+  },
+  "assets/characters/ch13/receive_salary.png": {
+    "bytes": 377685,
+    "sha256": "46f631051977c8b9c6a573ebb5733e72ffb8c5f492af1acc11c0b49641b27200"
+  },
+  "assets/characters/ch13/repair_pipe.png": {
+    "bytes": 668090,
+    "sha256": "ffe39e7fe266215e48f962adb499466599af148df1ae9d295b351b4b617f76ae"
+  },
+  "assets/characters/ch13/repair_vehicle.png": {
+    "bytes": 594738,
+    "sha256": "f4e548382c0c9bbf890172e40e992f36a631a0cf30f97e7dd7eb5185ca5cad8c"
+  },
+  "assets/characters/ch13/ride_scooter.png": {
+    "bytes": 737335,
+    "sha256": "ad43e782e1bae40fb3d3448acfd17f0e4608c8ba780eeb03244fe017f963b48c"
+  },
+  "assets/characters/ch13/roll_dice.png": {
+    "bytes": 724420,
+    "sha256": "78685bbf4a75d870e18e7ef19d2d757dad23170c85fe45349b2585b49d1e7bcb"
+  },
+  "assets/characters/ch13/run.png": {
+    "bytes": 884969,
+    "sha256": "ee9b589d15991d169c5088ae01a257deba8c36a25eded1131cc60d5ed91c9e5b"
+  },
+  "assets/characters/ch13/sad.png": {
+    "bytes": 675733,
+    "sha256": "e42b25511e46dba00edae31dcb0e4e3755a5049c8e3a86a6517a981963f37752"
+  },
+  "assets/characters/ch13/search_map.png": {
+    "bytes": 368627,
+    "sha256": "d1fa99e797bb2dbbefde988c25c98c58d37800b003c4fc0812fbbcfd26604428"
+  },
+  "assets/characters/ch13/sell.png": {
+    "bytes": 419052,
+    "sha256": "46b8ab5160da8bb0c77d7f9716eab066c8a033ab0a1617ddb7661cbe211f2876"
+  },
+  "assets/characters/ch13/serve_drink.png": {
+    "bytes": 401601,
+    "sha256": "1c8de41437495472883f9807a7a22272b2cd544ec0a7831ebabf065feb9f1585"
+  },
+  "assets/characters/ch13/shield_block.png": {
+    "bytes": 374027,
+    "sha256": "e1ea5f9cdb98308ef3b48848b214ed1fd31ac5dfdd3bb0be757509728db29c40"
+  },
+  "assets/characters/ch13/ship_order.png": {
+    "bytes": 468506,
+    "sha256": "d9240df316e23f47af76f795dd347a1856e3a482eaafb95dad7cd11f601643fa"
+  },
+  "assets/characters/ch13/shocked.png": {
+    "bytes": 758147,
+    "sha256": "9801e7dd875eeff3b5752d0519b9cf3b7611b8ee49f30f6df65fdf2a88320390"
+  },
+  "assets/characters/ch13/sit.png": {
+    "bytes": 914368,
+    "sha256": "be4a9b20ec401d1c26f1d368cd15c0d0ea7b1f4174340936327a644a4ca4b2f3"
+  },
+  "assets/characters/ch13/sleep.png": {
+    "bytes": 665744,
+    "sha256": "20cca2c185bef042e3e39fe7f0d73e60384afe5e7eeb445e52e265121a8bdfb1"
+  },
+  "assets/characters/ch13/study.png": {
+    "bytes": 410426,
+    "sha256": "44e4442d03365f27835e3baf1dde0c35182c5b44528663ed993937ecbb7bd926"
+  },
+  "assets/characters/ch13/sweep_street.png": {
+    "bytes": 1023423,
+    "sha256": "7b454bc99c684733d296f98097244e3484c65082f848086ae012b87f31a10945"
+  },
+  "assets/characters/ch13/thank_you.png": {
+    "bytes": 1025258,
+    "sha256": "81f7cd229e5192f7fffb10c9253a6ce5eab392afeb4667ab586b6810e9e065f9"
+  },
+  "assets/characters/ch13/type_keyboard.png": {
+    "bytes": 391927,
+    "sha256": "e0cca4bd7a24e07e0f5b065d2bc9ba2ccb2a36170b6615ddcb23948dd3ca3d98"
+  },
+  "assets/characters/ch13/unlock_house.png": {
+    "bytes": 374428,
+    "sha256": "308f51e1cdaa67a93ddf01f85c8afe27df7358780a5032982d8d605ff965de4d"
+  },
+  "assets/characters/ch13/walk.png": {
+    "bytes": 1030548,
+    "sha256": "736fcdfebaf740272192f19271cc0b0a9618c58297173e20f4b3b68e81e341b4"
+  },
+  "assets/characters/ch13/wave.png": {
+    "bytes": 404821,
+    "sha256": "ee07cebd7363bad3074b6aa9e01c3c2ae4c8c81ab317bcb854e7aedb6fc29186"
+  },
+  "assets/characters/ch13/wedding.png": {
+    "bytes": 432314,
+    "sha256": "160d71767ccab91af42429ca125f24a392364dc1665c5fbe5241a88e0a8a4872"
+  },
+  "assets/characters/ch14/adopt_dog.png": {
+    "bytes": 946017,
+    "sha256": "3bc0fd7d502516d8b2bfe0740d345c0e8d28a8a93990fc371a899ea947b4115b"
+  },
+  "assets/characters/ch14/advertise.png": {
+    "bytes": 409808,
+    "sha256": "f98274a3c98d7c86043080e75861c7cf88857c411f12e435b2627f2a57182a6d"
+  },
+  "assets/characters/ch14/animations.json": {
+    "bytes": 434934,
+    "sha256": "ee831e25033f660f33cb59b8544df5c469cd3eb69329c74104dd19b93d1973cf"
+  },
+  "assets/characters/ch14/birthday.png": {
+    "bytes": 1137312,
+    "sha256": "adb53c2c34d09abe1ba8e0397fd0bdfe51c368029fd88ef538f016f5dfde7fe4"
+  },
+  "assets/characters/ch14/care_pet.png": {
+    "bytes": 388229,
+    "sha256": "15ed05ab6fa08d47056cf263e995f1a75edc2232ee3219c05c012542f37af69f"
+  },
+  "assets/characters/ch14/celebrate.png": {
+    "bytes": 1132512,
+    "sha256": "59876eb489e932e68f281be80e81de9b52f10b4503c9390e6224d9c244d80df2"
+  },
+  "assets/characters/ch14/choose_left.png": {
+    "bytes": 311329,
+    "sha256": "3e93d64668159f449a5ca08a888fc9463868d5960536cb97a5ee47dd78ce9842"
+  },
+  "assets/characters/ch14/choose_right.png": {
+    "bytes": 309163,
+    "sha256": "923062f2f7819a2dbe13c64b08e66b1e96b060a2134a9587972c9a0551e45eb0"
+  },
+  "assets/characters/ch14/clean_house.png": {
+    "bytes": 879559,
+    "sha256": "f2dad1666348c994f303b1333a7c84ab8323739384faced2b385922998d125d2"
+  },
+  "assets/characters/ch14/coin_buy.png": {
+    "bytes": 359119,
+    "sha256": "47b34ff4e58dc25b9374e9600afac0b75d7b703828d341aadc2a45971857448c"
+  },
+  "assets/characters/ch14/coin_lose.png": {
+    "bytes": 665575,
+    "sha256": "e841e131ed17fe953c31a8f701244546b06f5e4cf2d1f627cd7b9628060eab5b"
+  },
+  "assets/characters/ch14/coin_win.png": {
+    "bytes": 811406,
+    "sha256": "383a002eedbcf6b0e22e5bb541c647b7d8d707946c41c3343c22fa0c1a1121d9"
+  },
+  "assets/characters/ch14/cook_sausage.png": {
+    "bytes": 417397,
+    "sha256": "9d10e5310fdca0fe3a35b865d27cf86e69af2d61fa31f14ddc0caf0fd3bd0ccd"
+  },
+  "assets/characters/ch14/dance.png": {
+    "bytes": 977357,
+    "sha256": "30ecfb32526d7cf50746cae7395c6bdd4845ac5f760c3e11b8238e5e617f8390"
+  },
+  "assets/characters/ch14/graduate.png": {
+    "bytes": 352655,
+    "sha256": "3d5e182f78957a3bb0590cde013e8f075dd320b294c1e02524d6cc4e311f0b67"
+  },
+  "assets/characters/ch14/happy.png": {
+    "bytes": 727643,
+    "sha256": "b988637e7aa89a77384b9070534b044a4cb05d7f74efe8ac31977efa447df961"
+  },
+  "assets/characters/ch14/hit.png": {
+    "bytes": 922943,
+    "sha256": "48e218122be906be071d7b5b7463ede223aea48ea89ee71995ec72e1bc3ec0f2"
+  },
+  "assets/characters/ch14/hold_baby.png": {
+    "bytes": 332749,
+    "sha256": "bcdb635d8f614d9e6adc232a54685f5b2b32ed4ed66d449e690530aa74af5f2a"
+  },
+  "assets/characters/ch14/hold_trophy.png": {
+    "bytes": 314920,
+    "sha256": "f248f65423a5e60e58ceff744de55f55866449ce5389466f2b823c2451279476"
+  },
+  "assets/characters/ch14/idle.png": {
+    "bytes": 401061,
+    "sha256": "68e8350f726ec0e1a58b9fd497174a4619922badb5d5aef79cea5f57d0726484"
+  },
+  "assets/characters/ch14/interview.png": {
+    "bytes": 403542,
+    "sha256": "fb2ce5a2e88c0d06ba6cdd7c43da52ea6e5bf1d10d8c327abde38684a419a59a"
+  },
+  "assets/characters/ch14/lift_box.png": {
+    "bytes": 457023,
+    "sha256": "a5cd9bd7d4edb584c9694a973eea13af56e60aeb46186c1ba1dd4bfe9cab468f"
+  },
+  "assets/characters/ch14/pack_box.png": {
+    "bytes": 386183,
+    "sha256": "9d8b9f6397c48a032dcfa7177d20bde7f8c7757e2c10925e3ec39b2dc0cb46f1"
+  },
+  "assets/characters/ch14/pet_dog.png": {
+    "bytes": 1540910,
+    "sha256": "fa95a032dcf2b17827178fa6c9165bbe596e09ed39eaf24734b6798a48ebcee5"
+  },
+  "assets/characters/ch14/phone_read.png": {
+    "bytes": 327591,
+    "sha256": "cdf0efb11b2d7a1c71a2a346c3a842de41d0a894a5864f0c0047293fd5ecd09f"
+  },
+  "assets/characters/ch14/phone_tap.png": {
+    "bytes": 823007,
+    "sha256": "f5900b8e5dfd8f7ea0add541d498e9f1e66a9764c6202face002b0dc1ce63de9"
+  },
+  "assets/characters/ch14/point_question.png": {
+    "bytes": 367421,
+    "sha256": "5d444c715f24e1b84b028d380f2af0d3df1e134887482627599ce06d0764b448"
+  },
+  "assets/characters/ch14/police_stop.png": {
+    "bytes": 448855,
+    "sha256": "248be7b1cd022445289f7f5dadb61acea0570b1584e09e00253d5b746c8593e7"
+  },
+  "assets/characters/ch14/portrait.png": {
+    "bytes": 33208,
+    "sha256": "ac1931c42c8e7d57d676cfa2292f8757682eb23d837cb4c9dad99ed267eab4eb"
+  },
+  "assets/characters/ch14/push_cart.png": {
+    "bytes": 438639,
+    "sha256": "607a7d7d535a6d494931108389791273c9b0fb392fb58d4868fe5e57c3d7dcab"
+  },
+  "assets/characters/ch14/rain_walk.png": {
+    "bytes": 918956,
+    "sha256": "470fa1287551ba880c8474cd93f6ce1b54a1373da6577f77ad64f8a393e4fd77"
+  },
+  "assets/characters/ch14/receive_salary.png": {
+    "bytes": 355336,
+    "sha256": "e1e823876a4bd892189e6653b285382ddd8f1ac4ce069b2cf297b310f2598c2e"
+  },
+  "assets/characters/ch14/repair_pipe.png": {
+    "bytes": 849875,
+    "sha256": "cfefc248ba9ab451b7d7120a4fa3ce3fc3a4f3cf129590d3751495edd49007c2"
+  },
+  "assets/characters/ch14/repair_vehicle.png": {
+    "bytes": 522777,
+    "sha256": "9844a27cbb2ecf89ff5615e9825c1ae06f9415573aeb42ae8562c3114f91fe2b"
+  },
+  "assets/characters/ch14/ride_scooter.png": {
+    "bytes": 713507,
+    "sha256": "75593ae3050fb85253f574d6138228d4a0140b848341e40403138f1a42bef183"
+  },
+  "assets/characters/ch14/roll_dice.png": {
+    "bytes": 955570,
+    "sha256": "81aefd36312fb85afb280b32c2199371277c81b35c115f22afc144deb0cde639"
+  },
+  "assets/characters/ch14/run.png": {
+    "bytes": 845113,
+    "sha256": "73e931d880be1a564aaab42082dec5e9bdd8f8da705fab0e41f87cffbf745a3e"
+  },
+  "assets/characters/ch14/sad.png": {
+    "bytes": 602619,
+    "sha256": "bc027bda92a3db2fe3decdb736d42d1cebde2d9a33c5d306067143a22b96ec70"
+  },
+  "assets/characters/ch14/search_map.png": {
+    "bytes": 344935,
+    "sha256": "ecb3c98688cd6e5481f766b76eb71b460858d3a22dfa577b7ffac409061e71a1"
+  },
+  "assets/characters/ch14/sell.png": {
+    "bytes": 399646,
+    "sha256": "7a252d435ad483c161a545241fa983226c5eb9d86cac1634d3bff7ae44d1ffb1"
+  },
+  "assets/characters/ch14/serve_drink.png": {
+    "bytes": 385469,
+    "sha256": "a72c87be92b8b1542b8d65f930ec9f8c617d0a6c83cbf33bd81b8df6d6a89ee7"
+  },
+  "assets/characters/ch14/shield_block.png": {
+    "bytes": 353136,
+    "sha256": "4acec6a57d2c5fcbd78d9e257dc223bc7e0288b8d0b46c76e32bd736b2d3089d"
+  },
+  "assets/characters/ch14/ship_order.png": {
+    "bytes": 452103,
+    "sha256": "641b4c3e1776c3b0b42d5f5646f706bd9e0dcf182be81dc6b7a3999a993d6972"
+  },
+  "assets/characters/ch14/shocked.png": {
+    "bytes": 718641,
+    "sha256": "e6cd27dd2e2acf62daa3f051e76f41ba1ddbb98da72f6a641a49a529e60560a3"
+  },
+  "assets/characters/ch14/sit.png": {
+    "bytes": 854946,
+    "sha256": "283a85c613cc646ca11b6337d771e5dcdb6ed807e9efaf28403c38a2b16f7a43"
+  },
+  "assets/characters/ch14/sleep.png": {
+    "bytes": 600279,
+    "sha256": "e59e9256fae5661190d4c3e0b74ed247463eba6f468263a31ef32968bb94c722"
+  },
+  "assets/characters/ch14/study.png": {
+    "bytes": 380318,
+    "sha256": "528b178c993f20c5267f6745b8e3cbaffdab67045cbc06afef0b5852d24a4240"
+  },
+  "assets/characters/ch14/sweep_street.png": {
+    "bytes": 1183406,
+    "sha256": "49e3a0f5d1de8fcf32bd54c049f5c7c67096de7923039fbad0477d2924b936c3"
+  },
+  "assets/characters/ch14/thank_you.png": {
+    "bytes": 952949,
+    "sha256": "66809db2e0dd6ce7c83bddc721fb5fc4c5d2fcf2895cd931f43679b8d806e814"
+  },
+  "assets/characters/ch14/type_keyboard.png": {
+    "bytes": 370460,
+    "sha256": "6bb72436fa877e8e221ae6cd74fd5701b467f98b22ab99851f5e3a8f35bbe716"
+  },
+  "assets/characters/ch14/unlock_house.png": {
+    "bytes": 356896,
+    "sha256": "4735be280f44ea9b61b0d82ee556c249bdea3714e2d3d50a5630f7c572e25f01"
+  },
+  "assets/characters/ch14/walk.png": {
+    "bytes": 995613,
+    "sha256": "e1287b594375f790c1e5c31361d4b3fd445f8fbbbd1eebd9cee7ebc26d261300"
+  },
+  "assets/characters/ch14/wave.png": {
+    "bytes": 388167,
+    "sha256": "55839fb828440676dbae753a4df7ccc9d23a68260ae74f99c57efa7d79878826"
+  },
+  "assets/characters/ch14/wedding.png": {
+    "bytes": 420549,
+    "sha256": "a1825461384f80fe8bff80cfffd64ee6b3a6da319aea80ec2fe3c28b5550af89"
+  },
+  "assets/characters/ch15/adopt_dog.png": {
+    "bytes": 955540,
+    "sha256": "8700ba313c8d51d4b6158fc106f2614d3feb35690ae095420bf55227253e4b49"
+  },
+  "assets/characters/ch15/advertise.png": {
+    "bytes": 409567,
+    "sha256": "d227d05b491395a7b0fa7114ddc3280f358f36a2944c656a5a8a5f3ad5120b01"
+  },
+  "assets/characters/ch15/animations.json": {
+    "bytes": 434937,
+    "sha256": "1b02bd0cf1d574fb348972c86036adb9db388380c1ff9d7c83960f12ca87c467"
+  },
+  "assets/characters/ch15/birthday.png": {
+    "bytes": 1141240,
+    "sha256": "3ec67d716b7bb60b160ca520fd9e07aa3d440ba0846ccdf3d7c8fe646e0c1a97"
+  },
+  "assets/characters/ch15/care_pet.png": {
+    "bytes": 384629,
+    "sha256": "08285c526934425ac42bde19537fefbc0a89c9045e25df39c5f8703083bda18b"
+  },
+  "assets/characters/ch15/celebrate.png": {
+    "bytes": 1135340,
+    "sha256": "0bb37dc1192b370c9bea5fe2a98f97d935089af6b748dc9244067972c00be2a1"
+  },
+  "assets/characters/ch15/choose_left.png": {
+    "bytes": 314937,
+    "sha256": "0294c9a149fd12070492b034d2c96a2859c001d1629c5e07ae6bfb5a99dcdc74"
+  },
+  "assets/characters/ch15/choose_right.png": {
+    "bytes": 315212,
+    "sha256": "21c525c0a9b98997779b5eaea89b184b426f2347223c05e070fcd1c2f2b9db66"
+  },
+  "assets/characters/ch15/clean_house.png": {
+    "bytes": 887612,
+    "sha256": "a600d4de67b14573e0902d24ce6f3d894d913ad210fd3efbf400ffd3ac6452f9"
+  },
+  "assets/characters/ch15/coin_buy.png": {
+    "bytes": 358002,
+    "sha256": "a132f1ffaf13288346616ca6e023d8dbc9b8ca12e3bc83a2b854d0ae11cc0696"
+  },
+  "assets/characters/ch15/coin_lose.png": {
+    "bytes": 664995,
+    "sha256": "a2114bd0642ca06e00fc6d60da24a5140334c79403a81be911bebcffbf225b2f"
+  },
+  "assets/characters/ch15/coin_win.png": {
+    "bytes": 833536,
+    "sha256": "2aa7a63f74e93c851a5a1f201bf23495beef3e86a35df2ed4b11cead88a25d80"
+  },
+  "assets/characters/ch15/cook_sausage.png": {
+    "bytes": 412320,
+    "sha256": "ac85633a659c92ef44b0b4a929f770ef19b10fc27e919e1c06891181bf84b841"
+  },
+  "assets/characters/ch15/dance.png": {
+    "bytes": 983934,
+    "sha256": "1f605909430e738ea181af67be13e14f20799442bb140acbfec347cd8d6b74af"
+  },
+  "assets/characters/ch15/graduate.png": {
+    "bytes": 352098,
+    "sha256": "f4c67b2de9c5e30faa12e6898bc9a31b9cd6d7f89e910d8a13399f823125e6e2"
+  },
+  "assets/characters/ch15/happy.png": {
+    "bytes": 748054,
+    "sha256": "a658ca6bb7d7628439652deebffd7e937773df7406f6589ec1557beb6e45dc26"
+  },
+  "assets/characters/ch15/hit.png": {
+    "bytes": 953701,
+    "sha256": "fe00f747ea5db6a3f847aee19c3f9dfedddf0243a9468d7508c3e46c1c928730"
+  },
+  "assets/characters/ch15/hold_baby.png": {
+    "bytes": 325684,
+    "sha256": "dd80855f4cf4e8b069ea36539e78a78a74049b781ec9cab7aa543345e1e98881"
+  },
+  "assets/characters/ch15/hold_trophy.png": {
+    "bytes": 318728,
+    "sha256": "71f85fe9ffecf3f9c8088a600c0d403896ed8da1d3e21b055b7663a87f53ccae"
+  },
+  "assets/characters/ch15/idle.png": {
+    "bytes": 399267,
+    "sha256": "196c15febc37f5acd703977dbaf5842194f023f9f84938813c286d354093cf27"
+  },
+  "assets/characters/ch15/interview.png": {
+    "bytes": 416256,
+    "sha256": "fd219de8a713187ca752c27f3bd594894cbd42299e26660d5677135ce4ddc083"
+  },
+  "assets/characters/ch15/lift_box.png": {
+    "bytes": 446144,
+    "sha256": "ab608bdbb3abc32436e253f357169fc1f304ab398e6ace5ad6dcba13b68bdfe6"
+  },
+  "assets/characters/ch15/pack_box.png": {
+    "bytes": 380289,
+    "sha256": "8fb9e2fca06341c6f4f13868fc7a0d1d7424d9f6812267f4b2803bc877c32bc3"
+  },
+  "assets/characters/ch15/pet_dog.png": {
+    "bytes": 1543585,
+    "sha256": "702a7d8862ef225aade0f18bc8b079271973800643dcff224b5b5845b3624605"
+  },
+  "assets/characters/ch15/phone_read.png": {
+    "bytes": 325890,
+    "sha256": "478cc7bcbeaeab3b72aec4fac80a9f5b305797ce63a191a433f884a850be7ea8"
+  },
+  "assets/characters/ch15/phone_tap.png": {
+    "bytes": 831262,
+    "sha256": "3008be481fbd9bf26a02840f6e50de310f8a542eb31a02fea479d9d699220594"
+  },
+  "assets/characters/ch15/point_question.png": {
+    "bytes": 368211,
+    "sha256": "d20420bbe27c1558f45e253ad45f0d14d2a1dba18244ed577444c902de4646fc"
+  },
+  "assets/characters/ch15/police_stop.png": {
+    "bytes": 460374,
+    "sha256": "d02c5b3af3c324f4e8757c40ddb8ee38b182d5444cdf97fa06a41ef8ebbc308a"
+  },
+  "assets/characters/ch15/portrait.png": {
+    "bytes": 33498,
+    "sha256": "164fcb21adbcb41b95391e5a371da60a78b25d534c37b711569ba5695d30e1f1"
+  },
+  "assets/characters/ch15/push_cart.png": {
+    "bytes": 434742,
+    "sha256": "2b6760190bdb71d045134ff2d7ee2ce186a9d9576aa951a8377368785facb53a"
+  },
+  "assets/characters/ch15/rain_walk.png": {
+    "bytes": 918189,
+    "sha256": "7e5d9629936992dc99e885ebb2cae965e0dadeeb5bbfef6f77e7cefbc0721e68"
+  },
+  "assets/characters/ch15/receive_salary.png": {
+    "bytes": 353854,
+    "sha256": "6304c9abbd6636a4c88b916c162b2a160f222c4580c02a42bdbbf6b6976bc2e0"
+  },
+  "assets/characters/ch15/repair_pipe.png": {
+    "bytes": 858811,
+    "sha256": "d54bd594a852a431023e30ea08a1a64b478c36eec0afa40765f59cbd7be3fb1a"
+  },
+  "assets/characters/ch15/repair_vehicle.png": {
+    "bytes": 533657,
+    "sha256": "752ca146065496e9b56c74811a1f9d57cf12fe9de853a9fef0083e5a1accbda4"
+  },
+  "assets/characters/ch15/ride_scooter.png": {
+    "bytes": 723554,
+    "sha256": "9bc328b41fb4f83cb0cd9e4cda2a590ec202fceac047a010256551fb19fce1e4"
+  },
+  "assets/characters/ch15/roll_dice.png": {
+    "bytes": 965395,
+    "sha256": "fdb8494d07b169630a57ee1ff866c9792154e6d2ee4a93bcc04511f93a11b8a3"
+  },
+  "assets/characters/ch15/run.png": {
+    "bytes": 847446,
+    "sha256": "666281bdd6c1854908839633d1967f643370bf1c9b26963036cdf3e9959c4b11"
+  },
+  "assets/characters/ch15/sad.png": {
+    "bytes": 616048,
+    "sha256": "3cbe8a93cdad61d28f1040afbf7dbd03d3ebe4246423cd19779a0d083708612a"
+  },
+  "assets/characters/ch15/search_map.png": {
+    "bytes": 345509,
+    "sha256": "3c078888887a9c31bd7803c07cba6de2c3421128c7adbba20c3b9e23b1bfee04"
+  },
+  "assets/characters/ch15/sell.png": {
+    "bytes": 396719,
+    "sha256": "bb4415e29268aefb2ae0fe554117bf847888ee585e9cb1c5e3370f0157be8180"
+  },
+  "assets/characters/ch15/serve_drink.png": {
+    "bytes": 381442,
+    "sha256": "ceba27900ff642c61c83973f7c3d5800bc5fa8857f6d32b726efa7172cfb15bd"
+  },
+  "assets/characters/ch15/shield_block.png": {
+    "bytes": 353640,
+    "sha256": "7c2476b8c376e1f78a3fdccf0ea5abd1a6d6bbd1a438fcb90047d6b93e7d08c5"
+  },
+  "assets/characters/ch15/ship_order.png": {
+    "bytes": 446104,
+    "sha256": "15c3ef853d049d7ae7de415010b1fdc7cf475119dd39458985d6a3279660c57f"
+  },
+  "assets/characters/ch15/shocked.png": {
+    "bytes": 738923,
+    "sha256": "ce3d4ffdc86db20cf3425220a8c141fcb18ca6b24bf3eceba5a58eb03c445dba"
+  },
+  "assets/characters/ch15/sit.png": {
+    "bytes": 832243,
+    "sha256": "391983a2a6f40854318533a2dbcacaeb3b441fd3ef373723dbea079ca1096dcc"
+  },
+  "assets/characters/ch15/sleep.png": {
+    "bytes": 609728,
+    "sha256": "974a1b75e09bd27e61010cdf9b23ecd76b9f7d0af6072550215c3d973c73329c"
+  },
+  "assets/characters/ch15/study.png": {
+    "bytes": 384323,
+    "sha256": "9b602e12c486bc98a01dedb7a8fb01cf61c4d299f83746346a5592aeb85a20c2"
+  },
+  "assets/characters/ch15/sweep_street.png": {
+    "bytes": 1185236,
+    "sha256": "b6e7735148470d318711b9b0b674f802192b08f9034956acf12c2e1b71b7cedf"
+  },
+  "assets/characters/ch15/thank_you.png": {
+    "bytes": 965938,
+    "sha256": "b2f7105a1293088a145950358b16b1233db85091c088371adf368b9cb6030552"
+  },
+  "assets/characters/ch15/type_keyboard.png": {
+    "bytes": 363730,
+    "sha256": "7e76c490e3614eb17c699030148f65fb990ec7997301e2d86d36c8946b0eae4a"
+  },
+  "assets/characters/ch15/unlock_house.png": {
+    "bytes": 350988,
+    "sha256": "bfaf239070df13272abe20e36506d0fd05509f2b83b7e4dee71b1c38fca2ce2a"
+  },
+  "assets/characters/ch15/walk.png": {
+    "bytes": 931141,
+    "sha256": "4fb342194554c4957ca5fb95d1cd7b1f0373d8bab36dd2ee3714e650cd7e0e5f"
+  },
+  "assets/characters/ch15/wave.png": {
+    "bytes": 387891,
+    "sha256": "4479b2d430b13bd167c13d7030a8194a541bf07cc9a35bfad5cb3907e4356f88"
+  },
+  "assets/characters/ch15/wedding.png": {
+    "bytes": 429647,
+    "sha256": "fa0632babd2faa39a24fb0213adde50d477b36c27188f3927cb05f22a7a4cae8"
+  },
+  "assets/characters/ch16/adopt_dog.png": {
+    "bytes": 936131,
+    "sha256": "ba569063f39ce77265972685290564e2ecc2f5dbbd6d511c11f1dab45b57f23a"
+  },
+  "assets/characters/ch16/advertise.png": {
+    "bytes": 418291,
+    "sha256": "ee774579bbc943036bdf999442c3402b26c0abb0045fb1da21b062a6520972a7"
+  },
+  "assets/characters/ch16/animations.json": {
+    "bytes": 434919,
+    "sha256": "04ff64f55af3e6658cdb839b12a00d5fb8b6ed229957a4dc5c4a82fbbbc3a81d"
+  },
+  "assets/characters/ch16/birthday.png": {
+    "bytes": 1112917,
+    "sha256": "47a67b115b07fb869637aaaea6659d64e2e5bf72e3062d3d843a5d3c55aa33ff"
+  },
+  "assets/characters/ch16/care_pet.png": {
+    "bytes": 403094,
+    "sha256": "792aa6cd7338c0fb4bd5cad7795c34bf26271e62eaf7b5a6205fcafd05a8798b"
+  },
+  "assets/characters/ch16/celebrate.png": {
+    "bytes": 1112696,
+    "sha256": "9e18cda1f0e29ff238e42edb7a216bc72d62e48771a43539a66f80406541ce3f"
+  },
+  "assets/characters/ch16/choose_left.png": {
+    "bytes": 324246,
+    "sha256": "3685db7b0c6ac2a3761108856f25433e8ff9ffb231f7836e6cb744d92561f402"
+  },
+  "assets/characters/ch16/choose_right.png": {
+    "bytes": 319319,
+    "sha256": "715a818d323775f941314c6b99751b5881362c4409a0873fd6ed2fc9acfad582"
+  },
+  "assets/characters/ch16/clean_house.png": {
+    "bytes": 875683,
+    "sha256": "20fdb46505666b990e4fd87c63e2be749398a894306116c5d50788d809727c97"
+  },
+  "assets/characters/ch16/coin_buy.png": {
+    "bytes": 363270,
+    "sha256": "4a4d2387d2d43097663b05fd76b0cf59ffa82e77074120637f70363fe0843a6c"
+  },
+  "assets/characters/ch16/coin_lose.png": {
+    "bytes": 681928,
+    "sha256": "b0de28c2b95b2a190503ed932f54b2398351146d1a777a132acb51f15ac555fd"
+  },
+  "assets/characters/ch16/coin_win.png": {
+    "bytes": 806660,
+    "sha256": "5daa4a9602591bcc13c50e73cff6123b50395d30c1aa9eb4abafa5fbbc9207cd"
+  },
+  "assets/characters/ch16/cook_sausage.png": {
+    "bytes": 419670,
+    "sha256": "1b81cb2ebff902e20aa747030a062ba8ab29ac32adaa6b9b8f627dd339ca4430"
+  },
+  "assets/characters/ch16/dance.png": {
+    "bytes": 988495,
+    "sha256": "f53a56fcbdcd928222d38e8e9b92bb76efa269bad1770a5d2aec04d4b188c2da"
+  },
+  "assets/characters/ch16/graduate.png": {
+    "bytes": 366092,
+    "sha256": "c439ae9d52b83ee35dff08c66faa25bf5f4aefd630b6b5187de7eefd99c717aa"
+  },
+  "assets/characters/ch16/happy.png": {
+    "bytes": 741238,
+    "sha256": "a8682f4c4aa6bb33677304f9db0931793582f5150ba56b23d5ad97f045d7b97d"
+  },
+  "assets/characters/ch16/hit.png": {
+    "bytes": 882962,
+    "sha256": "7f4eb985df8a57ead0f8130fa372f7af28654de87ca67f139339b209d251a16a"
+  },
+  "assets/characters/ch16/hold_baby.png": {
+    "bytes": 335352,
+    "sha256": "dc13f5faac7a7044f6c99f815637f72bb8dae2e907a80659a28bb01c5aaadee3"
+  },
+  "assets/characters/ch16/hold_trophy.png": {
+    "bytes": 317872,
+    "sha256": "2cd09f71439afe9ae35eac04cc7699f91856fb49c75f1c5026871f4f897e066a"
+  },
+  "assets/characters/ch16/idle.png": {
+    "bytes": 396724,
+    "sha256": "df3f88d86efe32f0308b55b5e12d69c9fd0f8188cb9155dd300d2f2a97bf970d"
+  },
+  "assets/characters/ch16/interview.png": {
+    "bytes": 408027,
+    "sha256": "bb66177847c441dcce8607a278c9b0430c03715310a85295bed3ca3b8b3027a0"
+  },
+  "assets/characters/ch16/lift_box.png": {
+    "bytes": 465764,
+    "sha256": "54c66a30703c768b964153cbfc8638c37fed7ae4a33a07d12159383bed6db21a"
+  },
+  "assets/characters/ch16/pack_box.png": {
+    "bytes": 393727,
+    "sha256": "9c23aa563b055b4f2b18c5337c1bd28dc2ddf028bdcb3da541753ff20240c965"
+  },
+  "assets/characters/ch16/pet_dog.png": {
+    "bytes": 1505249,
+    "sha256": "3d54660d22cca3cadcda9b2d8e1fe7410199858291bf6856e310605572ba6c89"
+  },
+  "assets/characters/ch16/phone_read.png": {
+    "bytes": 328574,
+    "sha256": "112794c0c5b4d0391c3fc871c764345682047782801f3a5d6274ee3b9e1f75c1"
+  },
+  "assets/characters/ch16/phone_tap.png": {
+    "bytes": 809423,
+    "sha256": "c2e179454e6f26194d0ebb0c2a35822a0922e94707b4d685736c998a3ea49c3d"
+  },
+  "assets/characters/ch16/point_question.png": {
+    "bytes": 373486,
+    "sha256": "8ad19437eb44f3a757c9a3700e243efc69002f4a76813530e5a27bfb917463f9"
+  },
+  "assets/characters/ch16/police_stop.png": {
+    "bytes": 466178,
+    "sha256": "bb6ba640e0aed4947e501a1473f745a3f156c69b524cef17657d4f93e82efc4e"
+  },
+  "assets/characters/ch16/portrait.png": {
+    "bytes": 31665,
+    "sha256": "10fda354ef4d0e1760eb2966bb3b876798b4d1bb2dec93cd10a58438ddccf14b"
+  },
+  "assets/characters/ch16/push_cart.png": {
+    "bytes": 440366,
+    "sha256": "35b41310f2a83cfcc5149a642746bd8b89fcebc2ce3c98c9a8b01ae01471324b"
+  },
+  "assets/characters/ch16/rain_walk.png": {
+    "bytes": 1013012,
+    "sha256": "f38a221f4b671707ae424cfe239c8cf469eca8368340dc5923c1f6aa7534b986"
+  },
+  "assets/characters/ch16/receive_salary.png": {
+    "bytes": 359282,
+    "sha256": "581428fec194db652fadd74456161f8dc3bbbc4a5cda709bd7d3992b08c859fa"
+  },
+  "assets/characters/ch16/repair_pipe.png": {
+    "bytes": 836332,
+    "sha256": "83889b9b50775f17621653a6f17d2e4def3ce699268a3464dddac4accc6a6f2f"
+  },
+  "assets/characters/ch16/repair_vehicle.png": {
+    "bytes": 550104,
+    "sha256": "d0799cf6e4b0fa23890a45a2ad093951e330f2cb502704a8cb64025444484374"
+  },
+  "assets/characters/ch16/ride_scooter.png": {
+    "bytes": 693330,
+    "sha256": "29ee7e70b5a9d79766941b0030ace0dc6f657c6f04ed8c69acf457f625c14669"
+  },
+  "assets/characters/ch16/roll_dice.png": {
+    "bytes": 944660,
+    "sha256": "13d324b16d6fb8fff13df25f767855368ac8fd6e3ac57b8246e5122363e21343"
+  },
+  "assets/characters/ch16/run.png": {
+    "bytes": 828180,
+    "sha256": "2fbcb1d4ca2c19fb37eb25c939b2e22ba617f315679b9314335c50203bb835b6"
+  },
+  "assets/characters/ch16/sad.png": {
+    "bytes": 612033,
+    "sha256": "88f71259f68267cd088611271203e409abbef0beaf4a81525233658c44d74a22"
+  },
+  "assets/characters/ch16/search_map.png": {
+    "bytes": 345314,
+    "sha256": "84289e201528fbf670e5d3e363885b1af235848d383871a5c3d5d8dccc2e6817"
+  },
+  "assets/characters/ch16/sell.png": {
+    "bytes": 400017,
+    "sha256": "c0e186cb770b67a7e8e86b4bef77333b98bd5e84d0e4bc727d3f663e087f3841"
+  },
+  "assets/characters/ch16/serve_drink.png": {
+    "bytes": 388882,
+    "sha256": "217d6df6b8123337bb11f69a20ed46bb564e2386734420228fcb925a31d34cde"
+  },
+  "assets/characters/ch16/shield_block.png": {
+    "bytes": 366835,
+    "sha256": "c3d851091a1cc8b2ef8ea8837480c12baf64b8b90a9ab18dae8ee20e8d0d1204"
+  },
+  "assets/characters/ch16/ship_order.png": {
+    "bytes": 457330,
+    "sha256": "d75e69b5005c98117847a174a04a62b1568bbf28eb8a3ff5c37f45fc542eb3ab"
+  },
+  "assets/characters/ch16/shocked.png": {
+    "bytes": 709677,
+    "sha256": "9232a9d5afeb42f2fcf93acc2c54c345d1eb5d59610f27409d8a28cf1ad10580"
+  },
+  "assets/characters/ch16/sit.png": {
+    "bytes": 815881,
+    "sha256": "8cd292107864f17131e8bc5f38acf0d5ac76e059dcdc774b9f8d00c2b2b9503a"
+  },
+  "assets/characters/ch16/sleep.png": {
+    "bytes": 598144,
+    "sha256": "63763339df2c65ed5cec7f88462b508bccee1925ebc64216e134800b72004623"
+  },
+  "assets/characters/ch16/study.png": {
+    "bytes": 394532,
+    "sha256": "c311d730a582144fa381195d76e4f50a87e8cbc7642cef07e6940015cd555d57"
+  },
+  "assets/characters/ch16/sweep_street.png": {
+    "bytes": 1160423,
+    "sha256": "aa78b37df58394fc2f424578f0a162ab077ddb043900fd84c68f8ccbd91e5719"
+  },
+  "assets/characters/ch16/thank_you.png": {
+    "bytes": 921390,
+    "sha256": "0c7eccff766ea2dce0860b5ef751b7ece99a798d8995389315742e959f6e2a56"
+  },
+  "assets/characters/ch16/type_keyboard.png": {
+    "bytes": 379399,
+    "sha256": "674103a3d872f3f127f4dc9959c4731351dd32f7c3bdfd41c6d1da392f742945"
+  },
+  "assets/characters/ch16/unlock_house.png": {
+    "bytes": 357078,
+    "sha256": "30f73e752b3fac450d61447d7d3ef8bac4e3be9c6639af2b2d90fd52d19ab3ef"
+  },
+  "assets/characters/ch16/walk.png": {
+    "bytes": 951036,
+    "sha256": "5e93f9550c46b33e12823e5024feaf686e0476fa5054d1b1208ea84a5567f8a5"
+  },
+  "assets/characters/ch16/wave.png": {
+    "bytes": 396487,
+    "sha256": "33677f833315c97be5f6757b7c6cb84416e6aa94702abb4c508e2d83e6846a60"
+  },
+  "assets/characters/ch16/wedding.png": {
+    "bytes": 435644,
+    "sha256": "8d4e7c445ca4d26d6fe763e4f48d74d07d552599fd49b83e455530a9b375108b"
+  },
+  "assets/characters/ch17/adopt_dog.png": {
+    "bytes": 902093,
+    "sha256": "c9ee76ad5b221457e72215fe03866961471da25c015f933b7feb29a6c127c316"
+  },
+  "assets/characters/ch17/advertise.png": {
+    "bytes": 426278,
+    "sha256": "49125eec189d324415653599639df062c3eae7fea9b39c4c24cc8e3f836c1179"
+  },
+  "assets/characters/ch17/animations.json": {
+    "bytes": 434936,
+    "sha256": "73344388461ecacd52b0eb9fcc05e1786e4ea9cec179e4bc8592b2a5ffc5c085"
+  },
+  "assets/characters/ch17/birthday.png": {
+    "bytes": 1099752,
+    "sha256": "9bd9938c2aa4f05980c974f2b8ad20321909873bc5c35f53902d9df09c52a08a"
+  },
+  "assets/characters/ch17/care_pet.png": {
+    "bytes": 401649,
+    "sha256": "adef733515d5010d76f6acfb3f41caac80fe182d53fc814d4158cb7f33c550ed"
+  },
+  "assets/characters/ch17/celebrate.png": {
+    "bytes": 1132728,
+    "sha256": "c64b20e3edc1f3692fb63981c308ff2286c3e24638dcb23b449da201ccca9b42"
+  },
+  "assets/characters/ch17/choose_left.png": {
+    "bytes": 317989,
+    "sha256": "06632b94a338156eb2018d2a4d52464ad38a1a134b7627bc29eb6a591116c0b0"
+  },
+  "assets/characters/ch17/choose_right.png": {
+    "bytes": 315608,
+    "sha256": "15075cf3f4363b9ecdc7e9978c728abf9453daa9fe7548fbb04a0ddf1c05f9b9"
+  },
+  "assets/characters/ch17/clean_house.png": {
+    "bytes": 862769,
+    "sha256": "2fc3666fd5a7fed47e44bf535815282b2ff826dc36610ed4f2c3dd78c1d5598d"
+  },
+  "assets/characters/ch17/coin_buy.png": {
+    "bytes": 363029,
+    "sha256": "666c36ce24a1c710bb16b43a773a72c4b99f06c06d7760ae877ce6b141bdab9c"
+  },
+  "assets/characters/ch17/coin_lose.png": {
+    "bytes": 666242,
+    "sha256": "064415e77181be6c0ff3c35353cdc33619a271d1078c6ec321969e00a12400a9"
+  },
+  "assets/characters/ch17/coin_win.png": {
+    "bytes": 814132,
+    "sha256": "b3be289e4d36ef8282b2615b48a5f379a8ffd175b990fb6c5a87aa659d82208c"
+  },
+  "assets/characters/ch17/cook_sausage.png": {
+    "bytes": 424840,
+    "sha256": "d17bcee40260a58668380c44eb5dfd331cd74f106f81c569c6449e1be2e55cca"
+  },
+  "assets/characters/ch17/dance.png": {
+    "bytes": 983834,
+    "sha256": "e306a7c120dc7f344497fc6f6c1fd395ac23dfd1a081c9a1f7ba9c3f5b292635"
+  },
+  "assets/characters/ch17/graduate.png": {
+    "bytes": 358671,
+    "sha256": "858274a5ef85df338a92a83aca131c617a6d4f2e012b06f2af5e44d4b19b263b"
+  },
+  "assets/characters/ch17/happy.png": {
+    "bytes": 816333,
+    "sha256": "0132a6762beb061180378a4ac409f7e151f977c385c5b43ce6e964e103d63de3"
+  },
+  "assets/characters/ch17/hit.png": {
+    "bytes": 912962,
+    "sha256": "2a62c77942f70f98179cebdb32a132bc2537c40219aa0f9af0cda015a364aed4"
+  },
+  "assets/characters/ch17/hold_baby.png": {
+    "bytes": 345328,
+    "sha256": "86d9a34a50e7e080f89c752a24a787c896d10ebe85426b0b0a9c211735a4f35d"
+  },
+  "assets/characters/ch17/hold_trophy.png": {
+    "bytes": 313531,
+    "sha256": "a89cc348ea0ed2107954f7ae77ada7853568d1b7d337f0ba4658efd8f66fc436"
+  },
+  "assets/characters/ch17/idle.png": {
+    "bytes": 407183,
+    "sha256": "defe7809bc5ee2b3ec247ae80c40743e41f3a3ffdfe2e1de56ed9f5b97a10d13"
+  },
+  "assets/characters/ch17/interview.png": {
+    "bytes": 432054,
+    "sha256": "e05eb6bae2f54802ee978910fc9fe066916251594f2d52477c60ba9f304e15f7"
+  },
+  "assets/characters/ch17/lift_box.png": {
+    "bytes": 476404,
+    "sha256": "64afbaa7ab75fba94651ae0e37f4143f14a361fb7bc449a823c7cfb193140eb4"
+  },
+  "assets/characters/ch17/pack_box.png": {
+    "bytes": 395934,
+    "sha256": "845c33c42b1c72af54ee590b18ec5cd296e5fbf543990e0ce504299aef8abeed"
+  },
+  "assets/characters/ch17/pet_dog.png": {
+    "bytes": 1481247,
+    "sha256": "11fa3d3396e4463b1fb828655733a40ed8369cd57348cdac0687cfe01e09a03c"
+  },
+  "assets/characters/ch17/phone_read.png": {
+    "bytes": 324623,
+    "sha256": "0d147c52e045371c1f1a3e584614a28c1ee629d8a9233e14c42566bef8aa0f14"
+  },
+  "assets/characters/ch17/phone_tap.png": {
+    "bytes": 796807,
+    "sha256": "1706236f285ce311efb530bc1933f65f968e1124923b7f459b9ad0c531f9b533"
+  },
+  "assets/characters/ch17/point_question.png": {
+    "bytes": 377141,
+    "sha256": "321ac2a59e77cdb7409378867717f70727b34ec966e82d59a2dbb90fddf8176b"
+  },
+  "assets/characters/ch17/police_stop.png": {
+    "bytes": 472634,
+    "sha256": "2e32c7c76c5ffbbce66db0973eaea22541424b5d73797624920e0ffd8c9bf1ec"
+  },
+  "assets/characters/ch17/portrait.png": {
+    "bytes": 32319,
+    "sha256": "a641d192435cea50284af6be3a54e16e58997e645cc0fe07c780732084ca4e90"
+  },
+  "assets/characters/ch17/push_cart.png": {
+    "bytes": 445350,
+    "sha256": "ebc3e8adcbbd769d91a6af48f9db07000f36ed2d6d0811547f3427e92bf29b74"
+  },
+  "assets/characters/ch17/rain_walk.png": {
+    "bytes": 903218,
+    "sha256": "e60c0de796789342806a4a8fbfe431bc634ce3f937d2e59e732fb5deca319744"
+  },
+  "assets/characters/ch17/receive_salary.png": {
+    "bytes": 354704,
+    "sha256": "ff0df228c5634d0a84315d41f7df8a6a1b1a9cddfc96e9ba54ce709d4086f892"
+  },
+  "assets/characters/ch17/repair_pipe.png": {
+    "bytes": 829394,
+    "sha256": "3b1c5bfe45b38b614450a67262d40be65612aa8fe45bb30172957da86332e28e"
+  },
+  "assets/characters/ch17/repair_vehicle.png": {
+    "bytes": 587074,
+    "sha256": "6e53418b915c52393c328085aef629d538b16ea938d26a9c19d131d427741cc0"
+  },
+  "assets/characters/ch17/ride_scooter.png": {
+    "bytes": 715521,
+    "sha256": "c395b1ede714478da42e2f95635a1d3f501baad573034d5fe7dd6a404055ca20"
+  },
+  "assets/characters/ch17/roll_dice.png": {
+    "bytes": 945400,
+    "sha256": "d7e9f5dee1f6f62bad2c8fb5fda802120fab7734071fca1640d074678bedef55"
+  },
+  "assets/characters/ch17/run.png": {
+    "bytes": 825973,
+    "sha256": "8579e67e670446f38eefaccfb69906f07da7d8c496aa7114d3eb0cd9185ce380"
+  },
+  "assets/characters/ch17/sad.png": {
+    "bytes": 610091,
+    "sha256": "395e69e3342b87b20c570fda8809b6ec33cb28a581c7421bf3adebc81b08a70a"
+  },
+  "assets/characters/ch17/search_map.png": {
+    "bytes": 352120,
+    "sha256": "1cce319ce947f904fffd96208b6865bf512f424c0cb1639f39f73a15b1a731b2"
+  },
+  "assets/characters/ch17/sell.png": {
+    "bytes": 405874,
+    "sha256": "a61c9eeb8c7c067ec6ee65808f9d1dea6590cc5902895816eb80c679009ebb52"
+  },
+  "assets/characters/ch17/serve_drink.png": {
+    "bytes": 384720,
+    "sha256": "41cfbc33e367f5a5726ff76493c78fd892f61f73ccf5be5e8c129694b4fd562d"
+  },
+  "assets/characters/ch17/shield_block.png": {
+    "bytes": 357414,
+    "sha256": "a1d29957351db36db17cc9bd3381e9530fc30ca9e770062296f738641f4947eb"
+  },
+  "assets/characters/ch17/ship_order.png": {
+    "bytes": 456448,
+    "sha256": "70f47a3c6040e52a6ea02da9b99973711e04e2f2fce35fceca6d024bb13411e9"
+  },
+  "assets/characters/ch17/shocked.png": {
+    "bytes": 722875,
+    "sha256": "1636babe53008ee1a867ab6e760efd4356476dffebb10f90e56b85b2a5b1a163"
+  },
+  "assets/characters/ch17/sit.png": {
+    "bytes": 813330,
+    "sha256": "77896664f3b9c6882d65efdd0258e132070aab1c679a39ef40abdfea07306a8a"
+  },
+  "assets/characters/ch17/sleep.png": {
+    "bytes": 602124,
+    "sha256": "40bb24ffe48d82b5046d8e33aad07e7f355102f7c107aeaed5631da45297bcb2"
+  },
+  "assets/characters/ch17/study.png": {
+    "bytes": 413887,
+    "sha256": "2ca78fc86fa917f285e66549e5f9f9aa70c33ff9f90925cb3eddfb719e803022"
+  },
+  "assets/characters/ch17/sweep_street.png": {
+    "bytes": 1147131,
+    "sha256": "46babd3fc9584b100b1cb87518dc5fa9c0496da6620d9fd4e070ecd93eec4ebc"
+  },
+  "assets/characters/ch17/thank_you.png": {
+    "bytes": 934814,
+    "sha256": "d5b22c1408b4e54070c4ed152c7b1c0785c2c57d3da2e26d416e8d3160519c1d"
+  },
+  "assets/characters/ch17/type_keyboard.png": {
+    "bytes": 380711,
+    "sha256": "d072b239238f154ad64dd0d40c699fd918549516572b75d674cd89dafc1cdcc4"
+  },
+  "assets/characters/ch17/unlock_house.png": {
+    "bytes": 360625,
+    "sha256": "0fa7f976229567ac6e471ff91aae4e7251b99dce9c2f7d18b3bd9ea40f63f1c6"
+  },
+  "assets/characters/ch17/walk.png": {
+    "bytes": 830616,
+    "sha256": "29004c99dd6f164c5f20bee4b1c45a9c7ae8b6d9851ad0ea78b1e98729956fdf"
+  },
+  "assets/characters/ch17/wave.png": {
+    "bytes": 395430,
+    "sha256": "eafaf7bdffb12b8c9d150e19aae04aa5d8631bfbd0da44ed1ae207c236d1c308"
+  },
+  "assets/characters/ch17/wedding.png": {
+    "bytes": 410551,
+    "sha256": "e218da12a841348452a2a7a27ff676aa5d2f06075a97459904bd012bfcfc826b"
+  },
+  "assets/characters/ch18/adopt_dog.png": {
+    "bytes": 943814,
+    "sha256": "91d644a2e8c1eb43f9921b54b088e7e4df8aed4ea2357ba2762957119d302b34"
+  },
+  "assets/characters/ch18/advertise.png": {
+    "bytes": 420118,
+    "sha256": "1f196b65cd839c402f3403aa7d5337212e04a537392e7f6adc44f4c4efb6a682"
+  },
+  "assets/characters/ch18/animations.json": {
+    "bytes": 434927,
+    "sha256": "6b25e2ef267dd067ef442c27513b3f798d704757675056b3fa62c0e7df22fa2d"
+  },
+  "assets/characters/ch18/birthday.png": {
+    "bytes": 1116265,
+    "sha256": "5e1c51e5810d499f4e53818714f0dac6da2e1fc2d451bf625c83f330a405aff6"
+  },
+  "assets/characters/ch18/care_pet.png": {
+    "bytes": 399352,
+    "sha256": "bbb5114fa80e8973cb7b730c53dc834d41ae58f1fe0faf803c8ccae35dea78e1"
+  },
+  "assets/characters/ch18/celebrate.png": {
+    "bytes": 1104697,
+    "sha256": "d8b422dfd200bdcd1c1f5270756093ebba85ca5a398910288e136b9c965bdb72"
+  },
+  "assets/characters/ch18/choose_left.png": {
+    "bytes": 323227,
+    "sha256": "c853ab3c958e3b44949d2bd8c05c2e67d51a3e90028f9353d4832e4d26695dc0"
+  },
+  "assets/characters/ch18/choose_right.png": {
+    "bytes": 319875,
+    "sha256": "9c31ded3037ff0fb6a2f7616e08874792266945a93e2dd36e68388c39be88365"
+  },
+  "assets/characters/ch18/clean_house.png": {
+    "bytes": 861894,
+    "sha256": "93a6ebc6e5188e384112acd6969fbe73f999ee17ffeb86474a777b3d4fa2697a"
+  },
+  "assets/characters/ch18/coin_buy.png": {
+    "bytes": 367669,
+    "sha256": "791c6b08061b05c33d7d9c3b44a27168ba98e9a2ea54e316b42b10271235bb87"
+  },
+  "assets/characters/ch18/coin_lose.png": {
+    "bytes": 693115,
+    "sha256": "b2bec4af90c81c0419af36642b7767c2398ad51252b883ac400ace31034922d2"
+  },
+  "assets/characters/ch18/coin_win.png": {
+    "bytes": 791683,
+    "sha256": "228b71bcd9bb66e771371eb979b7dee92029fbe5e17abc9f0356bbe1960c5327"
+  },
+  "assets/characters/ch18/cook_sausage.png": {
+    "bytes": 420945,
+    "sha256": "d31bce2fe70669b7c21b8fce7239acbb5f448c426990b7146456e0dbdca684f7"
+  },
+  "assets/characters/ch18/dance.png": {
+    "bytes": 949939,
+    "sha256": "34f6764c0debf4962d10d9e93eb9f37ad5e3eb28d788bdf37d14c63316c90fb4"
+  },
+  "assets/characters/ch18/graduate.png": {
+    "bytes": 360627,
+    "sha256": "884a1f4bb771db5d7ee740c7441f041ba990155079c0d9e54f599456156c8571"
+  },
+  "assets/characters/ch18/happy.png": {
+    "bytes": 711720,
+    "sha256": "fe8baca25964cafc249b56cdda59f2f3271983a4d88dad60975a9aa6ef32cbbb"
+  },
+  "assets/characters/ch18/hit.png": {
+    "bytes": 868997,
+    "sha256": "7dc053bc5e6a44cdeeabc2c3b9e0fec21733a2dd32e3efb70f3170f4946124de"
+  },
+  "assets/characters/ch18/hold_baby.png": {
+    "bytes": 342578,
+    "sha256": "45e80ae3114e0b69e99f2c6d239a5d600827ce7a7bb855e02d7a120ab6eb3ad4"
+  },
+  "assets/characters/ch18/hold_trophy.png": {
+    "bytes": 326812,
+    "sha256": "9647d9dfa863f14fd891ada5819e4303aa91ccd5a14029892b1532bb686103ff"
+  },
+  "assets/characters/ch18/idle.png": {
+    "bytes": 397315,
+    "sha256": "d61ac30653550ec3ee0055b386aba19d48ef92cd1c1bb869d9cf4e6a5769387e"
+  },
+  "assets/characters/ch18/interview.png": {
+    "bytes": 439323,
+    "sha256": "6120e9f3393d935345892215e66c36e6e989971fa635d936238e904a1e757a38"
+  },
+  "assets/characters/ch18/lift_box.png": {
+    "bytes": 466528,
+    "sha256": "cf5bdd95ed50df2f9e0cd002a030520d1deb5fae13a1828378c3f01de884f095"
+  },
+  "assets/characters/ch18/pack_box.png": {
+    "bytes": 398628,
+    "sha256": "78caa1dcd4ed1395fe7124a0e02108543f3bd3a6bda0d4b779c8381546497c11"
+  },
+  "assets/characters/ch18/pet_dog.png": {
+    "bytes": 1479545,
+    "sha256": "5970dc8de0a65ed23ab77b5d544857a9e81c0e1677bbdc072951a469c631efd1"
+  },
+  "assets/characters/ch18/phone_read.png": {
+    "bytes": 338139,
+    "sha256": "0f5e92d1933597d3d8a5d0488ca207dab9d97c1271b25ee239b96bcced7b522a"
+  },
+  "assets/characters/ch18/phone_tap.png": {
+    "bytes": 803334,
+    "sha256": "e04aecd310b0ce5ee5e1a31b30ee0aac095eb3a2cdb4063258fc5f4336f128bf"
+  },
+  "assets/characters/ch18/point_question.png": {
+    "bytes": 372521,
+    "sha256": "7b22bb2a2fcff8ffc5d293afc0941a144d1b9bc8dc0c19642e6daf507b59e3fe"
+  },
+  "assets/characters/ch18/police_stop.png": {
+    "bytes": 467236,
+    "sha256": "dd4044032d81bb9ce1897aa58ab09d935c631b5e24288d97e01e5b414ff1e5c9"
+  },
+  "assets/characters/ch18/portrait.png": {
+    "bytes": 32588,
+    "sha256": "309f05813c29f18a5aecb8839e5b503b1f60d50b47c654b8a6e3db49cd2fa873"
+  },
+  "assets/characters/ch18/push_cart.png": {
+    "bytes": 444947,
+    "sha256": "bc5d2e1b72836cdabf656118e2de95207cc853c7020a818cde28bd2cb70ab1af"
+  },
+  "assets/characters/ch18/rain_walk.png": {
+    "bytes": 906064,
+    "sha256": "cdefa9ced29cfd30b60bea0d7187c78b292720b1f99b0471d91456cc52b9a51d"
+  },
+  "assets/characters/ch18/receive_salary.png": {
+    "bytes": 367749,
+    "sha256": "ef0dad20416976284ddb213ea4cc3cb6904343c891f05a844fcdccbd49485f0d"
+  },
+  "assets/characters/ch18/repair_pipe.png": {
+    "bytes": 827380,
+    "sha256": "7ef21f4da1e121fe47d2bdfa6d18751abaaff57c6563bc902764b9b34ef4e838"
+  },
+  "assets/characters/ch18/repair_vehicle.png": {
+    "bytes": 553965,
+    "sha256": "2237ec848fdea3b78aa69745e38ea8887bb880b26ccb11395a55ea4791d5628d"
+  },
+  "assets/characters/ch18/ride_scooter.png": {
+    "bytes": 709013,
+    "sha256": "328123882a35935c5a0ed498c5b91c126148f58c70552e6974271e3a827629d3"
+  },
+  "assets/characters/ch18/roll_dice.png": {
+    "bytes": 931809,
+    "sha256": "204ca3ce6c3d519162041d728ea6acc642716199a8763b6be1faceceeeac1f7f"
+  },
+  "assets/characters/ch18/run.png": {
+    "bytes": 826542,
+    "sha256": "f037371b0c1af08b824c8ea69dfd3bd0a1c58be3a1ce281909c3a5778d21b15b"
+  },
+  "assets/characters/ch18/sad.png": {
+    "bytes": 614671,
+    "sha256": "0ec0c8fe2448f72ed35a7341325db884980fef815f60b63a7cc9a60623a25bf3"
+  },
+  "assets/characters/ch18/search_map.png": {
+    "bytes": 358327,
+    "sha256": "e48cd516d4a63b27ebedc8a640c9b766afcecedbc88144c2d846c43ab40b1999"
+  },
+  "assets/characters/ch18/sell.png": {
+    "bytes": 399468,
+    "sha256": "3e4c3d930f63dde1b8611183e370059c12eefae17a51db82349246657fdc20d8"
+  },
+  "assets/characters/ch18/serve_drink.png": {
+    "bytes": 393775,
+    "sha256": "2d0877ffce8ba7621e1210db3ed3d725043c9cf94e33ca9129957962e4a22622"
+  },
+  "assets/characters/ch18/shield_block.png": {
+    "bytes": 360531,
+    "sha256": "48ddfd1a4aa1b8465bf254171a76d848db637cd3aeb6b3e10efeef99cd49e26c"
+  },
+  "assets/characters/ch18/ship_order.png": {
+    "bytes": 456336,
+    "sha256": "ea71aabf1f74d2f8c365bcad9877ec7cb691bcefcc61f3aed9fe786c7624002b"
+  },
+  "assets/characters/ch18/shocked.png": {
+    "bytes": 683298,
+    "sha256": "5b888a82983875733ff9149b26587d624d123ed328e812ece028f394e11af7d2"
+  },
+  "assets/characters/ch18/sit.png": {
+    "bytes": 828542,
+    "sha256": "923aae33c548356b36c955b7182f3ccc3caefe8080fd0f4cc364cb5bb9814e6c"
+  },
+  "assets/characters/ch18/sleep.png": {
+    "bytes": 614806,
+    "sha256": "d6d3643d7a5b9e867617ba89e7c86cfcb4de4102f2627e29191681b9f404d036"
+  },
+  "assets/characters/ch18/study.png": {
+    "bytes": 412772,
+    "sha256": "ebb033e6196463d4eed94aad8a7ed6f6eee9ab08fc05f44117e25924b7cb6cc9"
+  },
+  "assets/characters/ch18/sweep_street.png": {
+    "bytes": 1153646,
+    "sha256": "474b2ee488f032936e99be671d02256ba621e64780e97b46c89577828b4141de"
+  },
+  "assets/characters/ch18/thank_you.png": {
+    "bytes": 925577,
+    "sha256": "9cb716130afcb7bc4f52c724b608350ea7353b302e50335db2dac17cafc92767"
+  },
+  "assets/characters/ch18/type_keyboard.png": {
+    "bytes": 383354,
+    "sha256": "20afec53f425fc704934eeae9fa739604b1a52f1f93733d2cf32773df8b8f472"
+  },
+  "assets/characters/ch18/unlock_house.png": {
+    "bytes": 360039,
+    "sha256": "33661491d072a111282ab7bdf8e954e39d5df9c9a69cbaa9da26006d27b908a8"
+  },
+  "assets/characters/ch18/walk.png": {
+    "bytes": 977116,
+    "sha256": "71784349f25a1f955b5dfcf34653a9ae31de3eb40c62913a77f7a1f8ac2aea08"
+  },
+  "assets/characters/ch18/wave.png": {
+    "bytes": 393233,
+    "sha256": "66ddb757e1baaf216444ac3c3d05ce251e14e21e068f0920973f97067f72ae55"
+  },
+  "assets/characters/ch18/wedding.png": {
+    "bytes": 425125,
+    "sha256": "5962c7a5523d900de2fbaca2bc5d7add5d069243d9f0c3be72101def6f3119c5"
+  },
+  "assets/characters/ch19/adopt_dog.png": {
+    "bytes": 936654,
+    "sha256": "4650ca35c13b64e1f9aa90e02dc3a6e1f5b71545fd5855455cf1bb362c28c8e6"
+  },
+  "assets/characters/ch19/advertise.png": {
+    "bytes": 428524,
+    "sha256": "2e7ae26ba06c43166334e61fd11337821dfc56c03fc06e239316a3fa11e95684"
+  },
+  "assets/characters/ch19/animations.json": {
+    "bytes": 434933,
+    "sha256": "6d39f910cbdcc81f76ff93943914f7cb2b01cbe0bf5ce03e14a0bdf6ea3dbefb"
+  },
+  "assets/characters/ch19/birthday.png": {
+    "bytes": 1177904,
+    "sha256": "0386ee0957c9a83605b9f39bb2117b0384e037aaf921eec7c26988c7bdc7d203"
+  },
+  "assets/characters/ch19/care_pet.png": {
+    "bytes": 399674,
+    "sha256": "ba8d1340dbe3bc7acec8db823f9de24f06bed4a482a72e65031fdfa24450e64e"
+  },
+  "assets/characters/ch19/celebrate.png": {
+    "bytes": 1124125,
+    "sha256": "6bd2c0b6b17719b48686957c346c36b549761ff6ee20d7b60bc6944a36e40ede"
+  },
+  "assets/characters/ch19/choose_left.png": {
+    "bytes": 320493,
+    "sha256": "7099a2cdc3313e95ad82616fb45a9de99fddb283d2c50694bd1c4c9d8f61dfa3"
+  },
+  "assets/characters/ch19/choose_right.png": {
+    "bytes": 320142,
+    "sha256": "4d2a5c52a10b0a55d6d0ed3d67b88265ae64a0eb60802203c99607884829b9c0"
+  },
+  "assets/characters/ch19/clean_house.png": {
+    "bytes": 914735,
+    "sha256": "82560025573afa7e53652d3d8d4b90e485e2650e8217aa2c70dd71cc645e7e93"
+  },
+  "assets/characters/ch19/coin_buy.png": {
+    "bytes": 370788,
+    "sha256": "610fb758055236fac648164cc7d3f42e35029458a55ebee28bcc64f60e9ecc5f"
+  },
+  "assets/characters/ch19/coin_lose.png": {
+    "bytes": 674455,
+    "sha256": "e00aeefff7d119eee60aae16a64f80822837c33d7e388f73a3ac0a2df24d5f6e"
+  },
+  "assets/characters/ch19/coin_win.png": {
+    "bytes": 817202,
+    "sha256": "850b4e88be777ef7a2540b220adc985297a0bb925cb079dcf18630a1b4613c99"
+  },
+  "assets/characters/ch19/cook_sausage.png": {
+    "bytes": 428720,
+    "sha256": "ec320547697fcbd50928925ecc1a94cdbb7a833675ffc742f3be513f38eb045b"
+  },
+  "assets/characters/ch19/dance.png": {
+    "bytes": 952421,
+    "sha256": "54bb6605a4bf5aef053a5b90e800ffdb95f807a87de33427e28590121ee27cec"
+  },
+  "assets/characters/ch19/graduate.png": {
+    "bytes": 360247,
+    "sha256": "6be043bde0b2f761c2a074a80db6a86c4fe56106d647b0e887dfb4e3f84c6786"
+  },
+  "assets/characters/ch19/happy.png": {
+    "bytes": 733428,
+    "sha256": "b0f7f0cbd86ef5901b22843ec6db11e626708d8550c078b81afef73b0684e238"
+  },
+  "assets/characters/ch19/hit.png": {
+    "bytes": 933373,
+    "sha256": "72020414ab4e85772fb2f0c4f17a6615b70600943491ab11a3b248fcc8a9b03c"
+  },
+  "assets/characters/ch19/hold_baby.png": {
+    "bytes": 337579,
+    "sha256": "7d18f8071c85d77fcc56a68537f8e965a9692961f76271cd4dbf524ae06fd085"
+  },
+  "assets/characters/ch19/hold_trophy.png": {
+    "bytes": 325886,
+    "sha256": "4c22de95f971369ecb2ec06dd59a621885fd9cefdea30e1d682f4edb1b8c16c3"
+  },
+  "assets/characters/ch19/idle.png": {
+    "bytes": 405768,
+    "sha256": "ec9bab75395cdc92fc666c18fc035ebfa5b261ced1e63fb2430865b0a2c3378e"
+  },
+  "assets/characters/ch19/interview.png": {
+    "bytes": 451942,
+    "sha256": "3084c18d0f2f14d6d6025e3d9682e5e8f31a5f0b679bddf22c36887ae2cad5c3"
+  },
+  "assets/characters/ch19/lift_box.png": {
+    "bytes": 461454,
+    "sha256": "6dbcf477bb80667a147c424357bcbfadf787f55c5fe616f9a1f1475731fc2acb"
+  },
+  "assets/characters/ch19/pack_box.png": {
+    "bytes": 395548,
+    "sha256": "ac3afbcf3dc33b88c61958a2002995585f53784578d8af55b1965ab72a88bb6a"
+  },
+  "assets/characters/ch19/pet_dog.png": {
+    "bytes": 1308602,
+    "sha256": "c4c6f21280cc9d20516a19e11e07f1232aaa3cb3a32644c503161ad15fbcbbf9"
+  },
+  "assets/characters/ch19/phone_read.png": {
+    "bytes": 337617,
+    "sha256": "6e488ddd65d7ae14bece5f8f9a566ccf4c00f6a08ced1d234ba7ff86a42ea9ba"
+  },
+  "assets/characters/ch19/phone_tap.png": {
+    "bytes": 846746,
+    "sha256": "b871ffe99034890f8b598939c21130fd051347a5de2968b547299aa7ea297565"
+  },
+  "assets/characters/ch19/point_question.png": {
+    "bytes": 384199,
+    "sha256": "55a76b4dceb548524aab29c0e42fdcf673a9cbc82f35724ac0224f8b0530a63f"
+  },
+  "assets/characters/ch19/police_stop.png": {
+    "bytes": 475159,
+    "sha256": "9623bfb9046f55b591f776e79a9039deb5f0a2acffbec594148968e738fb95eb"
+  },
+  "assets/characters/ch19/portrait.png": {
+    "bytes": 31489,
+    "sha256": "336176677ecdc3374e90395de53bbd16d16c97b4941b8a5b652ff942d2cfb377"
+  },
+  "assets/characters/ch19/push_cart.png": {
+    "bytes": 444664,
+    "sha256": "137d7cc46a7e2abcaa0234dc0ecc767a936aa3a9b622d9162b0b628b6cc3f7b6"
+  },
+  "assets/characters/ch19/rain_walk.png": {
+    "bytes": 907419,
+    "sha256": "09985ef29980dabd70793d23ce2136b429a7b1df7f852b166c66fc38beb19472"
+  },
+  "assets/characters/ch19/receive_salary.png": {
+    "bytes": 369231,
+    "sha256": "fc8dcc7f583e00a7d5124a5af5ba8c7fc028d4c66435e1a630bf945f982d7fae"
+  },
+  "assets/characters/ch19/repair_pipe.png": {
+    "bytes": 889795,
+    "sha256": "50a44306df2b1e795b71c325704132234defc4f0bb41ab6123b1e93a1e3afc2a"
+  },
+  "assets/characters/ch19/repair_vehicle.png": {
+    "bytes": 575243,
+    "sha256": "acd75828141e68b99b7c0a239660cb901bc1041c35ac9200bf6a488821fa1d45"
+  },
+  "assets/characters/ch19/ride_scooter.png": {
+    "bytes": 716737,
+    "sha256": "b00e910c6e93bec3f05acde7024b682961f446d31dae0843222e1710e8521f71"
+  },
+  "assets/characters/ch19/roll_dice.png": {
+    "bytes": 936130,
+    "sha256": "1ca7a33a09b2d6e337384cf43876f581d5ec05c58de5e72a63121f74c8b5c651"
+  },
+  "assets/characters/ch19/run.png": {
+    "bytes": 849488,
+    "sha256": "61722165da762ec4f41451f7778ccf547e98a718912a5601e74dd5965563a442"
+  },
+  "assets/characters/ch19/sad.png": {
+    "bytes": 634037,
+    "sha256": "052d65a30bb48e6067c6892b55ce3493e2011cb29f3f73590939663f85fce77c"
+  },
+  "assets/characters/ch19/search_map.png": {
+    "bytes": 357698,
+    "sha256": "ab0b7b80c39657513008f41205db844e985f6ab6773bd6381f68f9e6270f3c8e"
+  },
+  "assets/characters/ch19/sell.png": {
+    "bytes": 411307,
+    "sha256": "f6e821b94561a96ef53b7e1052e116c02c0313292fa4cd897d8a5d9df8a97f3a"
+  },
+  "assets/characters/ch19/serve_drink.png": {
+    "bytes": 388666,
+    "sha256": "62ed04b4d1078188feff2cfb44cdd9234c0a8f73d6949c883d7aaab17e7043f4"
+  },
+  "assets/characters/ch19/shield_block.png": {
+    "bytes": 359990,
+    "sha256": "5ac312ef00d5e17cc2ffaa269bdb00755245e1214ab3ac158a2a2ea9a4c5ced6"
+  },
+  "assets/characters/ch19/ship_order.png": {
+    "bytes": 454359,
+    "sha256": "41bef91804e9ce554e99baaa6ae283188387e4b6186d1dd36927d7af33e5d6f5"
+  },
+  "assets/characters/ch19/shocked.png": {
+    "bytes": 729085,
+    "sha256": "196cce4a6cfa8cb1c8da69c07d3dfc843229b18387c60912721322a9fe77634f"
+  },
+  "assets/characters/ch19/sit.png": {
+    "bytes": 855644,
+    "sha256": "1af47c50409093bfbf4b7a0144601f4829033db8bf092932c7356ffeb8a61a51"
+  },
+  "assets/characters/ch19/sleep.png": {
+    "bytes": 629763,
+    "sha256": "60b06e7ec6d9c58989d14059d9856e40aa4686df879a7ce0ea4553b36dda178c"
+  },
+  "assets/characters/ch19/study.png": {
+    "bytes": 402593,
+    "sha256": "d253f71692c27305495e7c02370fcf954ad8be169216a7e7e01eaf275b7f1e7d"
+  },
+  "assets/characters/ch19/sweep_street.png": {
+    "bytes": 1021633,
+    "sha256": "97a1c49158a8c4f571841cdc365cf9d09bec74ee5e3d770f73771bb121df7d9a"
+  },
+  "assets/characters/ch19/thank_you.png": {
+    "bytes": 975225,
+    "sha256": "751d6424d782d12b335795582f18fe6ca0c00d63246843af3ffad7c13396ee87"
+  },
+  "assets/characters/ch19/type_keyboard.png": {
+    "bytes": 377581,
+    "sha256": "910ff12f03c61729443391d6ee1339ec8dca43e180f06a5ddd3f80d3b78ac179"
+  },
+  "assets/characters/ch19/unlock_house.png": {
+    "bytes": 363832,
+    "sha256": "4177f8f912b61753af3d76b96324de626df3a8f021ba7c2ffda755642bdce749"
+  },
+  "assets/characters/ch19/walk.png": {
+    "bytes": 977798,
+    "sha256": "46db5484839829d9d56ea37a1bfdb6594d36ad363936d9df3acc450bacf58ddf"
+  },
+  "assets/characters/ch19/wave.png": {
+    "bytes": 394389,
+    "sha256": "8884c7f06f3f3497835601c0e842e3e47baf1a7dabae390e62808188081c2f98"
+  },
+  "assets/characters/ch19/wedding.png": {
+    "bytes": 417057,
+    "sha256": "4d7bd4a1f7163c309c3308849ed51d812e3346279761a6745782fd8629b3e59c"
+  },
+  "assets/characters/ch20/adopt_dog.png": {
+    "bytes": 903111,
+    "sha256": "9c351edbd2b7f123606a68c54be46aa932394cc54fb81ec1d3495eb36ef1bdf6"
+  },
+  "assets/characters/ch20/advertise.png": {
+    "bytes": 406280,
+    "sha256": "e5a50474f7f83b969c94e9a14e7591b368420321d01cc3dde98d8f59a940fb4e"
+  },
+  "assets/characters/ch20/animations.json": {
+    "bytes": 434936,
+    "sha256": "ee46c9440927dd5795cb389ebd669158f7ec108aff92243e04ee438f493685cf"
+  },
+  "assets/characters/ch20/birthday.png": {
+    "bytes": 1066501,
+    "sha256": "829051a6fd8a4bab0c0aee5dd52facb8d4fb49bf11661a251159b1dc160b3fef"
+  },
+  "assets/characters/ch20/care_pet.png": {
+    "bytes": 388263,
+    "sha256": "89aa57d579ff382e6013c9cab84c1eb00e9df4121978f13a82afc878c04f358e"
+  },
+  "assets/characters/ch20/celebrate.png": {
+    "bytes": 954721,
+    "sha256": "a6b3044e8159a920d3871d6ed0f6f3d34f390274f57795974ced91035355e638"
+  },
+  "assets/characters/ch20/choose_left.png": {
+    "bytes": 311368,
+    "sha256": "b5b161b62b0d77e7fd841869e281af7bb10eb1f6ac98c09f47bc5474a4502824"
+  },
+  "assets/characters/ch20/choose_right.png": {
+    "bytes": 308733,
+    "sha256": "1adef761e8c9f79da25aa6cb18aa1baf346b9444e2571132ea90869d27362061"
+  },
+  "assets/characters/ch20/clean_house.png": {
+    "bytes": 838149,
+    "sha256": "f894ac3d8ad96bed5b160bcd7964e970c80d2559302fcb0de09660d8b9f8fa05"
+  },
+  "assets/characters/ch20/coin_buy.png": {
+    "bytes": 359449,
+    "sha256": "a0ccb45295801fc5d06f006a40f086245af2e016d96e7e5afab7055fbf417f1a"
+  },
+  "assets/characters/ch20/coin_lose.png": {
+    "bytes": 674039,
+    "sha256": "acd829bb4abd628cad3ca20a2ff2a960e9d96308d6c24ad1d5d963b46762e871"
+  },
+  "assets/characters/ch20/coin_win.png": {
+    "bytes": 718418,
+    "sha256": "cf9f78edd5038eea5fdbc85a63464887eefefda683b040264e0e7e750f470acb"
+  },
+  "assets/characters/ch20/cook_sausage.png": {
+    "bytes": 414444,
+    "sha256": "fe7eb8fc684ed5f9dc64c657dc68977aec416557abd03f70ed4540cf2f4f00e2"
+  },
+  "assets/characters/ch20/dance.png": {
+    "bytes": 850971,
+    "sha256": "54c431dac52b4d16fefe00e28cd5f29bd2b58f036f795f5f07bacdad3cb791f5"
+  },
+  "assets/characters/ch20/graduate.png": {
+    "bytes": 363276,
+    "sha256": "88b95de019d19553546ed6f5b4aa34b248a2aacdd828fb7f865d24b80149f0c9"
+  },
+  "assets/characters/ch20/happy.png": {
+    "bytes": 646073,
+    "sha256": "bfb4ae2401b06cdb7139c8561e7fd93063d2c7c2aea7c25eaf896197b92bfa90"
+  },
+  "assets/characters/ch20/hit.png": {
+    "bytes": 873801,
+    "sha256": "f1ada7e7fc9fe307d3cb73dfb44d5cf2caa0d419a6a6c46b0ad5d07ceaae367e"
+  },
+  "assets/characters/ch20/hold_baby.png": {
+    "bytes": 326954,
+    "sha256": "c291840c90bac233d789fb4e0630adedaabfe83c152807fb788f4cb31101ccc0"
+  },
+  "assets/characters/ch20/hold_trophy.png": {
+    "bytes": 317091,
+    "sha256": "bf9286ac2c8a7347f55850fde6b45914a7e089a2fbcda5c64e470ec9f0353250"
+  },
+  "assets/characters/ch20/idle.png": {
+    "bytes": 383843,
+    "sha256": "94c34a73ee6db21f9249d187b83ee989f9509b3baac77560ba7370e862109fe7"
+  },
+  "assets/characters/ch20/interview.png": {
+    "bytes": 420110,
+    "sha256": "1c056c0be5e5aebd36ff0350a0ab6d7051df16205fa1fc00b70641e31ded697d"
+  },
+  "assets/characters/ch20/lift_box.png": {
+    "bytes": 456966,
+    "sha256": "2fd905bc0b41afa49a8f38d5d0806e38c0f6324663eced9d1738c31cf826a09f"
+  },
+  "assets/characters/ch20/pack_box.png": {
+    "bytes": 381776,
+    "sha256": "c995a861434df342e03e8fc54e4ff43b0af0e384b7db58dbf6db1f6f67a14a38"
+  },
+  "assets/characters/ch20/pet_dog.png": {
+    "bytes": 1444160,
+    "sha256": "9220cc341525cb25e992ef6a13506f1d4102518b77730f0366ff8c60a1a8f85b"
+  },
+  "assets/characters/ch20/phone_read.png": {
+    "bytes": 325020,
+    "sha256": "10b12c859510c8965c6119acf4f926f20ca70ef206ea722b5b8ca5bd89fbb86c"
+  },
+  "assets/characters/ch20/phone_tap.png": {
+    "bytes": 784341,
+    "sha256": "40ade90b116b2dd95fe94d503d7898188bac0a1d4ed39d75f8531eb17b4fa8d4"
+  },
+  "assets/characters/ch20/point_question.png": {
+    "bytes": 365573,
+    "sha256": "952d2bb1c9d0f1c65b0be7a0d98fbb12ba36e9ad30d4a8f30f7f080586d6b957"
+  },
+  "assets/characters/ch20/police_stop.png": {
+    "bytes": 456842,
+    "sha256": "55e696b701402742d5dceb6a71bff445915ffe9e89be8afba606008d9b7df7f9"
+  },
+  "assets/characters/ch20/portrait.png": {
+    "bytes": 31164,
+    "sha256": "c31c2570d9894c387e9cada1898941a31022c41bb5a4bc7b2aa0fb6fdbdab52a"
+  },
+  "assets/characters/ch20/push_cart.png": {
+    "bytes": 429804,
+    "sha256": "44f0aceba2e84ec4b0e6a5050cf09b9d69fb354a0b1586e6cac0458c28fe55cd"
+  },
+  "assets/characters/ch20/rain_walk.png": {
+    "bytes": 999317,
+    "sha256": "f76317a6f1400ae040b861a6de8db978280da740cafc49de6136c6de90a36a88"
+  },
+  "assets/characters/ch20/receive_salary.png": {
+    "bytes": 352945,
+    "sha256": "1f19d6e6d00aad4cac8549c7983cdb679dcdadef5e58cac969ffcce09d778613"
+  },
+  "assets/characters/ch20/repair_pipe.png": {
+    "bytes": 810455,
+    "sha256": "b402d6347ece4c5cc35d1af7fab9c3252b68bcbab808de2afebb39cf5ccf7af7"
+  },
+  "assets/characters/ch20/repair_vehicle.png": {
+    "bytes": 562596,
+    "sha256": "88a64c23e4375ae0a414f1ca307883631ce0c7ca50c2c9ac72f6a9ede858efd7"
+  },
+  "assets/characters/ch20/ride_scooter.png": {
+    "bytes": 691561,
+    "sha256": "615de7765f458eb973af57256e61c4c51954551473a55b4b1368509172fe2dd0"
+  },
+  "assets/characters/ch20/roll_dice.png": {
+    "bytes": 922996,
+    "sha256": "4dc065113780c72acd37a8020f207fe4be870b61434dd4f55f2b73e29b452b3f"
+  },
+  "assets/characters/ch20/run.png": {
+    "bytes": 836771,
+    "sha256": "6c9a1b498517501d81406cf2401fecbded50f6090f3391a8ae5ab326cdeb2d03"
+  },
+  "assets/characters/ch20/sad.png": {
+    "bytes": 580816,
+    "sha256": "ce5e1433f0dcc6983c80656eba342c0d7a90df2ded3e20348e75af07c214deae"
+  },
+  "assets/characters/ch20/search_map.png": {
+    "bytes": 343876,
+    "sha256": "2b392b5c12c8910ceb629628efc5f4f4464b104e4fcfabad2333704986d58f69"
+  },
+  "assets/characters/ch20/sell.png": {
+    "bytes": 394672,
+    "sha256": "e057667145cfa6333f0de3f9444bc73e4e74bbb83752938b4a3beebdd0146c7f"
+  },
+  "assets/characters/ch20/serve_drink.png": {
+    "bytes": 387888,
+    "sha256": "a0c133cead89a60b25cf764900ffd6f93620611a9f9b75a99887b68e7b58ab68"
+  },
+  "assets/characters/ch20/shield_block.png": {
+    "bytes": 363321,
+    "sha256": "b3e20ca6201db3bbb9307b2c27a0f3d496c7394085504eafb74da7c13bf7c241"
+  },
+  "assets/characters/ch20/ship_order.png": {
+    "bytes": 446318,
+    "sha256": "0a1adacb7f4897c1c86aeeb80092f8c7e700732de55dd44d91bc38bccd04014a"
+  },
+  "assets/characters/ch20/shocked.png": {
+    "bytes": 687583,
+    "sha256": "3efd75c33b1c01dda5b0f464ff31e1c18cca616bf5acb1fbb2911759dbac9b9a"
+  },
+  "assets/characters/ch20/sit.png": {
+    "bytes": 814985,
+    "sha256": "994f31f4876a24454c6957a66ac2456207c8994dc760a8acae05e70e54a319b9"
+  },
+  "assets/characters/ch20/sleep.png": {
+    "bytes": 573428,
+    "sha256": "f27269711391fce49e18355fed74807ac0b6f728cf64286566c824d4a28c4b7e"
+  },
+  "assets/characters/ch20/study.png": {
+    "bytes": 390285,
+    "sha256": "29a5ac5eb3eda5b81bb68f39475bc07c4c1067e9c444a863038db8e30351d3d7"
+  },
+  "assets/characters/ch20/sweep_street.png": {
+    "bytes": 1121419,
+    "sha256": "8fa1e57115ef8053de02ddf0164606adee3b5702ad2195514886791b83f33435"
+  },
+  "assets/characters/ch20/thank_you.png": {
+    "bytes": 897807,
+    "sha256": "793d89b9ff638f6a7d1411e064138d0eb9e582c52bdc1e5c6da1a0e922509f92"
+  },
+  "assets/characters/ch20/type_keyboard.png": {
+    "bytes": 369219,
+    "sha256": "e49622351c649a1268708cf738024a3d8f8d7334856508f27c3f8dd094c56ed5"
+  },
+  "assets/characters/ch20/unlock_house.png": {
+    "bytes": 349700,
+    "sha256": "c52abd3c11048fdedf1acc41a32f38a26c9c0af7edf7056ed8124d871e5f4159"
+  },
+  "assets/characters/ch20/walk.png": {
+    "bytes": 937610,
+    "sha256": "cf301e007300844decd42017f5cb9010985b617296fd8f058061ee7cfad456be"
+  },
+  "assets/characters/ch20/wave.png": {
+    "bytes": 395713,
+    "sha256": "9aa6d58d54bb9aeb7fc36dc9ed3c93bd4c0b1c6d87c04cdd3b8a42dbc195e185"
+  },
+  "assets/characters/ch20/wedding.png": {
+    "bytes": 433055,
+    "sha256": "fd44a737c909ab65bd3e85c8276cafd3d85cd364b00de67bb79d279c5325ad80"
+  },
+  "assets/characters/npc/npc01/animations.json": {
+    "bytes": 5371,
+    "sha256": "a2b7e49a76c35d3544307fef8f26214397a471afeb539b920a1086b917e1838f"
+  },
+  "assets/characters/npc/npc01/celebrate.png": {
+    "bytes": 2220972,
+    "sha256": "559663777382d425f81daa3ea97642e0cf15b9106465721c0688be0ff237ebab"
+  },
+  "assets/characters/npc/npc01/idle.png": {
+    "bytes": 1016893,
+    "sha256": "28f52abe841ac5b7e9be7590efd36d4aeb91f3cb41214375da6bbc2cb4325c9d"
+  },
+  "assets/characters/npc/npc01/point_question.png": {
+    "bytes": 1281807,
+    "sha256": "8b2706fb90556c849323d6a512deab30c9526aa38653e4ccf939db38dbd45661"
+  },
+  "assets/characters/npc/npc01/portrait.png": {
+    "bytes": 27602,
+    "sha256": "7188003623e546d131fc2fbbd0c151ac35c3be79e1352475cfa1183d81602d37"
+  },
+  "assets/characters/npc/npc01/wave.png": {
+    "bytes": 1107148,
+    "sha256": "3ca7d47f1fe97e246de7f1dbbe73290cbde4d9c784385ba054a88c0848eeb4b5"
+  },
+  "assets/characters/npc/npc02/animations.json": {
+    "bytes": 22175,
+    "sha256": "8248b0923362f31d4e9a374779e6eea03b40e0a869cd32eb72819a56b695993b"
+  },
+  "assets/characters/npc/npc02/idle.png": {
+    "bytes": 383606,
+    "sha256": "63b0c83141db401fdf40ef91a0c5da305e5154f311345c28d1404128b951c259"
+  },
+  "assets/characters/npc/npc02/police_stop.png": {
+    "bytes": 447752,
+    "sha256": "33d3a4f6d80a85fb338ec6808f5a92c17f649fb8506d0b58267417442656d774"
+  },
+  "assets/characters/npc/npc02/portrait.png": {
+    "bytes": 31080,
+    "sha256": "bb28d0198610b6c550921159d06f62093663db7954b15546f02329c707b5abfc"
+  },
+  "assets/characters/npc/npc02/wave.png": {
+    "bytes": 376787,
+    "sha256": "8cf5965fc26e41700c54c5bc6ec5c9e7d434d8e0371884a1e0c5804fd3d37e9f"
+  },
+  "assets/characters/npc/npc03/animations.json": {
+    "bytes": 32226,
+    "sha256": "1da9929eb85b7cb3d986f6804e65cd8f5598c15d5f7e8d3a046dacaedc58f481"
+  },
+  "assets/characters/npc/npc03/idle.png": {
+    "bytes": 413461,
+    "sha256": "dcbd77c60ef797a26a890699c6f1827cf6f497c9dfdf7dadfe7cf1a76a0eb7bd"
+  },
+  "assets/characters/npc/npc03/portrait.png": {
+    "bytes": 32033,
+    "sha256": "64326702146582152d49abe196a45897d4aa42937e2aea7ebf0d00aeeb5d8240"
+  },
+  "assets/characters/npc/npc03/sad.png": {
+    "bytes": 602712,
+    "sha256": "9bb4da44dd60ad2eb13052f5bc76baef7ab02254c719994df072dd5d2674ec9d"
+  },
+  "assets/characters/npc/npc03/ship_order.png": {
+    "bytes": 431514,
+    "sha256": "5e40a9e32f207c7f0f898f59679c1a59c2ee89d7bc258f0d89d3f7fb34b22bce"
+  },
+  "assets/characters/npc/npc03/walk.png": {
+    "bytes": 984776,
+    "sha256": "14fbd547882dd1ac8fda3c9681b9f0e7133ff9b11de97fde54350afb281d2206"
+  },
+  "assets/characters/npc/npc04/animations.json": {
+    "bytes": 30623,
+    "sha256": "866f4303af691e57762225f3d9571620f60b769521fbbd9674f9159005c4ca39"
+  },
+  "assets/characters/npc/npc04/happy.png": {
+    "bytes": 729743,
+    "sha256": "5d3ad0b207cef68d7a4f5e4570a2f68a1824af2c8b3d9164db17b36c926c22b7"
+  },
+  "assets/characters/npc/npc04/idle.png": {
+    "bytes": 426107,
+    "sha256": "867addc9cb44ee5906facdc9bf5d4b0fb4739f0407511cdd52475156be29ae0d"
+  },
+  "assets/characters/npc/npc04/portrait.png": {
+    "bytes": 35171,
+    "sha256": "855564e517e26b9786f29fc4a88b0b8d2052bfd16e507743a4b5c5a6bfba437c"
+  },
+  "assets/characters/npc/npc04/sad.png": {
+    "bytes": 661428,
+    "sha256": "7ca415fabd0c86dd2955f6133df9d4ed6ee3604a6526f27bd00c27440d9dcdba"
+  },
+  "assets/characters/npc/npc04/walk.png": {
+    "bytes": 970632,
+    "sha256": "74174494ca78c730b5b7026ca60da8b79ba174787965280adb049097c2f85206"
+  },
+  "assets/characters/npc/npc05/animations.json": {
+    "bytes": 22225,
+    "sha256": "53a04c9159df5e6fe83b6b2ab2c28e5c56410787594b89d0919cf70156f63d62"
+  },
+  "assets/characters/npc/npc05/happy.png": {
+    "bytes": 735274,
+    "sha256": "0cb34193137ccf560af2e2e341964c61288cbed8434d220b7e46742d63212a18"
+  },
+  "assets/characters/npc/npc05/idle.png": {
+    "bytes": 388093,
+    "sha256": "a041b50f6644f701cffc2a606448b612480ce5bc8155e4a05b6ee0d86e82321f"
+  },
+  "assets/characters/npc/npc05/portrait.png": {
+    "bytes": 32442,
+    "sha256": "dd491523dec85a1545937a1684a9ce6a06e15f5e25447169457eb9c7003ebc17"
+  },
+  "assets/characters/npc/npc05/repair_vehicle.png": {
+    "bytes": 551019,
+    "sha256": "e2173ee701d77ebd72ab7ac68734ea47b6388a8c7ac81221f520dea79758eab5"
+  },
+  "assets/characters/npc/npc06/animations.json": {
+    "bytes": 22219,
+    "sha256": "b38a09080cee27b3284adca2057fde117ce46cd9a29cb3cfbe010390da312e67"
+  },
+  "assets/characters/npc/npc06/care_pet.png": {
+    "bytes": 405922,
+    "sha256": "991cbd9abc1ff11f7a819a00c4430ebdd53c0dfc9d40bd1ab0ca3bf387f8d23b"
+  },
+  "assets/characters/npc/npc06/happy.png": {
+    "bytes": 743282,
+    "sha256": "f90d1d83c6c13b469a71753d6cd0573ef7bacc951bb72160ae36654a9c3c7ef9"
+  },
+  "assets/characters/npc/npc06/idle.png": {
+    "bytes": 409439,
+    "sha256": "7fa7132a033102ed3d13ae3cfbfd514e32d1c7dc656b7ae13b11f352e8b29a87"
+  },
+  "assets/characters/npc/npc06/portrait.png": {
+    "bytes": 33916,
+    "sha256": "0310f9b9427d608100a7a033719a3dba1cdd89d97798ba8a9d2b4af141acaadf"
+  },
+  "assets/characters/npc/npc07/animations.json": {
+    "bytes": 15097,
+    "sha256": "bc696b8e21145e213e5b2c73a1053a234fdfd3dc7e8e66c0e86fff22f50bae88"
+  },
+  "assets/characters/npc/npc07/idle.png": {
+    "bytes": 400520,
+    "sha256": "4857e3b539ed62f48a6c32733dc4988b8191f534873cc19faf01901681beccaa"
+  },
+  "assets/characters/npc/npc07/portrait.png": {
+    "bytes": 32350,
+    "sha256": "4a1c090818e538cc8f752137ff7e33b0e7cd6194bd4ed0ceb20b22dd2499726a"
+  },
+  "assets/characters/npc/npc07/repair_pipe.png": {
+    "bytes": 861441,
+    "sha256": "85a267ddc98b9f6de1c4a65bda56dd7d4343d95484d7785bf6bb0f0cca31f5ca"
+  },
+  "assets/characters/npc/npc08/animations.json": {
+    "bytes": 20859,
+    "sha256": "e4c4cf61e56a667a520037de944268da237019dd8d842462a5092cf44526405a"
+  },
+  "assets/characters/npc/npc08/idle.png": {
+    "bytes": 413789,
+    "sha256": "cc859a7be834e0f6ee1daa30a0e30e6e5cf6df560e870f5f196e10775f877e16"
+  },
+  "assets/characters/npc/npc08/portrait.png": {
+    "bytes": 32405,
+    "sha256": "47f58f578ff09c7df9c1d8475066b6d74fffbddb36f86f0c1373ec3899cb968f"
+  },
+  "assets/characters/npc/npc08/sad.png": {
+    "bytes": 624723,
+    "sha256": "860f48625350c1cb8e480ac93378ab28de67738115dcf43f044c6e6f09859346"
+  },
+  "assets/characters/npc/npc08/sell.png": {
+    "bytes": 410286,
+    "sha256": "3c34c97bc67575795c4f0bebc6b45580d1c4722789cbd74794b9e5fa3f16f38b"
+  },
+  "assets/characters/npc/npc09/animations.json": {
+    "bytes": 13625,
+    "sha256": "f3608765a636a1b8544d04249a63d4a16458360958b30d4dd6387dd8bf051bdb"
+  },
+  "assets/characters/npc/npc09/idle.png": {
+    "bytes": 377330,
+    "sha256": "f02f34912df2bbbea9fb64170663a3486fa2391267a87bb4c949a4fd0b89f359"
+  },
+  "assets/characters/npc/npc09/interview.png": {
+    "bytes": 402711,
+    "sha256": "e0f0e6a7641ef2e407d98b36d864c47d263013c214c92f03059ee148e76d41a6"
+  },
+  "assets/characters/npc/npc09/portrait.png": {
+    "bytes": 30801,
+    "sha256": "ead0a10214619773f90618849f9e191a1662f35828a30446d7738a0193f6c40c"
+  },
+  "assets/characters/npc/npc10/animations.json": {
+    "bytes": 14995,
+    "sha256": "ffb6930ef5be33c1f6da9c57af0453fc5c65f3c98433ea82d6e8a51509de5e06"
+  },
+  "assets/characters/npc/npc10/graduate.png": {
+    "bytes": 352764,
+    "sha256": "86c10348058c57f7b6e6b45c50bad758902bbddf04802f3cef0b68662da27e62"
+  },
+  "assets/characters/npc/npc10/idle.png": {
+    "bytes": 408739,
+    "sha256": "66f9b905eff0919c00837db720841611b2260872ee36d8c7aa4cab24b78f74af"
+  },
+  "assets/characters/npc/npc10/portrait.png": {
+    "bytes": 34755,
+    "sha256": "28a0a2859015c6dd13ddf9cf5e04d159756012db55185b32fba758e67065cd3d"
+  },
+  "assets/characters/npc/npc11/animations.json": {
+    "bytes": 24852,
+    "sha256": "5522e7ec9fda5e1f78e25eb50848913cddd03101b2673e72204b525014f5563f"
+  },
+  "assets/characters/npc/npc11/idle.png": {
+    "bytes": 438798,
+    "sha256": "8fdeeb3042e31cf621dac455e6357a37645092d48778fec9d871f430b9881324"
+  },
+  "assets/characters/npc/npc11/portrait.png": {
+    "bytes": 33510,
+    "sha256": "6f94922d3e7e024e57f872639ef665968031d92a6e21cb77c90149410d6a03d7"
+  },
+  "assets/characters/npc/npc11/walk.png": {
+    "bytes": 889699,
+    "sha256": "5468bf0bb9e5986641515f3377a17f75a955996bb8cb334111c1bb21725dfed9"
+  },
+  "assets/characters/npc/npc11/wave.png": {
+    "bytes": 405864,
+    "sha256": "8fe185b25045d78a25de0ba69f9ac69445f9b1b8960f681c972564143b5216d5"
+  },
+  "assets/characters/npc/npc12/animations.json": {
+    "bytes": 24907,
+    "sha256": "a158ed4d360b9804d6d57ce322cf8f34de5a54542bf623505eed7c0d1c71a199"
+  },
+  "assets/characters/npc/npc12/celebrate.png": {
+    "bytes": 1130339,
+    "sha256": "4b853b1c71e70c335a9aeee1826d3294c4ab81de2e535332c973e4078edfecce"
+  },
+  "assets/characters/npc/npc12/idle.png": {
+    "bytes": 404121,
+    "sha256": "7b14ebb3492bdf58ed1ea15ac8d5ae2072ea4bed1ca8e511d3e0abd3720df36a"
+  },
+  "assets/characters/npc/npc12/portrait.png": {
+    "bytes": 32928,
+    "sha256": "bfb6b1eccc5e51d5d7825f1285db6e5bbfa3395d307ce08834e1b30cdaa72bde"
+  },
+  "assets/characters/npc/npc12/wave.png": {
+    "bytes": 397392,
+    "sha256": "97ad6a3944ab401af06f507ac8d926b48d2b24be90d17f01bd3f25362eb0d7d9"
+  },
+  "assets/characters/npc/npc13/advertise.png": {
+    "bytes": 412024,
+    "sha256": "14cf68fe2b905f8b7da1f91c817d58777ded9795feeb8ed095bb980cf93a4abb"
+  },
+  "assets/characters/npc/npc13/animations.json": {
+    "bytes": 22167,
+    "sha256": "ad2c04627e862f99a3d367b851c8f682f8105ea2aa0870cc3764048d1ba4dcca"
+  },
+  "assets/characters/npc/npc13/happy.png": {
+    "bytes": 714710,
+    "sha256": "825aaee1ca1c529b2d51697375ebdd816cbd3b3df86693a09597b7aff6f035c3"
+  },
+  "assets/characters/npc/npc13/idle.png": {
+    "bytes": 412974,
+    "sha256": "6107d26403f8d835a5a21d2308a448ee342d8c66944aaf3950fb17ad7c80d7d8"
+  },
+  "assets/characters/npc/npc13/portrait.png": {
+    "bytes": 34998,
+    "sha256": "126df0b2ab1ed2a3977c1ba34696dc2e2d43df919046dce900cd13636f880e09"
+  },
+  "assets/characters/npc/npc14/animations.json": {
+    "bytes": 23824,
+    "sha256": "ab75a594c0d77cce07f70b3232579635b17312c26b987663f0ff3e79161446cb"
+  },
+  "assets/characters/npc/npc14/idle.png": {
+    "bytes": 393919,
+    "sha256": "d8281a2ff6bdc02322e4599cb48e9fc3419b051b3a03900ef69c6cdd2261534a"
+  },
+  "assets/characters/npc/npc14/portrait.png": {
+    "bytes": 31232,
+    "sha256": "039de7aa6bac558336be0b40d6a560a2706ab9b6b20fb6c2c971adb2088859ff"
+  },
+  "assets/characters/npc/npc14/sell.png": {
+    "bytes": 384545,
+    "sha256": "b242f32ca79468068ef07401ec0ce67f7b9907dc20c449c37d63f2c07ce0826a"
+  },
+  "assets/characters/npc/npc14/ship_order.png": {
+    "bytes": 441909,
+    "sha256": "3b4379eaa9d975723cc4b0e5ecb34c44f6308b3e8960c0185a729f18253802ca"
+  },
+  "assets/characters/npc/npc15/animations.json": {
+    "bytes": 24902,
+    "sha256": "9282bc44f153340708db0ad9dbb02eeee6691958d568ab08addd089449db96bc"
+  },
+  "assets/characters/npc/npc15/idle.png": {
+    "bytes": 405132,
+    "sha256": "525c801f69c16934f125496c2fc3e9e99d678f68cd102cda05bf73ab08001b22"
+  },
+  "assets/characters/npc/npc15/portrait.png": {
+    "bytes": 33465,
+    "sha256": "95f0dac72ea5cf02a7419e992334c9fe86cf04cf9773353e99e36f071b352072"
+  },
+  "assets/characters/npc/npc15/thank_you.png": {
+    "bytes": 940475,
+    "sha256": "859a7bedf4b3f417ac0b6a3e28c5923b24e0bde891f7890cf295e1dcf0021fa1"
+  },
+  "assets/characters/npc/npc15/walk.png": {
+    "bytes": 853770,
+    "sha256": "ffabcb2e9a7d510583d35d259b12f5be3b393d842e65eb2884fd0d9dbe524fbd"
+  },
+  "assets/characters/npc/npc16/animations.json": {
+    "bytes": 3708,
+    "sha256": "00aa8c740a760ed9eed8fb95ca17a8204d53ec1f8f09ba4910978b8284126506"
+  },
+  "assets/characters/npc/npc16/happy.png": {
+    "bytes": 318966,
+    "sha256": "9fa0b3a0e27acb098f553a39fc906d625ef395b64a3053f18035db777941fe34"
+  },
+  "assets/characters/npc/npc16/idle.png": {
+    "bytes": 192037,
+    "sha256": "01cf754fcb8dcb1a2a233aa38db8f148866aeee502d4ad7cc8e0c9cab88935cd"
+  },
+  "assets/characters/npc/npc16/point_question.png": {
+    "bytes": 245564,
+    "sha256": "6151563b74e57f8d64aefa91e6b4eef2f7f244473828e34d9f057b91bde6f91b"
+  },
+  "assets/characters/npc/npc16/portrait.png": {
+    "bytes": 11974,
+    "sha256": "0c658df3c3b83699dbbd58040067c833bf58164a26a8c67d3344b22724c4dc72"
+  },
+  "assets/characters/npc/pet_baby/animations.json": {
+    "bytes": 4836,
+    "sha256": "7ebfedb6b1327a30fa35866f06583565d28993e6e52466d00670843719c3a14f"
+  },
+  "assets/characters/npc/pet_baby/cry.png": {
+    "bytes": 1344907,
+    "sha256": "ab065d0e0abbb754eb6ad152788c45853361041fcefa9ae513b32e906fa7c7d2"
+  },
+  "assets/characters/npc/pet_baby/idle.png": {
+    "bytes": 879409,
+    "sha256": "b79398d73caf01b033ece1b1d187374bfd31d4054e8f7a743947854a8e5553f9"
+  },
+  "assets/characters/npc/pet_baby/portrait.png": {
+    "bytes": 24922,
+    "sha256": "ad4bf88f7ac589db6b884556212d8e1fad5f5043f1147a88d4c520885f1b5230"
+  },
+  "assets/characters/npc/pet_baby/sleep.png": {
+    "bytes": 793638,
+    "sha256": "5a99aaafdcfa92bc2ceba72b42a6266be6e81b04aa6cbbc105f2f5eab15852a2"
+  },
+  "assets/characters/npc/pet_baby/smile.png": {
+    "bytes": 1344907,
+    "sha256": "ab065d0e0abbb754eb6ad152788c45853361041fcefa9ae513b32e906fa7c7d2"
+  },
+  "assets/characters/npc/pet_bird/animations.json": {
+    "bytes": 3938,
+    "sha256": "8f90d026de536857977a039f8b7b50789eef07bcf9ca887d5c644f3ff5b2cf73"
+  },
+  "assets/characters/npc/pet_bird/flap.png": {
+    "bytes": 1181902,
+    "sha256": "8ed294d487e67828c064223819525d2ca2e15485377269e6615c9bb8428816f5"
+  },
+  "assets/characters/npc/pet_bird/fly.png": {
+    "bytes": 1212597,
+    "sha256": "5a2e30a2c2e3360d90fcd9a7578eadcf95f66ddbdfe6959e1813ed9ee554fc53"
+  },
+  "assets/characters/npc/pet_bird/idle.png": {
+    "bytes": 738667,
+    "sha256": "19eff52774cf7cdf1f4aaccb5627f7753be98fdb08378bd5c414cfc3040c6cb9"
+  },
+  "assets/characters/npc/pet_bird/portrait.png": {
+    "bytes": 20174,
+    "sha256": "203995c55aa7157c5eee87d5eead2acd8159fffeb55dd14148d6a62c57db728e"
+  },
+  "assets/characters/npc/pet_cat/animations.json": {
+    "bytes": 17375,
+    "sha256": "1576519b7348a665641dbc0ce2803714080f44d9b1a91cb0d0a53f3610b46588"
+  },
+  "assets/characters/npc/pet_cat/idle.png": {
+    "bytes": 923921,
+    "sha256": "55ec07544243bf55a2d0d5f629286fb75a6ec63ea8da0070888f8d17b38fcd51"
+  },
+  "assets/characters/npc/pet_cat/jump.png": {
+    "bytes": 1475556,
+    "sha256": "0f00d83e36564ec124acc7059a70a377acea6da244c17b01602ffe90ef9aed1d"
+  },
+  "assets/characters/npc/pet_cat/meow.png": {
+    "bytes": 1435530,
+    "sha256": "1a865eab7bf12017a78ab5e359f5203b951a12a9b9e1219f22a847d87820e7f5"
+  },
+  "assets/characters/npc/pet_cat/portrait.png": {
+    "bytes": 26853,
+    "sha256": "1b630543a3fa80664a9df3e3bc191b3f9fab82dd06a1e0f3390a56efcd2700a5"
+  },
+  "assets/characters/npc/pet_cat/sit.png": {
+    "bytes": 1055851,
+    "sha256": "d138b7701aa17388d81e8a5b8a6421430693f4db3d4591f332d55ff6710b873c"
+  },
+  "assets/characters/npc/pet_cat/walk.png": {
+    "bytes": 524691,
+    "sha256": "390b03bea41b51aed650c1cb033a70b2390621dd98f092e350dca4702b3b7c93"
+  },
+  "assets/characters/npc/pet_dog/animations.json": {
+    "bytes": 30982,
+    "sha256": "2fe4aa072ce0cc5a6453e733ad9da85c90bc8f83e7d84d30ffc91b8c0671f87e"
+  },
+  "assets/characters/npc/pet_dog/bark.png": {
+    "bytes": 1560502,
+    "sha256": "9b69e3465409ef0a2a7451577c375ffd66b8dc9b4131e91ec8340c6e8e1f6866"
+  },
+  "assets/characters/npc/pet_dog/fetch.png": {
+    "bytes": 553564,
+    "sha256": "95572ea77511013b040cfdaac68e753beb8f995b95dfe20d8f7086381abe0034"
+  },
+  "assets/characters/npc/pet_dog/idle.png": {
+    "bytes": 996687,
+    "sha256": "595bab9ec89de41158a2224383222862d413c2af8ed0ea6d358a4b09f5af1747"
+  },
+  "assets/characters/npc/pet_dog/portrait.png": {
+    "bytes": 30211,
+    "sha256": "72dd21a3fff56c45c2905a16250766943dc03c4e079de87a697062f040d57305"
+  },
+  "assets/characters/npc/pet_dog/roll.png": {
+    "bytes": 1631634,
+    "sha256": "7ccff6ff9d79b7e577ed270958c08780653bc3b73b21bf9c71c373a2c38dc1ec"
+  },
+  "assets/characters/npc/pet_dog/sick.png": {
+    "bytes": 1378831,
+    "sha256": "d5446207ce830babd8fbb43850b3681f228c1dcd5c574cbc37d6422b998c20ba"
+  },
+  "assets/characters/npc/pet_dog/sit.png": {
+    "bytes": 1154343,
+    "sha256": "f411b15a264702b949586f616ab677fdbd9a34688ecb1fd1409fc31ecb5eebcb"
+  },
+  "assets/characters/npc/pet_dog/sleep.png": {
+    "bytes": 922861,
+    "sha256": "7e47d28670fbe9696fef1ffcd8ebd2b1e812695d99d993c9ef405e7bbb8b9c1d"
+  },
+  "assets/characters/npc/pet_dog/walk.png": {
+    "bytes": 554719,
+    "sha256": "09e960bf68eb84dfbc9f981cdb0d2e8e64fed62555dd45154dcdfbcab1156db4"
+  },
+  "catalog/camera_directions.json": {
+    "bytes": 2242,
+    "sha256": "623022ec5f0b889a4bba9fd14895aefa4806eba732c3c02cd046e68e61ce063c"
+  },
+  "catalog/characters_v2.json": {
+    "bytes": 31460,
+    "sha256": "393d9993582ca660a6a0681fe23ea934bf85a0f358a7cd750e70580b367229c7"
+  },
+  "catalog/idle_v2_3.json": {
+    "bytes": 24539,
+    "sha256": "b60383515e110f955a5584529a294c218b57a462af8d4ed999c5c82ebcf8dba2"
+  },
+  "catalog/locomotion_v2_2.json": {
+    "bytes": 15327,
+    "sha256": "2246473861903389508f090e30cb1e7b3a94042892cf5078e55dc904cfdf9687"
+  },
+  "catalog/qa_v2.json": {
+    "bytes": 6366,
+    "sha256": "2bfca925adbfdc63523e92d61e579c5158a5ab11e239965561c6b1fa513f1f50"
+  },
+  "catalog/qa_v2_3_integrated.json": {
+    "bytes": 742,
+    "sha256": "066ef631cf3714411eef7b69795dcc2d58e660d1ea5110884d1158e4a0461022"
+  },
+  "preview/Co_Ty_Phi_V2_5_Huong.gif": {
+    "bytes": 724067,
+    "sha256": "5fe1d49ebd955b9cece350a25511f999c3ac252bc2b2b54aceb61c22d9427dda"
+  },
+  "preview/Co_Ty_Phi_V2_Roster.jpg": {
+    "bytes": 590453,
+    "sha256": "afbaaa9c6b24456b61d50d4d4b0dd69d1a68e1e9e05dcc3670f7c3965bfa5c7d"
+  },
+  "preview/Mit_Toc_Xu_V2_2_Di_Bo_4_Huong.gif": {
+    "bytes": 1386532,
+    "sha256": "26e10e91076a64bc4cad2ba4aedcc976f88a0d0cf4560977870a4be361c3d905"
+  },
+  "preview/Mit_Toc_Xu_V2_3_Idle_3_Huong.gif": {
+    "bytes": 315916,
+    "sha256": "9a24b4f245a48e1b7f4acc7d04b9ab20428deaa915c418cebc238ec0923dc185"
+  }
+}

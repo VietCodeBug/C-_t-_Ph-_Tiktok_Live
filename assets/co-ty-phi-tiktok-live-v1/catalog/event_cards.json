@@ -1,0 +1,2765 @@
+{
+  "EDU01": {
+    "id": "EDU01",
+    "title": "Đi học nghề",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "HỌC / LÀM",
+    "moneySummary": "LÀM +25 / HỌC −50",
+    "condition": "còn lượt sau",
+    "sourceRules": "LÀM nhận +25. HỌC đóng 50 MONEY, đặt lịch thi EDU02 đầu lượt kế tiếp. Chỉ mở thẻ khi ghế còn lượt sau.",
+    "animation": "study",
+    "modelIds": [
+      "school_desk",
+      "school_backpack",
+      "school_board"
+    ],
+    "models": [
+      "assets/props/education/school_desk.glb",
+      "assets/props/education/school_backpack.glb",
+      "assets/props/education/school_board.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC10",
+        "name": "Thầy cô dạy nghề",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc10/portrait.png",
+        "animations": "assets/characters/npc/npc10/animations.json",
+        "clips": [
+          "idle",
+          "graduate"
+        ],
+        "folder": "assets/characters/npc/npc10"
+      }
+    ],
+    "effects": [
+      "vfx_book_pages"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_book_pages.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [
+      "EDU02"
+    ],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/edu01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_edu.svg",
+    "voice": "assets/audio/mc_vi/edu01_prompt.ogg",
+    "voiceText": "Gõ Học hoặc Làm. Bé Két cổ vũ!",
+    "mcScript": "Học một khóa, mai đi thi. Đừng hỏi có học thuộc đường về không nha."
+  },
+  "EDU02": {
+    "id": "EDU02",
+    "title": "Thi tay nghề",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "+95 (lãi chuỗi +45)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ EDU01. Trao chứng chỉ và +95 MONEY, chốt lãi +45 sau học phí. Nhân vật đội mũ, vung tờ bằng.",
+    "animation": "graduate",
+    "modelIds": [
+      "graduation_hat",
+      "certificate"
+    ],
+    "models": [
+      "assets/props/education/graduation_hat.glb",
+      "assets/props/education/certificate.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC10",
+        "name": "Thầy cô dạy nghề",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc10/portrait.png",
+        "animations": "assets/characters/npc/npc10/animations.json",
+        "clips": [
+          "idle",
+          "graduate"
+        ],
+        "folder": "assets/characters/npc/npc10"
+      }
+    ],
+    "effects": [
+      "vfx_note_burst"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_note_burst.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/edu02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_edu.svg",
+    "voice": "assets/audio/mc_vi/edu02_prompt.ogg",
+    "voiceText": "Đến lượt thi tay nghề! Trao bằng thôi!",
+    "mcScript": "Có bằng rồi! Việc đầu tiên là gỡ cái giá còn dính trên mũ."
+  },
+  "EDU03": {
+    "id": "EDU03",
+    "title": "Săn học bổng",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "1 / 2 / 3",
+    "moneySummary": "đúng +65 / sai 0",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Ghế gõ 1, 2 hoặc 3 theo câu hỏi ghép biểu tượng trên bảng. Khán giả có thể chọn đáp án để gợi ý. Đúng +65, còn lại 0.",
+    "animation": "point_question",
+    "modelIds": [
+      "school_board",
+      "award_medal"
+    ],
+    "models": [
+      "assets/props/education/school_board.glb",
+      "assets/props/education/award_medal.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC10",
+        "name": "Thầy cô dạy nghề",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc10/portrait.png",
+        "animations": "assets/characters/npc/npc10/animations.json",
+        "clips": [
+          "idle",
+          "graduate"
+        ],
+        "folder": "assets/characters/npc/npc10"
+      }
+    ],
+    "effects": [
+      "vfx_star_hit"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_star_hit.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/edu03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_edu.svg",
+    "voice": "assets/audio/mc_vi/edu03_prompt.ogg",
+    "voiceText": "Gõ một, hai hoặc ba. Nhìn kỹ biểu tượng nhé!",
+    "mcScript": "Câu này có ba đáp án, đúng một. Bé Két cũng chỉ được nhìn đề."
+  },
+  "EDU04": {
+    "id": "EDU04",
+    "title": "Phỏng vấn nhanh",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "VĂN PHÒNG / GIAO HÀNG",
+    "moneySummary": "+45 / +30 (+30 cổ vũ)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "VĂN PHÒNG +45. GIAO HÀNG +30, nếu đủ 3 khán giả gõ CỔ VŨ A trong cửa hỗ trợ thì thêm +30.",
+    "animation": "interview",
+    "modelIds": [
+      "briefcase",
+      "document_stack"
+    ],
+    "models": [
+      "assets/props/education/briefcase.glb",
+      "assets/props/education/document_stack.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC09",
+        "name": "Nhân viên tuyển dụng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc09/portrait.png",
+        "animations": "assets/characters/npc/npc09/animations.json",
+        "clips": [
+          "idle",
+          "interview"
+        ],
+        "folder": "assets/characters/npc/npc09"
+      }
+    ],
+    "effects": [
+      "vfx_interview_question"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_interview_question.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/edu04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_edu.svg",
+    "voice": "assets/audio/mc_vi/edu04_prompt.ogg",
+    "voiceText": "Gõ Văn phòng hoặc Giao hàng. Phố đang tuyển người!",
+    "mcScript": "Câu cuối buổi phỏng vấn. Bạn chịu được bao nhiêu nhóm chat?"
+  },
+  "EDU05": {
+    "id": "EDU05",
+    "title": "Nhận việc freelance",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "NHẸ / GẤP + nhập cụm",
+    "moneySummary": "+35 / đúng +85, sai 0",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "NHẸ +35. GẤP mở 12 giây để ghế chép đúng cụm trên màn hình, ví dụ NỘP FILE XANH. Đúng +85, còn lại 0.",
+    "animation": "type_keyboard",
+    "modelIds": [
+      "laptop",
+      "document_stack"
+    ],
+    "models": [
+      "assets/props/education/laptop.glb",
+      "assets/props/education/document_stack.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC09",
+        "name": "Nhân viên tuyển dụng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc09/portrait.png",
+        "animations": "assets/characters/npc/npc09/animations.json",
+        "clips": [
+          "idle",
+          "interview"
+        ],
+        "folder": "assets/characters/npc/npc09"
+      }
+    ],
+    "effects": [
+      "vfx_pack_correct"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_pack_correct.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/edu05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_edu.svg",
+    "voice": "assets/audio/mc_vi/edu05_prompt.ogg",
+    "voiceText": "Gõ Nhẹ hoặc Gấp. Khách đang đợi file!",
+    "mcScript": "Khách bảo sửa đúng một chữ. Tên file đang là final_final_7."
+  },
+  "EDU06": {
+    "id": "EDU06",
+    "title": "Thưởng cuối tháng",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "NHẬN / CHIA",
+    "moneySummary": "NHẬN +45 / CHIA +30, ghế khác +20",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "NHẬN +45. CHIA nhận +30, đồng thời quỹ phố cộng +20 cho ghế khác ít MONEY nhất. Nếu hòa, ưu tiên theo thứ tự ghế.",
+    "animation": "receive_salary",
+    "modelIds": [
+      "briefcase",
+      "award_medal"
+    ],
+    "models": [
+      "assets/props/education/briefcase.glb",
+      "assets/props/education/award_medal.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC09",
+        "name": "Nhân viên tuyển dụng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc09/portrait.png",
+        "animations": "assets/characters/npc/npc09/animations.json",
+        "clips": [
+          "idle",
+          "interview"
+        ],
+        "folder": "assets/characters/npc/npc09"
+      }
+    ],
+    "effects": [
+      "vfx_coin_pop"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_pop.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/edu06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_edu.svg",
+    "voice": "assets/audio/mc_vi/edu06_prompt.ogg",
+    "voiceText": "Gõ Nhận hoặc Chia. Lương về rồi!",
+    "mcScript": "Lương vừa về. Ghế bên cạnh ngửi thấy mùi chuyển khoản rồi."
+  },
+  "HOME01": {
+    "id": "HOME01",
+    "title": "Mua căn nhà đầu tiên",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "BỎ / MUA NHÀ",
+    "moneySummary": "MUA −140, thanh lý +100",
+    "condition": "chưa có nhà; còn lượt sau",
+    "sourceRules": "BỎ giữ ví. MUA NHÀ trả 140, sở hữu một nhà và hẹn HOME02 lượt kế. Cuối ván nhà thanh lý +100. Chỉ mời ghế chưa có nhà và còn lượt.",
+    "animation": "unlock_house",
+    "modelIds": [
+      "starter_house",
+      "house_key",
+      "house_price_tag"
+    ],
+    "models": [
+      "assets/props/home/starter_house.glb",
+      "assets/props/home/house_key.glb",
+      "assets/props/home/house_price_tag.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC08",
+        "name": "Chủ nhà trọ",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc08/portrait.png",
+        "animations": "assets/characters/npc/npc08/animations.json",
+        "clips": [
+          "idle",
+          "sell",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc08"
+      }
+    ],
+    "effects": [
+      "vfx_house_unlock"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_house_unlock.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [
+      "HOME02"
+    ],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/home01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_home.svg",
+    "voice": "assets/audio/mc_vi/home01_prompt.ogg",
+    "voiceText": "Gõ Bỏ hoặc Mua nhà. Nhà có view ra phố!",
+    "mcScript": "Nhà hướng đẹp. Mở cửa ra là gặp ngay quầy thu phí."
+  },
+  "HOME02": {
+    "id": "HOME02",
+    "title": "Có người thuê phòng",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "+75 tiền thuê (lãi chuỗi +35)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ HOME01. Khách chuyển vào và trả +75 MONEY. Nếu giữ nhà tới cuối ván, tổng giao dịch mua, cho thuê và thanh lý là +35.",
+    "animation": "happy",
+    "modelIds": [
+      "house_door",
+      "rent_envelope"
+    ],
+    "models": [
+      "assets/props/home/house_door.glb",
+      "assets/props/home/rent_envelope.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC11",
+        "name": "Người thuê phòng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc11/portrait.png",
+        "animations": "assets/characters/npc/npc11/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc11"
+      }
+    ],
+    "effects": [
+      "vfx_rent_paid"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_rent_paid.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/home02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_home.svg",
+    "voice": "assets/audio/mc_vi/home02_prompt.ogg",
+    "voiceText": "Có khách thuê phòng rồi! Mật khẩu wifi dễ nhớ lắm.",
+    "mcScript": "Có khách thuê rồi. Wifi yếu nhưng mật khẩu dễ nhớ."
+  },
+  "HOME03": {
+    "id": "HOME03",
+    "title": "Đổi trọ gấp",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "TRẢ / DỌN",
+    "moneySummary": "−35 / đúng −10, sai −55",
+    "condition": "chưa có nhà",
+    "sourceRules": "Cho ghế chưa có nhà. TRẢ mất 35 phí chuyển phòng. DỌN đọc mã thùng trên màn hình, đúng mất 10, sai hoặc hết giờ mất 55.",
+    "animation": "lift_box",
+    "modelIds": [
+      "moving_box",
+      "starter_house"
+    ],
+    "models": [
+      "assets/props/home/moving_box.glb",
+      "assets/props/home/starter_house.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC08",
+        "name": "Chủ nhà trọ",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc08/portrait.png",
+        "animations": "assets/characters/npc/npc08/animations.json",
+        "clips": [
+          "idle",
+          "sell",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc08"
+      }
+    ],
+    "effects": [
+      "vfx_step_dust"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_step_dust.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/home03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_home.svg",
+    "voice": "assets/audio/mc_vi/home03_prompt.ogg",
+    "voiceText": "Gõ Trả hoặc Dọn. Đếm thùng cho kỹ nha!",
+    "mcScript": "Chủ trọ bảo đồ ít. Sao đếm sơ đã có chín cái ghế?"
+  },
+  "HOME04": {
+    "id": "HOME04",
+    "title": "Vỡ ống nước",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "THỢ / TỰ SỬA",
+    "moneySummary": "thợ −50 / tự sửa đúng −15 sai −65",
+    "condition": "đã có nhà",
+    "sourceRules": "Cho chủ nhà. THỢ mất 50. TỰ SỬA mở một thử thách 12 giây chọn van đúng. Đúng mất 15, còn lại mất 65.",
+    "animation": "repair_pipe",
+    "modelIds": [
+      "water_pipe",
+      "water_valve",
+      "pipe_wrench"
+    ],
+    "models": [
+      "assets/props/home/water_pipe.glb",
+      "assets/props/home/water_valve.glb",
+      "assets/props/home/pipe_wrench.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC07",
+        "name": "Thợ sửa ống nước",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc07/portrait.png",
+        "animations": "assets/characters/npc/npc07/animations.json",
+        "clips": [
+          "idle",
+          "repair_pipe"
+        ],
+        "folder": "assets/characters/npc/npc07"
+      }
+    ],
+    "effects": [
+      "vfx_water_leak",
+      "vfx_water_fixed"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_water_leak.png",
+      "assets/fx/vfx_water_fixed.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/home04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_home.svg",
+    "voice": "assets/audio/mc_vi/home04_prompt.ogg",
+    "voiceText": "Gõ Thợ hoặc Tự sửa. Nước tràn ra rồi!",
+    "mcScript": "Ghế {seat} vừa nâng cấp phòng khách thành hồ bơi."
+  },
+  "HOME05": {
+    "id": "HOME05",
+    "title": "Trang trí ban công",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "BỎ / TRANG TRÍ + VỖ TAY A",
+    "moneySummary": "trang trí −30 / đủ phiếu +80",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "BỎ giữ ví. TRANG TRÍ trả 30. Nếu đủ 3 khán giả gõ VỖ TAY A trong 10 giây thì phố thưởng +80, lãi ròng +50.",
+    "animation": "happy",
+    "modelIds": [
+      "balcony",
+      "flower_pot"
+    ],
+    "models": [
+      "assets/props/home/balcony.glb",
+      "assets/props/home/flower_pot.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC11",
+        "name": "Người thuê phòng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc11/portrait.png",
+        "animations": "assets/characters/npc/npc11/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc11"
+      }
+    ],
+    "effects": [
+      "vfx_flower_bloom"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_flower_bloom.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/home05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_home.svg",
+    "voice": "assets/audio/mc_vi/home05_prompt.ogg",
+    "voiceText": "Gõ Bỏ hoặc Trang trí. Khoe ban công nào!",
+    "mcScript": "Cây héo được gắn biển phong cách tối giản. Giám khảo đang suy nghĩ."
+  },
+  "HOME06": {
+    "id": "HOME06",
+    "title": "Chợ đồ cũ",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "GIỮ / BÁN + DỌN A",
+    "moneySummary": "GIỮ +20 / BÁN +15 mỗi ID, tối đa +75",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "GIỮ nhận +20 voucher. BÁN nhận +15 mỗi người gõ DỌN A, tối đa 5 người trong 10 giây. Chốt tối đa +75.",
+    "animation": "sell",
+    "modelIds": [
+      "old_furniture",
+      "moving_box"
+    ],
+    "models": [
+      "assets/props/home/old_furniture.glb",
+      "assets/props/home/moving_box.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC04",
+        "name": "Khách mua hàng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc04/portrait.png",
+        "animations": "assets/characters/npc/npc04/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "happy",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc04"
+      }
+    ],
+    "effects": [
+      "vfx_coin_pop"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_pop.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/home06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_home.svg",
+    "voice": "assets/audio/mc_vi/home06_prompt.ogg",
+    "voiceText": "Gõ Giữ hoặc Bán. Chợ đồ cũ mở cửa!",
+    "mcScript": "Thanh lý ghế gaming. Ghế thật, chữ gaming dán thêm."
+  },
+  "FAM01": {
+    "id": "FAM01",
+    "title": "Tổ chức đám cưới",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "BỎ / GỌN / RỘN + MỪNG A",
+    "moneySummary": "GỌN −40 / RỘN −80 +10 mỗi ID, tối đa 8",
+    "condition": "còn lượt sau",
+    "sourceRules": "BỎ giữ ví. GỌN trả 40. RỘN trả 80, nhận +10 mỗi khán giả gõ MỪNG A, tối đa 8. Hai lựa chọn tổ chức đều hẹn FAM02 ở lượt kế.",
+    "animation": "wedding",
+    "modelIds": [
+      "wedding_arch",
+      "wedding_ring",
+      "wedding_table"
+    ],
+    "models": [
+      "assets/props/family/wedding_arch.glb",
+      "assets/props/family/wedding_ring.glb",
+      "assets/props/family/wedding_table.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC12",
+        "name": "Người dẫn lễ cưới",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc12/portrait.png",
+        "animations": "assets/characters/npc/npc12/animations.json",
+        "clips": [
+          "idle",
+          "celebrate",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc12"
+      }
+    ],
+    "effects": [
+      "vfx_ring_flash",
+      "vfx_heart_burst"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_ring_flash.png",
+      "assets/fx/vfx_heart_burst.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [
+      "FAM02"
+    ],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/fam01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_family.svg",
+    "voice": "assets/audio/mc_vi/fam01_prompt.ogg",
+    "voiceText": "Gõ Bỏ, Gọn hoặc Rộn. Bàn ba hỏi wifi kìa!",
+    "mcScript": "Cô dâu chú rể bước ra rồi. Bàn số ba vừa hỏi có wifi chưa."
+  },
+  "FAM02": {
+    "id": "FAM02",
+    "title": "Mở phong bì cưới",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "+70 phong bì",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ FAM01. Mở phong bì trong game, nhận +70 MONEY. Hiện lãi ròng của cả tiệc theo kiểu đã chọn.",
+    "animation": "happy",
+    "modelIds": [
+      "red_envelope",
+      "wedding_gift"
+    ],
+    "models": [
+      "assets/props/family/red_envelope.glb",
+      "assets/props/family/wedding_gift.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC12",
+        "name": "Người dẫn lễ cưới",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc12/portrait.png",
+        "animations": "assets/characters/npc/npc12/animations.json",
+        "clips": [
+          "idle",
+          "celebrate",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc12"
+      }
+    ],
+    "effects": [
+      "vfx_coin_pop"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_pop.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/fam02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_family.svg",
+    "voice": "assets/audio/mc_vi/fam02_prompt.ogg",
+    "voiceText": "Cùng mở phong bì cưới nào! Mừng trăm năm nha!",
+    "mcScript": "Mở phong bì nào. Có một tờ ghi chúc trăm năm, chữ to lắm."
+  },
+  "FAM03": {
+    "id": "FAM03",
+    "title": "Nhà có em bé",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "ĐỂ SAU / ĐÓN + RU A",
+    "moneySummary": "ĐÓN −30 / ĐỂ SAU 0",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "ĐỂ SAU 0. ĐÓN trả 30 và mở cửa RU A trong 10 giây. Lưu mốc đủ hay thiếu 3 người ru. Dùng FAM04 đầu lượt kế, hoặc chốt ngay nếu đây là lượt cuối.",
+    "animation": "hold_baby",
+    "modelIds": [
+      "baby_stroller",
+      "baby_bottle"
+    ],
+    "models": [
+      "assets/props/family/baby_stroller.glb",
+      "assets/props/family/baby_bottle.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_BABY",
+        "name": "Em bé bế",
+        "style": "beast",
+        "height": 0.28,
+        "portrait": "assets/characters/npc/pet_baby/portrait.png",
+        "animations": "assets/characters/npc/pet_baby/animations.json",
+        "clips": [
+          "idle",
+          "sleep",
+          "cry",
+          "smile"
+        ],
+        "folder": "assets/characters/npc/pet_baby"
+      }
+    ],
+    "effects": [
+      "vfx_baby_cry"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_baby_cry.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [
+      "FAM04"
+    ],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/fam03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_family.svg",
+    "voice": "assets/audio/mc_vi/fam03_prompt.ogg",
+    "voiceText": "Gõ Để sau hoặc Đón. Bé Két nói nhỏ thôi.",
+    "mcScript": "Bé thức rồi. Cả phố gõ RU {seat} nhẹ tay, Bé Két cũng nói nhỏ."
+  },
+  "FAM04": {
+    "id": "FAM04",
+    "title": "Ca trực bỉm nửa đêm",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động / lượt cuối chốt ngay",
+    "moneySummary": "+45 hoặc +75 theo phiếu",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Kết quả của FAM03. Trợ cấp trong game +45, hoặc +75 nếu đạt mốc ru. Lãi ròng +15 hoặc +45 sau phí chuẩn bị. Cảnh bé ngủ kéo 2–3 giây.",
+    "animation": "hold_baby",
+    "modelIds": [
+      "baby_bed",
+      "baby_bottle"
+    ],
+    "models": [
+      "assets/props/family/baby_bed.glb",
+      "assets/props/family/baby_bottle.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_BABY",
+        "name": "Em bé bế",
+        "style": "beast",
+        "height": 0.28,
+        "portrait": "assets/characters/npc/pet_baby/portrait.png",
+        "animations": "assets/characters/npc/pet_baby/animations.json",
+        "clips": [
+          "idle",
+          "sleep",
+          "cry",
+          "smile"
+        ],
+        "folder": "assets/characters/npc/pet_baby"
+      }
+    ],
+    "effects": [
+      "vfx_baby_sleep"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_baby_sleep.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/fam04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_family.svg",
+    "voice": "assets/audio/mc_vi/fam04_prompt.ogg",
+    "voiceText": "Tới ca trực bỉm rồi! Bé ngủ rồi kìa.",
+    "mcScript": "Bé ngủ rồi. Cả nhà vừa hoàn thành nhiệm vụ khó nhất trong ván."
+  },
+  "FAM05": {
+    "id": "FAM05",
+    "title": "Sinh nhật bất ngờ",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "NẾN / BÁNH (1/2/3)",
+    "moneySummary": "NẾN +25 / BÁNH đúng +65",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "NẾN nhận +25. BÁNH chọn 1, 2 hoặc 3 theo hình mẫu. Đúng +65, còn lại 0. Bánh sai hình bật gag nến tắt.",
+    "animation": "birthday",
+    "modelIds": [
+      "birthday_cake",
+      "birthday_candle",
+      "birthday_gift"
+    ],
+    "models": [
+      "assets/props/family/birthday_cake.glb",
+      "assets/props/family/birthday_candle.glb",
+      "assets/props/family/birthday_gift.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC12",
+        "name": "Người dẫn lễ cưới",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc12/portrait.png",
+        "animations": "assets/characters/npc/npc12/animations.json",
+        "clips": [
+          "idle",
+          "celebrate",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc12"
+      }
+    ],
+    "effects": [
+      "vfx_candle_blow"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_candle_blow.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/fam05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_family.svg",
+    "voice": "assets/audio/mc_vi/fam05_prompt.ogg",
+    "voiceText": "Gõ Nến hoặc Bánh. Nhìn đúng hình bánh nhé!",
+    "mcScript": "Đặt bánh hình mèo mà giao bánh hình cá. Khách là mèo thì có tính đúng không?"
+  },
+  "FAM06": {
+    "id": "FAM06",
+    "title": "Dọn nhà đón Tết",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "NGHỈ / DỌN + PHỤ A",
+    "moneySummary": "đủ 3 phiếu +75 / thiếu −15",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "NGHỈ 0. DỌN mở 10 giây. Đủ 3 người gõ PHỤ A thì +75. Thiếu người, rơi một hộp và mất 15.",
+    "animation": "clean_house",
+    "modelIds": [
+      "broom",
+      "tet_tree",
+      "tet_lantern"
+    ],
+    "models": [
+      "assets/props/home/broom.glb",
+      "assets/props/family/tet_tree.glb",
+      "assets/props/family/tet_lantern.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC11",
+        "name": "Người thuê phòng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc11/portrait.png",
+        "animations": "assets/characters/npc/npc11/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc11"
+      }
+    ],
+    "effects": [
+      "vfx_step_dust"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_step_dust.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/fam06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_family.svg",
+    "voice": "assets/audio/mc_vi/fam06_prompt.ogg",
+    "voiceText": "Gõ Nghỉ hoặc Dọn. Dọn xong ăn Tết!",
+    "mcScript": "Dọn được một góc rồi. Ba góc còn lại đang họp bàn."
+  },
+  "PET01": {
+    "id": "PET01",
+    "title": "Nhận nuôi chó",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "BỎ / NUÔI",
+    "moneySummary": "NUÔI −35",
+    "condition": "còn lượt sau",
+    "sourceRules": "BỎ giữ ví. NUÔI trả 35, chó theo ghế đến cuối ván. Hẹn PET02 hoặc PET03 đầu lượt sau, hai khả năng ngang nhau theo seed. HUD hiện trước hai mức −25 và +85 ở lượt sau.",
+    "animation": "adopt_dog",
+    "modelIds": [
+      "dog_bowl",
+      "dog_bed",
+      "dog_leash"
+    ],
+    "models": [
+      "assets/props/pets/dog_bowl.glb",
+      "assets/props/pets/dog_bed.glb",
+      "assets/props/pets/dog_leash.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_DOG",
+        "name": "Chó chibi",
+        "style": "beast",
+        "height": 0.52,
+        "portrait": "assets/characters/npc/pet_dog/portrait.png",
+        "animations": "assets/characters/npc/pet_dog/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "sit",
+          "bark",
+          "sick",
+          "roll",
+          "fetch",
+          "sleep"
+        ],
+        "folder": "assets/characters/npc/pet_dog"
+      }
+    ],
+    "effects": [
+      "vfx_paw_print"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_paw_print.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [
+      "PET02",
+      "PET03"
+    ],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/pet01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_pet.svg",
+    "voice": "assets/audio/mc_vi/pet01_prompt.ogg",
+    "voiceText": "Gõ Bỏ hoặc Nuôi. Cất dép cẩn thận nha!",
+    "mcScript": "Ghế {seat} nhận nuôi một bạn chó. Bạn chó nhận nuôi luôn cái dép."
+  },
+  "PET02": {
+    "id": "PET02",
+    "title": "Chó bị ốm",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "−25 (chuỗi −60)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ PET01. Phòng khám thú y trong game thu 25, chó khỏe lại. Chốt tổng chi phí chuỗi là 60 nếu ví đủ trả.",
+    "animation": "care_pet",
+    "modelIds": [
+      "vet_table",
+      "pet_med_bag",
+      "pet_thermometer"
+    ],
+    "models": [
+      "assets/props/pets/vet_table.glb",
+      "assets/props/pets/pet_med_bag.glb",
+      "assets/props/pets/pet_thermometer.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC06",
+        "name": "Bác sĩ thú y",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc06/portrait.png",
+        "animations": "assets/characters/npc/npc06/animations.json",
+        "clips": [
+          "idle",
+          "care_pet",
+          "happy"
+        ],
+        "folder": "assets/characters/npc/npc06"
+      },
+      {
+        "id": "PET_DOG",
+        "name": "Chó chibi",
+        "style": "beast",
+        "height": 0.52,
+        "portrait": "assets/characters/npc/pet_dog/portrait.png",
+        "animations": "assets/characters/npc/pet_dog/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "sit",
+          "bark",
+          "sick",
+          "roll",
+          "fetch",
+          "sleep"
+        ],
+        "folder": "assets/characters/npc/pet_dog"
+      }
+    ],
+    "effects": [
+      "vfx_dog_sick"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_dog_sick.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/pet02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_pet.svg",
+    "voice": "assets/audio/mc_vi/pet02_prompt.ogg",
+    "voiceText": "Đưa chó đi khám nào! Bác sĩ đang đợi.",
+    "mcScript": "Bác sĩ bảo ổn rồi. Bệnh nhân xin thanh toán bằng một cái liếm."
+  },
+  "PET03": {
+    "id": "PET03",
+    "title": "Chó nhặt được ví",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "+85 (chuỗi +50)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ PET01. Chó mang ví về đúng chủ, chủ thưởng +85. Lãi ròng +50 sau phí nhận nuôi.",
+    "animation": "pet_dog",
+    "modelIds": [
+      "lost_wallet",
+      "dog_toy_ball"
+    ],
+    "models": [
+      "assets/props/road/lost_wallet.glb",
+      "assets/props/pets/dog_toy_ball.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_DOG",
+        "name": "Chó chibi",
+        "style": "beast",
+        "height": 0.52,
+        "portrait": "assets/characters/npc/pet_dog/portrait.png",
+        "animations": "assets/characters/npc/pet_dog/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "sit",
+          "bark",
+          "sick",
+          "roll",
+          "fetch",
+          "sleep"
+        ],
+        "folder": "assets/characters/npc/pet_dog"
+      },
+      {
+        "id": "NPC15",
+        "name": "Người chủ ví",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc15/portrait.png",
+        "animations": "assets/characters/npc/npc15/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "thank_you"
+        ],
+        "folder": "assets/characters/npc/npc15"
+      }
+    ],
+    "effects": [
+      "vfx_dog_found_wallet"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_dog_found_wallet.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/pet03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_pet.svg",
+    "voice": "assets/audio/mc_vi/pet03_prompt.ogg",
+    "voiceText": "Chú chó nhặt được ví! Giỏi quá, bạn cún ơi!",
+    "mcScript": "Có người đi làm hai vòng. Chú chó đi dạo một vòng có thưởng."
+  },
+  "PET04": {
+    "id": "PET04",
+    "title": "Thi tài thú cưng",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "NGỒI / LĂN / BẮT",
+    "moneySummary": "đúng +70 / sai 0",
+    "condition": "đã nuôi chó",
+    "sourceRules": "Cần có chó. Ghế chọn NGỒI, LĂN hoặc BẮT theo thẻ mẫu. Đúng +70, còn lại 0. Sai thì chó làm một động tác khác.",
+    "animation": "pet_dog",
+    "modelIds": [
+      "dog_toy_ball",
+      "pet_trophy"
+    ],
+    "models": [
+      "assets/props/pets/dog_toy_ball.glb",
+      "assets/props/pets/pet_trophy.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_DOG",
+        "name": "Chó chibi",
+        "style": "beast",
+        "height": 0.52,
+        "portrait": "assets/characters/npc/pet_dog/portrait.png",
+        "animations": "assets/characters/npc/pet_dog/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "sit",
+          "bark",
+          "sick",
+          "roll",
+          "fetch",
+          "sleep"
+        ],
+        "folder": "assets/characters/npc/pet_dog"
+      }
+    ],
+    "effects": [
+      "vfx_pet_score"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_pet_score.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/pet04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_pet.svg",
+    "voice": "assets/audio/mc_vi/pet04_prompt.ogg",
+    "voiceText": "Gõ Ngồi, Lăn hoặc Bắt. Xem mẫu trước nhé!",
+    "mcScript": "Ghế hô ngồi. Khán giả ngồi hết, riêng thí sinh đang chạy."
+  },
+  "PET05": {
+    "id": "PET05",
+    "title": "Chó giấu dép",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "MUA DÉP / TÌM + TÌM A",
+    "moneySummary": "MUA DÉP −30 / TÌM đủ −10, thiếu −40",
+    "condition": "đã nuôi chó",
+    "sourceRules": "Cần có chó. MUA DÉP mất 30. TÌM mở 10 giây, đủ 3 người gõ TÌM A thì chỉ mất 10 tiền sửa dép, còn lại mất 40.",
+    "animation": "search_map",
+    "modelIds": [
+      "lost_slipper",
+      "dog_bed"
+    ],
+    "models": [
+      "assets/props/pets/lost_slipper.glb",
+      "assets/props/pets/dog_bed.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_DOG",
+        "name": "Chó chibi",
+        "style": "beast",
+        "height": 0.52,
+        "portrait": "assets/characters/npc/pet_dog/portrait.png",
+        "animations": "assets/characters/npc/pet_dog/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "sit",
+          "bark",
+          "sick",
+          "roll",
+          "fetch",
+          "sleep"
+        ],
+        "folder": "assets/characters/npc/pet_dog"
+      }
+    ],
+    "effects": [
+      "vfx_star_hit"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_star_hit.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/pet05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_pet.svg",
+    "voice": "assets/audio/mc_vi/pet05_prompt.ogg",
+    "voiceText": "Gõ Mua dép hoặc Tìm. Thử nhìn dưới gầm ghế.",
+    "mcScript": "Dép ở dưới gầm ghế. Chú chó đang tránh giao tiếp bằng mắt."
+  },
+  "PET06": {
+    "id": "PET06",
+    "title": "Cứu mèo khỏi mái hiên",
+    "group": "Đời sống",
+    "kind": "CHÍNH",
+    "commands": "thang 1 / 2 / 3",
+    "moneySummary": "đúng +55 / sai 0",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Chọn thang 1, 2 hoặc 3 đúng chiều cao theo hình, đúng +55, còn lại 0. Mèo tự nhảy xuống khi hết giờ.",
+    "animation": "lift_box",
+    "modelIds": [
+      "rescue_ladder",
+      "house_awning"
+    ],
+    "models": [
+      "assets/props/pets/rescue_ladder.glb",
+      "assets/props/pets/house_awning.glb"
+    ],
+    "cast": [
+      {
+        "id": "PET_CAT",
+        "name": "Mèo mái hiên",
+        "style": "beast",
+        "height": 0.45,
+        "portrait": "assets/characters/npc/pet_cat/portrait.png",
+        "animations": "assets/characters/npc/pet_cat/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "sit",
+          "jump",
+          "meow"
+        ],
+        "folder": "assets/characters/npc/pet_cat"
+      }
+    ],
+    "effects": [
+      "vfx_cat_jump"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_cat_jump.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/pet06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_pet.svg",
+    "voice": "assets/audio/mc_vi/pet06_prompt.ogg",
+    "voiceText": "Chọn thang một, hai hoặc ba. Mèo đang đợi trên mái!",
+    "mcScript": "Dựng thang mất mười giây. Mèo xuống mất nửa giây và một cái liếc."
+  },
+  "BIZ01": {
+    "id": "BIZ01",
+    "title": "Khởi nghiệp bán xúc xích",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "CA PHỤ / MỞ QUẦY + XÍCH A",
+    "moneySummary": "CA PHỤ +25 / mở −40; +22 mỗi khách (max 6)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "CA PHỤ +25. MỞ QUẦY trả 40. Trong 12 giây, nhận +22 mỗi khách gõ XÍCH A, tối đa 6 khách. Lãi ròng tối đa +92.",
+    "animation": "cook_sausage",
+    "modelIds": [
+      "sausage_stall",
+      "sausage_grill",
+      "sausage_cooked",
+      "menu_sign_blank"
+    ],
+    "models": [
+      "assets/props/street_food/sausage_stall.glb",
+      "assets/props/street_food/sausage_grill.glb",
+      "assets/props/street_food/sausage_cooked.glb",
+      "assets/props/street_food/menu_sign_blank.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC04",
+        "name": "Khách mua hàng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc04/portrait.png",
+        "animations": "assets/characters/npc/npc04/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "happy",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc04"
+      }
+    ],
+    "effects": [
+      "vfx_grill_smoke",
+      "vfx_coin_pop"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_grill_smoke.png",
+      "assets/fx/vfx_coin_pop.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/biz01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_biz.svg",
+    "voice": "assets/audio/mc_vi/biz01_prompt.ogg",
+    "voiceText": "Gõ Ca phụ hoặc Mở quầy. Bếp nóng rồi đó!",
+    "mcScript": "Xúc xích nướng tới đâu thơm tới đó. Sổ kế toán thì hơi khét."
+  },
+  "BIZ02": {
+    "id": "BIZ02",
+    "title": "Shop online bị bom đơn",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "BÁN / LƯƠNG; A / BOM A",
+    "moneySummary": "−80 hàng; +30/đơn xong; −5/đơn trả",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Dùng nguyên kịch bản shop trong mục 4. Ghế chọn BÁN hoặc LƯƠNG. Khán giả gõ A để đặt, BOM A để hủy đơn của mình. Lãi ròng = 30 × giao thành công − 5 × trả − 80.",
+    "animation": "sell",
+    "modelIds": [
+      "shop_base",
+      "order_slot",
+      "package_medium",
+      "return_bin"
+    ],
+    "models": [
+      "assets/props/shop_core/shop_base.glb",
+      "assets/props/shop_core/order_slot.glb",
+      "assets/props/shop_core/package_medium.glb",
+      "assets/props/shop_core/return_bin.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC03",
+        "name": "Shipper áo xanh",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc03/portrait.png",
+        "animations": "assets/characters/npc/npc03/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "ship_order",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc03"
+      }
+    ],
+    "effects": [
+      "vfx_order_in",
+      "vfx_order_bom"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_order_in.png",
+      "assets/fx/vfx_order_bom.png"
+    ],
+    "camera": "SHOP_WIDE",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/biz02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_biz.svg",
+    "voice": "assets/audio/mc_vi/biz02_prompt.ogg",
+    "voiceText": "Gõ Bán hoặc Lương. Shipper để máy nổ nha!",
+    "mcScript": "Shipper ơi, để máy nổ. Bên kia đang gõ BOM."
+  },
+  "BIZ03": {
+    "id": "BIZ03",
+    "title": "Chạy quảng cáo",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "TỰ QUAY / CHẠY ADS + XEM A",
+    "moneySummary": "TỰ QUAY +25 / ADS −45, đủ views +100",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "TỰ QUAY +25. CHẠY ADS trả 45. Đủ 4 người gõ XEM A trong 10 giây, khách mới mang +100, lãi +55. Thiếu lượt xem mất 45.",
+    "animation": "advertise",
+    "modelIds": [
+      "ads_camera",
+      "ads_ring_light",
+      "smartphone_blank"
+    ],
+    "models": [
+      "assets/props/web/ads_camera.glb",
+      "assets/props/web/ads_ring_light.glb",
+      "assets/props/web/smartphone_blank.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC13",
+        "name": "Reviewer đồ ăn",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc13/portrait.png",
+        "animations": "assets/characters/npc/npc13/animations.json",
+        "clips": [
+          "idle",
+          "advertise",
+          "happy"
+        ],
+        "folder": "assets/characters/npc/npc13"
+      }
+    ],
+    "effects": [
+      "vfx_ad_play"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_ad_play.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/biz03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_biz.svg",
+    "voice": "assets/audio/mc_vi/biz03_prompt.ogg",
+    "voiceText": "Gõ Tự quay hoặc Chạy át. Camera sẵn sàng!",
+    "mcScript": "Clip chạy rồi. Ba lượt xem đầu tiên đều là Bé Két."
+  },
+  "BIZ04": {
+    "id": "BIZ04",
+    "title": "Chốt giao gấp",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "GẦN / GẤP + 1/2/3",
+    "moneySummary": "GẦN +35 / GẤP đúng +80",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "GẦN giao đơn gần, +35. GẤP chọn kiện đúng mã 1/2/3 trong 12 giây, đúng +80, còn lại 0.",
+    "animation": "ship_order",
+    "modelIds": [
+      "package_medium",
+      "delivery_label"
+    ],
+    "models": [
+      "assets/props/shop_core/package_medium.glb",
+      "assets/props/shop_core/delivery_label.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC03",
+        "name": "Shipper áo xanh",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc03/portrait.png",
+        "animations": "assets/characters/npc/npc03/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "ship_order",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc03"
+      }
+    ],
+    "effects": [
+      "vfx_delivery_speed"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_delivery_speed.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/biz04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_biz.svg",
+    "voice": "assets/audio/mc_vi/biz04_prompt.ogg",
+    "voiceText": "Gõ Gần hoặc Gấp. Đọc kỹ địa chỉ nha!",
+    "mcScript": "Đơn ghi giao gấp. Shipper hỏi gấp làm đôi được không."
+  },
+  "BIZ05": {
+    "id": "BIZ05",
+    "title": "Thương lượng nhập sỉ",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "lô 1 / 2 / 3",
+    "moneySummary": "đúng +65",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Nhà cung cấp hiện một đơn số lượng. Ghế chọn lô 1, 2 hoặc 3 đúng yêu cầu. Đúng nhận +65 tiền chiết khấu, còn lại 0.",
+    "animation": "sell",
+    "modelIds": [
+      "package_large",
+      "pallet",
+      "stack_boxes"
+    ],
+    "models": [
+      "assets/props/shop_core/package_large.glb",
+      "assets/map/kit/pho_giao_hang/pallet.glb",
+      "assets/map/kit/pho_giao_hang/stack_boxes.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC14",
+        "name": "Nhà cung cấp sỉ",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc14/portrait.png",
+        "animations": "assets/characters/npc/npc14/animations.json",
+        "clips": [
+          "idle",
+          "sell",
+          "ship_order"
+        ],
+        "folder": "assets/characters/npc/npc14"
+      }
+    ],
+    "effects": [
+      "vfx_coin_pop"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_pop.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/biz05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_biz.svg",
+    "voice": "assets/audio/mc_vi/biz05_prompt.ogg",
+    "voiceText": "Chọn lô một, hai hoặc ba. Soi lô hàng cho kỹ!",
+    "mcScript": "Mua sỉ nghe rẻ lắm, tới lúc bê hàng mới biết giá của cái lưng."
+  },
+  "BIZ06": {
+    "id": "BIZ06",
+    "title": "Reviewer ghé quầy",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "TỪ CHỐI / MỜI THỬ + 5 SAO A",
+    "moneySummary": "MỜI THỬ −20 / đủ đánh giá +65",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "TỪ CHỐI giữ ví. MỜI THỬ trả 20. Đủ 3 người gõ 5 SAO A trong 10 giây thì nhận +65 từ khách mới, lãi +45.",
+    "animation": "advertise",
+    "modelIds": [
+      "sausage_stall",
+      "ads_camera",
+      "rating_stand"
+    ],
+    "models": [
+      "assets/props/street_food/sausage_stall.glb",
+      "assets/props/web/ads_camera.glb",
+      "assets/props/web/rating_stand.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC13",
+        "name": "Reviewer đồ ăn",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc13/portrait.png",
+        "animations": "assets/characters/npc/npc13/animations.json",
+        "clips": [
+          "idle",
+          "advertise",
+          "happy"
+        ],
+        "folder": "assets/characters/npc/npc13"
+      }
+    ],
+    "effects": [
+      "vfx_five_star"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_five_star.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/biz06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_biz.svg",
+    "voice": "assets/audio/mc_vi/biz06_prompt.ogg",
+    "voiceText": "Gõ Từ chối hoặc Mời thử. Mời khách chấm sao!",
+    "mcScript": "Reviewer quay cận món ăn. Chủ quầy đứng sau quay cận máy tính tiền."
+  },
+  "WEB01": {
+    "id": "WEB01",
+    "title": "Đầu tư Bánh Coin",
+    "group": "Kinh doanh",
+    "kind": "CHÍNH",
+    "commands": "BỎ / MUA COIN",
+    "moneySummary": "MUA −80",
+    "condition": "còn lượt sau",
+    "sourceRules": "BỎ giữ ví. MUA COIN trả 80. Chốt trước một kết quả theo seed, cơ hội ngang nhau. Lượt sau WEB02 hoặc WEB03, HUD báo trước lãi +60 hoặc lỗ 45.",
+    "animation": "coin_buy",
+    "modelIds": [
+      "coin_banh",
+      "smartphone_blank",
+      "tablet_dashboard"
+    ],
+    "models": [
+      "assets/props/web/coin_banh.glb",
+      "assets/props/web/smartphone_blank.glb",
+      "assets/props/web/tablet_dashboard.glb"
+    ],
+    "cast": [],
+    "effects": [
+      "vfx_coin_pop"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_pop.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [
+      "WEB02",
+      "WEB03"
+    ],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/web01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_web.svg",
+    "voice": "assets/audio/mc_vi/web01_prompt.ogg",
+    "voiceText": "Gõ Bỏ hoặc Mua coin. Đọc kỹ bảng giá nhé!",
+    "mcScript": "Bánh Coin trông như bánh quy. Giá thì nhảy như vừa uống ba ly cà phê."
+  },
+  "WEB02": {
+    "id": "WEB02",
+    "title": "Bánh Coin tăng giá",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "bán +140 (chuỗi +60)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ WEB01. Bán Bánh Coin lấy +140, lãi ròng +60. Biểu đồ đi lên, đồng bánh bật ra khỏi màn hình.",
+    "animation": "coin_win",
+    "modelIds": [
+      "coin_banh",
+      "coin_pile",
+      "tablet_dashboard"
+    ],
+    "models": [
+      "assets/props/web/coin_banh.glb",
+      "assets/props/web/coin_pile.glb",
+      "assets/props/web/tablet_dashboard.glb"
+    ],
+    "cast": [],
+    "effects": [
+      "vfx_coin_up"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_up.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/web02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_web.svg",
+    "voice": "assets/audio/mc_vi/web02_prompt.ogg",
+    "voiceText": "Bánh Coin tăng giá! Biểu đồ nhảy lên rồi!",
+    "mcScript": "Màu xanh rồi. Bán xong nhớ phân biệt tiền lời với tiền ăn bánh."
+  },
+  "WEB03": {
+    "id": "WEB03",
+    "title": "Bánh Coin rơi giá",
+    "group": "Nối tiếp",
+    "kind": "NỐI",
+    "commands": "tự động",
+    "moneySummary": "bán +35 (chuỗi −45)",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Thẻ nối từ WEB01. Bán Bánh Coin lấy +35, lỗ ròng 45. Biểu đồ hạ, hiện cả tiền thu về và số lỗ.",
+    "animation": "coin_lose",
+    "modelIds": [
+      "coin_banh",
+      "tablet_dashboard"
+    ],
+    "models": [
+      "assets/props/web/coin_banh.glb",
+      "assets/props/web/tablet_dashboard.glb"
+    ],
+    "cast": [],
+    "effects": [
+      "vfx_coin_down"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_coin_down.png"
+    ],
+    "camera": "FOLLOWUP_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/web03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_web.svg",
+    "voice": "assets/audio/mc_vi/web03_prompt.ogg",
+    "voiceText": "Bánh Coin rơi giá! Biểu đồ đỏ rồi kìa!",
+    "mcScript": "Giá vừa về thăm đáy. Bé Két tắt nhạc chiến thắng nha."
+  },
+  "WEB04": {
+    "id": "WEB04",
+    "title": "Inbox lừa trúng thưởng",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "KIỂM TRA / NHẬN NGAY",
+    "moneySummary": "KIỂM TRA +20 / NHẬN NGAY −65",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "KIỂM TRA +20 tiền thưởng phát hiện tin giả. NHẬN NGAY dính bẫy và mất 65. Màn hình chỉ hiện nội dung mô phỏng.",
+    "animation": "phone_read",
+    "modelIds": [
+      "smartphone_blank",
+      "fake_prize_box"
+    ],
+    "models": [
+      "assets/props/web/smartphone_blank.glb",
+      "assets/props/web/fake_prize_box.glb"
+    ],
+    "cast": [],
+    "effects": [
+      "vfx_scam_warning"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_scam_warning.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/web04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_web.svg",
+    "voice": "assets/audio/mc_vi/web04_prompt.ogg",
+    "voiceText": "Gõ Kiểm tra hoặc Nhận ngay. Khoan bấm nhận quà!",
+    "mcScript": "Bạn trúng một chiếc xe. Người gửi đang xin phí giao… bằng xe khác."
+  },
+  "WEB05": {
+    "id": "WEB05",
+    "title": "Shipper giả đòi mã",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "XÁC MINH / GỬI MÃ",
+    "moneySummary": "XÁC MINH +15 / GỬI MÃ −50",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "XÁC MINH +15. GỬI MÃ làm lộ mã giả lập và mất 50. Thẻ diễn một giao dịch hư cấu, MC đọc kết quả sau khi chốt.",
+    "animation": "phone_tap",
+    "modelIds": [
+      "smartphone_blank",
+      "otp_card_blank"
+    ],
+    "models": [
+      "assets/props/web/smartphone_blank.glb",
+      "assets/props/web/otp_card_blank.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC03",
+        "name": "Shipper áo xanh",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc03/portrait.png",
+        "animations": "assets/characters/npc/npc03/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "ship_order",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc03"
+      }
+    ],
+    "effects": [
+      "vfx_otp_warning"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_otp_warning.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/web05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_web.svg",
+    "voice": "assets/audio/mc_vi/web05_prompt.ogg",
+    "voiceText": "Gõ Xác minh hoặc Gửi mã. Bảo mật mã của mình nhé!",
+    "mcScript": "Shipper này biết tên bạn, biết số nhà, quên mất mình giao món gì."
+  },
+  "WEB06": {
+    "id": "WEB06",
+    "title": "App tính tiền hai lần",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "chọn dòng 1 / 2 / 3",
+    "moneySummary": "đúng +65",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Hiện ba dòng giao dịch, ghế chọn 1, 2 hoặc 3 là dòng bị tính lặp. Đúng được hoàn +65, còn lại 0.",
+    "animation": "phone_read",
+    "modelIds": [
+      "payment_receipt",
+      "smartphone_blank"
+    ],
+    "models": [
+      "assets/props/web/payment_receipt.glb",
+      "assets/props/web/smartphone_blank.glb"
+    ],
+    "cast": [],
+    "effects": [
+      "vfx_refund"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_refund.png"
+    ],
+    "camera": "EVENT_CLOSE",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/web06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_web.svg",
+    "voice": "assets/audio/mc_vi/web06_prompt.ogg",
+    "voiceText": "Chọn dòng một, hai hoặc ba. Nhìn kỹ hóa đơn!",
+    "mcScript": "Bạn uống một ly. Hệ thống tưởng bạn dẫn theo bạn thân."
+  },
+  "ROAD01": {
+    "id": "ROAD01",
+    "title": "Vượt đèn đỏ bị công an bắt",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "DỪNG / VƯỢT",
+    "moneySummary": "DỪNG 0 / VƯỢT −60 tối đa",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "DỪNG chờ đèn xanh và giữ MONEY. VƯỢT phát cảnh tăng tốc, còi, công an chặn xe và trừ tối đa 60. Giữ vị trí ô đã dừng.",
+    "animation": "police_stop",
+    "modelIds": [
+      "traffic_light",
+      "toy_scooter",
+      "ticket_paper"
+    ],
+    "models": [
+      "assets/props/road/traffic_light.glb",
+      "assets/props/road/toy_scooter.glb",
+      "assets/props/road/ticket_paper.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC02",
+        "name": "Công an giao thông",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc02/portrait.png",
+        "animations": "assets/characters/npc/npc02/animations.json",
+        "clips": [
+          "idle",
+          "police_stop",
+          "wave"
+        ],
+        "folder": "assets/characters/npc/npc02"
+      }
+    ],
+    "effects": [
+      "vfx_police_siren",
+      "vfx_ticket_float"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_police_siren.png",
+      "assets/fx/vfx_ticket_float.png"
+    ],
+    "camera": "ROAD_EVENT",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/road01.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_road.svg",
+    "voice": "assets/audio/mc_vi/road01_prompt.ogg",
+    "voiceText": "Gõ Dừng hoặc Vượt. Đèn đỏ kìa!",
+    "mcScript": "Camera phố gửi lời chào. Anh công an gửi thêm một tờ biên bản."
+  },
+  "ROAD02": {
+    "id": "ROAD02",
+    "title": "Xe chết máy",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "THỢ / DẮT + ĐẨY XE A",
+    "moneySummary": "THỢ −45 / DẮT đủ −10, thiếu −55",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "THỢ mất 45. DẮT mở cửa ĐẨY XE A 10 giây, đủ 3 người thì mất 10, còn lại mất 55. Cảnh chốt xe nổ máy.",
+    "animation": "repair_vehicle",
+    "modelIds": [
+      "toy_scooter",
+      "repair_wrench"
+    ],
+    "models": [
+      "assets/props/road/toy_scooter.glb",
+      "assets/props/road/repair_wrench.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC05",
+        "name": "Thợ sửa xe",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc05/portrait.png",
+        "animations": "assets/characters/npc/npc05/animations.json",
+        "clips": [
+          "idle",
+          "repair_vehicle",
+          "happy"
+        ],
+        "folder": "assets/characters/npc/npc05"
+      }
+    ],
+    "effects": [
+      "vfx_vehicle_smoke",
+      "vfx_vehicle_start"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_vehicle_smoke.png",
+      "assets/fx/vfx_vehicle_start.png"
+    ],
+    "camera": "ROAD_EVENT",
+    "followup": [],
+    "stage": "MVP",
+    "card": "assets/ui/events/cards/road02.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_road.svg",
+    "voice": "assets/audio/mc_vi/road02_prompt.ogg",
+    "voiceText": "Gõ Thợ hoặc Dắt. Đứng yên giữa phố rồi!",
+    "mcScript": "Xe tắt máy đúng đoạn đông nhất. Bây giờ cả phố làm động cơ."
+  },
+  "ROAD03": {
+    "id": "ROAD03",
+    "title": "Giao hàng gặp mưa",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "ÁO MƯA / TÌM MÁI + CHE MƯA A",
+    "moneySummary": "ÁO MƯA −25 / TÌM MÁI đủ 0 thiếu −50",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "ÁO MƯA mất 25. TÌM MÁI mở 10 giây, đủ 3 người gõ CHE MƯA A thì 0, còn lại mất 50 vì thùng ướt.",
+    "animation": "rain_walk",
+    "modelIds": [
+      "umbrella",
+      "street_box_wet",
+      "package_medium"
+    ],
+    "models": [
+      "assets/props/road/umbrella.glb",
+      "assets/props/road/street_box_wet.glb",
+      "assets/props/shop_core/package_medium.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC03",
+        "name": "Shipper áo xanh",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc03/portrait.png",
+        "animations": "assets/characters/npc/npc03/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "ship_order",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc03"
+      }
+    ],
+    "effects": [
+      "vfx_rain_loop",
+      "vfx_splash"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_rain_loop.png",
+      "assets/fx/vfx_splash.png"
+    ],
+    "camera": "ROAD_EVENT",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/road03.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_road.svg",
+    "voice": "assets/audio/mc_vi/road03_prompt.ogg",
+    "voiceText": "Gõ Áo mưa hoặc Tìm mái. Mưa tới rồi!",
+    "mcScript": "Mưa bắt đầu đúng lúc app bảo còn hai phút tới nơi."
+  },
+  "ROAD04": {
+    "id": "ROAD04",
+    "title": "Rẽ nhầm vào hẻm",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "lối 1 / 2 / 3",
+    "moneySummary": "đúng +60 / sai 0",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "Ghế chọn lối 1, 2 hoặc 3 theo bản đồ nhỏ. Đúng +60 vì giao kịp, còn lại 0. Lối chọn chỉ đổi cảnh sự kiện.",
+    "animation": "search_map",
+    "modelIds": [
+      "road_map_folded",
+      "traffic_sign"
+    ],
+    "models": [
+      "assets/props/road/road_map_folded.glb",
+      "assets/props/road/traffic_sign.glb"
+    ],
+    "cast": [],
+    "effects": [
+      "vfx_map_route"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_map_route.png"
+    ],
+    "camera": "ROAD_EVENT",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/road04.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_road.svg",
+    "voice": "assets/audio/mc_vi/road04_prompt.ogg",
+    "voiceText": "Chọn lối một, hai hoặc ba. Xem bảng chỉ đường nha!",
+    "mcScript": "Bản đồ bảo đi thẳng. Trước mặt là cái tường đang rất thẳng."
+  },
+  "ROAD05": {
+    "id": "ROAD05",
+    "title": "Nhặt ví ngoài đường",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "TRẢ / GIỮ",
+    "moneySummary": "TRẢ +40 / GIỮ 0",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "TRẢ nhận +40 từ chủ ví. GIỮ mở gag chủ ví quay lại nhận, ghế nhận 0. Cả hai chốt nhanh trong một cảnh.",
+    "animation": "happy",
+    "modelIds": [
+      "lost_wallet"
+    ],
+    "models": [
+      "assets/props/road/lost_wallet.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC15",
+        "name": "Người chủ ví",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc15/portrait.png",
+        "animations": "assets/characters/npc/npc15/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "thank_you"
+        ],
+        "folder": "assets/characters/npc/npc15"
+      }
+    ],
+    "effects": [
+      "vfx_found_wallet"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_found_wallet.png"
+    ],
+    "camera": "ROAD_EVENT",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/road05.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_road.svg",
+    "voice": "assets/audio/mc_vi/road05_prompt.ogg",
+    "voiceText": "Gõ Trả hoặc Giữ. Có người đang tìm ví đó.",
+    "mcScript": "Ví trông dày. Bên trong toàn thẻ tích điểm mua trà sữa."
+  },
+  "ROAD06": {
+    "id": "ROAD06",
+    "title": "Hội chợ chắn lối",
+    "group": "Sự cố",
+    "kind": "CHÍNH",
+    "commands": "ĐI VÒNG / PHỤ DỌN + NHẤC A",
+    "moneySummary": "ĐI VÒNG +15 / PHỤ DỌN đủ +75",
+    "condition": "luật lọc thẻ theo loại ô / trạng thái",
+    "sourceRules": "ĐI VÒNG nhận +15 voucher. PHỤ DỌN mở 10 giây, đủ 3 người gõ NHẤC A thì +75, còn lại 0.",
+    "animation": "lift_box",
+    "modelIds": [
+      "festival_stall",
+      "road_barrier",
+      "package_large"
+    ],
+    "models": [
+      "assets/props/road/festival_stall.glb",
+      "assets/props/road/road_barrier.glb",
+      "assets/props/shop_core/package_large.glb"
+    ],
+    "cast": [
+      {
+        "id": "NPC04",
+        "name": "Khách mua hàng",
+        "style": "npc",
+        "height": 1.15,
+        "portrait": "assets/characters/npc/npc04/portrait.png",
+        "animations": "assets/characters/npc/npc04/animations.json",
+        "clips": [
+          "idle",
+          "walk",
+          "happy",
+          "sad"
+        ],
+        "folder": "assets/characters/npc/npc04"
+      }
+    ],
+    "effects": [
+      "vfx_carnival"
+    ],
+    "effectPaths": [
+      "assets/fx/vfx_carnival.png"
+    ],
+    "camera": "ROAD_EVENT",
+    "followup": [],
+    "stage": "GIAI ĐOẠN 2",
+    "card": "assets/ui/events/cards/road06.svg",
+    "cardDimensions": [
+      540,
+      326
+    ],
+    "titleBox": [
+      105,
+      24,
+      375,
+      54
+    ],
+    "bodyBox": [
+      34,
+      119,
+      472,
+      171
+    ],
+    "themeTemplate": "assets/ui/events/event_card_road.svg",
+    "voice": "assets/audio/mc_vi/road06_prompt.ogg",
+    "voiceText": "Gõ Đi vòng hoặc Phụ dọn. Đường hơi đông nha!",
+    "mcScript": "Ai nhấc giúp cái bàn? Bé Két nhấc tinh thần trước rồi."
+  }
+}

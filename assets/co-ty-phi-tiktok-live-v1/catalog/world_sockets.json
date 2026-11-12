@@ -1,0 +1,206 @@
+{
+  "PLAYER_ROOT": {
+    "offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sprite": "128,218",
+    "animation": "all",
+    "purpose": "Tile center + slot offset",
+    "space": "100% game world",
+    "notes": "Giữ token root đứng y=0"
+  },
+  "SHADOW": {
+    "offset": [
+      0.0,
+      0.01,
+      0.0
+    ],
+    "sprite": "128,218",
+    "animation": "all",
+    "purpose": "Ellipse 3D κάτω chân, không bake",
+    "space": "world",
+    "notes": "scale (0.58,0.01,0.32)"
+  },
+  "HEAD_BADGE": {
+    "offset": [
+      0.0,
+      1.35,
+      0.0
+    ],
+    "sprite": "128,22",
+    "animation": "all",
+    "purpose": "Billboard tên/avatar đứng trên đầu",
+    "space": "HUD anchor",
+    "notes": "tùy chiều cao tóc +0.08"
+  },
+  "HAND_RIGHT": {
+    "offset": [
+      0.24,
+      0.67,
+      0.06
+    ],
+    "sprite": "165,145",
+    "animation": "S",
+    "purpose": "Đồ vật tương tác 3D",
+    "space": "3D socket",
+    "notes": "driven by 05_ANIM_COORDS RH every frame"
+  },
+  "HAND_LEFT": {
+    "offset": [
+      -0.24,
+      0.67,
+      0.06
+    ],
+    "sprite": "91,145",
+    "animation": "S",
+    "purpose": "Đồ vật tương tác 3D",
+    "space": "3D socket",
+    "notes": "driven by 05_ANIM_COORDS LH every frame"
+  },
+  "FRONT_CENTER": {
+    "offset": [
+      0.0,
+      0.6,
+      0.2
+    ],
+    "sprite": "128,156",
+    "animation": "S",
+    "purpose": "Hộp bế, bé, hộp giao hàng",
+    "space": "3D socket",
+    "notes": "2 tay hỗ trợ HOLD"
+  },
+  "DICE_THROW": {
+    "offset": [
+      0.27,
+      0.7,
+      0.13
+    ],
+    "sprite": "RH at f8",
+    "animation": "roll_dice",
+    "purpose": "Spawn dice world at animation frame 8",
+    "space": "event hook",
+    "notes": "velocity by physics/game logic"
+  },
+  "SHOP_ITEM": {
+    "offset": [
+      0.28,
+      0.72,
+      0.26
+    ],
+    "sprite": "RH around f6",
+    "animation": "sell",
+    "purpose": "Prop 3D xuất hiện từ tray vào tay",
+    "space": "event hook",
+    "notes": "despawn when delivered"
+  },
+  "KEY_TIP": {
+    "offset": [
+      0.31,
+      0.68,
+      0.25
+    ],
+    "sprite": "RH around f7",
+    "animation": "unlock_house",
+    "purpose": "Chìa tới ổ khóa; set target door offset",
+    "space": "event hook",
+    "notes": "snap to door node if near"
+  },
+  "WRENCH": {
+    "offset": [
+      0.25,
+      0.69,
+      0.1
+    ],
+    "sprite": "RH",
+    "animation": "repair_pipe,repair_vehicle",
+    "purpose": "Tool node theo tay player",
+    "space": "event hook",
+    "notes": "align rotation Y to actor yaw"
+  },
+  "UMB_HANDLE": {
+    "offset": [
+      0.25,
+      0.82,
+      0.08
+    ],
+    "sprite": "RH",
+    "animation": "rain_walk",
+    "purpose": "Cán ô 3D lên tay",
+    "space": "event hook",
+    "notes": "ô không che UI"
+  },
+  "BABY_OVERLAY": {
+    "offset": [
+      0.0,
+      0.58,
+      0.23
+    ],
+    "sprite": "128,146",
+    "animation": "hold_baby",
+    "purpose": "Em bé là 2D overlay, không mesh 3D",
+    "space": "2D child sprite",
+    "notes": "scale ~0.28wu"
+  },
+  "DOG_FOLLOW": {
+    "offset": [
+      -0.55,
+      0.0,
+      0.4
+    ],
+    "sprite": "128,218",
+    "animation": "PET01 onward",
+    "purpose": "Dog sprite 2D cách token ~0.55wu",
+    "space": "world follow",
+    "notes": "Lerp theo player movement; tránh occlusion"
+  },
+  "POLICE_STOP": {
+    "offset": [
+      0.75,
+      0.0,
+      0.35
+    ],
+    "sprite": "independent",
+    "animation": "ROAD01",
+    "purpose": "NPC công an đứng cạnh xe 3D",
+    "space": "world static",
+    "notes": "không dịch chuyển token logic"
+  },
+  "SHOP_PLACE": {
+    "offset": [
+      0.95,
+      0.0,
+      0.3
+    ],
+    "sprite": "independent",
+    "animation": "BIZ01/BIZ02",
+    "purpose": "Quầy 3D xuất hiện kế token, không che chân",
+    "space": "world static",
+    "notes": "quầy = 1.65wu, không nằm trên tile trung tâm"
+  },
+  "FOAM_IMPACT": {
+    "offset": [
+      0.0,
+      1.1,
+      0.0
+    ],
+    "sprite": "128,56",
+    "animation": "hit",
+    "purpose": "FX bom xốp xuất hiện trên đầu",
+    "space": "world FX",
+    "notes": "trigger f4"
+  },
+  "PODIUM_WIN": {
+    "offset": [
+      0.0,
+      1.1,
+      0.0
+    ],
+    "sprite": "128,218",
+    "animation": "celebrate",
+    "purpose": "Player đứng trên bục ở chân thế giới mới",
+    "space": "scene transform",
+    "notes": "tạm khác board scene; giữ sprite scale"
+  }
+}

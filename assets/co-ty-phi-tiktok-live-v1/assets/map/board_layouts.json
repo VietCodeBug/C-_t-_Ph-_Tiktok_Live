@@ -1,0 +1,1220 @@
+{
+  "CHO_VIA_HE": {
+    "name": "Chợ Vỉa Hè",
+    "asset": "assets/map/layouts/cho_via_he.glb",
+    "triangles": 70248,
+    "nodes": {
+      "C00": {
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "next": [
+          "C01"
+        ],
+        "station": true,
+        "fork": false,
+        "defaultType": "GA",
+        "previewAsset": "assets/map/kit/core_tile/tile_station.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C01": {
+        "position": [
+          2.0,
+          0.0,
+          0.0
+        ],
+        "next": [
+          "C02"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_money.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C02": {
+        "position": [
+          4.0,
+          0.0,
+          0.0
+        ],
+        "next": [
+          "F01_L1",
+          "F01_R1"
+        ],
+        "station": false,
+        "fork": true,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C03": {
+        "position": [
+          10.0,
+          0.0,
+          0.0
+        ],
+        "next": [
+          "C04"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C04": {
+        "position": [
+          12.0,
+          0.0,
+          0.0
+        ],
+        "next": [
+          "C05"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_business.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C05": {
+        "position": [
+          14.0,
+          0.0,
+          0.0
+        ],
+        "next": [
+          "C06"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_mishap.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C06": {
+        "position": [
+          14.0,
+          0.0,
+          2.0
+        ],
+        "next": [
+          "C07"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_rest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C07": {
+        "position": [
+          14.0,
+          0.0,
+          4.0
+        ],
+        "next": [
+          "C08"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_business.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C08": {
+        "position": [
+          14.0,
+          0.0,
+          6.0
+        ],
+        "next": [
+          "C09"
+        ],
+        "station": true,
+        "fork": false,
+        "defaultType": "GA",
+        "previewAsset": "assets/map/kit/core_tile/tile_station.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C09": {
+        "position": [
+          12.0,
+          0.0,
+          6.0
+        ],
+        "next": [
+          "C10"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_invest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C10": {
+        "position": [
+          10.0,
+          0.0,
+          6.0
+        ],
+        "next": [
+          "F02_L1",
+          "F02_R1"
+        ],
+        "station": false,
+        "fork": true,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C11": {
+        "position": [
+          4.0,
+          0.0,
+          6.0
+        ],
+        "next": [
+          "C12"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_mishap.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C12": {
+        "position": [
+          2.0,
+          0.0,
+          6.0
+        ],
+        "next": [
+          "C13"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C13": {
+        "position": [
+          0.0,
+          0.0,
+          6.0
+        ],
+        "next": [
+          "C14"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_rest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C14": {
+        "position": [
+          0.0,
+          0.0,
+          4.0
+        ],
+        "next": [
+          "C15"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_money.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C15": {
+        "position": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "next": [
+          "C00"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_L1": {
+        "position": [
+          6.0,
+          0.0,
+          -1.5
+        ],
+        "next": [
+          "F01_L2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_invest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_L2": {
+        "position": [
+          8.0,
+          0.0,
+          -1.5
+        ],
+        "next": [
+          "C03"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_business.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_R1": {
+        "position": [
+          6.0,
+          0.0,
+          1.5
+        ],
+        "next": [
+          "F01_R2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_mishap.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_R2": {
+        "position": [
+          8.0,
+          0.0,
+          1.5
+        ],
+        "next": [
+          "C03"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_L1": {
+        "position": [
+          8.0,
+          0.0,
+          4.5
+        ],
+        "next": [
+          "F02_L2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_rest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_L2": {
+        "position": [
+          6.0,
+          0.0,
+          4.5
+        ],
+        "next": [
+          "C11"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_R1": {
+        "position": [
+          8.0,
+          0.0,
+          7.5
+        ],
+        "next": [
+          "F02_R2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_money.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_R2": {
+        "position": [
+          6.0,
+          0.0,
+          7.5
+        ],
+        "next": [
+          "C11"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      }
+    }
+  },
+  "PHO_GIAO_HANG": {
+    "name": "Phố Giao Hàng",
+    "asset": "assets/map/layouts/pho_giao_hang.glb",
+    "triangles": 44724,
+    "nodes": {
+      "C00": {
+        "position": [
+          -3.36,
+          0.0,
+          7.0
+        ],
+        "next": [
+          "C01"
+        ],
+        "station": true,
+        "fork": false,
+        "defaultType": "GA",
+        "previewAsset": "assets/map/kit/core_tile/tile_station.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C01": {
+        "position": [
+          -3.36,
+          0.0,
+          5.0
+        ],
+        "next": [
+          "C02"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_money.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C02": {
+        "position": [
+          -3.36,
+          0.0,
+          3.0
+        ],
+        "next": [
+          "F01_L1",
+          "F01_R1"
+        ],
+        "station": false,
+        "fork": true,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C03": {
+        "position": [
+          -3.36,
+          0.0,
+          -3.0
+        ],
+        "next": [
+          "C04"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C04": {
+        "position": [
+          -3.36,
+          0.0,
+          -5.0
+        ],
+        "next": [
+          "C05"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_business.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C05": {
+        "position": [
+          -3.36,
+          0.0,
+          -7.0
+        ],
+        "next": [
+          "C06"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_mishap.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C06": {
+        "position": [
+          -1.12,
+          0.0,
+          -7.0
+        ],
+        "next": [
+          "C07"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_rest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C07": {
+        "position": [
+          1.12,
+          0.0,
+          -7.0
+        ],
+        "next": [
+          "C08"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_business.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C08": {
+        "position": [
+          3.36,
+          0.0,
+          -7.0
+        ],
+        "next": [
+          "C09"
+        ],
+        "station": true,
+        "fork": false,
+        "defaultType": "GA",
+        "previewAsset": "assets/map/kit/core_tile/tile_station.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C09": {
+        "position": [
+          3.36,
+          0.0,
+          -5.0
+        ],
+        "next": [
+          "C10"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_invest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C10": {
+        "position": [
+          3.36,
+          0.0,
+          -3.0
+        ],
+        "next": [
+          "F02_L1",
+          "F02_R1"
+        ],
+        "station": false,
+        "fork": true,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C11": {
+        "position": [
+          3.36,
+          0.0,
+          3.0
+        ],
+        "next": [
+          "C12"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_mishap.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C12": {
+        "position": [
+          3.36,
+          0.0,
+          5.0
+        ],
+        "next": [
+          "C13"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C13": {
+        "position": [
+          3.36,
+          0.0,
+          7.0
+        ],
+        "next": [
+          "C14"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_rest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C14": {
+        "position": [
+          1.12,
+          0.0,
+          7.0
+        ],
+        "next": [
+          "C15"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_money.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "C15": {
+        "position": [
+          -1.12,
+          0.0,
+          7.0
+        ],
+        "next": [
+          "C00"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_L1": {
+        "position": [
+          -5.04,
+          0.0,
+          1.0
+        ],
+        "next": [
+          "F01_L2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_invest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_L2": {
+        "position": [
+          -5.04,
+          0.0,
+          -1.0
+        ],
+        "next": [
+          "C03"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_business.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_R1": {
+        "position": [
+          -1.68,
+          0.0,
+          1.0
+        ],
+        "next": [
+          "F01_R2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_mishap.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F01_R2": {
+        "position": [
+          -1.68,
+          0.0,
+          -1.0
+        ],
+        "next": [
+          "C03"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_L1": {
+        "position": [
+          1.68,
+          0.0,
+          -1.0
+        ],
+        "next": [
+          "F02_L2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_rest.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_L2": {
+        "position": [
+          1.68,
+          0.0,
+          1.0
+        ],
+        "next": [
+          "C11"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_life.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_R1": {
+        "position": [
+          5.04,
+          0.0,
+          -1.0
+        ],
+        "next": [
+          "F02_R2"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_money.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      },
+      "F02_R2": {
+        "position": [
+          5.04,
+          0.0,
+          1.0
+        ],
+        "next": [
+          "C11"
+        ],
+        "station": false,
+        "fork": false,
+        "defaultType": "BRANCH_DYNAMIC",
+        "previewAsset": "assets/map/kit/core_tile/tile_minigame.glb",
+        "nodeWidth": 2,
+        "slotOffset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cameraLookOffset": [
+          0.0,
+          1.5,
+          0.0
+        ]
+      }
+    }
+  }
+}

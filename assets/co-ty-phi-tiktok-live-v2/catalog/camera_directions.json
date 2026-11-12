@@ -1,0 +1,102 @@
+{
+  "atlasRows": [
+    {
+      "id": "S",
+      "row": 0,
+      "facing": "front, looks toward camera"
+    },
+    {
+      "id": "SE",
+      "row": 1,
+      "facing": "front-right three-quarter"
+    },
+    {
+      "id": "E",
+      "row": 2,
+      "facing": "right side profile"
+    },
+    {
+      "id": "NE",
+      "row": 3,
+      "facing": "rear-right three-quarter"
+    },
+    {
+      "id": "N",
+      "row": 4,
+      "facing": "back, faces away from camera"
+    }
+  ],
+  "mirrorRows": {
+    "SW": "SE",
+    "W": "E",
+    "NW": "NE"
+  },
+  "screenRelativeSectors": [
+    {
+      "degreesClockwiseFromDown": 0,
+      "id": "S",
+      "sourceRow": 0,
+      "mirrorX": false
+    },
+    {
+      "degreesClockwiseFromDown": 45,
+      "id": "SE",
+      "sourceRow": 1,
+      "mirrorX": false
+    },
+    {
+      "degreesClockwiseFromDown": 90,
+      "id": "E",
+      "sourceRow": 2,
+      "mirrorX": false
+    },
+    {
+      "degreesClockwiseFromDown": 135,
+      "id": "NE",
+      "sourceRow": 3,
+      "mirrorX": false
+    },
+    {
+      "degreesClockwiseFromDown": 180,
+      "id": "N",
+      "sourceRow": 4,
+      "mirrorX": false
+    },
+    {
+      "degreesClockwiseFromDown": 225,
+      "id": "NW",
+      "sourceRow": 3,
+      "mirrorX": true
+    },
+    {
+      "degreesClockwiseFromDown": 270,
+      "id": "W",
+      "sourceRow": 2,
+      "mirrorX": true
+    },
+    {
+      "degreesClockwiseFromDown": 315,
+      "id": "SW",
+      "sourceRow": 1,
+      "mirrorX": true
+    }
+  ],
+  "projection": {
+    "movement": "Normalize horizontal XZ world movement.",
+    "right": "Camera local +X projected to XZ and normalized.",
+    "down": "Camera look direction negated, projected to XZ and normalized. If the view is exactly top-down, use camera local -Y projected to XZ.",
+    "heading": "sx = dot(movement, right); sd = dot(movement, down); heading = degrees(atan2(sx, sd)). Choose the nearest 45 degree sector modulo 360.",
+    "idle": "Retain the last nonzero direction. Use S if there has been no movement."
+  },
+  "cell": [
+    256,
+    256
+  ],
+  "pivotPx": [
+    128,
+    218
+  ],
+  "coordinateOrigin": "top-left",
+  "frontWalkClip": "walk",
+  "positionMotion": "Game controls world movement along the board; sprites animate in place."
+}

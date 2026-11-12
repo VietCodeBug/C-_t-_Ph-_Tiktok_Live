@@ -1,0 +1,58 @@
+{
+  "MINI01": {
+    "name": "Đóng Gói Thần Tốc",
+    "example": "HỘP BĂNG TEM / biến thể",
+    "animation": "pack_box",
+    "models": [
+      "assets/props/minigames/packing_table.glb",
+      "assets/props/minigames/item_box.glb",
+      "assets/props/minigames/item_tape.glb",
+      "assets/props/minigames/item_stamp.glb"
+    ],
+    "graphics": [
+      "assets/ui/mini/mini_pack_icons.svg",
+      "assets/fx/vfx_pack_correct.png",
+      "assets/fx/vfx_pack_wrong.png"
+    ],
+    "command": "GÓI A",
+    "window": "2 lần thử / 12s",
+    "result": "đúng +70, đủ 3 giúp +20",
+    "stage": "MVP"
+  },
+  "MINI02": {
+    "name": "Trà Sữa Đúng Đơn",
+    "example": "Đơn ít đá + topping",
+    "animation": "serve_drink",
+    "models": [
+      "assets/props/street_food/milk_tea_counter.glb",
+      "assets/props/street_food/milk_tea_cup_1.glb",
+      "assets/props/street_food/milk_tea_cup_2.glb",
+      "assets/props/street_food/milk_tea_cup_3.glb"
+    ],
+    "graphics": [
+      "assets/ui/mini/mini_milk_cups.svg",
+      "assets/fx/vfx_milk_tea_correct.png"
+    ],
+    "command": "khán giả chọn 1/2/3",
+    "window": "12s",
+    "result": "đúng +65",
+    "stage": "MVP"
+  },
+  "MINI03": {
+    "name": "Ráp Hóa Đơn",
+    "example": "2 món + 3 đáp án",
+    "animation": "point_question",
+    "models": [
+      "assets/props/minigames/receipt_board.glb",
+      "assets/props/shop_core/cash_register.glb"
+    ],
+    "graphics": [
+      "assets/ui/mini/mini_invoice_sum.svg",
+      "assets/fx/vfx_invoice_sum.png"
+    ],
+    "command": "NHẮC A",
+    "window": "12s",
+    "result": "đúng +55",
+    "stage": "GIAI ĐOẠN 2"
+  }
+}

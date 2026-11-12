@@ -1,0 +1,557 @@
+{
+  "tile_straight": {
+    "asset": "assets/map/kit/core_tile/tile_straight.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.12,
+      2
+    ],
+    "center": [
+      0,
+      0.06,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_corner": {
+    "asset": "assets/map/kit/core_tile/tile_corner.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.12,
+      2
+    ],
+    "center": [
+      0,
+      0.06,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_fork": {
+    "asset": "assets/map/kit/core_tile/tile_fork.glb",
+    "shape": "box",
+    "dimensions": [
+      4,
+      0.12,
+      4
+    ],
+    "center": [
+      0,
+      0.06,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_merge": {
+    "asset": "assets/map/kit/core_tile/tile_merge.glb",
+    "shape": "box",
+    "dimensions": [
+      3,
+      0.12,
+      3
+    ],
+    "center": [
+      0,
+      0.06,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_crosswalk": {
+    "asset": "assets/map/kit/core_tile/tile_crosswalk.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.15,
+      2
+    ],
+    "center": [
+      0,
+      0.075,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_station": {
+    "asset": "assets/map/kit/core_tile/tile_station.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.16,
+      2
+    ],
+    "center": [
+      0,
+      0.08,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_money": {
+    "asset": "assets/map/kit/core_tile/tile_money.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_rest": {
+    "asset": "assets/map/kit/core_tile/tile_rest.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_business": {
+    "asset": "assets/map/kit/core_tile/tile_business.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_invest": {
+    "asset": "assets/map/kit/core_tile/tile_invest.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_mishap": {
+    "asset": "assets/map/kit/core_tile/tile_mishap.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_minigame": {
+    "asset": "assets/map/kit/core_tile/tile_minigame.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_life": {
+    "asset": "assets/map/kit/core_tile/tile_life.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.14,
+      2
+    ],
+    "center": [
+      0,
+      0.07,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_select_glow": {
+    "asset": "assets/map/kit/core_tile/tile_select_glow.glb",
+    "shape": "box",
+    "dimensions": [
+      2,
+      0.02,
+      2
+    ],
+    "center": [
+      0,
+      0.01,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_foot_mark": {
+    "asset": "assets/map/kit/core_tile/tile_foot_mark.glb",
+    "shape": "box",
+    "dimensions": [
+      0.3,
+      0.03,
+      0.45
+    ],
+    "center": [
+      0,
+      0.015,
+      0
+    ],
+    "unit": "world"
+  },
+  "tile_type_badge": {
+    "asset": "assets/map/kit/common_env/tile_type_badge.glb",
+    "shape": "box",
+    "dimensions": [
+      0.7,
+      0.2,
+      0.2
+    ],
+    "center": [
+      0,
+      0.1,
+      0
+    ],
+    "unit": "world"
+  },
+  "traffic_light": {
+    "asset": "assets/props/road/traffic_light.glb",
+    "shape": "box",
+    "dimensions": [
+      0.33,
+      1.9,
+      0.33
+    ],
+    "center": [
+      0,
+      0.95,
+      0
+    ],
+    "unit": "world"
+  },
+  "traffic_sign": {
+    "asset": "assets/props/road/traffic_sign.glb",
+    "shape": "box",
+    "dimensions": [
+      0.6,
+      1.35,
+      0.15
+    ],
+    "center": [
+      0,
+      0.675,
+      0
+    ],
+    "unit": "world"
+  },
+  "police_whistle": {
+    "asset": "assets/props/road/police_whistle.glb",
+    "shape": "box",
+    "dimensions": [
+      0.15,
+      0.12,
+      0.09
+    ],
+    "center": [
+      0,
+      0.06,
+      0
+    ],
+    "unit": "world"
+  },
+  "ticket_paper": {
+    "asset": "assets/props/road/ticket_paper.glb",
+    "shape": "box",
+    "dimensions": [
+      0.4,
+      0.02,
+      0.5
+    ],
+    "center": [
+      0,
+      0.01,
+      0
+    ],
+    "unit": "world"
+  },
+  "toy_scooter": {
+    "asset": "assets/props/road/toy_scooter.glb",
+    "shape": "box",
+    "dimensions": [
+      1.15,
+      0.85,
+      0.65
+    ],
+    "center": [
+      0,
+      0.425,
+      0
+    ],
+    "unit": "world"
+  },
+  "scooter_wheel": {
+    "asset": "assets/props/road/scooter_wheel.glb",
+    "shape": "box",
+    "dimensions": [
+      0.3,
+      0.3,
+      0.12
+    ],
+    "center": [
+      0,
+      0.15,
+      0
+    ],
+    "unit": "world"
+  },
+  "repair_wrench": {
+    "asset": "assets/props/road/repair_wrench.glb",
+    "shape": "box",
+    "dimensions": [
+      0.08,
+      0.08,
+      0.38
+    ],
+    "center": [
+      0,
+      0.04,
+      0
+    ],
+    "unit": "world"
+  },
+  "raincoat": {
+    "asset": "assets/props/road/raincoat.glb",
+    "shape": "box",
+    "dimensions": [
+      0.8,
+      1,
+      0.15
+    ],
+    "center": [
+      0,
+      0.5,
+      0
+    ],
+    "unit": "world"
+  },
+  "umbrella": {
+    "asset": "assets/props/road/umbrella.glb",
+    "shape": "box",
+    "dimensions": [
+      1,
+      1.35,
+      1
+    ],
+    "center": [
+      0,
+      0.675,
+      0
+    ],
+    "unit": "world"
+  },
+  "rain_puddle": {
+    "asset": "assets/props/road/rain_puddle.glb",
+    "shape": "box",
+    "dimensions": [
+      0.9,
+      0.02,
+      0.65
+    ],
+    "center": [
+      0,
+      0.01,
+      0
+    ],
+    "unit": "world"
+  },
+  "road_barrier": {
+    "asset": "assets/props/road/road_barrier.glb",
+    "shape": "box",
+    "dimensions": [
+      1.3,
+      0.8,
+      0.2
+    ],
+    "center": [
+      0,
+      0.4,
+      0
+    ],
+    "unit": "world"
+  },
+  "road_map_folded": {
+    "asset": "assets/props/road/road_map_folded.glb",
+    "shape": "box",
+    "dimensions": [
+      0.5,
+      0.03,
+      0.45
+    ],
+    "center": [
+      0,
+      0.015,
+      0
+    ],
+    "unit": "world"
+  },
+  "lost_wallet": {
+    "asset": "assets/props/road/lost_wallet.glb",
+    "shape": "box",
+    "dimensions": [
+      0.4,
+      0.25,
+      0.15
+    ],
+    "center": [
+      0,
+      0.125,
+      0
+    ],
+    "unit": "world"
+  },
+  "festival_stall": {
+    "asset": "assets/props/road/festival_stall.glb",
+    "shape": "box",
+    "dimensions": [
+      1.5,
+      1.35,
+      0.8
+    ],
+    "center": [
+      0,
+      0.675,
+      0
+    ],
+    "unit": "world"
+  },
+  "street_box_wet": {
+    "asset": "assets/props/road/street_box_wet.glb",
+    "shape": "box",
+    "dimensions": [
+      0.55,
+      0.5,
+      0.5
+    ],
+    "center": [
+      0,
+      0.25,
+      0
+    ],
+    "unit": "world"
+  },
+  "foam_bomb_3d": {
+    "asset": "assets/props/gifts/foam_bomb_3d.glb",
+    "shape": "box",
+    "dimensions": [
+      0.55,
+      0.55,
+      0.55
+    ],
+    "center": [
+      0,
+      0.275,
+      0
+    ],
+    "unit": "world"
+  },
+  "foam_crate": {
+    "asset": "assets/props/gifts/foam_crate.glb",
+    "shape": "box",
+    "dimensions": [
+      0.75,
+      0.7,
+      0.7
+    ],
+    "center": [
+      0,
+      0.35,
+      0
+    ],
+    "unit": "world"
+  },
+  "protect_umbrella": {
+    "asset": "assets/props/gifts/protect_umbrella.glb",
+    "shape": "box",
+    "dimensions": [
+      1.2,
+      1.1,
+      1.2
+    ],
+    "center": [
+      0,
+      0.55,
+      0
+    ],
+    "unit": "world"
+  },
+  "sale_trolley": {
+    "asset": "assets/props/gifts/sale_trolley.glb",
+    "shape": "box",
+    "dimensions": [
+      1.15,
+      0.9,
+      0.65
+    ],
+    "center": [
+      0,
+      0.45,
+      0
+    ],
+    "unit": "world"
+  },
+  "gift_box_toy": {
+    "asset": "assets/props/gifts/gift_box_toy.glb",
+    "shape": "box",
+    "dimensions": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "center": [
+      0,
+      0.25,
+      0
+    ],
+    "unit": "world"
+  },
+  "badge_target_pole": {
+    "asset": "assets/props/gifts/badge_target_pole.glb",
+    "shape": "box",
+    "dimensions": [
+      0.4,
+      0.8,
+      0.2
+    ],
+    "center": [
+      0,
+      0.4,
+      0
+    ],
+    "unit": "world"
+  }
+}

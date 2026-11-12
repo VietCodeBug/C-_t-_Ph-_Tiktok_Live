@@ -1,0 +1,134 @@
+{
+  "BOARD_OVERVIEW": {
+    "id": "CAM01",
+    "name": "Toàn bàn",
+    "angle": "55–60",
+    "position": "0,14,10",
+    "lookAt": "7,0,3",
+    "transitionSeconds": 2.5,
+    "ortho": "ortho = 12.5",
+    "composition": "hai ga + 10 ghế",
+    "notes": "giữ 2–3 s"
+  },
+  "TURN_ROLL": {
+    "id": "CAM02",
+    "name": "Cận lắc",
+    "angle": "50",
+    "position": "token + (1.0,2.6,3.0)",
+    "lookAt": "token + (0,0.5,0)",
+    "transitionSeconds": 0.6,
+    "ortho": "ortho = 3.2",
+    "composition": "token ~25–30% frame",
+    "notes": "tung xúc xắc f8"
+  },
+  "FOLLOW_TOKEN": {
+    "id": "CAM03",
+    "name": "Bám quân",
+    "angle": "55",
+    "position": "token + (0,3.2,3.8)",
+    "lookAt": "token + (0,0.45,0)",
+    "transitionSeconds": 0.32,
+    "ortho": "ortho = 4.7",
+    "composition": "thấy ô đích + các token",
+    "notes": "di chuyển bằng easing"
+  },
+  "FORK_TOP": {
+    "id": "CAM04",
+    "name": "Ngã rẽ",
+    "angle": "62",
+    "position": "fork + (0,5.8,5.0)",
+    "lookAt": "fork",
+    "transitionSeconds": 0.55,
+    "ortho": "ortho = 5.8",
+    "composition": "cả 2 nhánh trong hình",
+    "notes": "bảo đảm TRÁI/PHẢI là screen direction"
+  },
+  "EVENT_CLOSE": {
+    "id": "CAM05",
+    "name": "Sự kiện đời sống",
+    "angle": "50",
+    "position": "token + (1.2,2.8,3.5)",
+    "lookAt": "token + (0,0.65,0)",
+    "transitionSeconds": 0.55,
+    "ortho": "ortho = 3.7",
+    "composition": "nhân vật giữa, prop bên trái",
+    "notes": "đủ chỗ HUD"
+  },
+  "SHOP_WIDE": {
+    "id": "CAM06",
+    "name": "Shop online",
+    "angle": "52",
+    "position": "shop + (0.7,3.4,4.2)",
+    "lookAt": "shop + (0,0.7,0)",
+    "transitionSeconds": 0.6,
+    "ortho": "ortho = 4.9",
+    "composition": "player/quầy/8 đơn",
+    "notes": "không lấp return icons"
+  },
+  "FOLLOWUP_CLOSE": {
+    "id": "CAM07",
+    "name": "Thẻ nối tiếp",
+    "angle": "50",
+    "position": "token + (1,2.4,3.0)",
+    "lookAt": "token + (0,0.65,0)",
+    "transitionSeconds": 0.35,
+    "ortho": "ortho = 3.5",
+    "composition": "nhịp ngắn",
+    "notes": "2–4s trước khi lắc"
+  },
+  "ROAD_EVENT": {
+    "id": "CAM08",
+    "name": "Giao thông",
+    "angle": "55",
+    "position": "token + (1.4,3.2,4.0)",
+    "lookAt": "token + (0,0.5,0)",
+    "transitionSeconds": 0.5,
+    "ortho": "ortho = 4.7",
+    "composition": "có xe + công an",
+    "notes": "không thay world tile"
+  },
+  "PET_CLOSE": {
+    "id": "CAM09",
+    "name": "Thú cưng",
+    "angle": "43",
+    "position": "token + (1.0,2.2,3.0)",
+    "lookAt": "token + (0,0.45,0)",
+    "transitionSeconds": 0.5,
+    "ortho": "ortho = 3.0",
+    "composition": "full player + chó",
+    "notes": "chó scale 45% player"
+  },
+  "CELEBRATE": {
+    "id": "CAM10",
+    "name": "Bục vinh danh",
+    "angle": "48",
+    "position": "podium + (0,3.8,5)",
+    "lookAt": "podium + (0,0.7,0)",
+    "transitionSeconds": 0.75,
+    "ortho": "ortho = 5.3",
+    "composition": "cúp + winner + MONEY",
+    "notes": "10s end screen"
+  },
+  "MINIGAME": {
+    "id": "CAM11",
+    "name": "Mini game",
+    "angle": "51",
+    "position": "table + (0,2.6,3.5)",
+    "lookAt": "table + (0,0.5,0)",
+    "transitionSeconds": 0.5,
+    "ortho": "ortho = 3.9",
+    "composition": "thấy đồ vật 1/2/3",
+    "notes": "không che cue của chat"
+  },
+  "GIFT_IMPACT": {
+    "id": "CAM12",
+    "name": "Nhắm chiêu",
+    "angle": "51",
+    "position": "target + (0.8,3.0,3.0)",
+    "lookAt": "target + (0,0.6,0)",
+    "transitionSeconds": 0.45,
+    "ortho": "ortho = 3.6",
+    "composition": "target nằm giữa khung",
+    "notes": "FX trigger theo animation"
+  }
+}
