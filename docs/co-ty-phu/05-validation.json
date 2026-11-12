@@ -1,0 +1,502 @@
+{
+  "checked_at_utc": "2026-11-12T03:39:04.065682+00:00",
+  "status": "asset-prototype-checks-passed",
+  "tools": {
+    "blender": "4.3.2",
+    "render_backend": "Cycles CPU",
+    "gpu_render_claim": false,
+    "ffmpeg": "7.1.5"
+  },
+  "scope": {
+    "model_files": 10,
+    "source_blend_files": 10,
+    "glb_animations": 40,
+    "individual_sprite_frames": 480,
+    "atlases": 10,
+    "audio_cues": 12
+  },
+  "models": [
+    {
+      "id": "bong_rabbit",
+      "glb_bytes": 190708,
+      "triangles": 3184,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "bap_capybara",
+      "glb_bytes": 207452,
+      "triangles": 3520,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "mun_owl",
+      "glb_bytes": 171396,
+      "triangles": 2752,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "lua_red_panda",
+      "glb_bytes": 240948,
+      "triangles": 4192,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "mam_turtle",
+      "glb_bytes": 215816,
+      "triangles": 3688,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "cam_fox",
+      "glb_bytes": 188136,
+      "triangles": 3088,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "com_frog",
+      "glb_bytes": 165988,
+      "triangles": 2672,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "hat_hedgehog",
+      "glb_bytes": 172104,
+      "triangles": 2632,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "kem_penguin",
+      "glb_bytes": 158700,
+      "triangles": 2530,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    },
+    {
+      "id": "mo_axolotl",
+      "glb_bytes": 199476,
+      "triangles": 3344,
+      "joints": 7,
+      "mesh_primitives": 1,
+      "animation_checks": {
+        "Celebrate": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Idle": {
+          "duration_seconds": 2.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "React": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        },
+        "Walk": {
+          "duration_seconds": 1.0,
+          "motion_data": "nonconstant",
+          "samplers": 21
+        }
+      },
+      "sprite_frames": 48,
+      "sprite_dimensions": [
+        128,
+        128
+      ],
+      "transparent": true,
+      "clipping_margin_min_pixels": 2,
+      "atlas_pixels_match_frames": true
+    }
+  ],
+  "audio": [
+    {
+      "id": "build_upgrade",
+      "seconds": 1.0,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "coin_collect",
+      "seconds": 0.35,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "dice_roll",
+      "seconds": 0.8,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "event_reveal",
+      "seconds": 0.82,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "invalid_action",
+      "seconds": 0.34,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "purchase_success",
+      "seconds": 0.9,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "rent_paid",
+      "seconds": 0.55,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "token_step",
+      "seconds": 0.14,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "turn_start",
+      "seconds": 0.68,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "ui_back",
+      "seconds": 0.22,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "ui_confirm",
+      "seconds": 0.26,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    },
+    {
+      "id": "victory_short",
+      "seconds": 2.0,
+      "peak_dbfs": -6.38,
+      "decode": "passed",
+      "listening_review": "pending"
+    }
+  ],
+  "preview": {
+    "file": "assets/co-ty-phu/previews/walk-preview.webm",
+    "frames": 48,
+    "fps": 24,
+    "seconds": 2,
+    "meaning": "offline software render of ten GLB files reimported into Blender; not a game benchmark"
+  },
+  "concept": {
+    "dimensions": [
+      941,
+      1672
+    ],
+    "reference_sheet_accessed": false,
+    "graph_validated": false
+  },
+  "not_run": [
+    "AutoSprite jobs",
+    "Software Notion read/write",
+    "game-dev canonical package verification",
+    "game engine import",
+    "gameplay tests",
+    "1/10/20/100 network clients",
+    "hardware FPS/frame-time measurement",
+    "mobile-device tests",
+    "audio listening review"
+  ]
+}

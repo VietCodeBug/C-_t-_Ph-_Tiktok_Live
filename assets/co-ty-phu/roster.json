@@ -1,0 +1,282 @@
+[
+  {
+    "id": "bong_rabbit",
+    "name": "Bông — thỏ bưu tá",
+    "species": "rabbit",
+    "triangles": 3184,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#F7E8CB",
+      "accent": "#40B9A4"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "bap_capybara",
+    "name": "Bắp — capybara thợ bánh",
+    "species": "capybara",
+    "triangles": 3520,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#B87943",
+      "accent": "#F4A449"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "mun_owl",
+    "name": "Mùn — cú thiên văn",
+    "species": "owl",
+    "triangles": 2752,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#695C8D",
+      "accent": "#B99BDD"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "lua_red_panda",
+    "name": "Lửa — gấu trúc đỏ thợ máy",
+    "species": "red_panda",
+    "triangles": 4192,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#C96335",
+      "accent": "#3A9998"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "mam_turtle",
+    "name": "Mầm — rùa làm vườn",
+    "species": "turtle",
+    "triangles": 3688,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#8BC55B",
+      "accent": "#42765A"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "cam_fox",
+    "name": "Cam — cáo thương nhân",
+    "species": "fox",
+    "triangles": 3088,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#E48A3D",
+      "accent": "#AE4053"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "com_frog",
+    "name": "Cốm — ếch du hành",
+    "species": "frog",
+    "triangles": 2672,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#72BD81",
+      "accent": "#F4C65C"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "hat_hedgehog",
+    "name": "Hạt — nhím thủ thư",
+    "species": "hedgehog",
+    "triangles": 2632,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#A37556",
+      "accent": "#6189AE"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "kem_penguin",
+    "name": "Kem — chim cánh cụt nhạc công",
+    "species": "penguin",
+    "triangles": 2530,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#3B5874",
+      "accent": "#E4A6AD"
+    },
+    "status": "original-prototype-not-engine-validated"
+  },
+  {
+    "id": "mo_axolotl",
+    "name": "Mơ — kỳ giông pha chế",
+    "species": "axolotl",
+    "triangles": 3344,
+    "bones": 7,
+    "materials": 1,
+    "fps": 24,
+    "clips_seconds": {
+      "Idle": 2.0,
+      "Walk": 1.0,
+      "Celebrate": 2.0,
+      "React": 1.0
+    },
+    "forward": "-Y",
+    "up": "+Z",
+    "ground_anchor": [
+      0,
+      0,
+      0
+    ],
+    "root_motion": false,
+    "colors": {
+      "fur": "#F0B2BD",
+      "accent": "#8D9CD2"
+    },
+    "status": "original-prototype-not-engine-validated"
+  }
+]

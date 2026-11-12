@@ -1,0 +1,19 @@
+{
+  "asset_id": "ben-may-v02",
+  "status": "concept-only-not-approved",
+  "provider": "host-native-ImageGen",
+  "paid_provider_job_id": null,
+  "source": "original-prompt-plus-session-generated-v01",
+  "reference_v01_sha256": "49fac51e812d8a99b7bf82323c6534b1c77120c75f2e2105e7430adbbb85c263",
+  "reference_v01_status": "rejected-by-user-too-simple",
+  "output_sha256": "2582fd6fa361c9bce089ecb8615af94c53bade5b4a7a28fbec18aec4bdf7e2e1",
+  "native_dimensions": [
+    941,
+    1672
+  ],
+  "target_composition": "9:16 portrait",
+  "exact_1080x1920_export": false,
+  "prompt": "ben-may-v02.prompt.txt",
+  "sheet_accessed": false,
+  "topology_validated": false
+}

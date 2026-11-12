@@ -1,0 +1,29 @@
+{
+  "view": "front-three-quarter",
+  "directions_delivered": 1,
+  "frame_size": [
+    128,
+    128
+  ],
+  "ground_anchor_normalized": [
+    0.5,
+    0.5
+  ],
+  "note": "Same camera and world origin for every species; PNG y axis points down.",
+  "camera_location_blender": [
+    2.8,
+    -6,
+    3.0
+  ],
+  "camera_target_blender": [
+    0,
+    0,
+    0.92
+  ],
+  "projection": "orthographic",
+  "ortho_scale": 2.5,
+  "renderer": "Cycles CPU",
+  "samples": 16,
+  "color_transform": "AgX",
+  "look": "AgX - Medium High Contrast"
+}
