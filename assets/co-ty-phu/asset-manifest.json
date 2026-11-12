@@ -88,6 +88,26 @@
       "sha256": "897f3b96e748689ded72c6c3e9eef5ab2dcc615ddca8d8c84bb200df60992083"
     },
     {
+      "path": "map/ben-may-blockout.blend",
+      "bytes": 5266716,
+      "sha256": "9f2c155aa91c8993bdaf20a985ec9685b74cd1e5fd636bab1d187f68b2544213"
+    },
+    {
+      "path": "map/ben-may-blockout.glb",
+      "bytes": 1302704,
+      "sha256": "34545baaa43b91926f631052dbffda652d04631ca7a3a0145a6b295b6c94b974"
+    },
+    {
+      "path": "map/layout.proposed.json",
+      "bytes": 7434,
+      "sha256": "0bef4198c0366f52ace24baf466e9cb21a587faad63cbc192e0edbcf04e0f6e5"
+    },
+    {
+      "path": "map/spatial-preview.json",
+      "bytes": 1036,
+      "sha256": "a1f6c561d1f589041e8863411010e5c5110c27b4165e88de98a5c2c2a9c5ad83"
+    },
+    {
       "path": "models/bap_capybara.glb",
       "bytes": 207452,
       "sha256": "b3760c53df597ac946621e6c86628427cf474b57a1c5bbc7c791a8a9843d91d5"
@@ -191,6 +211,26 @@
       "path": "previews/mascot-roster.png",
       "bytes": 2383892,
       "sha256": "86ca0b016a20e01c3d8399181bef520a65527d2aa987a642917c1bfe6418ee9b"
+    },
+    {
+      "path": "previews/occupancy-001.png",
+      "bytes": 807421,
+      "sha256": "8b16eb60eef6815bf56fe83848ee42d1065b25a235d6b4522a38c955beeed938"
+    },
+    {
+      "path": "previews/occupancy-010.png",
+      "bytes": 811162,
+      "sha256": "ba22bea0a6401d866997b1e172c92c3725a248754c455864c7ab74df3db6b83d"
+    },
+    {
+      "path": "previews/occupancy-020.png",
+      "bytes": 815684,
+      "sha256": "ad022d4365fa29866d44869f2fb03ff61c6006f68972aed9562287f146c0a282"
+    },
+    {
+      "path": "previews/occupancy-100.png",
+      "bytes": 821108,
+      "sha256": "c5af9ae5e7a7de1f96834a2fce6c6acfc37010d283922cd08089c2bdee211f37"
     },
     {
       "path": "previews/walk-preview.webm",

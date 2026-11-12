@@ -49,3 +49,11 @@ Tách số kết nối, số token logic và số token vẽ chi tiết. Token c
 4. Token đi sau nhà/qua cầu có thứ tự vẽ đúng; UI không che ô quan trọng.
 
 Các điều kiện này chưa kiểm chứng trong game. V02 mới chứng minh hướng hình ảnh; các đường nối trong ảnh chưa phải đường logic được duyệt.
+
+## Bản 3D có thể chỉnh sửa đã dựng
+
+`assets/co-ty-phu/map/ben-may-blockout.blend` và `.glb` chứa hình học thật: đảo nổi, đường nối, mặt ô, nhà/landmark, cây/đèn và anchor. Nguồn Blender tách các collection `Terrain`, `Route`, `Buildings`, `Foliage`, `Anchors`.
+
+Graph minh họa ở `layout.proposed.json` có **40 node do người dựng giả định**, mỗi node có next/previous và tọa độ anchor. Bản này dùng để phát triển bố cục và kiểm tra một chu trình liên thông; không phải luật/giá đất lấy từ sheet. Đổi số ô/topology sau P0 có thể cần dựng lại layout. Blockout không được tuyên bố là mỹ thuật cuối khớp concept v02.
+
+Các ảnh `occupancy-001/010/020/100.png` dùng cùng camera 540×960 và model thật, đặt token lần lượt trên 40 ô. Mức 100 có tối đa 3 token/ô trong **phân bố round-robin này**. Chúng chưa thử tình huống cả 100 cùng một ô, chưa có chọn/focus tương tác hoặc chuyển động đồng thời.

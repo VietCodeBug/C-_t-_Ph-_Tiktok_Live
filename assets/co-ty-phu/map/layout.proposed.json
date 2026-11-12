@@ -1,0 +1,456 @@
+{
+  "status": "editable-art-blockout-not-approved-sheet-layout",
+  "tile_count": 40,
+  "tile_count_source": "illustrative-assumption-not-sheet",
+  "route_type": "one-directed-cycle",
+  "coordinates": "Blender right-handed +Z up, glTF export converts +Y up",
+  "districts": [
+    "Chợ Đèn",
+    "Phố Bánh",
+    "Bến Sen",
+    "Vườn Trúc",
+    "Đồi Sao"
+  ],
+  "nodes": [
+    {
+      "id": 0,
+      "next": 1,
+      "previous": 39,
+      "district_id": 0,
+      "anchor_blender": [
+        -2.05,
+        -4.85,
+        0.68
+      ]
+    },
+    {
+      "id": 1,
+      "next": 2,
+      "previous": 0,
+      "district_id": 0,
+      "anchor_blender": [
+        -1.08245,
+        -4.94675,
+        0.68
+      ]
+    },
+    {
+      "id": 2,
+      "next": 3,
+      "previous": 1,
+      "district_id": 0,
+      "anchor_blender": [
+        -0.11573,
+        -4.94891,
+        0.68
+      ]
+    },
+    {
+      "id": 3,
+      "next": 4,
+      "previous": 2,
+      "district_id": 0,
+      "anchor_blender": [
+        0.84999,
+        -4.8353,
+        0.68
+      ]
+    },
+    {
+      "id": 4,
+      "next": 5,
+      "previous": 3,
+      "district_id": 0,
+      "anchor_blender": [
+        1.66272,
+        -4.36824,
+        0.68
+      ]
+    },
+    {
+      "id": 5,
+      "next": 6,
+      "previous": 4,
+      "district_id": 0,
+      "anchor_blender": [
+        2.01789,
+        -3.60996,
+        0.72106
+      ]
+    },
+    {
+      "id": 6,
+      "next": 7,
+      "previous": 5,
+      "district_id": 1,
+      "anchor_blender": [
+        1.5176,
+        -2.94704,
+        0.80942
+      ]
+    },
+    {
+      "id": 7,
+      "next": 8,
+      "previous": 6,
+      "district_id": 1,
+      "anchor_blender": [
+        0.58071,
+        -2.70266,
+        0.88067
+      ]
+    },
+    {
+      "id": 8,
+      "next": 9,
+      "previous": 7,
+      "district_id": 1,
+      "anchor_blender": [
+        -0.38199,
+        -2.83545,
+        0.91386
+      ]
+    },
+    {
+      "id": 9,
+      "next": 10,
+      "previous": 8,
+      "district_id": 1,
+      "anchor_blender": [
+        -1.23188,
+        -2.57841,
+        0.9501
+      ]
+    },
+    {
+      "id": 10,
+      "next": 11,
+      "previous": 9,
+      "district_id": 1,
+      "anchor_blender": [
+        -1.76606,
+        -1.87376,
+        0.99131
+      ]
+    },
+    {
+      "id": 11,
+      "next": 12,
+      "previous": 10,
+      "district_id": 1,
+      "anchor_blender": [
+        -1.47151,
+        -1.03822,
+        1.03686
+      ]
+    },
+    {
+      "id": 12,
+      "next": 13,
+      "previous": 11,
+      "district_id": 2,
+      "anchor_blender": [
+        -0.55324,
+        -0.72035,
+        1.07218
+      ]
+    },
+    {
+      "id": 13,
+      "next": 14,
+      "previous": 12,
+      "district_id": 2,
+      "anchor_blender": [
+        0.40458,
+        -0.7059,
+        1.10795
+      ]
+    },
+    {
+      "id": 14,
+      "next": 15,
+      "previous": 13,
+      "district_id": 2,
+      "anchor_blender": [
+        1.2997,
+        -0.52523,
+        1.14498
+      ]
+    },
+    {
+      "id": 15,
+      "next": 16,
+      "previous": 14,
+      "district_id": 2,
+      "anchor_blender": [
+        1.982,
+        0.09449,
+        1.1845
+      ]
+    },
+    {
+      "id": 16,
+      "next": 17,
+      "previous": 15,
+      "district_id": 2,
+      "anchor_blender": [
+        1.80026,
+        1.04865,
+        1.22994
+      ]
+    },
+    {
+      "id": 17,
+      "next": 18,
+      "previous": 16,
+      "district_id": 3,
+      "anchor_blender": [
+        0.86959,
+        1.32568,
+        1.26446
+      ]
+    },
+    {
+      "id": 18,
+      "next": 19,
+      "previous": 17,
+      "district_id": 3,
+      "anchor_blender": [
+        -0.08251,
+        1.40904,
+        1.30048
+      ]
+    },
+    {
+      "id": 19,
+      "next": 20,
+      "previous": 18,
+      "district_id": 3,
+      "anchor_blender": [
+        -1.00508,
+        1.47923,
+        1.33862
+      ]
+    },
+    {
+      "id": 20,
+      "next": 21,
+      "previous": 19,
+      "district_id": 3,
+      "anchor_blender": [
+        -1.7496,
+        2.10178,
+        1.38008
+      ]
+    },
+    {
+      "id": 21,
+      "next": 22,
+      "previous": 20,
+      "district_id": 3,
+      "anchor_blender": [
+        -1.53431,
+        3.04904,
+        1.42314
+      ]
+    },
+    {
+      "id": 22,
+      "next": 23,
+      "previous": 21,
+      "district_id": 4,
+      "anchor_blender": [
+        -0.71676,
+        3.43207,
+        1.45901
+      ]
+    },
+    {
+      "id": 23,
+      "next": 24,
+      "previous": 22,
+      "district_id": 4,
+      "anchor_blender": [
+        0.22683,
+        3.54617,
+        1.49346
+      ]
+    },
+    {
+      "id": 24,
+      "next": 25,
+      "previous": 23,
+      "district_id": 4,
+      "anchor_blender": [
+        1.18883,
+        3.40874,
+        1.52782
+      ]
+    },
+    {
+      "id": 25,
+      "next": 26,
+      "previous": 24,
+      "district_id": 4,
+      "anchor_blender": [
+        1.87211,
+        4.06359,
+        1.57147
+      ]
+    },
+    {
+      "id": 26,
+      "next": 27,
+      "previous": 25,
+      "district_id": 4,
+      "anchor_blender": [
+        1.44532,
+        4.75468,
+        1.61467
+      ]
+    },
+    {
+      "id": 27,
+      "next": 28,
+      "previous": 26,
+      "district_id": 4,
+      "anchor_blender": [
+        0.57629,
+        5.04158,
+        1.63
+      ]
+    },
+    {
+      "id": 28,
+      "next": 29,
+      "previous": 27,
+      "district_id": 4,
+      "anchor_blender": [
+        -0.39098,
+        5.07652,
+        1.62413
+      ]
+    },
+    {
+      "id": 29,
+      "next": 30,
+      "previous": 28,
+      "district_id": 4,
+      "anchor_blender": [
+        -1.33068,
+        4.83402,
+        1.5635
+      ]
+    },
+    {
+      "id": 30,
+      "next": 31,
+      "previous": 29,
+      "district_id": 4,
+      "anchor_blender": [
+        -2.13282,
+        4.37253,
+        1.48534
+      ]
+    },
+    {
+      "id": 31,
+      "next": 32,
+      "previous": 30,
+      "district_id": 4,
+      "anchor_blender": [
+        -2.76502,
+        3.6405,
+        1.38552
+      ]
+    },
+    {
+      "id": 32,
+      "next": 33,
+      "previous": 31,
+      "district_id": 3,
+      "anchor_blender": [
+        -2.88537,
+        2.68939,
+        1.29463
+      ]
+    },
+    {
+      "id": 33,
+      "next": 34,
+      "previous": 32,
+      "district_id": 3,
+      "anchor_blender": [
+        -2.95,
+        1.72518,
+        1.19565
+      ]
+    },
+    {
+      "id": 34,
+      "next": 35,
+      "previous": 33,
+      "district_id": 2,
+      "anchor_blender": [
+        -2.95,
+        0.76032,
+        1.07504
+      ]
+    },
+    {
+      "id": 35,
+      "next": 36,
+      "previous": 34,
+      "district_id": 2,
+      "anchor_blender": [
+        -2.95,
+        -0.2069,
+        0.97645
+      ]
+    },
+    {
+      "id": 36,
+      "next": 37,
+      "previous": 35,
+      "district_id": 1,
+      "anchor_blender": [
+        -2.95,
+        -1.17551,
+        0.89098
+      ]
+    },
+    {
+      "id": 37,
+      "next": 38,
+      "previous": 36,
+      "district_id": 1,
+      "anchor_blender": [
+        -2.9098,
+        -2.1443,
+        0.81969
+      ]
+    },
+    {
+      "id": 38,
+      "next": 39,
+      "previous": 37,
+      "district_id": 0,
+      "anchor_blender": [
+        -2.86366,
+        -3.11311,
+        0.75049
+      ]
+    },
+    {
+      "id": 39,
+      "next": 0,
+      "previous": 38,
+      "district_id": 0,
+      "anchor_blender": [
+        -2.51952,
+        -3.999,
+        0.70934
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "type": "offline-static-spatial-simulation",
+  "render_backend": "Cycles CPU",
+  "camera": "same 540x960 camera in all captures",
+  "scenarios": [
+    {
+      "tokens": 1,
+      "distribution": "round-robin across forty demo tiles",
+      "max_tokens_per_tile": 1,
+      "static_instances": 1,
+      "network_clients": 0,
+      "runtime_fps_measured": false
+    },
+    {
+      "tokens": 10,
+      "distribution": "round-robin across forty demo tiles",
+      "max_tokens_per_tile": 1,
+      "static_instances": 10,
+      "network_clients": 0,
+      "runtime_fps_measured": false
+    },
+    {
+      "tokens": 20,
+      "distribution": "round-robin across forty demo tiles",
+      "max_tokens_per_tile": 1,
+      "static_instances": 20,
+      "network_clients": 0,
+      "runtime_fps_measured": false
+    },
+    {
+      "tokens": 100,
+      "distribution": "round-robin across forty demo tiles",
+      "max_tokens_per_tile": 3,
+      "static_instances": 100,
+      "network_clients": 0,
+      "runtime_fps_measured": false
+    }
+  ]
+}

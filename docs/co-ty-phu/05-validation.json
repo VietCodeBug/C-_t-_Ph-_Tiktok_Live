@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-12T03:39:04.065682+00:00",
+  "checked_at_utc": "2026-11-12T03:46:23.687480+00:00",
   "status": "asset-prototype-checks-passed",
   "tools": {
     "blender": "4.3.2",
@@ -13,7 +13,9 @@
     "glb_animations": 40,
     "individual_sprite_frames": 480,
     "atlases": 10,
-    "audio_cues": 12
+    "audio_cues": 12,
+    "map_environment_files": 2,
+    "static_spatial_captures": 4
   },
   "models": [
     {
@@ -498,5 +500,65 @@
     "hardware FPS/frame-time measurement",
     "mobile-device tests",
     "audio listening review"
-  ]
+  ],
+  "map": {
+    "type": "editable-modular-blockout",
+    "tiles": 40,
+    "tile_count_source": "proposed-not-sheet",
+    "single_cycle_and_reciprocal_links": "passed",
+    "exported_glb_anchor_ids_and_links": "passed",
+    "exported_tile_faces": 40,
+    "glb_nodes": 373,
+    "glb_meshes": 333,
+    "glb_bytes": 1302704,
+    "source_blend_header": "passed",
+    "spatial_captures": [
+      {
+        "tokens": 1,
+        "distribution": "round-robin across forty demo tiles",
+        "max_tokens_per_tile": 1,
+        "static_instances": 1,
+        "network_clients": 0,
+        "runtime_fps_measured": false
+      },
+      {
+        "tokens": 10,
+        "distribution": "round-robin across forty demo tiles",
+        "max_tokens_per_tile": 1,
+        "static_instances": 10,
+        "network_clients": 0,
+        "runtime_fps_measured": false
+      },
+      {
+        "tokens": 20,
+        "distribution": "round-robin across forty demo tiles",
+        "max_tokens_per_tile": 1,
+        "static_instances": 20,
+        "network_clients": 0,
+        "runtime_fps_measured": false
+      },
+      {
+        "tokens": 100,
+        "distribution": "round-robin across forty demo tiles",
+        "max_tokens_per_tile": 3,
+        "static_instances": 100,
+        "network_clients": 0,
+        "runtime_fps_measured": false
+      }
+    ],
+    "spatial_capture_dimensions": [
+      540,
+      960
+    ],
+    "same_tile_100_token_case": "not_run",
+    "gameplay_validated": false,
+    "engine_import": "not_run",
+    "note": "Static scene renders assess layout only. They are not 100 animated clients or runtime performance evidence.",
+    "visual_readability_at_100": "needs-iteration",
+    "observations": [
+      "Light-colored tokens merge with tile faces at overview scale.",
+      "Repeated prototypes cluster within tiles; grouping/focus/contrast remain to implement.",
+      "Blockout landmarks require occlusion review before final art."
+    ]
+  }
 }

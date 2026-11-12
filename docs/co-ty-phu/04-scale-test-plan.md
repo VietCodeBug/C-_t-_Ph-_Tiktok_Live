@@ -2,6 +2,10 @@
 
 **Chưa chạy game benchmark.** Không có số đo FPS/p95/latency thực. Render offline và kiểm tra asset không chứng minh phòng 100 người chạy mượt.
 
+Đã dựng riêng bốn bài **bố trí tĩnh** với 1/10/20/100 mesh token thật trên map blockout. Cùng camera 540×960, phân bố round-robin trên 40 ô minh họa; tối đa lần lượt 1/1/1/3 token mỗi ô. Ảnh trong `assets/co-ty-phu/previews/occupancy-*.png`, metadata tại `map/spatial-preview.json`. Đây là kiểm tra hình ảnh/bố cục, không có client mạng, gameplay, token animation hoặc số đo FPS. Chưa thử toàn bộ token cùng một ô.
+
+Quan sát ảnh 100 token: dùng lại 10 mẫu, không phải 100 model riêng. Token sáng bị hòa với mặt ô và các nhóm cùng ô khó đọc khi xem toàn cảnh. Cần outline/marker tương phản, badge nhóm, focus/zoom và rà lại landmark che ô. Bản blockout chưa vượt qua nghiệm thu độ đọc; ảnh này ghi nhận vấn đề cần sửa, không chứng minh bố cục cuối đã đạt.
+
 ## Tách hai mô hình
 
 - Một phòng N người: ảnh hưởng chờ lượt, token chồng nhau và cập nhật trong một view.
