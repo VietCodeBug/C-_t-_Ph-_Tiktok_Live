@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Video & Media output files
+*.mp4
+*.ts
+*.mkv
+*.flv
+*.mov
+*.avi
+*.mp3
+*.m4a
+output/
+highlights/
+recordings/
+temp/
+downloads/
+
+# Environment and secrets
+.env
+.env.local
+config.json
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
