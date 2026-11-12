@@ -1,0 +1,544 @@
+{
+  "spriteVersion": "2.3",
+  "environmentVersion": "1",
+  "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+  "mapSourceCommit": "abb5a1cf040e79bb98efe74a45050853e1e0e6cd",
+  "thirdPartyLicenses": [
+    "licenses/nunito-OFL.txt",
+    "licenses/three-MIT.txt"
+  ],
+  "files": [
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch01/idle.png",
+      "to": "characters/ch01/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 453852,
+      "sha256": "102f4ebdf9d199130c1aa666662c5f02738883013f138703ae02375484005e0d"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch01/walk.png",
+      "to": "characters/ch01/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1174260,
+      "sha256": "abd446c22d742351ede500f97eb22183232e81c919febf4c5bf5c796e7602e42"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch01/run.png",
+      "to": "characters/ch01/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 922870,
+      "sha256": "3c4219e52932a68dc51db21ab493df3f87e46a1b8df9ad71c54ebb56e0630b9d"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch01/roll_dice.png",
+      "to": "characters/ch01/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1061624,
+      "sha256": "f2021c9d9163a8f3a98e16873d2b7a8034330f053be44dce5fd0c90b650143d6"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch01/happy.png",
+      "to": "characters/ch01/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 692699,
+      "sha256": "880a08b89ad59e3d20c7d6b2709432b51200e0ac6baf219c6586aa680df8c79c"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch02/idle.png",
+      "to": "characters/ch02/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 419931,
+      "sha256": "9d0d0ed082aa179d25012d7d64e24299c87b4f4e927102fe0972e72fdbeeed63"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch02/walk.png",
+      "to": "characters/ch02/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1039340,
+      "sha256": "f5a6f0a7b4b5553474c2198f3275391e5ae6cbf29cf3cb746ea5158565ccf14b"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch02/run.png",
+      "to": "characters/ch02/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 850313,
+      "sha256": "b8ce3aa09776d89db73b8364ca4542769afbe7dbe032fd22c07d68a5ef442cb8"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch02/roll_dice.png",
+      "to": "characters/ch02/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 997800,
+      "sha256": "db3ea106fc2bbcb9ea31ba068fbebf12082ba71ad37875af8ccd8ed253be1e3d"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch02/happy.png",
+      "to": "characters/ch02/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 806747,
+      "sha256": "9e8f6a2228d314d878c9c266a04157a4159b37ba4d6e8d80c88da303e4827116"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch03/idle.png",
+      "to": "characters/ch03/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 396606,
+      "sha256": "a381fe28375a7314858cf852e7712d26ba36dc91c1d1425e96978fc32016514f"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch03/walk.png",
+      "to": "characters/ch03/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 951666,
+      "sha256": "0283ce02ef9741b6223ce6221ad1a9125d53ad1f3eeb660443147e392b6304c0"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch03/run.png",
+      "to": "characters/ch03/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 844072,
+      "sha256": "705d954598fb44d70c9544f2d0667723a26d7e3b92474c15fd7a8920046e1063"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch03/roll_dice.png",
+      "to": "characters/ch03/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 948679,
+      "sha256": "06337f601d14493e716f81bb912a2b1cb4ebd00b18a9b8a3a7406219f4ac9b68"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch03/happy.png",
+      "to": "characters/ch03/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 720904,
+      "sha256": "20dee13a3d5f3762a5a9f8e4c9f6432c34e3e5eba0fcf4e43074138da2661817"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch04/idle.png",
+      "to": "characters/ch04/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 398939,
+      "sha256": "58b93e8dc9ec3916cea0c10c2ae6068bebf9ffaa465780a7ca89fbb275bf8e8c"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch04/walk.png",
+      "to": "characters/ch04/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 966061,
+      "sha256": "d962fd7b9acc43843521b5ad10f5cfe921fdc2753afe6a7cf7a6dc7c49ecbf1e"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch04/run.png",
+      "to": "characters/ch04/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 841259,
+      "sha256": "6db7d838c3d1e76ea4757e780c1cbd6b459556471d74b6b41de7f20a72f13242"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch04/roll_dice.png",
+      "to": "characters/ch04/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 911558,
+      "sha256": "9f89c38b0b2d8439add39b6e99a555701b22666ee1cd7cf72501f0c42e0283e7"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch04/happy.png",
+      "to": "characters/ch04/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 729349,
+      "sha256": "6d76ca48305af567ba43602c02df7df6d6522e1c17dccfeee2a1eed6d13135cb"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch05/idle.png",
+      "to": "characters/ch05/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 449903,
+      "sha256": "9317205416f030e47817c48357cd95b56c5b3503a6ae6c387cfdff65ba771f12"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch05/walk.png",
+      "to": "characters/ch05/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1017504,
+      "sha256": "604c78d0b9df8bbfb3f0caf48ba394487e4fac424f63b3e3e0b88434c565b779"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch05/run.png",
+      "to": "characters/ch05/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 935772,
+      "sha256": "9ce6c869ca4092aaa8c95b1052a2fb23de9c017a09aaeb0d3cee4fff33d101da"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch05/roll_dice.png",
+      "to": "characters/ch05/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1089043,
+      "sha256": "de27cf9dc89c3e62af25fab0ab3cca1218edcda6804c8ad3dec78748cf5002dc"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch05/happy.png",
+      "to": "characters/ch05/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 699494,
+      "sha256": "20731ba99b67e3e36e779a52e3c80dd532622ce219d85ab5dfaeaa5779adf32a"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch06/idle.png",
+      "to": "characters/ch06/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 390781,
+      "sha256": "3b316895b5305a43718b92e99abf7eba80fd811f107022e34b4b2c7e6d4ce9d5"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch06/walk.png",
+      "to": "characters/ch06/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 965877,
+      "sha256": "ee94ad08cd1561768280d70091d026952bd0a5daec818c2a1c11b4f8d25c7541"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch06/run.png",
+      "to": "characters/ch06/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 823820,
+      "sha256": "7f10c9c0efbbcb87ef24a8eef685b69907461686084d795f6d19eb7f55553cb1"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch06/roll_dice.png",
+      "to": "characters/ch06/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 902846,
+      "sha256": "d647e13930511befc85e4f034764e872e2567d19bb5b3d6e8b3e256c295f41d7"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch06/happy.png",
+      "to": "characters/ch06/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 718298,
+      "sha256": "5de6bbe4893d4e0de57bd9cd11d38995c03a5deb65f36b9f3c535f6da6dcf796"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch07/idle.png",
+      "to": "characters/ch07/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 445653,
+      "sha256": "05640431928c3bd299a9100b4ce696f20cd6e2ec39b6c1f058d0089a3bb64afd"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch07/walk.png",
+      "to": "characters/ch07/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1045363,
+      "sha256": "daa4751a4826eb2a7b485c44a11766b435d580e261a4f5db510f4a28ab620c3a"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch07/run.png",
+      "to": "characters/ch07/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 906766,
+      "sha256": "088ce613868b8c3cb26bb0ffd4cce9fa72899f4dcfcf713e63e8dcbfa833d62c"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch07/roll_dice.png",
+      "to": "characters/ch07/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1059875,
+      "sha256": "6614f7d44e7f6e6c98cd19b54aff203a80e75ff8a415f55adc3ce00ac0b61137"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch07/happy.png",
+      "to": "characters/ch07/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 661796,
+      "sha256": "dc112a59842be366ea70182a2816f67dae0c3f46bc763c07cea86677d124e56a"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch08/idle.png",
+      "to": "characters/ch08/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 409427,
+      "sha256": "f3d2ecbaca1d6e90e1c43e456725b638084375cb33c397a60a81a9903c040c82"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch08/walk.png",
+      "to": "characters/ch08/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 969215,
+      "sha256": "154efa86d525868eebd08c68ed8ab63e57a5ed867d98902403006b71e034c0d0"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch08/run.png",
+      "to": "characters/ch08/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 835815,
+      "sha256": "7b7e5e6c90a5e6b0dc82dfa98ee5a12d617b2db9308532eda89dfdce0a2cf6b9"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch08/roll_dice.png",
+      "to": "characters/ch08/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 651305,
+      "sha256": "e696665c365c17ce2ea6e7d2ba05fd8c61c22758e58ebe868135cb433f53c961"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch08/happy.png",
+      "to": "characters/ch08/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 719687,
+      "sha256": "37f7f9fdecacc27debd84c394763898009d04350fcce5638584df6e205cf1d3c"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch09/idle.png",
+      "to": "characters/ch09/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 389346,
+      "sha256": "ab6fc952733ac32e911eed6c932253b50c187c81a33e971d58f7267ad8ba42ed"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch09/walk.png",
+      "to": "characters/ch09/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 863718,
+      "sha256": "2f955608d4c020c4f14a84ceda5cf626afbcaca6e8ca27456ff9fff23c0de4ae"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch09/run.png",
+      "to": "characters/ch09/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 835069,
+      "sha256": "a34ad606d48caba25bc58c4637ea4bb0171ff62ac8bf4d61387ef4ead07bd3b5"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch09/roll_dice.png",
+      "to": "characters/ch09/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 913391,
+      "sha256": "ae27fdd6d35c5bf7e495fe21f3025b2518d9c06d12445118b6a4fd095240c37a"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch09/happy.png",
+      "to": "characters/ch09/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 669171,
+      "sha256": "cb200daa60d139ce30f9292f4282893fac156a75aa14b8a8b8d2a3d7226eeeee"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch10/idle.png",
+      "to": "characters/ch10/idle.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 399948,
+      "sha256": "430da4caa1203945adc9e827b5693674b24a276e788b9edc111394a1b8457f40"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch10/walk.png",
+      "to": "characters/ch10/walk.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1040708,
+      "sha256": "569588ba0500d31a234490e53b7e9bc3b45f4483d982f265d82eeb8aeff95180"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch10/run.png",
+      "to": "characters/ch10/run.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 856338,
+      "sha256": "46dc374419ae11b025fa31f2b070cfee3e673959cb7c3ab002c18a41c83260e1"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch10/roll_dice.png",
+      "to": "characters/ch10/roll_dice.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 958229,
+      "sha256": "99e64d01b81373e0382cf4aee7239010c1b57f8b29091557e02b689a0367c3ab"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch10/happy.png",
+      "to": "characters/ch10/happy.png",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 738995,
+      "sha256": "f3d48dd43928560a605252dfbade08456bf70e59ca548cb2ecc706c98cbb94d9"
+    },
+    {
+      "from": "assets/map/board_layouts.json",
+      "to": "board_layouts.json",
+      "sourceCommit": "abb5a1cf040e79bb98efe74a45050853e1e0e6cd",
+      "bytes": 35276,
+      "sha256": "d4a6870ed363e1874160a6b2c3b73fbbc7457ae3211989848a7ef18a8396e216"
+    },
+    {
+      "from": "assets/map/cho_via_he.glb",
+      "to": "maps/cho_via_he.glb",
+      "sourceCommit": "abb5a1cf040e79bb98efe74a45050853e1e0e6cd",
+      "bytes": 1585276,
+      "sha256": "5e68bd6044bab246d80063d578a6ecdd3b1ebebb11c350ba6f3bb954e00cf087"
+    },
+    {
+      "from": "assets/map/pho_giao_hang.glb",
+      "to": "maps/pho_giao_hang.glb",
+      "sourceCommit": "abb5a1cf040e79bb98efe74a45050853e1e0e6cd",
+      "bytes": 1577480,
+      "sha256": "08f76aafd885e6fb8723765cb91dde483ae85a340aa2750a8afd1e1722714944"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/house_mint.glb",
+      "to": "models/house_mint.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 80096,
+      "sha256": "2f9a89aa19f23e1eb7e7fa5accc4a999e9c2fbb7432381b4a1f986f19e68e552"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/house_blue.glb",
+      "to": "models/house_blue.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 79948,
+      "sha256": "66f3b284ee30e9f765c29d68ceec0a85be9f7092c5a9dc503d5ef6f3f966e7cc"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/market_tent.glb",
+      "to": "models/market_tent.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 121288,
+      "sha256": "78f500cf154026c084158506fcd0ed46650185ce042e587221c85fe167d389bd"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/street_stall.glb",
+      "to": "models/street_stall.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 134304,
+      "sha256": "cb58e54f53a652faebc4612173941c6ccf029e2968af376e3f8398e7a3687ba3"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/common_env/street_tree.glb",
+      "to": "models/street_tree.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 22808,
+      "sha256": "93010e7b0dd7209c30ccff4327081b12d559fe8b1e1b0bd3f169e1c6be721756"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/common_env/bush_ball.glb",
+      "to": "models/bush_ball.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 23852,
+      "sha256": "92dddc3b2f2d55efc8e5bb1d3ce0bc4508607cdbd3cc3d7464df6decb86dfa72"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/flower_cart.glb",
+      "to": "models/flower_cart.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 580596,
+      "sha256": "aacf3e7484698ff19bbbffc7eca467b8df1ae59da212a126102396594d9f55d2"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/street_umbrella.glb",
+      "to": "models/street_umbrella.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 22436,
+      "sha256": "1e8419d2fe5ebf2b5ed2a24ff7091259f750ed8467313cdade081d590eaedb80"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/bench.glb",
+      "to": "models/bench.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 60112,
+      "sha256": "bb6c9114e147e0d7fd7ec6e1d2c0fa4648fc5054615e70cd40253d3d13af7105"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/lamp_street.glb",
+      "to": "models/lamp_street.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 24304,
+      "sha256": "36f4f6252f27f9cf8f58a2abb76adfd85cc78f82dbb90bf20658edcd09b5edc0"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/plant_pot.glb",
+      "to": "models/plant_pot.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 59688,
+      "sha256": "b0c1d17258bca3810f7a617d57d0a7f1359057e40b8d7a7a72d2edcb99064182"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/cho_via_he/market_banner.glb",
+      "to": "models/market_banner.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 22064,
+      "sha256": "b29497edd931f847c0a8ee2750371f4d2ac00f657b5bf8717ff81ea8ade0c831"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/warehouse_a.glb",
+      "to": "models/warehouse_a.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 72564,
+      "sha256": "4ae7b91c64a4d5a6013081117d866dc92b1d3d87fb45a86b9c9c5a6a9962b27b"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/warehouse_b.glb",
+      "to": "models/warehouse_b.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 72564,
+      "sha256": "fdfa58c17171dd168aca67a2f66eb48178da5e698f334c9ee95c336a244b6a17"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/loading_dock.glb",
+      "to": "models/loading_dock.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 39484,
+      "sha256": "1d50702cf3c35c970d99c8e57a22dd9b90549867c600ee8eeb1b3b81f53a2ec9"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/stack_boxes.glb",
+      "to": "models/stack_boxes.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 104892,
+      "sha256": "5eb59fdc5e94e0ae3464aebc92066a49b7c3351ba0a0f15afcc9cbf11f2554e5"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/delivery_gate.glb",
+      "to": "models/delivery_gate.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 33468,
+      "sha256": "09a4239a375e0d6babd56a09be98eeecd8ffbb05e4414b9f7aa6ee3e150d5ed6"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/bridge_toy.glb",
+      "to": "models/toy_bridge.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 89264,
+      "sha256": "f9d5ff793e207566f873791e9508f5838eb0fa10bd8ab35093ca7828aa541e31"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/pho_giao_hang/traffic_cone.glb",
+      "to": "models/traffic_cone.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 21348,
+      "sha256": "01a77d05bb380c6dde1cfae0f0fbd26c527bfe54df74651b46295bc3bd0e68c3"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/common_env/gate_start.glb",
+      "to": "models/gate_start.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 36072,
+      "sha256": "ebf7aa30dc8151c28e3c290affeeb246c894b8bb7be1e487d5ff38bcc8fab85d"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/common_env/podium_1.glb",
+      "to": "models/podium_1.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 23740,
+      "sha256": "a48957e9e03ee3325e6bd96b2b420d3e3d5608673b737621e4d02d1e03a4a314"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v1/assets/map/kit/common_env/trophy_gold.glb",
+      "to": "models/trophy_gold.glb",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 53100,
+      "sha256": "c0396252b1e465fe2c275f64f05e220520d0b7ee052dc080b52da9fab7f2715a"
+    },
+    {
+      "from": "assets/co-ty-phi-tiktok-live-v2/README_V2_3.md",
+      "to": "SOURCE_V2_3.md",
+      "sourceCommit": "fb996c6c23433f14b465849510ba797ab6818bbe",
+      "bytes": 1298,
+      "sha256": "5bf76172a4d1e01a2c18dfb36659473bf783263e71696a444730564154361732"
+    }
+  ]
+}
