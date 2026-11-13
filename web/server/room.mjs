@@ -327,7 +327,7 @@ export class LiveRoom extends EventEmitter {
     if(!member)return;
     const index=this.demo.players.findIndex(player=>player.seat===member.seat),returnSeat=this.demo.players[this.demo.active]?.seat;
     this.demo.select(index);this.spotlight={seat:member.seat,userId:member.id,userName:member.name,avatar:member.avatar,kind:'welcome',startedAt:this.clock,elapsed:0,expiresAt:this.clock+16,until:this.clock+16,returnSeat,queued:this.introQueue.length};
-    this.announce('member.seated',`Chào ${spokenName(member)}, mời lắc xúc xắc!`,{priority:2,ttl:15});
+    this.announce('member.seated',`Chào ${spokenName(member)}, gõ LẮC vào chat!`,{priority:2,ttl:15});
   }
   observeBoard(){
     // The collective controller owns narration while its modal is open. The
@@ -338,10 +338,10 @@ export class LiveRoom extends EventEmitter {
     const name=spokenName(member);
     const once=(key,fn)=>{if(this.seenBoardCues.has(key))return;this.seenBoardCues.add(key);fn();};
     if(state.phase==='roll-result')once(`dice:${state.dice.sequence}`,()=>this.announce('race.roll-result',`${name} ra ${state.dice.value}, đi ${state.dice.value} ô.`,{ttl:8}));
-    if(state.branch)once(`fork:${member.seat}:${state.turn}:${state.branch.nodeId}`,()=>this.announce('race.fork',`${name}: TRÁI hay PHẢI?`,{priority:2,ttl:10}));
+    if(state.branch)once(`fork:${member.seat}:${state.turn}:${state.branch.nodeId}`,()=>this.announce('race.fork',`${name}, gõ TRÁI hoặc PHẢI vào chat.`,{priority:2,ttl:10}));
     const event=state.event;
     if(event&&!event.result?.community&&!['rest','quiet'].includes(event.category)){
-      if(!event.result&&event.choices.length)once(`event:${event.sequence}:open`,()=>this.announce(`event.${event.id}.open`,`${name}: ${event.choices.slice(0,2).map((choice,index)=>`${index+1} ${shortChoice(choice.label)}`).join(', ')}.`,{priority:2,ttl:10}));
+      if(!event.result&&event.choices.length)once(`event:${event.sequence}:open`,()=>this.announce(`event.${event.id}.open`,`${name}, gõ vào chat: ${event.choices.slice(0,2).map((choice,index)=>`${index+1} ${shortChoice(choice.label)}`).join(', ')}.`,{priority:2,ttl:10}));
       if(event.result)once(`event:${event.sequence}:result`,()=>this.announce(`event.${event.id}.result`,`${name}: ${text(event.title,100).split(/\s+/).slice(0,8).join(' ')}. ${event.result.delta>0?'+':''}${event.result.delta}.`,{priority:1,ttl:10}));
     }
     for(const entry of state.race?.finishers??[])once(`finish:${entry.seat}`,()=>this.announce('race.finish',`${spokenName(entry)} về đích hạng ${entry.rank}!`,{priority:3,ttl:15}));

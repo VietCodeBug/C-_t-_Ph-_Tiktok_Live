@@ -37,3 +37,4 @@ body[data-capture=true] .live-view-nav{display:none}
 
 .live-music-button{position:absolute;z-index:50;left:5%;bottom:1%;padding:3px 7px;border:1px solid #b3ad7455;border-radius:20px;background:#213f30d9;color:#d7d9b3;font-size:1.6cqw;opacity:.78}
 .live-music-button[aria-pressed=false]{color:#a6b9a0;opacity:.6}
+.live-stage .chat-command-hint{padding:9px 11px;border:1px solid #d8bf78;border-radius:8px;background:#274d39;color:#f5e7ba;font-weight:800;line-height:1.6}.chat-command-hint b{color:#ffe29b;font-weight:1000}

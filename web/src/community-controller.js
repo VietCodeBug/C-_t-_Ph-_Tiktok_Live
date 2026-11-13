@@ -31,15 +31,15 @@ export class CommunityController {
     const signed = value => `${value > 0 ? '+' : ''}${value}`;
     if (id.startsWith('investment-')) {
       const event=this.game.investmentSnapshot();
-      text=id.endsWith('.open')?`${event.hostId}: GÓP 100 hoặc BỎ, mười giây.`
+      text=id.endsWith('.open')?`Gõ GÓP hoặc BỎ vào chat. Góp một trăm MONEY.`
         :event.phase==='settled'?`Góp vốn: cả nhóm ${signed(event.result.net)} MONEY.`:'Chốt góp vốn. Xem chart mô phỏng.';
     } else if (id.startsWith('shop-')) {
       const event=this.shop.snapshot();
-      text=event.phase==='ordering'?`MUA ${event.hostId}: tối đa tám đơn.`
-        :event.phase==='returns'?`BOM ${event.hostId} để hủy, mười hai giây.`:`${event.hostId}: shop ${signed(event.result?.net||0)} MONEY.`;
+      text=event.phase==='ordering'?`Khách chờ, gõ MUA ${event.hostId} vào chat để đặt đơn.`
+        :event.phase==='returns'?`Gõ BOM ${event.hostId} vào chat để tự hủy đơn.`:`${event.hostId}: shop ${signed(event.result?.net||0)} MONEY.`;
     } else if (id.startsWith('envelope-')) {
       const event=this.game.redEnvelopeSnapshot();
-      text=event?.phase==='settled'?`Lì xì ${event.result.pot}, chia ${event.participants} người.`:'Đủ nghìn tim, mở lì xì cả phố.';
+      text=event?.phase==='settled'?`Lì xì ${event.result.pot}, chia ${event.participants} người.`:'Chạm màn hình thả tim để mở lì xì cả phố.';
     } else if (id==='race.new-match') text='Ván mới: ba vòng, ba người lên bục.';
     const cue = { sequence: ++this.sequence, id, text, variables, clock: this.clock, kind: 'script-only' };
     this.mcCues.push(cue); if (this.mcCues.length > 200) this.mcCues.shift();

@@ -33,7 +33,7 @@ $('#live-app').innerHTML = `
     <section class="live-welcome" id="live-welcome" hidden aria-live="polite"><span class="welcome-icon">✦</span><div><small id="welcome-label">CẢ PHỐ CHÀO BẠN</small><b id="welcome-name"></b><span id="welcome-detail"></span></div></section>
     <aside class="live-side-rail live-money-rail" data-testid="top-players" aria-label="Xếp hạng MONEY"><h2><span>♛</span> TOP MONEY</h2><ol id="money-leaders"></ol><p class="rail-empty" id="money-empty">Chờ người chơi</p></aside>
     <aside class="live-side-rail live-gift-rail" data-testid="gift-feed" aria-label="Quà vừa nhận"><h2><span>✦</span> QUÀ GHÉ PHỐ</h2><ol id="recent-gifts"></ol><p class="rail-empty" id="gift-empty">Lời cảm ơn<br>của cả phố</p><div id="gift-guide">${giftGuideHTML({base})}</div></aside>
-    <section class="live-branch" id="branch-bar" hidden><div><b>↔ CHỌN NGÕ NÀO?</b><span id="branch-time"></span></div><div id="branch-options"></div><small id="branch-votes"></small><div class="live-track"><i id="branch-track"></i></div></section>
+    <section class="live-branch" id="branch-bar" hidden><div><b>Gõ TRÁI hoặc PHẢI vào chat</b><span id="branch-time"></span></div><div id="branch-options"></div><small id="branch-votes"></small><div class="live-track"><i id="branch-track"></i></div></section>
     <section class="live-event" id="event-panel" hidden><div><span id="event-category"></span><span id="event-time"></span></div><h2 id="event-title"></h2><p id="event-body"></p><strong id="event-money"></strong><div id="event-options"></div></section>
     <section class="live-waiting" id="live-waiting"><span>✦</span><h1>Khu phố đang mở cửa</h1><p id="waiting-description">Gõ <b>CHƠI</b> để có quân của bạn.<br>Khách chờ vẫn góp vốn, đặt đơn và nhận lì xì.</p></section>
     <div class="live-caption" id="live-caption" hidden aria-live="polite"></div>
@@ -192,7 +192,7 @@ function renderHud() {
     $('#turn-seat').textContent = player.seat; $('#turn-name').textContent = player.name;
     $('#turn-money').textContent = money(player.money);
     $('#turn-label').textContent = game.globalHold ? 'SỰ KIỆN CẢ PHỐ' : current.spotlight?.kind === 'rose' ? 'LƯỢT ƯU TIÊN HOA HỒNG' : current.spotlight ? 'CHÀO NGƯỜI MỚI' : 'CAMERA ĐANG THEO';
-    $('#turn-action').textContent = game.globalHold ? 'Cả phố cùng tham gia sự kiện' : game.phase === 'roll' ? 'Đang lắc xúc xắc…' : game.phase === 'roll-result' ? `Ra ${game.roll}!` : game.phase === 'moving' ? `Đang đi · còn ${game.remaining} bước` : game.phase === 'fork-choice' ? 'Gõ TRÁI hoặc PHẢI' : game.phase === 'event-choice' ? 'Chọn phương án trên thẻ' : 'Gõ LẮC · hết giờ tự lắc';
+    $('#turn-action').textContent = game.globalHold ? 'Cả phố cùng tham gia sự kiện' : game.phase === 'roll' ? 'Đang lắc xúc xắc…' : game.phase === 'roll-result' ? `Ra ${game.roll}!` : game.phase === 'moving' ? `Đang đi · còn ${game.remaining} bước` : game.phase === 'fork-choice' ? 'Gõ TRÁI hoặc PHẢI vào chat' : game.phase === 'event-choice' ? 'Gõ số lựa chọn vào chat' : 'Gõ LẮC vào chat · hết giờ tự lắc';
   }
   const welcome = current.spotlight;
   $('#live-welcome').hidden = !welcome || over || !!current.community?.modal;
@@ -206,7 +206,7 @@ function renderHud() {
   $('#branch-bar').hidden = !branch || !!current.community?.modal || over;
   if (branch) {
     $('#branch-time').textContent = `${Math.ceil(branch.remainingSeconds)}s`;
-    $('#branch-options').innerHTML = branch.options.map(option => `<div><b>${option.id === 'left' ? '↰ TRÁI' : 'PHẢI ↱'}</b><span>${esc(option.name || option.label)}</span><small>${esc(option.preview)}</small></div>`).join('');
+    $('#branch-options').innerHTML = branch.options.map(option => `<div><b>${option.id === 'left' ? 'Gõ TRÁI ↰' : 'Gõ PHẢI ↱'}</b><span>${esc(option.name || option.label)}</span><small>${esc(option.preview)}</small></div>`).join('');
     $('#branch-votes').textContent = `Phiếu: TRÁI ${branch.votes.left} · PHẢI ${branch.votes.right} · hòa đi mặc định`;
     $('#branch-track').style.width = `${Math.min(100, branch.remainingSeconds * 10)}%`;
   }
@@ -218,7 +218,7 @@ function renderHud() {
     $('#event-time').textContent = event.result ? 'ĐÃ CHỐT' : `${Math.ceil(event.remainingSeconds)}s`;
     $('#event-title').textContent = event.title; $('#event-body').textContent = event.body;
     $('#event-money').textContent = event.result ? `${event.result.delta > 0 ? '+' : ''}${money(event.result.delta)} MONEY` : '';
-    $('#event-options').innerHTML = event.result ? '' : event.choices.map((choice, index) => `<div><b>Gõ ${index + 1} · ${esc(choice.label)}</b><span>${esc(choice.description)}</span></div>`).join('');
+    $('#event-options').innerHTML = event.result ? '' : event.choices.map((choice, index) => `<div><b>Gõ ${index + 1} vào chat · ${esc(choice.label)}</b><span>${esc(choice.description)}</span></div>`).join('');
   }
   if (communityView && game && current.community) {
     const state = { ...current.community, selectedId: game.seat || actors[0]?.seat || '' };
