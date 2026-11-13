@@ -1,5 +1,7 @@
 # Luật ván chơi và logic sự kiện — Cờ Tý Phí V5
 
+> Tài liệu này mô tả engine V5/offline. Phần TikTok LIVE/MC, đăng ký thật, lệnh số và thay ghế giữa ván được bổ sung ở [hướng dẫn LIVE Studio](14-live-studio.md); những mục dưới đây ghi “chưa nối LIVE” nói về bản offline tại mốc V5.
+
 Cập nhật: **13/11/2026** · Nhánh: `web/third-person-v23`.
 
 Tài liệu này dành cho người vận hành livestream, người viết kịch bản MC và người tiếp tục phát triển game. Các luật ghi **hiện có** được đối chiếu với mã nguồn trong nhánh này. Phần **cần triển khai cho LIVE** là hướng tích hợp, chưa phải tính năng đã chạy với người xem thật.

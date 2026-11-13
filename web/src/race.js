@@ -72,7 +72,7 @@ export class RaceState {
     if (nextSteps === this.totalSteps) {
       if (destination !== this.course.finishNodeId) throw new Error('Finish must cross the shared finish tile');
       player.finished = true; player.finishRank = this.finishers.length + 1;
-      this.finishers.push({ seat: player.seat, index: this.players.indexOf(player), rank: player.finishRank, turn });
+      this.finishers.push({ seat: player.seat, index: this.players.indexOf(player), name:player.data.name, money:player.money, rank: player.finishRank, turn });
       return true;
     }
     return false;
@@ -100,8 +100,8 @@ export class RaceState {
   snapshot(preview = false) {
     return { lapTarget: this.lapTarget, lapSteps: this.course.lapSteps, totalSteps: this.totalSteps, finishLimit: this.finishLimit,
       finishNodeId: this.course.finishNodeId, finishPosition: [...this.course.finishPosition], finishHeading: [...this.course.finishHeading],
-      finishCandidates: [...this.course.finishCandidates], finishers: this.finishers.map(entry => ({ ...entry, money: this.players[entry.index].money })),
+      finishCandidates: [...this.course.finishCandidates], finishers: this.finishers.map(entry => ({ ...entry, money: this.players[entry.index]?.money??entry.money })),
       over: this.over, preview, players: this.rankings(), moneyStandings: this.moneyStandings(),
-      finalStandings: this.over ? this.finishers.map(entry => ({ ...entry, name: this.players[entry.index].data.name, money: this.players[entry.index].money })) : [] };
+      finalStandings: this.over ? this.finishers.map(entry => ({ ...entry, name: this.players[entry.index]?.data.name??entry.name, money: this.players[entry.index]?.money??entry.money })) : [] };
   }
 }

@@ -1,4 +1,6 @@
-# Cờ Tý Phí — Web demo camera · Asset v2.3
+# Cờ Tý Phí — TikTok LIVE · Khu phố 3D
+
+**TikTok LIVE + MC:** chạy `start-live.cmd`, mở [Admin](http://127.0.0.1:5182/admin) và [khung phát 9:16](http://127.0.0.1:5182/overlay). Có phòng mô phỏng riêng khi chưa mở LIVE. [Hướng dẫn kết nối, MC, người mới và thay ghế](docs/co-ty-phu/14-live-studio.md). Server mặc định chưa kết nối TikTok; nhập username tại Admin khi phòng đã phát. Dừng bằng `stop-live.cmd` hoặc Ctrl+C.
 
 **Tài liệu dùng để phát triển tiếp:** [Luật ván chơi và logic sự kiện V5](docs/co-ty-phu/13-event-logic-guide.md) — công thức tiền, lệnh, góp vốn/chart, shop, lì xì, ghép trận, MC và danh mục 50 thẻ.
 

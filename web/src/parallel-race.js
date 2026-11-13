@@ -20,6 +20,8 @@ export class ParallelRace {
     this.onCollectiveLanding = options.onCollectiveLanding || null;
     this.dispatchInterval = Math.max(.001, options.dispatchInterval ?? .06);
     this.backgroundDecisionSeconds = Math.max(.1, options.backgroundDecisionSeconds ?? 3);
+    this.autoRollSeconds = Math.max(0, options.autoRollSeconds ?? 0);
+    this.heldSeats = new Set();
     this.runners = []; this.ledger = []; this.previewOrigins = new Map(); this.manualQueue = new Set();
     this.eventSequence = 0; this.rollSequence = 0; this.dispatchClock = 0; this.lastDispatched = -1;
     this.nodes = new Map(); this.emitTime = 0;
@@ -85,6 +87,51 @@ export class ParallelRace {
     };
     runner._ledgerCursor = 0;
     return runner;
+  }
+
+  // LIVE membership changes preserve every remaining actor's current segment,
+  // event, wallet and completed edges. Rebind index-capturing adapters only.
+  async updatePlayers(players, { finishLimit = null } = {}) {
+    if (this.loading || this.globalHold) throw new Error('Wait for the current scene or collective event');
+    if (!Array.isArray(players) || players.length > 200) throw new RangeError('Active roster needs 0–200 racers');
+    const ids=players.map(player=>String(player?.accountId??player?.id??player?.seat??'').trim());
+    if (ids.some(id=>!id)||new Set(ids).size!==ids.length) throw new Error('Active racers need unique account IDs');
+    if (players.some(player=>!player.group?.isObject3D||!player.position?.isVector3||!player.heading?.isVector3)) throw new TypeError('Active racers need initialized sprite actors');
+    const oldPlayers=this.players,oldRunners=this.runners,oldFocus=oldPlayers[this.active]?.seat;
+    const queued=new Set([...this.manualQueue].map(index=>oldPlayers[index]?.seat));
+    const retained=new Map(oldPlayers.map((player,index)=>[player,oldRunners[index]]));
+    for(const [index] of this.previewOrigins)this.restorePreview(index);
+    for(const player of oldPlayers)if(!players.includes(player))this.world.playerGroup.remove(player.group);
+    this.players=[...players];
+    this.runners=[];
+    for(const [index,player] of this.players.entries()) {
+      const money=player.money??1000,old=retained.get(player),runner=this.makeRunner(player,index);
+      if(old) {
+        for(const key of Object.keys(old))if(typeof old[key]!=='function'&&!['players','world','onChange'].includes(key))runner[key]=old[key];
+      } else {
+        await runner.changeMap(this.mapId);
+        const node=this.nodes.get(this.race.course.finishNodeId);
+        player.node=node.id;player.position.fromArray(node.position);
+        player.heading.fromArray(this.nodes.get(node.next[0]).position).sub(player.position).setY(0).normalize();
+        player.raceSteps=0;player.laps=0;player.finished=false;player.finishRank=null;player.spawnOffset=[0,0];
+      }
+      player.money=money;this.world.playerGroup.add(player.group);this.runners.push(runner);
+    }
+    this.race.players=this.players;
+    for(const entry of this.race.finishers) {
+      const old=oldPlayers[entry.index];
+      entry.name??=old?.data.name;entry.money??=old?.money;
+      entry.index=this.players.findIndex(player=>player.seat===entry.seat);
+    }
+    if(Number.isInteger(finishLimit)&&finishLimit>0)this.race.finishLimit=Math.min(3,finishLimit);
+    this.active=Math.max(0,this.players.findIndex(player=>player.seat===oldFocus));
+    this.manualQueue=new Set(this.players.flatMap((player,index)=>queued.has(player.seat)?[index]:[]));
+    this.lastDispatched=-1;this.previewOrigins.clear();this.pendingCollective=null;this.advanceFocus=false;
+    this.emit();return oldPlayers;
+  }
+
+  holdPlayer(seat, value = true) {
+    if(value)this.heldSeats.add(seat);else this.heldSeats.delete(seat);
   }
 
   async changeMap(id) {
@@ -175,7 +222,7 @@ export class ParallelRace {
   }
 
   dispatch() {
-    const eligible = this.runners.map((runner,index)=>({runner,index})).filter(({runner,index})=>runner.phase==='overview'&&!this.players[index].finished).map(({index})=>index);
+    const eligible = this.runners.map((runner,index)=>({runner,index})).filter(({runner,index})=>runner.phase==='overview'&&!this.players[index].finished&&!this.heldSeats.has(this.players[index].seat)&&(this.manualQueue.has(index)||runner.phaseTime>=this.autoRollSeconds)).map(({index})=>index);
     if (!eligible.length) return false;
     const chosen = this.chooseNextPlayer?.([...eligible], this.lastDispatched, this);
     const manual = [...this.manualQueue].find(index=>eligible.includes(index));
@@ -321,6 +368,7 @@ export class ParallelRace {
       for (const [index,runner] of this.runners.entries()) {
         if (this.race.over) break;
         const player=this.players[index];
+        if(this.heldSeats.has(player.seat))continue;
         if (player.finished) {
           runner.phaseTime += simulationDt;
           if (index===this.active && runner.phaseTime>=2.4) this.advanceFocus=true;
@@ -361,7 +409,7 @@ export class ParallelRace {
   }
 
   update(dt) {
-    if (this.loading || !this.race) return;
+    if (this.loading || !this.race || !this.players.length) return;
     const gameDt=this.paused||this.globalHold||this.race.over?0:dt*this.speed;
     let remaining=gameDt,simulationDt=0;
     for(let slices=0;remaining>1e-12&&!this.globalHold&&!this.race.over&&slices<8;slices++) {
@@ -381,7 +429,7 @@ export class ParallelRace {
 
   snapshot() {
     const runner=this.runners[this.active];
-    if(!runner) return {map:this.mapId,active:this.active,loading:true,players:[]};
+    if(!runner) return {map:this.mapId,seed:this.layout?.seed,active:0,loading:this.loading,phase:'waiting',players:[],crowd:[],race:this.race?.snapshot()??null,paused:this.paused,globalHold:this.globalHold,speed:this.speed,parallel:true};
     const focused=runner.snapshot();
     const players=this.players.map((player,index)=>({seat:player.seat,name:player.data.name,money:player.money,node:player.node,
       position:player.position.toArray(),heading:player.heading.toArray(),clip:player.clip,frame:player.frame,facing:player.facing,

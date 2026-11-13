@@ -4,7 +4,7 @@ import * as THREE from 'three';
 // cannot play twice just because the HUD refreshes or the game is paused.
 export class TownEffects {
   constructor(world, parent, base) {
-    this.world = world; this.base = base; this.enabled = true;
+    this.world = world; this.base = base; this.enabled = true; this.volume = 1;
     this.group = new THREE.Group(); this.group.name = 'Event feedback'; world.scene.add(this.group);
     this.items = []; this.audio = []; this.seen = new Set();
     this.geometries = { coin: new THREE.CylinderGeometry(.095, .095, .035, 12),
@@ -32,7 +32,7 @@ export class TownEffects {
     if (!/^sfx_[a-z_]+$/.test(id)) return;
     this.audio = this.audio.filter(audio => !audio.ended);
     if (this.audio.length >= 3) this.audio.shift().pause();
-    const audio = new Audio(this.base + 'audio/' + id + '.ogg'); audio.volume = .28;
+    const audio = new Audio(this.base + 'audio/' + id + '.ogg'); audio.volume = .28 * this.volume;
     this.audio.push(audio); audio.play().catch(() => {});
   }
 

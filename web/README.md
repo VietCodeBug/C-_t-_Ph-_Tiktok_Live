@@ -1,5 +1,7 @@
 # Phố Đồ Chơi — web camera demo
 
+**Server TikTok LIVE + MC:** chạy `npm run build` rồi `npm run live`, hoặc `start-live.cmd` ở gốc repo. [Admin](http://127.0.0.1:5182/admin) · [Overlay](http://127.0.0.1:5182/overlay) · [Demo riêng](http://127.0.0.1:5182/demo). Xem [hướng dẫn LIVE Studio](../docs/co-ty-phu/14-live-studio.md); phần V5 bên dưới là bản offline cũ để duyệt asset.
+
 **Bản local V5:** xem [LOCAL_PREVIEW.md](LOCAL_PREVIEW.md) — mặc định **20 quân / 100 tài khoản, 80 khách chờ**, ba vòng đường và top 3 chốt ván. Bục 8 giây → sảnh giữ ghế 15 giây: tối đa 12 người cũ đầu tiên đủ 30 tim mới giữ ghế, tối thiểu tám khách chờ lâu nhất lên nếu đủ hàng; suất giữ ghế dư cũng lấy FIFO. Khách chờ đặt/hủy đơn SHOP01 miễn phí, góp vốn và nhận lì xì mà không tạo sprite trên map. Mỗi ván mới reset toàn bộ ví về 1.000; MC bàn giao text/JSON cho repo riêng. Mở [bản mặc định](http://localhost:4173/?players=20&accounts=100); 100/200 quân chỉ bật qua `stress=1`. Đây là mô phỏng local, chưa có adapter TikTok. Nội dung dưới đây mô tả bản camera gốc và các bằng chứng cũ.
 
 Interactive portrait preview with ten real characters from the user's Sprite V2.3 pack, the prepared two map layouts, and environment models from the user's V1 pack.
