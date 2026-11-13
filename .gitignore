@@ -41,3 +41,6 @@ Thumbs.db
 
 # Generated workbook inspection output
 *.xlsx.inspect.ndjson
+
+# Background music explicitly supplied for this game
+!assets/audio/music/*.m4a

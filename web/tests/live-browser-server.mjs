@@ -8,10 +8,10 @@ const port = Number(process.env.LIVE_QA_PORT || 5180);
 const origin = `http://127.0.0.1:${port}`;
 const token = process.env.LIVE_QA_TOKEN;
 function silence() {
-  const data = Buffer.alloc(44 + 8000); data.write('RIFF'); data.writeUInt32LE(data.length - 8, 4); data.write('WAVE', 8);
+  const data = Buffer.alloc(44 + 32000); data.write('RIFF'); data.writeUInt32LE(data.length - 8, 4); data.write('WAVE', 8);
   data.write('fmt ', 12); data.writeUInt32LE(16, 16); data.writeUInt16LE(1, 20); data.writeUInt16LE(1, 22);
   data.writeUInt32LE(8000, 24); data.writeUInt32LE(16000, 28); data.writeUInt16LE(2, 32); data.writeUInt16LE(16, 34);
-  data.write('data', 36); data.writeUInt32LE(8000, 40); return data;
+  data.write('data', 36); data.writeUInt32LE(32000, 40); return data;
 }
 const app = await createLiveServer({ config: { port }, dataDir: resolve('artifacts/live-studio/qa-runtime'),
   synthesizeTTS: async () => ({ buffer: silence(), contentType: 'audio/wav', provider: 'test-silence' }) });

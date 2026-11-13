@@ -6,7 +6,7 @@ export const DEFAULT_SETTINGS = Object.freeze({
   schemaVersion: 1,
   username: '',
   autoJoinOnEnter: true,
-  audio: { enabled: true, voice: 'vi-VN-HoaiMyNeural', rate: 1.05, volume: .85 },
+  audio: { enabled: true, voice: 'vi-VN-HoaiMyNeural', rate: 1.05, volume: .85, musicEnabled: true, musicVolume: .14 },
   gameplay: { maxPlayers: 20, startingMoney: 1000, inactivitySeconds: 300, autoRollSeconds: 10 },
   gifts: { roseIds: ['5655'] },
 });
@@ -37,6 +37,8 @@ export function validateSettings(input = {}, previous = DEFAULT_SETTINGS) {
       voice: ['female', 'male', 'vi-VN-HoaiMyNeural', 'vi-VN-NamMinhNeural'].includes(audio.voice) ? audio.voice : previous.audio.voice,
       rate: bounded(audio.rate, previous.audio.rate, .8, 1.25),
       volume: bounded(audio.volume, previous.audio.volume, 0, 1),
+      musicEnabled: typeof audio.musicEnabled === 'boolean' ? audio.musicEnabled : previous.audio.musicEnabled ?? DEFAULT_SETTINGS.audio.musicEnabled,
+      musicVolume: bounded(audio.musicVolume, previous.audio.musicVolume ?? DEFAULT_SETTINGS.audio.musicVolume, 0, 1),
     },
     gameplay: {
       maxPlayers: Math.round(bounded(gameplay.maxPlayers ?? gameplay.seats, previous.gameplay.maxPlayers, 1, 20)),

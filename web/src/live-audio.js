@@ -17,27 +17,28 @@ function silentWav(){
 // Feed it canonical server MC packets, never chat/comment payloads.
 export class LiveAudio {
   constructor({mode='live',ttsUrl='/api/tts',onCaption,onState,onDuck,onError,browserFallback=true,
-    volume=.85,voice='female',rate=1.06,env=globalThis,audio,fetch:fetcher,now=Date.now,gapMs=650}={}){
+    volume=.85,voice='female',rate=1.06,enabled=true,env=globalThis,audio,fetch:fetcher,now=Date.now,gapMs=650}={}){
     this.env=env;this.mode=mode;this.ttsUrl=ttsUrl;this.onCaption=onCaption;this.onState=onState;this.onDuck=onDuck;this.onError=onError;
     this.browserFallback=browserFallback;this.volume=clamp(volume,.85);this.voice=voiceName(voice);this.rate=speechRate(rate);
     this.audio=audio||new env.Audio();this.audio.preload='auto';this.fetcher=fetcher||env.fetch?.bind(env);this.now=now;this.gapMs=gapMs;
-    this.queue=new SpeechCueQueue({now});this.enabled=false;this.unlocked=false;this.speaking=false;this.error='';this.provider='captions';
+    this.queue=new SpeechCueQueue({now});this.configuredEnabled=!!enabled;this.ownerClaimed=false;this.blockedByOtherTab=false;this.enabled=false;this.unlocked=false;this.speaking=false;this.error='';this.provider='captions';
     this.lastEnded=-Infinity;this.generation=0;this.current=null;this.disposed=false;
     this.owner=env.crypto?.randomUUID?.()||`mc-${Math.random().toString(36).slice(2)}`;
     if(env.window&&typeof env.BroadcastChannel==='function'){
       this.channel=new env.BroadcastChannel(`co-ty-phi-mc-audio-owner-v1-${this.mode}`);
-      this.channel.onmessage=event=>{if(event.data?.owner&&event.data.owner!==this.owner&&this.enabled){this.setEnabled(false);this.error='MC đang phát ở tab game khác.';this._emit();}};
+      this.channel.onmessage=event=>{if(event.data?.owner&&event.data.owner!==this.owner){this.blockedByOtherTab=true;this.ownerClaimed=false;this.enabled=false;this.stop();this.error='MC đang phát ở tab game khác.';this._emit();}};
     }
     this._emit();
   }
-  get status(){return {enabled:this.enabled,unlocked:this.unlocked,speaking:this.speaking,queued:this.queue.size,error:this.error,provider:this.provider,volume:this.volume,voice:this.voice,currentId:this.current?.cue.id||null};}
+  get status(){return {enabled:this.enabled,configuredEnabled:this.configuredEnabled,ownerClaimed:this.ownerClaimed,blockedByOtherTab:this.blockedByOtherTab,unlocked:this.unlocked,speaking:this.speaking,queued:this.queue.size,error:this.error,provider:this.provider,volume:this.volume,voice:this.voice,currentId:this.current?.cue.id||null};}
   snapshot(){return this.status;}
   _emit(){safeCall(this.onState,this.status);}
   _error(message){this.error=message;safeCall(this.onError,message);this._emit();}
   async unlock(){
     if(this.disposed)return false;
-    if(this.unlocked){this.enabled=true;this.channel?.postMessage({owner:this.owner});this._emit();this._pump();return true;}
-    this.enabled=true;this.error='';
+    this.blockedByOtherTab=false;this.ownerClaimed=true;this.error='';
+    if(this.unlocked){this.enabled=this.configuredEnabled;this.channel?.postMessage({owner:this.owner});this._emit();this._pump();return true;}
+    this.enabled=false;this.error='';
     // Prime the SAME media element inside the original click handler. iOS and
     // embedded LIVE browsers may grant autoplay only to this element.
     const url=URL.createObjectURL(silentWav());this.audio.src=url;this.audio.volume=0;
@@ -48,19 +49,19 @@ export class LiveAudio {
       if(Context&&!this.context)this.context=new Context();
       const resume=this.context?.resume().catch(()=>{});
       await Promise.all([playback,resume]);this.audio.pause();this.audio.volume=this.volume;
-      this.unlocked=true;this.channel?.postMessage({owner:this.owner});this._emit();this._pump();return true;
+      this.unlocked=true;this.enabled=this.configuredEnabled;this.channel?.postMessage({owner:this.owner});this._emit();this._pump();return true;
     }catch{
       this.unlocked=false;this._error('Bấm Bật MC ngay trong tab hoặc nguồn game để cấp quyền âm thanh.');return false;
     }finally{URL.revokeObjectURL(url);}
   }
   setEnabled(value){
-    this.enabled=!!value;
+    this.configuredEnabled=!!value;this.enabled=this.configuredEnabled&&this.unlocked&&this.ownerClaimed&&!this.blockedByOtherTab;
     if(!this.enabled)this.stop();else this._pump();this._emit();return this.enabled;
   }
   setVolume(value){this.volume=clamp(value,.85);this.audio.volume=this.volume;if(this.utterance)this.utterance.volume=this.volume;this._emit();}
   setVoice(value){this.voice=voiceName(value);this._emit();}
   setRate(value){this.rate=speechRate(value);this._emit();}
-  configure(value={}){if(value.volume!==undefined)this.setVolume(value.volume);if(value.voice!==undefined)this.setVoice(value.voice);if(value.rate!==undefined)this.setRate(value.rate);if(value.browserFallback!==undefined)this.browserFallback=!!value.browserFallback;return this.status;}
+  configure(value={}){if(value.enabled!==undefined)this.setEnabled(value.enabled);if(value.volume!==undefined)this.setVolume(value.volume);if(value.voice!==undefined)this.setVoice(value.voice);if(value.rate!==undefined)this.setRate(value.rate);if(value.browserFallback!==undefined)this.browserFallback=!!value.browserFallback;return this.status;}
   enqueue(cue){
     if(this.disposed)return false;
     const accepted=this.queue.add(cue);if(!accepted)return false;
@@ -70,7 +71,7 @@ export class LiveAudio {
   }
   speak(cue){return this.enqueue(cue);}
   async test(){
-    if(!await this.unlock())return false;
+    if(!await this.unlock()||!this.enabled)return false;
     this.stop({clearQueue:false});this.queue.forget('audio-test',AUDIO_TEST_TEXT);
     return this.enqueue({id:'audio-test',eventId:'SYSTEM',text:AUDIO_TEST_TEXT,priority:3});
   }

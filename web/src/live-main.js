@@ -9,11 +9,15 @@ import { EventCameos } from './event-cameos.js';
 import { RacePresentation } from './race-presentation.js';
 import { CommunityView } from './community-view.js';
 import { LiveAudio } from './live-audio.js';
+import { LiveMusic } from './live-music.js';
+import { leaderboardRows, giftRows } from './live-rails.js';
 import './gameplay.css';
 import './community.css';
 import './live.css';
 
-const mode = location.pathname.startsWith('/demo') || new URLSearchParams(location.search).get('mode') === 'demo' ? 'demo' : 'live';
+const query = new URLSearchParams(location.search);
+const mode = location.pathname.startsWith('/demo') || query.get('mode') === 'demo' ? 'demo' : 'live';
+const capture = query.get('capture') === '1' || location.hash.includes('tiktok.studio');
 const base = new URL('/runtime/', location.origin).href;
 const money = value => Math.round(value || 0).toLocaleString('vi-VN');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -21,43 +25,86 @@ const $ = selector => document.querySelector(selector);
 $('#live-app').innerHTML = `
   <main class="live-stage portrait" id="portrait" data-phase="waiting">
     <canvas id="game" aria-label="Khu phố 3D Cờ Tý Phí"></canvas>
-    <header class="live-header"><div class="live-brand">CỜ TÝ PHÍ<small>CẢ PHỐ CÙNG CHƠI</small></div><div class="live-room-state"><span id="live-mode">${mode === 'demo' ? 'MÔ PHỎNG' : 'TIKTOK LIVE'}</span><small id="source-state">Đang nối máy chủ…</small></div></header>
+    <header class="live-header"><div class="live-brand">CỜ TÝ PHÍ<small id="brand-subtitle">CẢ PHỐ CÙNG CHƠI</small></div>${mode === 'demo' ? '<span class="live-demo-tag" id="live-mode">MÔ PHỎNG</span>' : ''}</header>
     <div class="live-turn" id="live-turn" hidden><div class="live-turn-seat" id="turn-seat"></div><div class="live-turn-person"><small id="turn-label">CAMERA ĐANG THEO</small><strong id="turn-name"></strong><span id="turn-action"></span></div><div class="live-wallet"><small>MONEY</small><b id="turn-money"></b></div></div>
     <section class="live-welcome" id="live-welcome" hidden aria-live="polite"><span class="welcome-icon">✦</span><div><small id="welcome-label">CẢ PHỐ CHÀO BẠN</small><b id="welcome-name"></b><span id="welcome-detail"></span></div></section>
+    <aside class="live-side-rail live-money-rail" data-testid="top-players" aria-label="Xếp hạng MONEY"><h2><span>♛</span> TOP MONEY</h2><ol id="money-leaders"></ol><p class="rail-empty" id="money-empty">Chờ người chơi</p></aside>
+    <aside class="live-side-rail live-gift-rail" data-testid="gift-feed" aria-label="Quà vừa nhận"><h2><span>✦</span> QUÀ GHÉ PHỐ</h2><ol id="recent-gifts"></ol><p class="rail-empty" id="gift-empty">Lời cảm ơn<br>của cả phố</p><p class="gift-rule">🌹 Hoa hồng<br><span>Ưu tiên lượt hợp lệ</span></p></aside>
     <section class="live-branch" id="branch-bar" hidden><div><b>↔ CHỌN NGÕ NÀO?</b><span id="branch-time"></span></div><div id="branch-options"></div><small id="branch-votes"></small><div class="live-track"><i id="branch-track"></i></div></section>
     <section class="live-event" id="event-panel" hidden><div><span id="event-category"></span><span id="event-time"></span></div><h2 id="event-title"></h2><p id="event-body"></p><strong id="event-money"></strong><div id="event-options"></div></section>
     <section class="live-waiting" id="live-waiting"><span>✦</span><h1>Khu phố đang mở cửa</h1><p id="waiting-description">Gõ <b>CHƠI</b> để có quân của bạn.<br>Khách chờ vẫn góp vốn, đặt đơn và nhận lì xì.</p></section>
     <div class="live-caption" id="live-caption" hidden aria-live="polite"></div>
     <footer class="live-footer"><div><b id="room-count">0 người trong bàn</b><span id="race-hint">Ba vòng đường · Top 3 lên bục</span></div><span id="lap-label">1 / 3</span></footer>
-    <button class="live-audio-button" id="audio-unlock">♫ Bật âm thanh MC</button>
+    <button class="live-audio-button" id="audio-unlock">♫ Bật âm thanh</button>
+    <button class="live-music-button" id="music-toggle" aria-pressed="true">♫ Nhạc nền</button>
     <div class="live-loading" id="live-loading"><span>✦</span><b>Đang mở khu phố…</b><small id="loading-message">Chuẩn bị nhà, cây và nhân vật</small></div>
     <div class="live-source-warning" id="live-warning" hidden></div>
-  </main>`;
+  </main>
+  <nav class="live-view-nav" data-testid="preview-navigation" aria-label="Chọn màn hình"><a href="/demo" ${mode === 'demo' ? 'aria-current="page"' : ''}>Mở Demo</a><a href="/overlay" ${mode === 'live' ? 'aria-current="page"' : ''}>Mở LIVE</a><a href="/admin">Quản lý</a></nav>`;
 document.body.dataset.mode = mode;
+document.body.dataset.capture = String(capture);
 
 let current = null, world, pack, actors = [], bySeat = new Map(), dice, effects, cameos, presentation, communityView;
 let mapKey = '', frameTime = 0, renderTime = 0, syncing = false, pending = null, connected = false, lastStateAt = 0, activeCaption = null;
+let demoStartRequested = false, demoStarting = false, railKey = '', musicManifestError = '';
 const targets = new Map();
 const facade = {
   game: { accounts: new Map() }, selectedId: '',
   demo: { players: [], active: 0, setPaused() {}, select() {} },
   comment() {}, like() {}, rose() {}, openInvestment() {}, openEnvelope() {}, openShop() {}, simulateJoins() {}, simulateHearts() {}, simulateOrders() {}, simulateCancels() {}
 };
+const music = new LiveMusic({mode,volume:.14,enabled:true,onState(status){
+  $('#music-toggle').textContent=status.error?'♫ Nhạc · thử lại':status.enabled?'♫ Nhạc nền':'♫ Nhạc tắt';
+  $('#music-toggle').setAttribute('aria-pressed',String(status.enabled));
+  $('#music-toggle').dataset.enabled=String(status.enabled&&status.unlocked);
+  $('#music-toggle').title=status.error||musicManifestError||'Bật hoặc tắt nhạc nền, độc lập với giọng MC';
+}});
 const audio = new LiveAudio({ mode,
   onCaption(text, cue) { activeCaption = text ? { text, cue, until: Date.now() + 16000 } : null; updateCaption(); },
   onState(status) {
-    $('#audio-unlock').textContent = !status.unlocked ? '♫ Bật âm thanh MC' : !status.enabled ? '♫ MC đang tắt' : status.error ? '♫ MC · kiểm tra âm thanh' : '♫ MC đang bật';
-    $('#audio-unlock').dataset.enabled = String(!!status.unlocked && status.enabled);
-    $('#audio-unlock').title = status.error || 'Bật âm thanh trong đúng cửa sổ đang lấy vào LIVE Studio';
+    $('#audio-unlock').textContent = !status.unlocked ? '♫ Bật âm thanh' : status.configuredEnabled===false ? '♫ MC tắt · nhạc riêng' : !status.enabled ? '♫ MC đang tắt' : status.error ? '♫ MC · kiểm tra âm thanh' : '♫ MC đang bật';
+    $('#audio-unlock').dataset.enabled = String(!!status.unlocked);
+    $('#audio-unlock').title = status.error || (status.configuredEnabled===false?'Giọng MC đang tắt trong Quản lý; nhạc nền được bật riêng':'Bật âm thanh trong đúng cửa sổ đang lấy vào LIVE Studio');
   },
-  onDuck(gain) { if (effects) { effects.volume = gain; effects.audio.forEach(item => { item.volume = .28 * gain; }); } }
+  onDuck(gain) { music.setDucking(gain<1); if (effects) { effects.volume = gain; effects.audio.forEach(item => { item.volume = .28 * gain; }); } }
 });
-$('#audio-unlock').onclick = async () => { try { await audio.unlock(); effects.unlocked = true; } catch (error) { showWarning(error.message); } };
+$('#audio-unlock').onclick = async () => {
+  const voice=audio.unlock(),background=music.unlock();
+  if(effects)effects.unlocked=true;
+  const results=await Promise.allSettled([voice,background]);
+  if(results[0].status==='rejected')showWarning(results[0].reason?.message||'Chưa bật được âm thanh MC');
+};
+$('#music-toggle').onclick = async () => {
+  if(music.status.blockedByOtherTab){await music.unlock();return;}
+  if(music.status.unlocked){music.configure({enabled:!music.status.enabled});return;}
+  music.configure({enabled:true});await music.unlock();
+};
 
 function showWarning(text) { $('#live-warning').hidden = !text; $('#live-warning').textContent = text || ''; }
 function updateCaption() {
   const text = activeCaption && activeCaption.until > Date.now() ? activeCaption.text : '';
   $('#live-caption').textContent = text; $('#live-caption').hidden = !text;
+}
+function configureAudio(settings={}) {
+  audio.configure(settings);
+  music.configure({musicEnabled:settings.musicEnabled,musicVolume:settings.musicVolume});
+}
+async function startDemoIfEmpty(state){
+  if(mode!=='demo'||query.get('empty')==='1'||demoStartRequested||(state.roster?.length||state.game?.players?.length))return;
+  demoStartRequested=true;demoStarting=true;
+  try{
+    const response=await fetch('/api/control',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'demo',action:'demo-start',payload:{count:20}})});
+    if(!response.ok)throw new Error('Chưa mở được bản mô phỏng; tải lại trang để thử lại.');
+  }catch(error){showWarning(error.message);}
+  finally{demoStarting=false;renderHud();}
+}
+function renderRails(){
+  const leaders=leaderboardRows(current),gifts=giftRows(current);
+  const key=JSON.stringify([leaders.map(row=>[row.seat,row.name,row.money,row.rank]),gifts.map(row=>[row.key,row.name,row.giftName,row.count])]);
+  if(key===railKey)return;railKey=key;
+  $('#money-empty').hidden=leaders.length>0;$('#gift-empty').hidden=gifts.length>0;
+  $('#money-leaders').innerHTML=leaders.map(row=>`<li class="money-leader" data-rank="${row.rank}" title="${esc(row.name)} · ${money(row.money)} MONEY"><b class="rail-rank">${row.rank}</b><div><strong>${esc(row.name)}</strong><span>${money(row.money)} <small>M</small></span></div></li>`).join('');
+  $('#recent-gifts').innerHTML=gifts.map(row=>`<li class="gift-receipt" data-gift="${esc(row.giftId||'')}" title="${esc(row.name)} · ${esc(row.giftName)} ×${row.count}"><span class="gift-mark">${String(row.giftId)==='5655'?'🌹':'✦'}</span><div><strong>${esc(row.name)}</strong><span>${esc(row.giftName)} <b>×${money(row.count)}</b></span></div></li>`).join('');
 }
 
 async function makeActor(row) {
@@ -75,6 +122,7 @@ async function applyState(state) {
   try {
     while (pending) {
       const next = pending; pending = null;
+      startDemoIfEmpty(next);
       const game = next.game;
       const key = game ? `${game.map}:${game.seed}` : 'waiting';
       if (game && key !== mapKey) {
@@ -125,15 +173,14 @@ function renderHud() {
   const over = !!game?.race?.over;
   $('#portrait').dataset.phase = game?.phase || 'waiting';
   $('#live-waiting').hidden = count > 0;
+  $('#waiting-description').innerHTML=mode==='demo'?(demoStarting?'Đang mời 20 người vào phố…':'Bản mô phỏng 20 người, tách riêng dữ liệu LIVE.<br>Mở <b>Quản lý</b> để thử bình luận và sự kiện.'):'Gõ <b>CHƠI</b> để có quân của bạn.<br>Khách chờ vẫn góp vốn, đặt đơn và nhận lì xì.';
   $('#live-turn').hidden = !game?.players?.length || over;
   $('#room-count').textContent = `${count} người trong bàn · ${waiting} khách chờ`;
+  $('#brand-subtitle').textContent=mode==='demo'?`MÔ PHỎNG ${count||20} NGƯỜI`:'CẢ PHỐ CÙNG CHƠI';
   $('#lap-label').textContent = game ? `${Math.min(3, (game.players[game.active]?.laps || 0) + 1)} / 3` : '3 VÒNG';
   const limit = game?.race?.finishLimit || 3;
   $('#race-hint').textContent = over ? 'Đã chốt ván · chuẩn bị sảnh mới' : `Ba vòng đường · ${limit < 3 ? `${limit} người về đích` : 'Top 3 lên bục'}`;
-  const source = current.connection;
-  const status = source?.status || source?.state;
-  $('#source-state').textContent = mode === 'demo' ? 'Sự kiện mô phỏng · dữ liệu riêng' : status === 'connected' ? `@${source.host || source.username || 'TikTok'} · đã kết nối` : current.sourcePaused ? 'Nguồn đang nối lại · giữ ván' : 'Chờ kết nối ở màn quản lý';
-  $('#live-mode').dataset.connected = String(status === 'connected');
+  renderRails();
   if (game?.players?.length) {
     const player = game.players[game.active];
     $('#turn-seat').textContent = player.seat; $('#turn-name').textContent = player.name;
@@ -210,6 +257,9 @@ function tick(now) {
 
 async function init() {
   try {
+    fetch(base+'music.json').then(response=>{if(!response.ok)throw new Error('Chưa tải được danh sách nhạc; đang dùng hai bản có sẵn.');return response.json();}).then(manifest=>{
+      if(manifest?.tracks?.length)music.configure({playlist:manifest.tracks.map(track=>({...track,url:new URL(track.url,base).href}))});
+    }).catch(error=>{musicManifestError=error.message;$('#music-toggle').title=musicManifestError;$('#music-toggle').dataset.manifest='unavailable';});
     pack = await fetch(base + 'actors.json').then(response => { if (!response.ok) throw new Error('Chưa có asset runtime; chạy npm run build trước'); return response.json(); });
     world = new TownWorld($('#game'), base);
     await world.loadModels(); await world.loadMap(createTownLayout('CHO_VIA_HE', 42));
@@ -228,16 +278,16 @@ async function init() {
       try { if (current) { current.connection = JSON.parse(event.data); renderHud(); } } catch {}
     });
     stream.addEventListener('settings', event => {
-      try { const settings = JSON.parse(event.data).audio; if (settings) audio.configure(settings); } catch {}
+      try { const settings = JSON.parse(event.data).audio; if (settings) configureAudio(settings); } catch {}
     });
     stream.onmessage = event => { try { const message = JSON.parse(event.data); if (message.type === 'state') state({ data: JSON.stringify(message.data) }); if (message.type === 'mc') audio.enqueue(message.data); } catch {} };
     stream.onerror = () => { connected = false; showWarning('Mất đường truyền tới máy chủ · đang tự nối lại'); };
     window.__TYPHI_LIVE__ = {
       ready: true, mode, snapshot: () => current, actors: () => actors.map(actor => ({ seat: actor.seat, position: actor.position.toArray(), name: actor.data.name })),
-      audio, stats: () => ({ actors: actors.length, calls: world.renderer.info.render.calls, triangles: world.renderer.info.render.triangles }),
-      dispose() { stream.close(); audio.dispose(); }
+      audio,music, stats: () => ({ actors: actors.length, calls: world.renderer.info.render.calls, triangles: world.renderer.info.render.triangles }),
+      dispose() { stream.close(); audio.dispose();music.dispose(); }
     };
-    window.addEventListener('pagehide', () => { stream.close(); audio.dispose(); }, { once: true });
+    window.addEventListener('pagehide', () => { stream.close(); audio.dispose();music.dispose(); }, { once: true });
   } catch (error) {
     console.error(error); $('#loading-message').textContent = error.message;
     showWarning('Không mở được khung phát. Kiểm tra terminal và tải lại trang.');

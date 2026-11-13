@@ -13,7 +13,7 @@ Phần LIVE này được đưa vào nhánh `web/third-person-v23` sau bản V5 
 | --- | --- |
 | `http://127.0.0.1:5182/admin` | Kết nối TikTok, cài MC, xem ghế/hàng chờ, pause và điều khiển |
 | `http://127.0.0.1:5182/overlay` | Khung phát 9:16, chỉ dữ liệu LIVE |
-| `http://127.0.0.1:5182/demo` | Khung thử với người/tim/quà mô phỏng, tách dữ liệu LIVE |
+| `http://127.0.0.1:5182/demo` | Tự mở 20 người mô phỏng để xem ngay; tách dữ liệu LIVE |
 
 Server chỉ nghe trên localhost. Đây là tool trên máy phát, không phải website công khai để người xem đăng nhập. Khi cần đổi cổng, đặt biến môi trường `COTYPHI_PORT`; các địa chỉ trong tài liệu dùng cổng mặc định 5182.
 
@@ -32,7 +32,11 @@ npm run live
 
 ## 2. Thử trước khi mở LIVE thật
 
-Tại Admin, chọn **Phòng mô phỏng**, mở khung `/demo`, rồi bấm **Một người mới vào** hoặc **20 người vào**. Bấm thêm một đợt để có khách chờ.
+Mở trực tiếp `/demo`: khi phòng demo còn trống, server tạo 20 người mô phỏng một lần rồi chạy. Mở lại hoặc mở hai tab không tự nhân thành 40 người. Trong Admin, chọn **Phòng mô phỏng** để xem bàn đó; bấm **Một người mới vào** hoặc **20 người vào** khi muốn thêm người và thử hàng chờ.
+
+Các link **Mở Demo**, **Mở LIVE**, **Quản lý** nằm ngoài khung 9:16 khi xem bình thường, kể cả trên màn hình dọc. Dùng `?capture=1` hoặc fragment `#tiktok.studio` để ẩn dải điều hướng khi lấy hình phát. Trên bản LIVE không còn nhãn TikTok LIVE/trạng thái kết nối ở góc trên; trạng thái nguồn xem tại Admin. Bản demo vẫn có nhãn nhỏ MÔ PHỎNG.
+
+Trong khung phát, **bên trái là top MONEY** của người trong bàn và khách chờ; **bên phải là quà vừa nhận**. Feed chỉ hiện quà đã chốt, chống lặp combo; ghi nhận quà không tự cộng MONEY. Dòng hoa hồng giải thích quyền ưu tiên lắc đang có, không tạo thêm tác dụng cho các quà khác.
 
 Kiểm tra lần lượt:
 
@@ -124,6 +128,14 @@ MC chỉ đọc lời game tạo ra: chào tên, hướng dẫn và kết quả 
 
 Cần bấm mở âm thanh sau khi tạo lại nguồn/trình duyệt nếu autoplay bị chặn. Nếu không nghe tiếng, kiểm tra nguồn âm Studio, mixer, quyền autoplay, Internet và thông báo trên nút MC; không chỉ nhìn việc caption đã xuất hiện.
 
+### Nhạc nền
+
+Hai bài trong playlist media của repo nguồn được chép nguyên vào [assets/audio/music](../../assets/audio/music/README.md). Game phát lần lượt rồi lặp playlist; không cần repo boss raid nằm cạnh dự án để chạy lại. Manifest giữ SHA-256 và commit nguồn, build sẽ kiểm tra đúng file.
+
+Bấm **Bật âm thanh** để mở cả nhạc và MC trong cùng thao tác. Có nút nhạc riêng trên khung phát; Admin có **Bật nhạc nền** và thanh âm lượng độc lập. Nhạc mặc định 14%; khi MC đang đọc, nhạc tạm còn 25% mức đã chọn rồi trở lại. Tắt MC không tắt nhạc, và tắt nhạc không tắt MC. Trong cùng một chế độ, tab vừa được bật âm thanh sẽ giữ quyền phát để tránh hai bản nhạc chồng nhau.
+
+Trình duyệt có thể chặn tự phát trước khi bấm mở tiếng. Mỗi bản thu LIVE chỉ nên bật một đường âm thanh game. Với kiểm tra thủ công phòng demo trống, dùng `/demo?empty=1` để bỏ bước tự mở 20 người.
+
 ## 8. Kết thúc ván và phòng ít người
 
 Phòng bình thường từ ba người: **ba người đầu hoàn thành ba vòng** chốt ván, giống V5. Nếu chỉ có một hoặc hai người thật, số người cần về đích được giảm tương ứng để phòng ít không mắc kẹt mãi; tăng lên tối đa ba khi có thêm người hợp lệ trước khi ván kết thúc. Người đã về đích được giữ kết quả dù rời bàn sau đó; snapshot bục không phụ thuộc sprite còn trong phòng.
@@ -144,7 +156,7 @@ Nguồn tham chiếu: [tiktok-live-boss-raid](https://github.com/VietCodeBug/tik
 
 Các phần được đọc/điều chỉnh: `server/tiktok.js`, `server/webcast.js`, adapter nền trong `reference/threejs-base`, `server/tts.js`, `server/state-writer.js`, `src/raid-audio.js` và `src/speech-policy.js`. Chúng được viết lại thành các module độc lập của Cờ Tý Phí, bỏ phụ thuộc engine boss.
 
-Bản tích hợp không nhập boss, lính/súng, sát thương, kỹ năng, HP, video quà, nhạc trận hoặc submodule nghiên cứu của boss raid. Nhà/map/sprite/thẻ của game cờ được giữ để tiếp tục phát triển.
+Bản tích hợp giữ thêm đúng hai bài nhạc nền trong playlist media theo yêu cầu. Không nhập boss, lính/súng, sát thương, kỹ năng, HP, video quà, nhạc MVP/chiến đấu hoặc submodule nghiên cứu của boss raid. Nhà/map/sprite/thẻ của game cờ được giữ để tiếp tục phát triển.
 
 | File | Trách nhiệm |
 | --- | --- |
@@ -156,6 +168,8 @@ Bản tích hợp không nhập boss, lính/súng, sát thương, kỹ năng, HP
 | [server/tts.mjs](../../web/server/tts.mjs) | Giọng tiếng Việt, giới hạn tải và cache |
 | [src/live-main.js](../../web/src/live-main.js) | Vẽ snapshot, HUD và hiệu ứng; không chạy một bộ luật thứ hai |
 | [src/live-audio.js](../../web/src/live-audio.js), [live-speech-policy.js](../../web/src/live-speech-policy.js) | Hàng đọc, chào gộp, quyền âm thanh và lọc lời |
+| [src/live-music.js](../../web/src/live-music.js) | Nhạc nền, playlist, bật tiếng, âm lượng và duck khi MC đọc |
+| [src/live-rails.js](../../web/src/live-rails.js) | Chuẩn hóa top MONEY và quà gần nhất cho hai cột khung phát |
 | [server/admin.html](../../web/server/admin.html) | Giao diện điều khiển và phòng mô phỏng |
 
 ## 11. Kiểm tra khi phát triển tiếp
@@ -171,4 +185,4 @@ Nếu có Python + Playwright/Chromium, chạy `python tests/live-browser.py` tr
 
 Tests kiểm tra chuẩn hóa sự kiện, ID, combo, reconnect, không coi tổng người xem giảm là rời cụ thể, giữ ghế lúc mất nguồn, FIFO, giữ tiến độ quân còn lại, ví/escrow, MC/TTS, cách ly LIVE/DEMO và API. Browser test kiểm tra thêm trang Admin, khung 9:16, lên hình/lắc chào, hàng chờ/thay ghế và hiển thị sự kiện. Test provider giọng dùng một câu mẫu không có dữ liệu người xem; không thay cho kiểm tra kết nối TikTok thật.
 
-Mốc kiểm tra bàn giao: **179 kiểm tra Node, 21 kiểm tra browser đạt, production build thành công**. Edge và giọng dự phòng đều tạo được MP3 tiếng Việt và đã giải mã kiểm tra. LIVE thật chưa được kết nối vì chủ phòng chưa mở buổi phát.
+Mốc kiểm tra bản có nhạc và hai cột thông tin: **197 kiểm tra Node, 34 kiểm tra browser đạt, production build thành công**. Browser đã phát trực tiếp hai file M4A, chuyển bài, giảm nhạc khi MC nói, kiểm tra bật/tắt độc lập, Demo tự có 20 người và cách ly LIVE. Hai M4A cũng được giải mã toàn bộ để kiểm tra file. Ở mốc tích hợp MC trước, Edge và giọng dự phòng đều tạo được MP3 tiếng Việt và đã giải mã kiểm tra. LIVE thật chưa được kết nối vì chủ phòng chưa mở buổi phát.

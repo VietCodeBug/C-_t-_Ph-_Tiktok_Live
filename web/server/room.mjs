@@ -28,7 +28,7 @@ export class LiveRoom extends EventEmitter {
     this.members=new Map();this.waitingSeats=[];this.admitted=new Set();this.sourceSeen=new Set();this.commandSeen=new Set();
     this.clock=0;this.revision=0;this.memberSequence=0;this.cueSequence=0;this.match=1;
     this.connection={status:'idle',host:null,roomId:null};this.sourcePaused=false;this.operatorPaused=false;
-    this.spotlight=null;this.introQueue=[];this.pendingLeaves=new Set();this.announcements=[];
+    this.spotlight=null;this.introQueue=[];this.pendingLeaves=new Set();this.announcements=[];this.gifts=[];
     this.matchmaking=new MatchmakingQueue([],{seats:this.options.maxPlayers,reserved:Math.floor(this.options.maxPlayers*.6)});
     this.phase='waiting';this.busy=false;this.timer=null;this.operations=Promise.resolve();this.lastPublishedAt=-1;
     this.seenBoardCues=new Set();this.waitingWelcome={count:0,names:[]};this.lastWaitingWelcome=-10;
@@ -78,7 +78,7 @@ export class LiveRoom extends EventEmitter {
       if(this.members.size>=1000)return null;
       const order=this.memberSequence++;
       member={id,userId:id,seat:`P${String(order+1).padStart(3,'0')}`,name:text(user.nickname||user.uniqueId||id),nickname:text(user.nickname||user.uniqueId||id),
-        uniqueId:text(user.uniqueId,128),avatar:text(user.avatar,2048),order,money:this.options.startingMoney,present:false,enrolled:false,lastActiveAt:this.clock,joinedAt:this.clock,pendingLeave:false};
+        uniqueId:text(user.uniqueId,128),avatar:text(user.avatar,2048),order,money:this.options.startingMoney,present:false,enrolled:false,lastActiveAt:this.clock,joinedAt:this.clock,pendingLeave:false,giftCount:0,giftCoins:0};
       this.members.set(id,member);
     } else {
       if(user.nickname){member.name=text(user.nickname);member.nickname=member.name;}
@@ -89,6 +89,18 @@ export class LiveRoom extends EventEmitter {
   }
   bySeat(seat){return [...this.members.values()].find(member=>member.seat===seat);}
   activeSeats(){return this.demo?.players.map(player=>player.seat)??[];}
+  recordGift(member,event,packet){
+    const count=Number(event.count),giftId=String(event.giftId??'');
+    if(event.finalized!==true||!Number.isSafeInteger(count)||count<1||count>1000000||!/^[A-Za-z0-9_:-]{1,80}$/.test(giftId))return false;
+    const unitCoins=Number(event.diamondCount),coins=Number.isFinite(unitCoins)&&unitCoins>0?Math.floor(unitCoins)*count:0;
+    const receipt={id:packet,eventId:packet,userId:member.id,seat:member.seat,name:member.name,giftId,giftName:text(event.giftName,80)||`Quà ${giftId}`,count,at:this.clock};
+    if(Number.isSafeInteger(coins)&&coins>0)receipt.coins=coins;
+    this.gifts.unshift(receipt);if(this.gifts.length>40)this.gifts.length=40;
+    member.giftCount=Math.min(Number.MAX_SAFE_INTEGER,(member.giftCount??0)+count);
+    member.giftCoins=Math.min(Number.MAX_SAFE_INTEGER,(member.giftCoins??0)+(receipt.coins??0));
+    // This feed acknowledges received gifts. MONEY and gift benefits remain owned by the existing game rules.
+    return true;
+  }
   syncLobby(){
     const active=this.activeSeats();
     for(const member of this.members.values())if(member.enrolled&&member.present)this.matchmaking.register(member.seat);
@@ -219,10 +231,12 @@ export class LiveRoom extends EventEmitter {
       }
       if(event.type==='leave')return this.leave(member,event.reason??'source');
       if(event.type==='comment')return this._command(member.id,event.text,packet);
-      // A finalized rose may arrive while capture is reconnecting. Credit it
-      // once without unpausing play; the adapter will not replay it again.
-      if(event.type==='gift'&&event.finalized&&this.roseIds.has(String(event.giftId))&&member.enrolled&&this.community){
-        const accepted=this.community.game.receiveRose(member.seat,packet,event.count);this.publish();return accepted;
+      // Finalized combo deltas are already deduplicated above. Every gift can
+      // appear in the feed; only the existing rose rule grants turn priority.
+      if(event.type==='gift'){
+        if(!this.recordGift(member,event,packet))return false;
+        if(this.roseIds.has(String(event.giftId))&&member.enrolled&&this.community)this.community.game.receiveRose(member.seat,packet,event.count);
+        this.publish();return true;
       }
       if(!member.present||!member.enrolled||member.pendingLeave||!this.community||this.sourcePaused)return false;
       let accepted=false;
@@ -327,8 +341,10 @@ export class LiveRoom extends EventEmitter {
       if(action==='new-match')return this.newMatch({manual:true});
       if(action==='try-event'){if(this.mode!=='demo')return false;return this.demo?.previewEvent(payload.category,payload.id)??false;}
       if(this.mode!=='demo'||!action.startsWith('demo-'))return false;
-      if(action==='demo-join'){
-        const count=Math.max(1,Math.min(100,Math.floor(payload.count??1)));
+      if(action==='demo-start'&&(this.activeSeats().length||[...this.members.values()].some(member=>member.enrolled)))return true;
+      if(action==='demo-join'||action==='demo-start'){
+        const requested=Number(payload.count??(action==='demo-start'?20:1));
+        const count=Math.max(1,Math.min(action==='demo-start'?this.options.maxPlayers:100,Number.isFinite(requested)?Math.floor(requested):(action==='demo-start'?20:1)));
         for(let i=0;i<count;i++){const member=this.memberFor({id:`demo-${this.memberSequence+1}`,nickname:`Khách thử ${this.memberSequence+1}`});if(member)await this.enroll(member);}
         return true;
       }
@@ -337,18 +353,28 @@ export class LiveRoom extends EventEmitter {
       if(action==='demo-comment')return this._command(member.id,payload.text,`demo:${++this.cueSequence}`);
       if(action==='demo-leave')return this.leave(member,'demo');
       if(action==='demo-like')return this.community?.like(member.seat,payload.count??10,`demo:${++this.cueSequence}`)??false;
-      if(action==='demo-gift')return this.community?.rose(member.seat,`demo:${++this.cueSequence}`,payload.count??1)??false;
+      if(action==='demo-gift'){
+        const packet=`demo:gift:${++this.cueSequence}`,giftId=String(payload.giftId??'5655');
+        const event={finalized:true,giftId,giftName:payload.giftName??(giftId==='5655'?'Hoa hồng':`Quà ${giftId}`),diamondCount:payload.diamondCount,count:payload.count??1};
+        if(!this.recordGift(member,event,packet))return false;
+        if(this.roseIds.has(giftId)&&member.enrolled&&this.community)this.community.game.receiveRose(member.seat,packet,event.count);
+        this.publish();return true;
+      }
       return false;
     });
   }
   snapshot(){
     const active=this.activeSeats(),row=member=>({id:member.id,userId:member.id,seat:member.seat,name:member.name,nickname:member.nickname,uniqueId:member.uniqueId,avatar:member.avatar,
       actorIndex:member.order%20,gameIndex:active.indexOf(member.seat),money:this.community?.game.accounts.get(member.seat)?.money??member.money,present:member.present,enrolled:member.enrolled,
-      lastActiveAt:member.lastActiveAt,joinedAt:member.joinedAt,pendingLeave:member.pendingLeave,characterId:`ch${String((member.order%20)+1).padStart(2,'0')}`});
+      lastActiveAt:member.lastActiveAt,joinedAt:member.joinedAt,pendingLeave:member.pendingLeave,giftCount:member.giftCount??0,giftCoins:member.giftCoins??0,characterId:`ch${String((member.order%20)+1).padStart(2,'0')}`});
+    const waiting=new Set(this.waitingSeats),leaderboard=[...this.members.values()].filter(member=>member.present&&member.enrolled&&!member.pendingLeave&&(active.includes(member.seat)||waiting.has(member.seat)))
+      .sort((a,b)=>(this.community?.game.accounts.get(b.seat)?.money??b.money)-(this.community?.game.accounts.get(a.seat)?.money??a.money)||a.order-b.order)
+      .map((member,index)=>({rank:index+1,seat:member.seat,userId:member.id,name:member.name,money:this.community?.game.accounts.get(member.seat)?.money??member.money,active:active.includes(member.seat),waiting:waiting.has(member.seat),giftCount:member.giftCount??0,giftCoins:member.giftCoins??0}));
     return {revision:this.revision,mode:this.mode,phase:this.phase,at:this.clock,matchId:this.match,seed:this.demo?.layout?.seed??this.seed,connection:{...this.connection},
       paused:this.operatorPaused||this.sourcePaused,operatorPaused:this.operatorPaused,sourcePaused:this.sourcePaused,viewerCount:this.viewerCount??null,
       game:this.demo?.players.length?this.demo.snapshot():null,community:this.community?.snapshot()??null,lobby:this.matchmaking.snapshot(),
       roster:active.map(seat=>this.bySeat(seat)).filter(Boolean).map(row),waiting:this.waitingSeats.map(seat=>this.bySeat(seat)).filter(Boolean).map(row),
+      gifts:this.gifts.map(gift=>({...gift})),leaderboard,
       spotlight:this.spotlight?{...this.spotlight,queued:false,queuedCount:this.introQueue.length}:this.waitingSpotlight?.expiresAt>this.clock?{...this.waitingSpotlight}:null,announcements:this.announcements.filter(cue=>cue.expiresAt>this.clock).map(cue=>({...cue})),
       settings:{maxPlayers:this.options.maxPlayers,inactivitySeconds:this.options.inactivitySeconds,autoRollSeconds:this.options.autoRollSeconds,autoJoinOnEnter:this.options.autoJoinOnEnter},
       inactivityPolicy:'explicit-leave-or-activity-timeout',realTikTokConnected:this.mode==='live'&&this.connection.status==='connected'};

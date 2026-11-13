@@ -5,6 +5,7 @@ import { mkdtemp, mkdir, writeFile, rm, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createLiveServer, AUDIO_TEST_TEXT } from '../server/index.mjs';
+import { validateSettings } from '../server/config.mjs';
 
 class FakeRoom extends EventEmitter {
   constructor(mode) { super(); this.mode = mode; this.revision = 0; this.received = []; this.actions = []; this.running = false; }
@@ -30,6 +31,7 @@ async function fixture(t, extra = {}) {
   await mkdir(join(distDir, 'assets'), { recursive: true });
   await writeFile(join(distDir, 'live.html'), '<!doctype html><title>Overlay</title>');
   await writeFile(join(distDir, 'assets', 'sample.glb'), '0123456789');
+  await writeFile(join(distDir, 'assets', 'music.m4a'), '0123456789');
   await writeFile(adminFile, '<!doctype html><title>Admin</title>');
   const rooms = { live: new FakeRoom('live'), demo: new FakeRoom('demo') }, tiktok = new FakeTikTok(), spoken = [];
   const app = await createLiveServer({ rooms, tiktok, distDir, dataDir, adminFile, synthesizeTTS: async input => { spoken.push(input); return { buffer: Buffer.from('mp3'), contentType: 'audio/mpeg', cacheHit: false, provider: 'google' }; }, ...extra });
@@ -115,6 +117,22 @@ test('settings updates serialize without losing other fields; connect is explici
   assert.equal((await post('/api/disconnect', {})).status, 200);
   assert.equal(tiktok.connection.status, 'disconnected');
 });
+test('music settings persist independently of MC voice settings and older settings receive defaults', async t => {
+  const { post, app, dataDir } = await fixture(t);
+  const legacy = validateSettings({ audio: { enabled: false, voice: 'male', rate: 1, volume: .4 } });
+  assert.equal(legacy.audio.musicEnabled, true); assert.equal(legacy.audio.musicVolume, .14); assert.equal(legacy.audio.voice, 'male');
+  assert.equal(app.settings.audio.musicEnabled, true); assert.equal(app.settings.audio.musicVolume, .14);
+  const voice = { voice: app.settings.audio.voice, rate: app.settings.audio.rate, volume: app.settings.audio.volume, enabled: app.settings.audio.enabled };
+  await post('/api/settings', { audio: { musicEnabled: false, musicVolume: .27 } });
+  assert.equal(app.settings.audio.musicEnabled, false); assert.equal(app.settings.audio.musicVolume, .27);
+  assert.deepEqual({ voice: app.settings.audio.voice, rate: app.settings.audio.rate, volume: app.settings.audio.volume, enabled: app.settings.audio.enabled }, voice);
+  await post('/api/settings', { audio: { rate: 1.1 } });
+  assert.equal(app.settings.audio.musicEnabled, false); assert.equal(app.settings.audio.musicVolume, .27);
+  const saved = JSON.parse(await readFile(join(dataDir, 'settings.json'), 'utf8'));
+  assert.equal(saved.audio.musicVolume, .27); assert.equal(saved.audio.rate, 1.1);
+  await post('/api/settings', { audio: { musicVolume: 2 } }); assert.equal(app.settings.audio.musicVolume, 1);
+  await post('/api/settings', { audio: { musicVolume: -1 } }); assert.equal(app.settings.audio.musicVolume, 0);
+});
 test('static media supports ranges, rejects traversal, and supports relative asset URLs under overlay', async t => {
   const { base } = await fixture(t);
   const range = await fetch(base + '/assets/sample.glb', { headers: { Range: 'bytes=2-5' } });
@@ -122,6 +140,8 @@ test('static media supports ranges, rejects traversal, and supports relative ass
   assert.equal((await fetch(base + '/assets/sample.glb', { headers: { Range: 'bytes=90-100' } })).status, 416);
   assert.equal(await (await fetch(base + '/overlay/assets/sample.glb')).text(), '0123456789');
   assert.equal((await fetch(base + '/assets/%2e%2e%5csettings.json')).status, 404);
+  const music = await fetch(base + '/assets/music.m4a', { headers: { Range: 'bytes=2-5' } });
+  assert.equal(music.status, 206); assert.equal(music.headers.get('content-type'), 'audio/mp4'); assert.equal(await music.text(), '2345');
 });
 test('shutdown rejects stale/cross-origin requests, acknowledges then saves and stops rooms and SSE', async t => {
   const { app, base, post, rooms, dataDir } = await fixture(t);
