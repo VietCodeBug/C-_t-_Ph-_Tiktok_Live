@@ -150,7 +150,7 @@ export class LiveRoom extends EventEmitter {
   async ensureEngine(member){
     if(this.demo)return;
     const actor=actorFor(member);
-    this.demo=new ParallelRace(this.world,[actor],this.layouts,null,{backgroundDecisionSeconds:10,autoRollSeconds:this.options.autoRollSeconds});
+    this.demo=new ParallelRace(this.world,[actor],this.layouts,null,{sequential:true,backgroundDecisionSeconds:10,autoRollSeconds:this.options.autoRollSeconds});
     await this.demo.changeMap('CHO_VIA_HE');this.demo.race.finishLimit=1;
     const accounts=[...this.members.values()].filter(m=>m.enrolled).map(m=>({seat:m.seat,data:{name:m.name},money:m.money}));
     this.community=new CommunityController(this.demo,{accounts,onMC:cue=>this.announce(cue.id,cue.text,{eventId:`community:${this.match}:${cue.sequence}`,priority:2})});
@@ -304,7 +304,7 @@ export class LiveRoom extends EventEmitter {
 
   updateSpotlight(dt=0){
     if(!this.demo||this.demo.paused||this.demo.globalHold||this.demo.race.over)return;
-    if(['roll','roll-result'].includes(this.demo.runners[this.demo.active]?.phase))return;
+    if(this.demo.runners.some((runner,index)=>!this.demo.players[index].finished&&runner.phase!=='overview'))return;
     const readyRose=this.demo.players.some((player,index)=>!player.finished&&this.demo.runners[index]?.phase==='overview'&&this.community.game.accounts.get(player.seat)?.roseCredits);
     if(readyRose)return;
     if(this.spotlight){
@@ -315,7 +315,7 @@ export class LiveRoom extends EventEmitter {
         this.spotlight=null;
       }else if(current.kind==='welcome'&&current.elapsed>=1.2){
         this.demo.holdPlayer(current.seat,false);this.demo.requestRollFor(index);current.kind='roll';current.expiresAt=this.clock+15;current.until=current.expiresAt;
-      }else if(current.kind==='roll'&&!['overview','roll','roll-result'].includes(runner.phase)){
+      }else if(current.kind==='roll'&&['overview','finished'].includes(runner.phase)){
         let next=this.demo.players.findIndex(player=>player.seat===current.returnSeat&&!player.finished);
         if(next<0||next===index)next=this.demo.players.findIndex((player,i)=>i!==index&&!player.finished);
         if(next>=0)this.demo.select(next);this.spotlight=null;

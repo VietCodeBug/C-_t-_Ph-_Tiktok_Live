@@ -1,5 +1,7 @@
 # Cờ Tý Phí — TikTok LIVE · Khu phố 3D
 
+**Lượt chơi LIVE/DEMO hiện tại là tuần tự:** một người lắc → đi đủ bước → chọn đường/xử lý sự kiện → kết thúc lượt, rồi người tiếp theo mới được lắc. Camera giữ người đang chơi hết lượt. Hoa hồng ưu tiên lượt kế tiếp sau toàn bộ lượt hiện tại. Các mô tả chạy đồng thời bên dưới thuộc bản offline/thử tải trước đây.
+
 **Xem ngay:** [Demo 20 người tự chạy](http://127.0.0.1:5182/demo) · [Bản LIVE](http://127.0.0.1:5182/overlay) · [Quản lý](http://127.0.0.1:5182/admin). Demo dùng dữ liệu mô phỏng riêng; LIVE chỉ có người thật đã vào. Khung phát có top MONEY bên trái, bảy icon quà thật bên phải và một bài nền **Cờ Tý Phí LIVE Theme (Alt Take)** từ bộ audio của game.
 
 Chạy `start-live.cmd`, bấm **Bật âm thanh** trong khung game để nghe MC và nhạc. [Hướng dẫn kết nối, MC, người mới và thay ghế](docs/co-ty-phu/14-live-studio.md). Server mặc định chưa kết nối TikTok; nhập username tại Admin khi phòng đã phát. Dừng bằng `stop-live.cmd` hoặc Ctrl+C.

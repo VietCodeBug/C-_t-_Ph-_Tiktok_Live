@@ -74,7 +74,9 @@ try:
         first=page.evaluate('window.__TYPHI_LIVE__.snapshot().spotlight.seat')
         page.screenshot(path=str(out/'02-welcome-die.png'))
         control('resume')
-        http('/advance', {'seconds':4}, True)
+        for _ in range(100):
+            http('/advance', {'seconds':.5}, True)
+            if http('/api/state')['game']['seat']!=first: break
         check('welcome rolls exactly once then camera continues to another participant',http('/api/state')['game']['seat']!=first)
         control('pause')
         http('/source', {'events':[{'type':'member','eventId':f'qa-member-{i}','user':{'id':f'qa-user-{i}','nickname':f'Khách phố {i}'}} for i in range(3,101)]}, True)

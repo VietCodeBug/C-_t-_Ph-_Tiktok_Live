@@ -1,5 +1,7 @@
 # Cờ Tý Phí — TikTok LIVE, MC và khung phát 9:16
 
+**Cập nhật lượt chơi:** LIVE và Demo dùng lượt tuần tự: lắc, đi đủ bước, chốt lựa chọn/sự kiện rồi mới chuyển người. Chào người mới và ưu tiên hoa hồng không cắt ngang lượt đang xử lý. Chỉ một quân được thực hiện lượt tại một thời điểm; giới hạn bàn vẫn là 20 người.
+
 Phần LIVE này được đưa vào nhánh `web/third-person-v23` sau bản V5 offline. Luật sự kiện, tiền và chart vẫn xem tại [tài liệu logic V5](13-event-logic-guide.md); tài liệu này giải thích cách nhận người thật, chào/lắc, thay ghế, đọc MC và vận hành livestream.
 
 ## 1. Chạy trên Windows

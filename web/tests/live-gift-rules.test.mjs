@@ -22,18 +22,18 @@ test('verified gift IDs win over names; prices never identify a gift and exact n
   assert.equal(resolveGift({giftId:'7934'}).key,'heart-me');
   assert.equal(resolveGift({giftName:'Hear Me Out'}),null);
 });
-test('rose waits for visible die, then focuses the donor and consumes exactly one credit while background rolls remain concurrent',async()=>{
+test('rose waits for the entire current turn before focusing the donor',async()=>{
   const value=await room();const demo=value.demo;
   demo.select(0);demo.requestRollFor(0);value.tick(.1);assert.equal(demo.runners[0].phase,'roll');
   value.community.game.served.add('P003');
   await value.handleSourceEvent(gift('rose-3','3','5655',5));
   demo.requestRollFor(1);value.tick(.15);
-  assert.equal(demo.active,0);assert.equal(demo.runners[1].phase,'roll');
+  assert.equal(demo.active,0);assert.equal(demo.runners[1].phase,'overview');
   assert.equal(demo.runners[2].phase,'overview');assert.equal(value.community.game.accounts.get('P003').roseCredits,2);
-  for(let i=0;i<100&&demo.runners[2].phase==='overview';i++)value.tick(.05);
+  for(let i=0;i<2000&&demo.runners[2].phase==='overview';i++)value.tick(.05);
   assert.equal(demo.active,2);assert.equal(demo.runners[2].phase,'roll');assert.equal(demo.lastDispatched,2);
   assert.equal(value.community.game.accounts.get('P003').roseCredits,1);
-  assert.equal(demo.runners[0].phase,'moving');
+  assert.equal(demo.runners[0].phase,'overview');
   const sequence=demo.rollSequence;value.tick(.2);assert.equal(demo.rollSequence,sequence);
 });
 test('failed rose dispatch keeps its credit and waiting donors do not acquire a seat',async()=>{
@@ -45,11 +45,17 @@ test('failed rose dispatch keeps its credit and waiting donors do not acquire a 
   assert.equal(small.snapshot().roster.length,1);assert.equal(small.snapshot().waiting[0].seat,'P002');
   assert.equal(small.community.game.accounts.get('P002').roseCredits,2);
 });
-test('the20-seat LIVE table retains concurrent background dice throughput',async()=>{
+test('the20-seat LIVE table completes movement and events before dispatching the next die',async()=>{
   const value=await room(20);value.demo.autoRollSeconds=0;
   value.tick(1.3);
-  assert.equal(value.demo.rollSequence,20);
-  assert(value.demo.runners.filter(runner=>['roll','roll-result','moving'].includes(runner.phase)).length>=15);
+  assert.equal(value.demo.rollSequence,1);
+  for(let step=0;step<1000;step++){
+    const previous=value.demo.lastDispatched,sequence=value.demo.rollSequence;
+    value.tick(.1);
+    assert(value.demo.runners.filter((runner,index)=>!value.demo.players[index].finished&&runner.phase!=='overview').length<=1);
+    if(value.demo.rollSequence>sequence)assert.equal(value.demo.runners[previous].phase,'overview');
+  }
+  assert(value.demo.rollSequence>2);
 });
 test('gift lìxì pays exact finite pot to active and waiting accounts once and preserves the separate heart bar',async()=>{
   const value=await room(23);value.community.openEnvelope(42);value.community.like('P001',123,'hearts');

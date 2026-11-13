@@ -17,6 +17,7 @@ export class ParallelRace {
     this.interactiveChoices = options.interactiveChoices !== false;
     this.lapTarget = options.lapTarget || 3;
     this.chooseNextPlayer = options.chooseNextPlayer || null;
+    this.sequential = options.sequential === true;
     this.onCollectiveLanding = options.onCollectiveLanding || null;
     this.dispatchInterval = Math.max(.001, options.dispatchInterval ?? .06);
     this.backgroundDecisionSeconds = Math.max(.1, options.backgroundDecisionSeconds ?? 3);
@@ -222,6 +223,7 @@ export class ParallelRace {
   }
 
   dispatch() {
+    if (this.sequential && (this.globalHold || this.runners.some((runner,index)=>!this.players[index].finished && runner.phase!=='overview'))) return false;
     const eligible = this.runners.map((runner,index)=>({runner,index})).filter(({runner,index})=>runner.phase==='overview'&&!this.players[index].finished&&!this.heldSeats.has(this.players[index].seat)&&(this.manualQueue.has(index)||runner.phaseTime>=this.autoRollSeconds)).map(({index})=>index);
     if (!eligible.length) return false;
     const chosen = this.chooseNextPlayer?.([...eligible], this.lastDispatched, this);
@@ -231,6 +233,7 @@ export class ParallelRace {
     let accepted;
     try { accepted = runner.requestRoll(); } finally { this.dispatching = null; }
     if (!accepted) return false;
+    if (this.sequential) this.select(index);
     runner.rollSequence = ++this.rollSequence; runner.turn = ++this.turn;
     this.manualQueue.delete(index); this.lastDispatched = index; return true;
   }

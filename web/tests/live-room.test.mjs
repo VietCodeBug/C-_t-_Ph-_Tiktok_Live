@@ -50,12 +50,14 @@ test('departure promotes oldest customer at zero progress and preserves other ra
   assert.equal(await game.command('a','LẮC','late-a'),false);assert.equal(game.world.playerGroup.children.length,2);
 });
 
-test('welcome spotlight holds later new racers until focus, rolls once then returns camera without cancelling movement',async()=>{
+test('welcome spotlight holds later new racers until the current movement and event finish',async()=>{
   const game=await room({maxPlayers:3});for(const id of ['a','b','c'])await game.handleSourceEvent(member(id));
   game.tick(.05);assert.equal(game.snapshot().spotlight.userId,'a');
   game.tick(2);assert.equal(game.demo.runners[0].phase,'roll');assert.equal(game.demo.runners[1].phase,'overview');assert.equal(game.demo.runners[1].phaseTime,0);
   game.tick(2.2);assert.notEqual(game.demo.runners[0].phase,'roll-result');assert.ok(game.demo.players[0].position.distanceTo(new THREE.Vector3().fromArray(game.demo.race.course.finishPosition))>0);
-  assert.equal(game.snapshot().spotlight.userId,'b');assert.equal(game.demo.active,1);
+  assert.equal(game.demo.active,0);assert.equal(game.demo.runners[1].phase,'overview');
+  for(let i=0;i<2000&&game.demo.active===0;i++)game.tick(.05);
+  assert.equal(game.demo.active,1);assert.equal(game.demo.runners[0].phase,'overview');
 });
 
 test('solo true three-lap finish closes solo race; top3 closes a larger real room',async()=>{

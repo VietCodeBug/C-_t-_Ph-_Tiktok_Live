@@ -1,5 +1,7 @@
 # Luật ván chơi và logic sự kiện — Cờ Tý Phí V5
 
+> Cập nhật LIVE/DEMO: các lượt được chạy **tuần tự**, một người lắc → di chuyển → chốt sự kiện rồi mới sang người kế. Hoa hồng chỉ ưu tiên sau khi lượt hiện tại kết thúc. Nội dung chạy đồng thời trong tài liệu V5 bên dưới mô tả engine offline trước đây.
+
 > Tài liệu này mô tả luật V5 và phần runtime LIVE hiện có. Bản offline tạo sẵn tài khoản; LIVE Studio dùng server giữ luật và chỉ nhận người từ nguồn thật. Xem [hướng dẫn LIVE Studio](14-live-studio.md) để chạy, cấu hình MC và kết nối. Chưa kết nối phòng TikTok thật trong lần bàn giao này.
 
 Cập nhật: **13/11/2026** · Nhánh: `web/third-person-v23`.
