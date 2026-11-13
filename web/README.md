@@ -1,10 +1,12 @@
 # Phố Đồ Chơi — web camera demo
 
+**Bản local V5:** xem [LOCAL_PREVIEW.md](LOCAL_PREVIEW.md) — mặc định **20 quân / 100 tài khoản, 80 khách chờ**, ba vòng đường và top 3 chốt ván. Bục 8 giây → sảnh giữ ghế 15 giây: tối đa 12 người cũ đầu tiên đủ 30 tim mới giữ ghế, tối thiểu tám khách chờ lâu nhất lên nếu đủ hàng; suất giữ ghế dư cũng lấy FIFO. Khách chờ đặt/hủy đơn SHOP01 miễn phí, góp vốn và nhận lì xì mà không tạo sprite trên map. Mỗi ván mới reset toàn bộ ví về 1.000; MC bàn giao text/JSON cho repo riêng. Mở [bản mặc định](http://localhost:4173/?players=20&accounts=100); 100/200 quân chỉ bật qua `stress=1`. Đây là mô phỏng local, chưa có adapter TikTok. Nội dung dưới đây mô tả bản camera gốc và các bằng chứng cũ.
+
 Interactive portrait preview with ten real characters from the user's Sprite V2.3 pack, the prepared two map layouts, and environment models from the user's V1 pack.
 
 ## Run
 
-Requires Node 24 (tested: 24.22.1).
+Requires Node 22.12+ (local upgrade tested: 22.20.0; original preview: 24.22.1).
 
 ```bash
 cd web

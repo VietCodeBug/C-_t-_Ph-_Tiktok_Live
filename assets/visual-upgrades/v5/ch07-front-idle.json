@@ -1,0 +1,18 @@
+{
+  "id": "ch07-front-idle-v5",
+  "characterId": "ch07",
+  "name": "Đào Tóc Dài — dáng đứng chính diện",
+  "image": "ch07-front-idle.png",
+  "imageSize": [1246, 1263],
+  "sourceRect": [278, 148, 665, 1023],
+  "sourceRectNote": "Read-only alpha inspection at threshold 8; the PNG is the unmodified ImageGen output.",
+  "cell": [256, 256],
+  "pivot": [128, 218],
+  "renderedHeight": 202,
+  "appliesTo": {"clip": "idle", "direction": "S"},
+  "animation": "single static idle pose; original atlases remain used for moving, gestures, side and back",
+  "tool": "image_gen built-in; two edit passes; actual transparent alpha preserved",
+  "sourceReference": "assets/co-ty-phi-tiktok-live-v2/assets/characters/ch07/idle.png",
+  "changes": ["gentle closed-mouth smile", "smooth connected elbows and wrists", "relaxed arms", "compact chibi proportions"],
+  "unchanged": ["auburn wavy hair", "mint-and-pink headband", "pink tunic", "plum leggings", "pink sneakers", "original atlas files"]
+}

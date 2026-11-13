@@ -1,0 +1,5409 @@
+{
+  "schemaVersion": 1,
+  "locale": "vi-VN",
+  "revision": "community-v5",
+  "purpose": "scripts-only-no-generated-voice",
+  "eventIds": [
+    "GA01",
+    "REST01",
+    "GAIN01",
+    "GAIN02",
+    "GAIN03",
+    "GAIN04",
+    "GAIN05",
+    "GAIN06",
+    "GAIN07",
+    "GAIN08",
+    "LOSS01",
+    "LOSS02",
+    "LOSS03",
+    "LOSS04",
+    "LOSS05",
+    "LOSS06",
+    "LOSS07",
+    "LOSS08",
+    "LIFE01",
+    "LIFE02",
+    "LIFE03",
+    "LIFE04",
+    "LIFE05",
+    "LIFE06",
+    "LIFE07",
+    "LIFE08",
+    "LIFE09",
+    "LIFE10",
+    "LIFE11",
+    "LIFE12",
+    "INV01",
+    "INV02",
+    "INV03",
+    "INV04",
+    "INV05",
+    "INV06",
+    "INV07",
+    "INV08",
+    "TRADE01",
+    "TRADE02",
+    "TRADE03",
+    "TRADE04",
+    "TRADE05",
+    "TRADE06",
+    "TRADE07",
+    "TRADE08",
+    "MINI01",
+    "MINI02",
+    "MINI03",
+    "MINI04"
+  ],
+  "eventCount": 50,
+  "gameFacts": {
+    "money": "integer in-game score only",
+    "totalAccounts": 100,
+    "actualRacers": 20,
+    "waitingCustomers": 80,
+    "stressModeRacers": 100,
+    "targetLaps": 3,
+    "finishersToEndMatch": 3,
+    "podiumOrder": "finish arrival order, not MONEY",
+    "resultHoldSeconds": 8,
+    "nextMatch": "matchmake active seats, new seed/map/finish, all registered wallets reset to1000",
+    "matchmaking": {
+      "reserveSeconds": 15,
+      "heartTarget": 30,
+      "retainedSeats": 12,
+      "waitingSeats": 8,
+      "reserveCountsOnlyNewWindowHearts": true,
+      "retainedOrder": "first to threshold",
+      "oldUnretainedJoinWaitingQueue": true,
+      "unfilledRetainedSeatsUseWaitingQueue": true,
+      "preserveWaitingAge": true,
+      "customersCanJoinEvents": true
+    },
+    "finish": "seeded bottom-of-map node, stable throughout a match",
+    "investment": {
+      "stake": 100,
+      "joinSeconds": 10,
+      "chartSeconds": 8,
+      "upReturnBps": [
+        12000,
+        18000
+      ],
+      "downReturnBps": [
+        1500,
+        7000
+      ],
+      "hostParticipates": true
+    },
+    "redEnvelope": {
+      "heartTarget": 1000,
+      "potMin": 1000,
+      "potMax": 5000,
+      "ranking": "wallet plus held escrow",
+      "distribution": "half base plus half rank weighted, exact integer remainders",
+      "preserveUnfilledHeartsAcrossMatches": true
+    },
+    "shop": {
+      "eventId": "SHOP01",
+      "hostMinimumWallet": 120,
+      "setupCost": 80,
+      "orderSeconds": 12,
+      "returnSeconds": 12,
+      "maxOrders": 8,
+      "goodReward": 30,
+      "cancelPenalty": 5,
+      "customerWalletCharge": 0,
+      "waitingCustomersOnly": true,
+      "oneOrderPerAccount": true,
+      "cancelOwnOrderOnly": true,
+      "chargeSetupOnce": true,
+      "realPurchase": false,
+      "preSettlementAbortRefund": 80,
+      "refundAfterSettlement": false
+    },
+    "queue": {
+      "roseCreditCap": 2,
+      "likeScoreCap": 1000,
+      "everyEligibleOncePerCycle": true,
+      "preserveUnusedRosePriorityAcrossMatches": true,
+      "giftsChangeDice": false,
+      "giftsChangeChart": false
+    }
+  },
+  "commandAliases": {
+    "join": [
+      "GÓP {hostTag}",
+      "THAM GIA {hostTag}"
+    ],
+    "pass": [
+      "BỎ {hostTag}",
+      "KHÔNG THAM GIA {hostTag}"
+    ],
+    "play": [
+      "CHƠI"
+    ],
+    "roll": [
+      "LẮC"
+    ],
+    "left": [
+      "TRÁI"
+    ],
+    "right": [
+      "PHẢI"
+    ],
+    "shopOrder": [
+      "{hostTag}"
+    ],
+    "shopCancel": [
+      "BOM {hostTag}"
+    ]
+  },
+  "playback": {
+    "readChoicesOnce": true,
+    "countdownAtSeconds": [
+      5,
+      3
+    ],
+    "maxQueueAnnouncementsPerSeconds": 12,
+    "maxEnvelopeSpokenRecipients": 3,
+    "restUseShortLine": true,
+    "resultFromCommittedLedgerOnly": true,
+    "discardStaleCueKeys": true,
+    "cueKey": "matchId:eventSequence:phase",
+    "comment": "The MC repository owns TTS. A caption/voice completion callback never changes money or RNG."
+  },
+  "cues": [
+    {
+      "id": "event.GA01.open",
+      "eventId": "GA01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Ghé ga nhận lộc đầu đường! Đặt quân đầu ván thì chưa tính thưởng nhé.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "station",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GA01.gain",
+      "eventId": "GA01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GA01.loss",
+      "eventId": "GA01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GA01.neutral",
+      "eventId": "GA01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.REST01.open",
+      "eventId": "REST01",
+      "phase": "event.open",
+      "line": "Ôi, không có gì! Ví vẫn nguyên, đi tiếp thôi.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "event.open",
+      "category": "rest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.REST01.gain",
+      "eventId": "REST01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.REST01.loss",
+      "eventId": "REST01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.REST01.neutral",
+      "eventId": "REST01",
+      "phase": "event.result.neutral",
+      "line": "Không có gì xảy ra. Ví vẫn {balance} MONEY, chân mình đi tiếp thôi.",
+      "variables": [
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN01.open",
+      "eventId": "GAIN01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Tìm thấy chiếc ví của chính mình! Có tờ tiền quên từ sáng, vậy cũng là niềm vui.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN01.gain",
+      "eventId": "GAIN01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN01.loss",
+      "eventId": "GAIN01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN01.neutral",
+      "eventId": "GAIN01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN02.open",
+      "eventId": "GAIN02",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Cô bán nước gọi lại trả tiền thừa. Khách quen được nhớ cả tiền lẫn mặt!",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN02.gain",
+      "eventId": "GAIN02",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN02.loss",
+      "eventId": "GAIN02",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN02.neutral",
+      "eventId": "GAIN02",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN03.open",
+      "eventId": "GAIN03",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Giao hàng đúng hẹn, khách thưởng thêm. Cơm còn nóng mà ví cũng ấm.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN03.gain",
+      "eventId": "GAIN03",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN03.loss",
+      "eventId": "GAIN03",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN03.neutral",
+      "eventId": "GAIN03",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN04.open",
+      "eventId": "GAIN04",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Phụ dọn mấy chiếc ghế nhựa, nhận công ngay. Việc nhỏ, tiếng cười lớn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN04.gain",
+      "eventId": "GAIN04",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN04.loss",
+      "eventId": "GAIN04",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN04.neutral",
+      "eventId": "GAIN04",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN05.open",
+      "eventId": "GAIN05",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Gom lon đổi điểm! Phố sạch hơn, ví xanh hơn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN05.gain",
+      "eventId": "GAIN05",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN05.loss",
+      "eventId": "GAIN05",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN05.neutral",
+      "eventId": "GAIN05",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN06.open",
+      "eventId": "GAIN06",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Gọi đúng tên, mèo chịu xuống nóc tủ. Bác hàng xóm gửi chút cảm ơn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN06.gain",
+      "eventId": "GAIN06",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN06.loss",
+      "eventId": "GAIN06",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN06.neutral",
+      "eventId": "GAIN06",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN07.open",
+      "eventId": "GAIN07",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Thông báo hoàn điểm về rồi! Lần này điện thoại reo là có tin vui.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN07.gain",
+      "eventId": "GAIN07",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN07.loss",
+      "eventId": "GAIN07",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN07.neutral",
+      "eventId": "GAIN07",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.GAIN08.open",
+      "eventId": "GAIN08",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Khách khen quầy dễ thương. Hôm nay nụ cười cũng biết tạo doanh thu.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.open",
+      "category": "gain",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.GAIN08.gain",
+      "eventId": "GAIN08",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN08.loss",
+      "eventId": "GAIN08",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.GAIN08.neutral",
+      "eventId": "GAIN08",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS01.open",
+      "eventId": "LOSS01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Tuýt còi! Đậu xe ngay trước biển cấm. Nộp phí trong game rồi dắt xe đúng chỗ nhé.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_traffic_whistle",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS01.gain",
+      "eventId": "LOSS01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS01.loss",
+      "eventId": "LOSS01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS01.neutral",
+      "eventId": "LOSS01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS02.open",
+      "eventId": "LOSS02",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Chó giữ chiếc dép như giữ kho báu. Chân vẫn ổn, nhưng quai dép xin nghỉ phép!",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_dog_bark",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS02.gain",
+      "eventId": "LOSS02",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS02.loss",
+      "eventId": "LOSS02",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS02.neutral",
+      "eventId": "LOSS02",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS03.open",
+      "eventId": "LOSS03",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Mưa bất ngờ! Mua áo mưa đầu hẻm, giữ người khô rồi đi tiếp.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS03.gain",
+      "eventId": "LOSS03",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS03.loss",
+      "eventId": "LOSS03",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS03.neutral",
+      "eventId": "LOSS03",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS04.open",
+      "eventId": "LOSS04",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Cốc trà sữa đổi chủ khi nắp bật ra. Mình đền một cốc, lần sau cầm hai tay nhé.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS04.gain",
+      "eventId": "LOSS04",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS04.loss",
+      "eventId": "LOSS04",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS04.neutral",
+      "eventId": "LOSS04",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS05.open",
+      "eventId": "LOSS05",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Bánh xe gặp chiếc đinh có tham vọng. Vá bánh một nhịp rồi tiếp tục.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS05.gain",
+      "eventId": "LOSS05",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS05.loss",
+      "eventId": "LOSS05",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS05.neutral",
+      "eventId": "LOSS05",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS06.open",
+      "eventId": "LOSS06",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Quên vé gửi xe! Chú giữ xe tra sổ giúp, phí làm lại vé đã hiện trên bảng.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS06.gain",
+      "eventId": "LOSS06",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS06.loss",
+      "eventId": "LOSS06",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS06.neutral",
+      "eventId": "LOSS06",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS07.open",
+      "eventId": "LOSS07",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Đóng thùng rất đẹp, hàng vẫn trên bàn. Tốn thêm một lượt băng keo rồi!",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS07.gain",
+      "eventId": "LOSS07",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS07.loss",
+      "eventId": "LOSS07",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS07.neutral",
+      "eventId": "LOSS07",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LOSS08.open",
+      "eventId": "LOSS08",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Một cú chạm, thêm topping. Ly nước nhiều tham vọng hơn, ví thì mỏng hơn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.open",
+      "category": "loss",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LOSS08.gain",
+      "eventId": "LOSS08",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS08.loss",
+      "eventId": "LOSS08",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LOSS08.neutral",
+      "eventId": "LOSS08",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE01.open",
+      "eventId": "LIFE01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Chó ngậm dép ngồi chắn hẻm. Chọn cách thương lượng, bên kia đang giữ lợi thế một chiếc dép.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_dog_bark",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE01.choose",
+      "eventId": "LIFE01",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để đợi cô chủ gọi: +0 MONEY. gõ 2 để mua bánh thưởng: -15 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "wait",
+        "2": "treat"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE01.countdown",
+      "eventId": "LIFE01",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE01.timeout",
+      "eventId": "LIFE01",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Đợi cô chủ gọi.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE01.gain",
+      "eventId": "LIFE01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE01.loss",
+      "eventId": "LIFE01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE01.neutral",
+      "eventId": "LIFE01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE02.open",
+      "eventId": "LIFE02",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Chú công an hỏi nhà số mười hai. Chỉ đường hay phụ chuyển nước, phố đang chờ bạn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_traffic_whistle",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE02.choose",
+      "eventId": "LIFE02",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để chỉ đường: +20 MONEY. gõ 2 để phụ chuyển nước: +35 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "point",
+        "2": "help"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE02.countdown",
+      "eventId": "LIFE02",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE02.timeout",
+      "eventId": "LIFE02",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Chỉ đường.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE02.gain",
+      "eventId": "LIFE02",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE02.loss",
+      "eventId": "LIFE02",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE02.neutral",
+      "eventId": "LIFE02",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE03.open",
+      "eventId": "LIFE03",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Bảng giảm giá chuẩn bị bay! Giữ bảng hay xếp lại ghế cho cô chủ?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE03.choose",
+      "eventId": "LIFE03",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để giữ tấm bảng: +25 MONEY. gõ 2 để xếp lại ghế: +30 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "sign",
+        "2": "chairs"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE03.countdown",
+      "eventId": "LIFE03",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE03.timeout",
+      "eventId": "LIFE03",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Giữ tấm bảng.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE03.gain",
+      "eventId": "LIFE03",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE03.loss",
+      "eventId": "LIFE03",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE03.neutral",
+      "eventId": "LIFE03",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE04.open",
+      "eventId": "LIFE04",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Hàng xóm nhờ tưới cây. Tưới bằng nước nhé, trà sữa để uống!",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE04.choose",
+      "eventId": "LIFE04",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để tưới ba chậu: +25 MONEY. gõ 2 để chăm cả sân: +45 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "small",
+        "2": "garden"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE04.countdown",
+      "eventId": "LIFE04",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE04.timeout",
+      "eventId": "LIFE04",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Tưới ba chậu.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE04.gain",
+      "eventId": "LIFE04",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE04.loss",
+      "eventId": "LIFE04",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE04.neutral",
+      "eventId": "LIFE04",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE05.open",
+      "eventId": "LIFE05",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Ghế đã có khách lông xù nằm ngủ. Bạn đứng hóng gió hay thuê ghế bên cạnh?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE05.choose",
+      "eventId": "LIFE05",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để đứng hóng gió: +0 MONEY. gõ 2 để thuê ghế bên cạnh: -10 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "stand",
+        "2": "rent"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE05.countdown",
+      "eventId": "LIFE05",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE05.timeout",
+      "eventId": "LIFE05",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Đứng hóng gió.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE05.gain",
+      "eventId": "LIFE05",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE05.loss",
+      "eventId": "LIFE05",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE05.neutral",
+      "eventId": "LIFE05",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE06.open",
+      "eventId": "LIFE06",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Hội hẻm mở bàn liên hoan. Phụ dọn hay góp quỹ, chọn cách vui cùng phố.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE06.choose",
+      "eventId": "LIFE06",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để phụ dọn bàn: +15 MONEY. gõ 2 để góp quỹ chung: -25 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "help",
+        "2": "party"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE06.countdown",
+      "eventId": "LIFE06",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE06.timeout",
+      "eventId": "LIFE06",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Phụ dọn bàn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE06.gain",
+      "eventId": "LIFE06",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE06.loss",
+      "eventId": "LIFE06",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE06.neutral",
+      "eventId": "LIFE06",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE07.open",
+      "eventId": "LIFE07",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Đơn cuối trước giờ ngủ. Nghỉ ngơi hay giao thêm một chuyến ngắn?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE07.choose",
+      "eventId": "LIFE07",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nghỉ thôi: +0 MONEY. gõ 2 để giao thêm phần: +40 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "rest",
+        "2": "deliver"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE07.countdown",
+      "eventId": "LIFE07",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE07.timeout",
+      "eventId": "LIFE07",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Nghỉ thôi.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE07.gain",
+      "eventId": "LIFE07",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE07.loss",
+      "eventId": "LIFE07",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE07.neutral",
+      "eventId": "LIFE07",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE08.open",
+      "eventId": "LIFE08",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Loa khu phố gọi tên bạn! Đọc thông báo thôi, chưa phải thi hát nhé.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE08.choose",
+      "eventId": "LIFE08",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để đọc thông báo: +30 MONEY. gõ 2 để soát lại nội dung: +20 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "read",
+        "2": "check"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE08.countdown",
+      "eventId": "LIFE08",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE08.timeout",
+      "eventId": "LIFE08",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Đọc thông báo.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE08.gain",
+      "eventId": "LIFE08",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE08.loss",
+      "eventId": "LIFE08",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE08.neutral",
+      "eventId": "LIFE08",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE09.open",
+      "eventId": "LIFE09",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Thang máy bảo trì, đơn ở tầng ba. Chờ khách xuống hay đi bộ giao tận cửa?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE09.choose",
+      "eventId": "LIFE09",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để khách xuống nhận: +10 MONEY. gõ 2 để đi bộ giao tận cửa: +35 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "wait",
+        "2": "stairs"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE09.countdown",
+      "eventId": "LIFE09",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE09.timeout",
+      "eventId": "LIFE09",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Khách xuống nhận.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE09.gain",
+      "eventId": "LIFE09",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE09.loss",
+      "eventId": "LIFE09",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE09.neutral",
+      "eventId": "LIFE09",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE10.open",
+      "eventId": "LIFE10",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Cô bán nước đi lấy đá. Trông quầy hay giúp bê thùng đá?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE10.choose",
+      "eventId": "LIFE10",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để trông quầy: +25 MONEY. gõ 2 để bê thùng đá: +40 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "watch",
+        "2": "ice"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE10.countdown",
+      "eventId": "LIFE10",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE10.timeout",
+      "eventId": "LIFE10",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Trông quầy.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE10.gain",
+      "eventId": "LIFE10",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE10.loss",
+      "eventId": "LIFE10",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE10.neutral",
+      "eventId": "LIFE10",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE11.open",
+      "eventId": "LIFE11",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Sinh nhật mèo hàng xóm! Mèo chưa phát biểu, nhưng thiệp mời đã đến tay bạn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE11.choose",
+      "eventId": "LIFE11",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để vỗ tay chúc mừng: +0 MONEY. gõ 2 để tặng món đồ chơi: -20 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "clap",
+        "2": "gift"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE11.countdown",
+      "eventId": "LIFE11",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE11.timeout",
+      "eventId": "LIFE11",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Vỗ tay chúc mừng.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE11.gain",
+      "eventId": "LIFE11",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE11.loss",
+      "eventId": "LIFE11",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE11.neutral",
+      "eventId": "LIFE11",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE12.open",
+      "eventId": "LIFE12",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Lạc một ngã, gặp quầy tuyển người phát menu. Đôi khi đi lạc cũng gặp việc.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "event",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE12.choose",
+      "eventId": "LIFE12",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để hỏi đường rồi đi: +0 MONEY. gõ 2 để phụ phát menu: +30 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "map",
+        "2": "menus"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.LIFE12.countdown",
+      "eventId": "LIFE12",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.LIFE12.timeout",
+      "eventId": "LIFE12",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Hỏi đường rồi đi.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.LIFE12.gain",
+      "eventId": "LIFE12",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE12.loss",
+      "eventId": "LIFE12",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.LIFE12.neutral",
+      "eventId": "LIFE12",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV01.open",
+      "eventId": "INV01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Cơ hội góp vốn xe bánh mì. Xem mức tiền và rủi ro trên bảng trước khi chọn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV01.choose",
+      "eventId": "INV01",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để giữ vốn: +10 MONEY. gõ 2 để góp mẻ bánh: 60%: +100; 40%: -70 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "save",
+        "2": "fund"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV01.countdown",
+      "eventId": "INV01",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV01.timeout",
+      "eventId": "INV01",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Giữ vốn.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV01.gain",
+      "eventId": "INV01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV01.loss",
+      "eventId": "INV01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV01.neutral",
+      "eventId": "INV01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV02.open",
+      "eventId": "INV02",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Quầy ô che nắng đang tìm người phụ. Nhận công chắc chắn hay thử góp vốn?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV02.choose",
+      "eventId": "INV02",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nhận lương trực quầy: +25 MONEY. gõ 2 để thuê thêm ô: 60%: +85; 40%: -60 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "shift",
+        "2": "umbrellas"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV02.countdown",
+      "eventId": "INV02",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV02.timeout",
+      "eventId": "INV02",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Nhận lương trực quầy.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV02.gain",
+      "eventId": "INV02",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV02.loss",
+      "eventId": "INV02",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV02.neutral",
+      "eventId": "INV02",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV03.open",
+      "eventId": "INV03",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Vườn rau sân thượng mở cửa. Nhận công tưới hay góp một vụ rau thử?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV03.choose",
+      "eventId": "INV03",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nhận công tưới: +30 MONEY. gõ 2 để góp giống rau: 65%: +80; 35%: -50 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "water",
+        "2": "garden"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV03.countdown",
+      "eventId": "INV03",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV03.timeout",
+      "eventId": "INV03",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Nhận công tưới.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV03.gain",
+      "eventId": "INV03",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV03.loss",
+      "eventId": "INV03",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV03.neutral",
+      "eventId": "INV03",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV04.open",
+      "eventId": "INV04",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Cả hẻm bàn chiếc máy ép mía chung. Phụ rửa cốc hay góp vốn máy?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV04.choose",
+      "eventId": "INV04",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để phụ rửa cốc: +35 MONEY. gõ 2 để góp vốn máy: 55%: +125; 45%: -90 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "work",
+        "2": "machine"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV04.countdown",
+      "eventId": "INV04",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV04.timeout",
+      "eventId": "INV04",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Phụ rửa cốc.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV04.gain",
+      "eventId": "INV04",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV04.loss",
+      "eventId": "INV04",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV04.neutral",
+      "eventId": "INV04",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV05.open",
+      "eventId": "INV05",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Tủ sách đầu hẻm cần người chăm. Sắp xếp sách hay mở một quầy nhỏ?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV05.choose",
+      "eventId": "INV05",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để sắp xếp sách: +20 MONEY. gõ 2 để mở quầy sách cũ: 65%: +65; 35%: -40 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "sort",
+        "2": "shelf"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV05.countdown",
+      "eventId": "INV05",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV05.timeout",
+      "eventId": "INV05",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Sắp xếp sách.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV05.gain",
+      "eventId": "INV05",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV05.loss",
+      "eventId": "INV05",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV05.neutral",
+      "eventId": "INV05",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV06.open",
+      "eventId": "INV06",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Quầy hoa cuối tuần chuẩn bị nhập hàng. Bó hoa lấy công hay thử một lô hoa?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV06.choose",
+      "eventId": "INV06",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nhận công bó hoa: +30 MONEY. gõ 2 để nhập lô hoa: 60%: +110; 40%: -80 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "salary",
+        "2": "flowers"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV06.countdown",
+      "eventId": "INV06",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV06.timeout",
+      "eventId": "INV06",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Nhận công bó hoa.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV06.gain",
+      "eventId": "INV06",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV06.loss",
+      "eventId": "INV06",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV06.neutral",
+      "eventId": "INV06",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV07.open",
+      "eventId": "INV07",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Điểm sạc xe đồ chơi cần người trực. Đây là MONEY trong game, chọn theo mức rủi ro đã báo nhé.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV07.choose",
+      "eventId": "INV07",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để trực điểm sạc: +25 MONEY. gõ 2 để thuê một trạm: 60%: +105; 40%: -75 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "guard",
+        "2": "station"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV07.countdown",
+      "eventId": "INV07",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV07.timeout",
+      "eventId": "INV07",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Trực điểm sạc.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV07.gain",
+      "eventId": "INV07",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV07.loss",
+      "eventId": "INV07",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV07.neutral",
+      "eventId": "INV07",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV08.open",
+      "eventId": "INV08",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Rạp chiếu sân nhà tìm người góp sức. Xếp ghế hay góp màn chiếu?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "invest",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV08.choose",
+      "eventId": "INV08",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để xếp ghế lấy công: +30 MONEY. gõ 2 để góp màn chiếu: 55%: +95; 45%: -65 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "chairs",
+        "2": "screen"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.INV08.countdown",
+      "eventId": "INV08",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.INV08.timeout",
+      "eventId": "INV08",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Xếp ghế lấy công.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.INV08.gain",
+      "eventId": "INV08",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV08.loss",
+      "eventId": "INV08",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.INV08.neutral",
+      "eventId": "INV08",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE01.open",
+      "eventId": "TRADE01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Shop dép chạy deadline mở cửa. Nhận lương hay nhập lô hàng thử?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE01.choose",
+      "eventId": "TRADE01",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nhận lương: +40 MONEY. gõ 2 để nhập một lô dép: 60%: +120; 40%: -80 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "salary",
+        "2": "sell"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE01.countdown",
+      "eventId": "TRADE01",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE01.timeout",
+      "eventId": "TRADE01",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Nhận lương.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE01.gain",
+      "eventId": "TRADE01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE01.loss",
+      "eventId": "TRADE01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE01.neutral",
+      "eventId": "TRADE01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE02.open",
+      "eventId": "TRADE02",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Xe trà tắc vừa dựng quầy. Phụ quầy hay thử bán một mẻ?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE02.choose",
+      "eventId": "TRADE02",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để phụ quầy: +30 MONEY. gõ 2 để bán một mẻ: 65%: +80; 35%: -50 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "wage",
+        "2": "batch"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE02.countdown",
+      "eventId": "TRADE02",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE02.timeout",
+      "eventId": "TRADE02",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Phụ quầy.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE02.gain",
+      "eventId": "TRADE02",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE02.loss",
+      "eventId": "TRADE02",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE02.neutral",
+      "eventId": "TRADE02",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE03.open",
+      "eventId": "TRADE03",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Bánh tráng trộn đã sẵn sàng. Đóng gói lấy công hay thử bán một mẻ?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE03.choose",
+      "eventId": "TRADE03",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nhận công đóng gói: +35 MONEY. gõ 2 để bán mẻ bánh: 60%: +95; 40%: -60 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "pack",
+        "2": "sell"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE03.countdown",
+      "eventId": "TRADE03",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE03.timeout",
+      "eventId": "TRADE03",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Nhận công đóng gói.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE03.gain",
+      "eventId": "TRADE03",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE03.loss",
+      "eventId": "TRADE03",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE03.neutral",
+      "eventId": "TRADE03",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE04.open",
+      "eventId": "TRADE04",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Quầy áo mưa nhìn trời chờ khách. Phát menu lấy công hay nhập hàng?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE04.choose",
+      "eventId": "TRADE04",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để phát menu: +25 MONEY. gõ 2 để nhập áo mưa: 55%: +110; 45%: -70 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "salary",
+        "2": "stock"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE04.countdown",
+      "eventId": "TRADE04",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE04.timeout",
+      "eventId": "TRADE04",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Phát menu.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE04.gain",
+      "eventId": "TRADE04",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE04.loss",
+      "eventId": "TRADE04",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE04.neutral",
+      "eventId": "TRADE04",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE05.open",
+      "eventId": "TRADE05",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Chợ đồ cũ vui vẻ! Lau quầy lấy công hay thu mua bán lại?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE05.choose",
+      "eventId": "TRADE05",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để lau quầy lấy công: +25 MONEY. gõ 2 để thu mua bán lại: 65%: +75; 35%: -45 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "clean",
+        "2": "resell"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE05.countdown",
+      "eventId": "TRADE05",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE05.timeout",
+      "eventId": "TRADE05",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Lau quầy lấy công.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE05.gain",
+      "eventId": "TRADE05",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE05.loss",
+      "eventId": "TRADE05",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE05.neutral",
+      "eventId": "TRADE05",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE06.open",
+      "eventId": "TRADE06",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Cà phê giao tận cổng. Giao thuê hay mở một ca bán thử?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE06.choose",
+      "eventId": "TRADE06",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để giao thuê: +40 MONEY. gõ 2 để mở ca cà phê: 60%: +115; 40%: -75 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "deliver",
+        "2": "coffee"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE06.countdown",
+      "eventId": "TRADE06",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE06.timeout",
+      "eventId": "TRADE06",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Giao thuê.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE06.gain",
+      "eventId": "TRADE06",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE06.loss",
+      "eventId": "TRADE06",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE06.neutral",
+      "eventId": "TRADE06",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE07.open",
+      "eventId": "TRADE07",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Giờ trưa tới rồi! Phụ đóng hộp hay nhập một mẻ cơm?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE07.choose",
+      "eventId": "TRADE07",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để phụ đóng hộp: +35 MONEY. gõ 2 để nhập mẻ cơm: 60%: +130; 40%: -85 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "pack",
+        "2": "lunch"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE07.countdown",
+      "eventId": "TRADE07",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE07.timeout",
+      "eventId": "TRADE07",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Phụ đóng hộp.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE07.gain",
+      "eventId": "TRADE07",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE07.loss",
+      "eventId": "TRADE07",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE07.neutral",
+      "eventId": "TRADE07",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE08.open",
+      "eventId": "TRADE08",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Quầy móc khóa mèo chào khách. Làm thuê hay mở quầy thử?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "trade",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE08.choose",
+      "eventId": "TRADE08",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để làm thuê: +30 MONEY. gõ 2 để mở quầy thử: 60%: +90; 40%: -55 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "craft",
+        "2": "stand"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.TRADE08.countdown",
+      "eventId": "TRADE08",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.TRADE08.timeout",
+      "eventId": "TRADE08",
+      "phase": "event.timeout",
+      "line": "Hết giờ, ghế {playerTag} dùng phương án mặc định: Làm thuê.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.TRADE08.gain",
+      "eventId": "TRADE08",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE08.loss",
+      "eventId": "TRADE08",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.TRADE08.neutral",
+      "eventId": "TRADE08",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI01.open",
+      "eventId": "MINI01",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Đóng gói thần tốc! Hộp trước, băng sau, tem cuối. Nhìn kỹ rồi chọn nhé.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "minigame",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI01.choose",
+      "eventId": "MINI01",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để hộp → băng → tem: Đúng thứ tự: +70 MONEY. gõ 2 để tem → hộp → băng: Sai thứ tự: 0 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "right",
+        "2": "wrong"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI01.countdown",
+      "eventId": "MINI01",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.MINI01.timeout",
+      "eventId": "MINI01",
+      "phase": "event.timeout",
+      "line": "Hết giờ rồi! Câu này chưa có thưởng, mình giữ ví rồi đi tiếp.",
+      "variables": [],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI01.gain",
+      "eventId": "MINI01",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI01.loss",
+      "eventId": "MINI01",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI01.neutral",
+      "eventId": "MINI01",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI02.open",
+      "eventId": "MINI02",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Khách gọi ít đá, không đường. Chọn phiếu đúng trước khi giao.",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "minigame",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI02.choose",
+      "eventId": "MINI02",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để ít đá · không đường: Khớp đơn: +65 MONEY. gõ 2 để nhiều đá · thêm đường: Sai đơn: 0 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "right",
+        "2": "wrong"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI02.countdown",
+      "eventId": "MINI02",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.MINI02.timeout",
+      "eventId": "MINI02",
+      "phase": "event.timeout",
+      "line": "Hết giờ rồi! Câu này chưa có thưởng, mình giữ ví rồi đi tiếp.",
+      "variables": [],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI02.gain",
+      "eventId": "MINI02",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI02.loss",
+      "eventId": "MINI02",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI02.neutral",
+      "eventId": "MINI02",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI03.open",
+      "eventId": "MINI03",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Đơn ghi nhà mười hai, hẻm ba. Đừng tráo hai con số rồi trách con hẻm!",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "minigame",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI03.choose",
+      "eventId": "MINI03",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để nhà 12 · hẻm 3: Giao đúng: +55 MONEY. gõ 2 để nhà 3 · hẻm 12: Giao nhầm: 0 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "right",
+        "2": "wrong"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI03.countdown",
+      "eventId": "MINI03",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.MINI03.timeout",
+      "eventId": "MINI03",
+      "phase": "event.timeout",
+      "line": "Hết giờ rồi! Câu này chưa có thưởng, mình giữ ví rồi đi tiếp.",
+      "variables": [],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI03.gain",
+      "eventId": "MINI03",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI03.loss",
+      "eventId": "MINI03",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI03.neutral",
+      "eventId": "MINI03",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI04.open",
+      "eventId": "MINI04",
+      "phase": "event.open",
+      "line": "Ghế {playerTag}, Hóa đơn ba mươi lăm, khách đưa năm mươi. Trả bao nhiêu?",
+      "variables": [
+        "playerTag"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.open",
+      "category": "minigame",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI04.choose",
+      "eventId": "MINI04",
+      "phase": "event.choose",
+      "line": "Ghế {playerTag}, gõ 1 để trả 15: Đúng phép tính: +60 MONEY. gõ 2 để trả 25: Sai phép tính: 0 MONEY. Còn {seconds} giây.",
+      "variables": [
+        "playerTag",
+        "seconds"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "event.choose",
+      "commandMap": {
+        "1": "right",
+        "2": "wrong"
+      },
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "event.MINI04.countdown",
+      "eventId": "MINI04",
+      "phase": "event.countdown",
+      "line": "Còn {seconds} giây để chọn. Bé Két chờ câu trả lời của ghế {playerTag}.",
+      "variables": [
+        "seconds",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "event.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "event.MINI04.timeout",
+      "eventId": "MINI04",
+      "phase": "event.timeout",
+      "line": "Hết giờ rồi! Câu này chưa có thưởng, mình giữ ví rồi đi tiếp.",
+      "variables": [],
+      "sfx": "sfx_timer_warn",
+      "trigger": "event.timeout",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "event.MINI04.gain",
+      "eventId": "MINI04",
+      "phase": "event.result.gain",
+      "line": "Ghế {playerTag} nhận {deltaAbs} MONEY. Ví mới {balance}. Ghi sổ xong, mình đi tiếp!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "event.result.gain",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI04.loss",
+      "eventId": "MINI04",
+      "phase": "event.result.loss",
+      "line": "Ghế {playerTag} mất {deltaAbs} MONEY. Ví còn {balance}. Phố giữ tiếng cười, mình giữ lượt sau!",
+      "variables": [
+        "playerTag",
+        "deltaAbs",
+        "balance"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "event.result.loss",
+      "oncePerEvent": true,
+      "priority": 3
+    },
+    {
+      "id": "event.MINI04.neutral",
+      "eventId": "MINI04",
+      "phase": "event.result.neutral",
+      "line": "Chốt rồi, MONEY không đổi. Ghế {playerTag} còn {balance}.",
+      "variables": [
+        "playerTag",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "event.result.neutral",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "match.open",
+      "eventId": "MATCH",
+      "phase": "match.open",
+      "line": "Khu phố mở cửa! Mỗi tài khoản có {startingMoney} MONEY. Gõ CHƠI để vào danh sách ghép bàn; trong lúc chờ vẫn góp vốn, ghé quầy và nhận lì xì được nhé.",
+      "variables": [
+        "startingMoney"
+      ],
+      "sfx": null,
+      "trigger": "match.open",
+      "priority": 2
+    },
+    {
+      "id": "match.full100",
+      "eventId": "MATCH",
+      "phase": "match.population",
+      "line": "Phòng có {accountCount} tài khoản, map hiện có {playerCount} người đua. Những bạn chờ ghế vẫn tham gia chuyện phố cùng cả bàn.",
+      "variables": [
+        "accountCount",
+        "playerCount"
+      ],
+      "sfx": null,
+      "trigger": "match.population"
+    },
+    {
+      "id": "race.rules",
+      "eventId": "RACE",
+      "phase": "race.ready",
+      "line": "Ván này chạy đủ {lapTarget} vòng đường. Vạch đích mới ở {finishName}; qua đó sau vòng cuối mới hoàn thành cuộc đua.",
+      "variables": [
+        "lapTarget",
+        "finishName"
+      ],
+      "sfx": null,
+      "trigger": "race.ready",
+      "oncePerMatch": true,
+      "priority": 2
+    },
+    {
+      "id": "race.turn",
+      "eventId": "RACE",
+      "phase": "turn.open",
+      "line": "Đến {playerName}, mã {playerTag}. Gõ LẮC, mình xem phố đưa bạn tới đâu.",
+      "variables": [
+        "playerName",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "turn.open",
+      "priority": 1
+    },
+    {
+      "id": "race.roll",
+      "eventId": "RACE",
+      "phase": "dice.result",
+      "line": "{roll} bước! Đi đúng số ô rồi mới xử lý chuyện ở ô cuối.",
+      "variables": [
+        "roll"
+      ],
+      "sfx": null,
+      "trigger": "dice.result"
+    },
+    {
+      "id": "race.autoRoll",
+      "eventId": "RACE",
+      "phase": "dice.timeout",
+      "line": "{playerName} đang bận một nhịp. Bé Két lắc hộ, vẫn chỉ một kết quả nhé.",
+      "variables": [
+        "playerName"
+      ],
+      "sfx": null,
+      "trigger": "dice.timeout"
+    },
+    {
+      "id": "race.fork",
+      "eventId": "RACE",
+      "phase": "fork.open",
+      "line": "{playerName}, gõ TRÁI hoặc PHẢI. Nhìn loại ô trên mỗi đường; cả phố cũng được góp ý!",
+      "variables": [
+        "playerName"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "fork.open"
+    },
+    {
+      "id": "race.forkOwner",
+      "eventId": "RACE",
+      "phase": "fork.owner",
+      "line": "Chốt {direction}! Chủ lượt đã chọn, cả phố cùng theo chân nào.",
+      "variables": [
+        "direction"
+      ],
+      "sfx": null,
+      "trigger": "fork.owner"
+    },
+    {
+      "id": "race.forkVotes",
+      "eventId": "RACE",
+      "phase": "fork.votes",
+      "line": "Khán giả chọn {direction}, {winningVotes} phiếu. Ghế {playerTag} đi nhé!",
+      "variables": [
+        "direction",
+        "winningVotes",
+        "playerTag"
+      ],
+      "sfx": null,
+      "trigger": "fork.votes"
+    },
+    {
+      "id": "race.forkDefault",
+      "eventId": "RACE",
+      "phase": "fork.default",
+      "line": "Phiếu hòa hoặc phố đang im lặng. Đi {direction} theo mặc định đã hiện trên bảng.",
+      "variables": [
+        "direction"
+      ],
+      "sfx": null,
+      "trigger": "fork.default"
+    },
+    {
+      "id": "race.lap",
+      "eventId": "RACE",
+      "phase": "race.lap",
+      "line": "{playerName} đã xong vòng {lap}/{lapTarget}! Ví còn {balance}, tiếp tục chuyến phố nào.",
+      "variables": [
+        "playerName",
+        "lap",
+        "lapTarget",
+        "balance"
+      ],
+      "sfx": "sfx_correct",
+      "trigger": "race.lap"
+    },
+    {
+      "id": "race.finalLap",
+      "eventId": "RACE",
+      "phase": "race.finalLap",
+      "line": "Vòng cuối của {playerName}! Vạch đích đang chờ, cả phố có thể cổ vũ bằng tim.",
+      "variables": [
+        "playerName"
+      ],
+      "sfx": null,
+      "trigger": "race.finalLap"
+    },
+    {
+      "id": "race.finish",
+      "eventId": "RACE",
+      "phase": "race.finish",
+      "line": "{playerName} về đích thứ {finishRank}! Hoàn thành đủ {lapTarget} vòng, ví hiện {balance} MONEY.",
+      "variables": [
+        "playerName",
+        "finishRank",
+        "lapTarget",
+        "balance"
+      ],
+      "sfx": "sfx_victory",
+      "trigger": "race.finish",
+      "priority": 3
+    },
+    {
+      "id": "race.end",
+      "eventId": "RACE",
+      "phase": "match.end",
+      "line": "Đủ ba người về đích, chốt ván! Nhất {firstName}, nhì {secondName}, ba {thirdName}. Bục theo thứ tự cán đích; MONEY vẫn hiện riêng cho mọi người.",
+      "variables": [
+        "firstName",
+        "secondName",
+        "thirdName"
+      ],
+      "sfx": "sfx_victory",
+      "trigger": "match.end",
+      "priority": 3
+    },
+    {
+      "id": "race.resultHold",
+      "eventId": "RACE",
+      "phase": "race.resultHold",
+      "line": "Giữ bục {seconds} giây để cả phố chúc mừng. Sau đó mở cửa tim giữ chỗ và ghép bàn kế tiếp.",
+      "variables": [
+        "seconds"
+      ],
+      "sfx": null,
+      "trigger": "race.resultHold",
+      "oncePerMatch": true
+    },
+    {
+      "id": "race.nextMatch",
+      "eventId": "RACE",
+      "phase": "match.next",
+      "line": "Bàn mới đã chọn xong {playerCount} người! Mọi tài khoản, kể cả khách chờ, nhận lại {startingMoney} MONEY. Map đổi cảnh, vạch đích đổi chỗ, mình chạy ba vòng mới nào!",
+      "variables": [
+        "playerCount",
+        "startingMoney"
+      ],
+      "sfx": null,
+      "trigger": "match.next",
+      "oncePerMatch": true,
+      "priority": 2
+    },
+    {
+      "id": "reserve.open",
+      "eventId": "MATCHMAKING",
+      "phase": "reserve.open",
+      "line": "Cửa giữ chỗ mở {reserveSeconds} giây! Người ở bàn cũ đạt {heartTarget} tim mới trước sẽ giữ ghế trước. Tối đa {retainedSeats} ghế cũ, dành {waitingSeats} ghế cho hàng chờ.",
+      "variables": [
+        "reserveSeconds",
+        "heartTarget",
+        "retainedSeats",
+        "waitingSeats"
+      ],
+      "sfx": null,
+      "trigger": "reserve.open",
+      "oncePerMatch": true,
+      "priority": 2
+    },
+    {
+      "id": "reserve.progress",
+      "eventId": "MATCHMAKING",
+      "phase": "reserve.progress",
+      "line": "{playerName} có {hearts}/{heartTarget} tim giữ chỗ. Chỉ tính tim mới trong cửa này, tim từ trước không cộng lại nhé.",
+      "variables": [
+        "playerName",
+        "hearts",
+        "heartTarget"
+      ],
+      "sfx": null,
+      "trigger": "reserve.progress",
+      "onlyAtHeartCount": [
+        10,
+        20,
+        30
+      ],
+      "cooldownSeconds": 5,
+      "priority": 0
+    },
+    {
+      "id": "reserve.retained",
+      "eventId": "MATCHMAKING",
+      "phase": "reserve.retained",
+      "line": "Đã giữ ghế cho {playerName}. Danh sách ghép bàn xác nhận trên màn hình, không cần gửi thêm tim cho suất này.",
+      "variables": [
+        "playerName"
+      ],
+      "sfx": null,
+      "trigger": "reserve.retained",
+      "onlyToPlayer": true,
+      "cooldownSeconds": 3,
+      "priority": 1
+    },
+    {
+      "id": "reserve.full",
+      "eventId": "MATCHMAKING",
+      "phase": "reserve.full",
+      "line": "Nhóm giữ chỗ đã đủ {retainedSeats} ghế cũ. Các ghế còn lại dành cho người chờ lâu nhất, mình chốt danh sách theo đồng hồ.",
+      "variables": [
+        "retainedSeats"
+      ],
+      "sfx": null,
+      "trigger": "reserve.full",
+      "oncePerMatch": true,
+      "priority": 1
+    },
+    {
+      "id": "reserve.timeout",
+      "eventId": "MATCHMAKING",
+      "phase": "reserve.timeout",
+      "line": "Hết cửa giữ chỗ! Bạn chưa có ghế sẽ vào hàng chờ; mọi người vẫn được góp vốn, mua ở quầy đang mở và cùng đổ tim lì xì.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "reserve.timeout",
+      "oncePerMatch": true,
+      "priority": 2
+    },
+    {
+      "id": "matchmaking.start",
+      "eventId": "MATCHMAKING",
+      "phase": "matchmaking.start",
+      "line": "Bắt đầu ghép bàn mới. Ưu tiên suất giữ chỗ hợp lệ và tám bạn chờ lâu nhất; ghế còn trống tiếp tục lấy từ hàng chờ.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "matchmaking.start",
+      "oncePerMatch": true
+    },
+    {
+      "id": "matchmaking.selected",
+      "eventId": "MATCHMAKING",
+      "phase": "matchmaking.selected",
+      "line": "Đã ghép {playerCount} người vào map. Những tên được chọn hiện trên bảng; mọi người chuẩn bị lượt đua mới!",
+      "variables": [
+        "playerCount"
+      ],
+      "sfx": null,
+      "trigger": "matchmaking.selected",
+      "oncePerMatch": true,
+      "priority": 2
+    },
+    {
+      "id": "matchmaking.waiting",
+      "eventId": "MATCHMAKING",
+      "phase": "matchmaking.waiting",
+      "line": "{playerName} đang ở vị trí {queuePosition} của hàng chờ. Thời gian chờ được giữ qua ván để lần sau tới lượt công bằng.",
+      "variables": [
+        "playerName",
+        "queuePosition"
+      ],
+      "sfx": null,
+      "trigger": "matchmaking.waiting",
+      "onlyToPlayer": true,
+      "cooldownSeconds": 10,
+      "priority": 0
+    },
+    {
+      "id": "matchmaking.customer",
+      "eventId": "MATCHMAKING",
+      "phase": "matchmaking.customer",
+      "line": "Chưa có ghế đua vẫn là khách của khu phố! Bạn có thể góp vốn, đặt đơn khi shop mở và nhận lì xì cùng mọi người.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "matchmaking.customer",
+      "cooldownSeconds": 45,
+      "priority": 0
+    },
+    {
+      "id": "queue.rose",
+      "eventId": "QUEUE",
+      "phase": "queue.rose",
+      "line": "Đã ghi nhận hoa hồng của {playerName}. Bạn được ưu tiên ở lượt hợp lệ kế tiếp; số xúc xắc và kết quả sự kiện vẫn giữ luật chung.",
+      "variables": [
+        "playerName"
+      ],
+      "sfx": null,
+      "trigger": "queue.rose",
+      "cooldownSeconds": 12,
+      "priority": 0
+    },
+    {
+      "id": "queue.likes",
+      "eventId": "QUEUE",
+      "phase": "queue.likes",
+      "line": "Tim đang giúp {playerName} nhích lên hàng lượt. Mỗi chu kỳ mọi người vẫn được đi một lần, không ai bị bỏ lại.",
+      "variables": [
+        "playerName"
+      ],
+      "sfx": null,
+      "trigger": "queue.likes",
+      "cooldownSeconds": 30,
+      "priority": 0
+    },
+    {
+      "id": "queue.free",
+      "eventId": "QUEUE",
+      "phase": "queue.explain",
+      "line": "Không cần quà vẫn được vào chơi và đi đủ lượt. Hoa hồng chỉ đổi vị trí lượt sắp tới, không đổi số lắc hay lợi nhuận.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "queue.explain",
+      "onlyOnRequest": true,
+      "priority": 0
+    },
+    {
+      "id": "queue.carry",
+      "eventId": "QUEUE",
+      "phase": "queue.carry",
+      "line": "Quyền ưu tiên chưa đến lượt đã được giữ sang ván mới. Không mất lượt ưu tiên chỉ vì ván trước vừa chốt.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "queue.carry",
+      "onlyOnRequest": true,
+      "priority": 0
+    },
+    {
+      "id": "startup.open",
+      "eventId": "STARTUP",
+      "phase": "startup.open",
+      "line": "Ghế {hostTag} mở {startupName}! Chủ quầy đã góp {stake} MONEY. Ai muốn góp cùng gõ GÓP {hostTag}; không tham gia gõ BỎ {hostTag}. Đây là chart mô phỏng trong game.",
+      "variables": [
+        "hostTag",
+        "startupName",
+        "stake"
+      ],
+      "sfx": "sfx_question",
+      "trigger": "startup.open",
+      "priority": 2
+    },
+    {
+      "id": "startup.rules",
+      "eventId": "STARTUP",
+      "phase": "startup.rules",
+      "line": "Mỗi người góp {stake} MONEY, trừ ngay khi nhận tham gia. Trong {joinSeconds} giây mở cửa có thể đổi ý để hoàn vốn; khóa cửa rồi cùng chờ kết quả.",
+      "variables": [
+        "stake",
+        "joinSeconds"
+      ],
+      "sfx": null,
+      "trigger": "startup.rules",
+      "oncePerEvent": true
+    },
+    {
+      "id": "startup.join",
+      "eventId": "STARTUP",
+      "phase": "startup.join",
+      "line": "Đã có {participantCount} người góp, tổng vốn {escrowTotal} MONEY. Mỗi tài khoản một phần vốn thôi nhé.",
+      "variables": [
+        "participantCount",
+        "escrowTotal"
+      ],
+      "sfx": "sfx_order",
+      "trigger": "startup.join",
+      "cooldownSeconds": 4
+    },
+    {
+      "id": "startup.reject",
+      "eventId": "STARTUP",
+      "phase": "startup.reject",
+      "line": "Ví {playerName} chưa đủ {stake} MONEY. Bạn vẫn xem chart và cổ vũ cùng phố được nhé.",
+      "variables": [
+        "playerName",
+        "stake"
+      ],
+      "sfx": null,
+      "trigger": "startup.reject",
+      "onlyToPlayer": true,
+      "priority": 0
+    },
+    {
+      "id": "startup.leave",
+      "eventId": "STARTUP",
+      "phase": "startup.leave",
+      "line": "{playerName} chọn không tham gia trước giờ khóa. Hoàn lại {refund} MONEY, không trừ thêm phí.",
+      "variables": [
+        "playerName",
+        "refund"
+      ],
+      "sfx": "sfx_return",
+      "trigger": "startup.leave",
+      "cooldownSeconds": 3
+    },
+    {
+      "id": "startup.countdown",
+      "eventId": "STARTUP",
+      "phase": "startup.countdown",
+      "line": "Còn {seconds} giây nhận vốn. GÓP hoặc BỎ, không trả lời thì không tự trừ tiền.",
+      "variables": [
+        "seconds"
+      ],
+      "sfx": null,
+      "trigger": "startup.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "startup.lock",
+      "eventId": "STARTUP",
+      "phase": "startup.lock",
+      "line": "Khóa danh sách! {participantCount} người, tổng vốn {escrowTotal} MONEY. Chart chạy {chartSeconds} giây, kết quả chưa chốt trước tiếng chuông.",
+      "variables": [
+        "participantCount",
+        "escrowTotal",
+        "chartSeconds"
+      ],
+      "sfx": "sfx_chat_ping",
+      "trigger": "startup.lock",
+      "priority": 2
+    },
+    {
+      "id": "startup.chart",
+      "eventId": "STARTUP",
+      "phase": "startup.chart",
+      "line": "Chart đang chạy! Lên xuống là hình mô phỏng; chờ điểm cuối mới chốt tiền cho cả nhóm.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "startup.chart",
+      "oncePerEvent": true
+    },
+    {
+      "id": "startup.up",
+      "eventId": "STARTUP",
+      "phase": "startup.result.up",
+      "line": "Chart chốt xanh! Mỗi phần vốn {stake} nhận lại {returnPerShare} MONEY, gồm vốn và lời {profitPerShare}. Chủ quầy cũng dùng đúng mức này.",
+      "variables": [
+        "stake",
+        "returnPerShare",
+        "profitPerShare"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "startup.result.up",
+      "priority": 3,
+      "secondarySfx": "sfx_victory"
+    },
+    {
+      "id": "startup.down",
+      "eventId": "STARTUP",
+      "phase": "startup.result.down",
+      "line": "Chart chốt đỏ! Mỗi phần vốn {stake} còn nhận lại {returnPerShare} MONEY, lỗ {lossPerShare}. Chủ quầy cũng chịu lỗ, không có người đứng ngoài luật.",
+      "variables": [
+        "stake",
+        "returnPerShare",
+        "lossPerShare"
+      ],
+      "sfx": "sfx_coin_down",
+      "trigger": "startup.result.down",
+      "priority": 3
+    },
+    {
+      "id": "startup.neutral",
+      "eventId": "STARTUP",
+      "phase": "startup.result.neutral",
+      "line": "Khóa sổ startup. Mỗi phần vốn nhận lại {returnPerShare} MONEY; số dư riêng hiện trên bảng của từng người.",
+      "variables": [
+        "returnPerShare"
+      ],
+      "sfx": null,
+      "trigger": "startup.result.neutral"
+    },
+    {
+      "id": "startup.close",
+      "eventId": "STARTUP",
+      "phase": "startup.close",
+      "line": "Đã ghi trả vốn và kết quả cho {participantCount} người. Không góp thì ví không đổi. Camera về người đang lượt!",
+      "variables": [
+        "participantCount"
+      ],
+      "sfx": null,
+      "trigger": "startup.close",
+      "priority": 1
+    },
+    {
+      "id": "startup.flavor.foodtruck",
+      "eventId": "STARTUP",
+      "phase": "startup.flavor",
+      "line": "Xe bánh mì góp vốn mở cửa! Hàng bán chạy hay cả phố ăn no rồi, cùng chờ một mẻ nhé.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "startup.flavor"
+    },
+    {
+      "id": "startup.flavor.garden",
+      "eventId": "STARTUP",
+      "phase": "startup.flavor",
+      "line": "Vườn rau hợp tác tìm bạn cùng góp. Rau trong game lớn nhanh, nhưng lời lỗ vẫn phải chờ chốt.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "startup.flavor"
+    },
+    {
+      "id": "startup.flavor.music",
+      "eventId": "STARTUP",
+      "phase": "startup.flavor",
+      "line": "Sân khấu cuối phố chuẩn bị mở đèn. Ai góp vốn cùng chủ sân thì xem phần tiền trên bảng trước nhé.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "startup.flavor"
+    },
+    {
+      "id": "startup.flavor.nightmarket",
+      "eventId": "STARTUP",
+      "phase": "startup.flavor",
+      "line": "Chợ đêm lên đèn! Một phần vốn, một kết quả chung, mỗi người tự chọn có tham gia không.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "startup.flavor"
+    },
+    {
+      "id": "envelope.open",
+      "eventId": "LIXI",
+      "phase": "envelope.open",
+      "line": "Lì xì khu phố bắt đầu! Cùng thả tim để đầy thanh {heartTarget} tim. Mọi người có tên khi mở quỹ đều nằm trong danh sách nhận.",
+      "variables": [
+        "heartTarget"
+      ],
+      "sfx": "sfx_birthday",
+      "trigger": "envelope.open",
+      "priority": 2
+    },
+    {
+      "id": "envelope.progress",
+      "eventId": "LIXI",
+      "phase": "envelope.progress",
+      "line": "Thanh tim đã đạt {heartPercent} phần trăm. Cả phố cùng góp nhịp, không cần quà để mở lì xì.",
+      "variables": [
+        "heartPercent"
+      ],
+      "sfx": null,
+      "trigger": "envelope.progress",
+      "onlyAtPercent": [
+        25,
+        50,
+        75
+      ],
+      "priority": 0
+    },
+    {
+      "id": "envelope.full",
+      "eventId": "LIXI",
+      "phase": "envelope.full",
+      "line": "Đầy tim rồi! Quỹ {pot} MONEY mở ra cho {recipientCount} người. Một phần chia nền cho cả nhóm, phần còn lại theo hạng MONEY lúc chốt.",
+      "variables": [
+        "pot",
+        "recipientCount"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "envelope.full",
+      "priority": 3,
+      "secondarySfx": "sfx_birthday"
+    },
+    {
+      "id": "envelope.rank",
+      "eventId": "LIXI",
+      "phase": "envelope.rank",
+      "line": "Hạng {rank}: {playerName} nhận {reward} MONEY. Bảng chia giữ đủ tên mọi người, camera chỉ đọc một vài người đầu để ván không bị dài.",
+      "variables": [
+        "rank",
+        "playerName",
+        "reward"
+      ],
+      "sfx": null,
+      "trigger": "envelope.rank",
+      "maxSpokenRecipients": 3
+    },
+    {
+      "id": "envelope.close",
+      "eventId": "LIXI",
+      "phase": "envelope.close",
+      "line": "Đã chia đúng {pot} MONEY, không sót hoặc nhân đôi giao dịch. Bạn xem phần của mình trên bảng nhé!",
+      "variables": [
+        "pot"
+      ],
+      "sfx": null,
+      "trigger": "envelope.close",
+      "priority": 1
+    },
+    {
+      "id": "envelope.timeout",
+      "eventId": "LIXI",
+      "phase": "envelope.timeout",
+      "line": "Thanh tim chưa đầy thì quỹ vẫn chờ. Mình tiếp tục chơi, không trừ MONEY để ép mở quỹ.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "envelope.timeout",
+      "onlyOnRequest": true
+    },
+    {
+      "id": "connection.pause",
+      "eventId": "SYSTEM",
+      "phase": "source.paused",
+      "line": "Nguồn bình luận đang nối lại. Đồng hồ nhập lệnh tạm dừng, tiền đã chốt giữ nguyên.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "source.paused",
+      "priority": 3
+    },
+    {
+      "id": "connection.resume",
+      "eventId": "SYSTEM",
+      "phase": "source.resumed",
+      "line": "Bình luận đã trở lại. Tiếp tục đúng cửa đang mở, không lắc lại hay tính tiền lần hai.",
+      "variables": [],
+      "sfx": null,
+      "trigger": "source.resumed",
+      "priority": 2
+    },
+    {
+      "id": "shop.open",
+      "eventId": "SHOP01",
+      "phase": "shop.open",
+      "line": "Quầy {hostTag} của {hostName} mở cửa! Chủ quầy đã trả {setupCost} MONEY dựng quầy một lần. Khách đang chờ ghế gõ {hostTag} để đặt đơn giả lập trong {orderSeconds} giây, tối đa {maxOrders} đơn.",
+      "variables": [
+        "hostTag",
+        "hostName",
+        "setupCost",
+        "orderSeconds",
+        "maxOrders"
+      ],
+      "sfx": "sfx_shop_open",
+      "trigger": "shop.open",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "shop.rules",
+      "eventId": "SHOP01",
+      "phase": "shop.rules",
+      "line": "Đây là đơn trong game, không mua hàng thật và không trừ ví khách. Mỗi tài khoản chờ một đơn. Đơn giao thành công cộng {goodReward} MONEY cho chủ; đơn tự hủy làm chủ mất {cancelPenalty} MONEY.",
+      "variables": [
+        "goodReward",
+        "cancelPenalty"
+      ],
+      "sfx": null,
+      "trigger": "shop.rules",
+      "oncePerEvent": true
+    },
+    {
+      "id": "shop.order",
+      "eventId": "SHOP01",
+      "phase": "shop.order",
+      "line": "Quầy {hostTag} đã nhận {orderCount}/{maxOrders} đơn. {customerName} có tên trên sổ, ví khách giữ nguyên.",
+      "variables": [
+        "hostTag",
+        "orderCount",
+        "maxOrders",
+        "customerName"
+      ],
+      "sfx": "sfx_order",
+      "trigger": "shop.order",
+      "cooldownSeconds": 4,
+      "priority": 0
+    },
+    {
+      "id": "shop.full",
+      "eventId": "SHOP01",
+      "phase": "shop.full",
+      "line": "Quầy {hostTag} đủ {maxOrders} đơn rồi! Không nhận thêm để chủ quầy kịp đóng hàng.",
+      "variables": [
+        "hostTag",
+        "maxOrders"
+      ],
+      "sfx": null,
+      "trigger": "shop.full",
+      "oncePerEvent": true,
+      "priority": 1
+    },
+    {
+      "id": "shop.returns",
+      "eventId": "SHOP01",
+      "phase": "shop.returns",
+      "line": "Khóa đơn quầy {hostTag}! Mở {returnSeconds} giây đổi ý: ai đã đặt muốn tự hủy thì gõ BOM {hostTag}. Chỉ hủy đơn của chính mình; không bình luận thì giữ đơn.",
+      "variables": [
+        "hostTag",
+        "returnSeconds"
+      ],
+      "sfx": "sfx_timer_warn",
+      "trigger": "shop.returns",
+      "oncePerEvent": true,
+      "priority": 2
+    },
+    {
+      "id": "shop.cancel",
+      "eventId": "SHOP01",
+      "phase": "shop.cancel",
+      "line": "{customerName} đã tự hủy đơn quầy {hostTag}. Mỗi đơn chỉ ghi hủy một lần, không tác động đơn của người khác.",
+      "variables": [
+        "customerName",
+        "hostTag"
+      ],
+      "sfx": "sfx_return",
+      "trigger": "shop.cancel",
+      "cooldownSeconds": 4,
+      "priority": 0
+    },
+    {
+      "id": "shop.countdown",
+      "eventId": "SHOP01",
+      "phase": "shop.countdown",
+      "line": "Quầy {hostTag} còn {seconds} giây. Xem pha nhận đơn hoặc tự hủy đang hiện trên bảng rồi chọn nhé.",
+      "variables": [
+        "hostTag",
+        "seconds"
+      ],
+      "sfx": null,
+      "trigger": "shop.countdown",
+      "onlyAtSeconds": [
+        5,
+        3
+      ],
+      "priority": 0
+    },
+    {
+      "id": "shop.settle",
+      "eventId": "SHOP01",
+      "phase": "shop.settled",
+      "line": "Chốt quầy {hostTag}: {goodOrders} đơn giao thành công, {cancelledOrders} đơn tự hủy. Tiền hàng chốt {salesDelta} MONEY, gồm cộng {goodReward} mỗi đơn tốt và trừ {cancelPenalty} mỗi đơn hủy. Phí dựng {setupCost} đã trả lúc mở, không trừ lại. Ví chủ còn {balance}; ví khách không đổi.",
+      "variables": [
+        "hostTag",
+        "goodOrders",
+        "cancelledOrders",
+        "salesDelta",
+        "goodReward",
+        "cancelPenalty",
+        "setupCost",
+        "balance"
+      ],
+      "sfx": null,
+      "trigger": "shop.settled",
+      "oncePerEvent": true,
+      "priority": 3,
+      "resultSfxByDelta": {
+        "positive": "sfx_coin_up",
+        "negative": "sfx_coin_down",
+        "zero": null
+      }
+    },
+    {
+      "id": "shop.abort",
+      "eventId": "SHOP01",
+      "phase": "shop.cancelled",
+      "line": "Quầy {hostTag} đóng trước khi chốt. Hoàn lại đúng {refund} MONEY dựng quầy cho chủ, bỏ các đơn giả lập và giữ nguyên ví khách. Giao dịch đã chốt trước đó không được hoàn lại lần nữa.",
+      "variables": [
+        "hostTag",
+        "refund"
+      ],
+      "sfx": "sfx_coin_up",
+      "trigger": "shop.cancelled",
+      "oncePerEvent": true,
+      "priority": 2
+    }
+  ]
+}

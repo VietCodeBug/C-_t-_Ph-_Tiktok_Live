@@ -38,3 +38,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Generated workbook inspection output
+*.xlsx.inspect.ndjson

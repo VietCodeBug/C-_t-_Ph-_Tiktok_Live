@@ -1,5 +1,9 @@
 # Cờ Tý Phí — Web demo camera · Asset v2.3
 
+**Tài liệu dùng để phát triển tiếp:** [Luật ván chơi và logic sự kiện V5](docs/co-ty-phu/13-event-logic-guide.md) — công thức tiền, lệnh, góp vốn/chart, shop, lì xì, ghép trận, MC và danh mục 50 thẻ.
+
+**Bản local V5:** [hướng dẫn](web/LOCAL_PREVIEW.md) · [luật 20 quân và khách chờ](docs/co-ty-phu/12-community-and-100-racers.md) · [Excel V5](outputs/co-ty-phi-v5/Co_Ty_Phi_Su_Kien_V5.xlsx) · [MC JSON](assets/scripts/mc-v5.json). Mặc định **20 quân trên map, 100 tài khoản gồm 80 khách chờ**. Ba vòng đường, người thứ ba về đích chốt ván; hiện bục 8 giây rồi mở 15 giây giữ ghế. Tối đa 12 người cũ đầu tiên đạt 30 tim mới giữ ghế; ít nhất tám khách chờ lâu nhất lên khi đủ hàng. Suất giữ ghế dư cũng lấy FIFO; người cũ không giữ ghế nối cuối hàng. Khách chờ có ví và được đặt/hủy đơn SHOP01 miễn phí, góp vốn/chart và nhận lì xì, không sinh thêm sprite. Ván mới sinh map/đích và reset cả 100 ví về 1.000 MONEY. Chạy `start-local.cmd` hoặc `cd web` → `npm ci` → `npm run dev`, mở [bản 20 quân / 100 tài khoản](http://localhost:4173/?players=20&accounts=100). 100/200 quân chỉ là thử tải với `stress=1`; chưa nối adapter TikTok thật. Phần bên dưới giữ thông tin bản cũ.
+
 Bản web 3D dọc 9:16 cho 10 nhân vật từ bộ sprite v2.3 trong Git. Camera tự chuyển từ nhìn toàn bàn sang góc thứ ba bám phía sau nhân vật, rồi lần lượt qua các ghế A–J.
 
 ![Web demo — toàn bàn](web/docs/overview.png)

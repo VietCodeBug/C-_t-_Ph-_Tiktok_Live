@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, copyFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -13,10 +13,19 @@ async function copy(from, to) {
   const dest = path.join(out, to);
   await mkdir(path.dirname(dest), { recursive: true });
   await copyFile(path.join(root, from), dest);
-  files.push({ from, to, sourceCommit: from.startsWith('assets/co-ty-phi-tiktok-live-') ? 'fb996c6c23433f14b465849510ba797ab6818bbe' : 'abb5a1cf040e79bb98efe74a45050853e1e0e6cd', bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
+  files.push({ from, to, sourceCommit: from.startsWith('assets/co-ty-phi-tiktok-live-') ? 'fb996c6c23433f14b465849510ba797ab6818bbe' : from.startsWith('assets/map/') ? 'abb5a1cf040e79bb98efe74a45050853e1e0e6cd' : null, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
 }
 const actors = [];
-for (let i = 1; i <= 10; i++) {
+for (const [id, gesture] of [['npc02', 'police_stop'], ['pet_dog', 'bark']]) {
+  const source = `${v2}/assets/characters/npc/${id}`;
+  const metadata = JSON.parse(await readFile(path.join(root, source, 'animations.json'), 'utf8'));
+  await copy(`${source}/animations.json`, `cameos/${id}/animations.json`);
+  for (const clip of ['idle', gesture]) {
+    const image = metadata.animations[clip].image;
+    await copy(`${source}/${image}`, `cameos/${id}/${image}`);
+  }
+}
+for (let i = 1; i <= 20; i++) {
   const id = `ch${String(i).padStart(2, '0')}`;
   const source = `${v2}/assets/characters/${id}`;
   const raw = JSON.parse(await readFile(path.join(root, source, 'animations.json'), 'utf8'));
@@ -31,7 +40,13 @@ for (let i = 1; i <= 10; i++) {
       idlePose: a.idlePose, locomotion: a.locomotion
     };
   }
-  actors.push({ id, name: raw.name, cell: raw.cell, pivot: raw.pivot, worldHeight: raw.worldHeight, animations });
+  let frontIdle;
+  if (id === 'ch07') {
+    const upgrade = JSON.parse(await readFile(path.join(root, 'assets/visual-upgrades/v5/ch07-front-idle.json'), 'utf8'));
+    await copy('assets/visual-upgrades/v5/ch07-front-idle.png', 'upgrades/ch07-front-idle.png');
+    frontIdle = { image: 'upgrades/ch07-front-idle.png', sourceRect: upgrade.sourceRect, renderedHeight: upgrade.renderedHeight || 202, pivot: raw.pivot };
+  }
+  actors.push({ id, name: raw.name, cell: raw.cell, pivot: raw.pivot, worldHeight: raw.worldHeight, animations, frontIdle });
 }
 await copy('assets/map/board_layouts.json', 'board_layouts.json');
 await copy('assets/map/cho_via_he.glb', 'maps/cho_via_he.glb');
@@ -43,6 +58,7 @@ const modelPaths = {
   flower_cart: 'cho_via_he/flower_cart', street_umbrella: 'cho_via_he/street_umbrella',
   bench: 'cho_via_he/bench', lamp_street: 'cho_via_he/lamp_street',
   plant_pot: 'cho_via_he/plant_pot', market_banner: 'cho_via_he/market_banner',
+  stool_plastic: 'cho_via_he/stool_plastic', trash_can: 'cho_via_he/trash_can', grass_patch: 'common_env/grass_patch',
   warehouse_a: 'pho_giao_hang/warehouse_a', warehouse_b: 'pho_giao_hang/warehouse_b',
   loading_dock: 'pho_giao_hang/loading_dock', stack_boxes: 'pho_giao_hang/stack_boxes',
   delivery_gate: 'pho_giao_hang/delivery_gate', toy_bridge: 'pho_giao_hang/bridge_toy',
@@ -53,7 +69,9 @@ for (const [name, rel] of Object.entries(modelPaths)) {
   await copy(`${v1}/assets/map/kit/${rel}.glb`, `models/${name}.glb`);
 }
 await copy(`${v2}/README_V2_3.md`, 'SOURCE_V2_3.md');
-await copy(`${v1}/assets/audio/sfx/sfx_dice_roll.ogg`, 'audio/sfx_dice_roll.ogg');
+for (const name of await readdir(path.join(root, v1, 'assets/audio/sfx'))) {
+  if (name.endsWith('.ogg')) await copy(`${v1}/assets/audio/sfx/${name}`, `audio/${name}`);
+}
 await mkdir(out, { recursive: true });
 await mkdir(path.join(out, 'licenses'), { recursive: true });
 await copyFile(path.join(root, 'web/node_modules/@fontsource-variable/nunito/LICENSE'), path.join(out, 'licenses/nunito-OFL.txt'));
