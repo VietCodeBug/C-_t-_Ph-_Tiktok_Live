@@ -104,10 +104,18 @@ test('all human card windows use ten seconds; numeric comments choose only the s
   assert.equal(await game.command('a','1','right-choice'),true);assert.equal(game.demo.players[0].money,1070);
 });
 
-test('inactive policy removes actual members after grace and re-arrival can enroll again',async()=>{
-  const game=await room({inactivitySeconds:10});await game.handleSourceEvent(member('a'));game.tick(10.1);await settle(game);
-  assert.equal(game.snapshot().roster.length,0);assert.equal(game.snapshot().game,null);
-  assert.equal(await game.handleSourceEvent(member('a','arrive-again')),true);assert.equal(game.snapshot().roster.length,1);
+test('LIVE and DEMO never evict quiet viewers; explicit departure promotes FIFO without clearing the table',async()=>{
+  for(const mode of ['live','demo']){
+    const game=await room({mode,inactivitySeconds:10});
+    for(let i=1;i<=23;i++)await game.handleSourceEvent(member(i));
+    await game.control('pause');game.tick(601);await settle(game);
+    assert.equal(game.snapshot().roster.length,20);assert.equal(game.snapshot().waiting.length,3);
+    assert.equal(game.snapshot().inactivityPolicy,'explicit-leave-only');
+    await game.command('1','RỜI','explicit-leave');
+    assert.equal(game.snapshot().roster.length,20);assert.equal(game.snapshot().waiting.length,2);
+    assert(game.snapshot().roster.some(row=>row.id==='21'));
+    assert(!game.snapshot().roster.some(row=>row.id==='1'));
+  }
 });
 
 test('MC ids are unique and welcome names are sanitized; demo controls never create fake live viewers',async()=>{

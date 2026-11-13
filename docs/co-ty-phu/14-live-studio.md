@@ -1,5 +1,7 @@
 # Cờ Tý Phí — TikTok LIVE, MC và khung phát 9:16
 
+**Hiện diện hiện tại:** cả LIVE và Demo không tự loại người vì không chat/thả tim. Chỉ tín hiệu rời rõ ràng, lệnh `RỜI` hoặc thao tác cho rời của quản lý mới nhường ghế; sau đó lấy đầu hàng chờ. Khi đang chốt sự kiện chung, đợi chốt xong mới thay ghế. TikTok có thể không gửi tín hiệu rời từng người; không suy ra ai rời từ tổng lượt xem giảm. Cài đặt hạn vắng hoạt động cũ đã ngừng áp dụng. Cuối ván vẫn đổi ghế theo luật giữ chỗ/ghép trận.
+
 **Cập nhật lượt chơi:** LIVE và Demo dùng lượt tuần tự: lắc, đi đủ bước, chốt lựa chọn/sự kiện rồi mới chuyển người. Chào người mới và ưu tiên hoa hồng không cắt ngang lượt đang xử lý. Chỉ một quân được thực hiện lượt tại một thời điểm; giới hạn bàn vẫn là 20 người.
 
 Phần LIVE này được đưa vào nhánh `web/third-person-v23` sau bản V5 offline. Luật sự kiện, tiền và chart vẫn xem tại [tài liệu logic V5](13-event-logic-guide.md); tài liệu này giải thích cách nhận người thật, chào/lắc, thay ghế, đọc MC và vận hành livestream.

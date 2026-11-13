@@ -371,7 +371,8 @@ export class LiveRoom extends EventEmitter {
         this.waitingWelcome={count:0,names:[]};this.lastWaitingWelcome=this.clock;
       }
       if(!this.sourcePaused){
-        for(const member of this.members.values())if(member.enrolled&&member.present&&this.clock-member.lastActiveAt>=this.options.inactivitySeconds){member.present=false;member.pendingLeave=true;this.pendingLeaves.add(member.seat);}
+        // Silence is not proof that a viewer has left. Only an explicit leave,
+        // a RỜI command or an operator action releases their place.
         if(this.pendingLeaves.size&&!this.demo?.globalHold){this.busy=true;this.enqueue(()=>this.flushLeaves('inactive')).catch(()=>{});break;}
         if(this.waitingSeats.length&&!this.demo?.globalHold&&!['podium','reserving'].includes(this.phase)&&this.activeSeats().length<this.options.maxPlayers){this.busy=true;this.enqueue(()=>this.fillVacancies()).catch(()=>{});break;}
       }
@@ -443,7 +444,7 @@ export class LiveRoom extends EventEmitter {
       giftCatalog:GIFT_CATALOG,giftEffects:this.giftEffects.filter(effect=>effect.expiresAt>this.clock).map(effect=>({...effect})),giftEnvelopePending:!!this.pendingGiftEnvelope,
       spotlight:this.spotlight?{...this.spotlight,queued:false,queuedCount:this.introQueue.length}:this.waitingSpotlight?.expiresAt>this.clock?{...this.waitingSpotlight}:null,announcements:this.announcements.filter(cue=>cue.expiresAt>this.clock).map(cue=>({...cue})),
       settings:{maxPlayers:this.options.maxPlayers,inactivitySeconds:this.options.inactivitySeconds,autoRollSeconds:this.options.autoRollSeconds,autoJoinOnEnter:this.options.autoJoinOnEnter},
-      inactivityPolicy:'explicit-leave-or-activity-timeout',realTikTokConnected:this.mode==='live'&&this.connection.status==='connected'};
+      inactivityPolicy:'explicit-leave-only',realTikTokConnected:this.mode==='live'&&this.connection.status==='connected'};
   }
   getSnapshot(){return this.snapshot();}
   publish(){this.revision++;const value=this.snapshot();this.emit('change',value);this.emit('state',value);return value;}
