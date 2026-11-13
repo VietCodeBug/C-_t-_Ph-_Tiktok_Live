@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir, copyFile, readdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, copyFile, readdir, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -13,7 +13,7 @@ async function copy(from, to) {
   const dest = path.join(out, to);
   await mkdir(path.dirname(dest), { recursive: true });
   await copyFile(path.join(root, from), dest);
-  files.push({ from, to, sourceCommit: from.startsWith('assets/co-ty-phi-tiktok-live-') ? 'fb996c6c23433f14b465849510ba797ab6818bbe' : from.startsWith('assets/map/') ? 'abb5a1cf040e79bb98efe74a45050853e1e0e6cd' : from.startsWith('assets/audio/music/') ? 'e0fc25472e896759cba8ce11c19bad15149e5b7c' : null, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
+  files.push({ from, to, sourceCommit: from.startsWith('assets/co-ty-phi-tiktok-live-') ? 'fb996c6c23433f14b465849510ba797ab6818bbe' : from.startsWith('assets/map/') ? 'abb5a1cf040e79bb98efe74a45050853e1e0e6cd' : null, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
 }
 const actors = [];
 for (const [id, gesture] of [['npc02', 'police_stop'], ['pet_dog', 'bark']]) {
@@ -79,8 +79,16 @@ for (const track of music.tracks) {
   await copy(`assets/audio/music/${filename}`, track.url);
   const entry = files.at(-1);
   if (entry.bytes !== track.bytes || entry.sha256 !== track.sha256) throw new Error(`Music provenance mismatch: ${filename}`);
+  entry.sourceCommit = music.sourceCommit ?? null;
+  entry.originalSource = track.source || null;
+}
+// Only the known generated copies from the previous playlist are obsolete.
+for (const filename of ['pho-do-choi-01.m4a', 'pho-do-choi-02.m4a']) {
+  await unlink(path.join(out, 'music', filename)).catch(error => { if (error.code !== 'ENOENT') throw error; });
 }
 await copy('assets/audio/music/playlist.json', 'music.json');
+const { prepareGiftIcons } = await import('./prepare-gift-icons.mjs');
+await prepareGiftIcons();
 await mkdir(out, { recursive: true });
 await mkdir(path.join(out, 'licenses'), { recursive: true });
 await copyFile(path.join(root, 'web/node_modules/@fontsource-variable/nunito/LICENSE'), path.join(out, 'licenses/nunito-OFL.txt'));

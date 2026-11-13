@@ -1,6 +1,6 @@
 # Luật ván chơi và logic sự kiện — Cờ Tý Phí V5
 
-> Tài liệu này mô tả engine V5/offline. Phần TikTok LIVE/MC, đăng ký thật, lệnh số và thay ghế giữa ván được bổ sung ở [hướng dẫn LIVE Studio](14-live-studio.md); những mục dưới đây ghi “chưa nối LIVE” nói về bản offline tại mốc V5.
+> Tài liệu này mô tả luật V5 và phần runtime LIVE hiện có. Bản offline tạo sẵn tài khoản; LIVE Studio dùng server giữ luật và chỉ nhận người từ nguồn thật. Xem [hướng dẫn LIVE Studio](14-live-studio.md) để chạy, cấu hình MC và kết nối. Chưa kết nối phòng TikTok thật trong lần bàn giao này.
 
 Cập nhật: **13/11/2026** · Nhánh: `web/third-person-v23`.
 
@@ -14,7 +14,7 @@ MONEY là điểm nguyên trong game. Mỗi tài khoản có ví riêng; góp v�
 2. Các quân chạy đồng thời. Camera theo một người; chọn camera không dừng hoặc xóa tiến độ của những quân khác.
 3. Quân lắc xúc xắc 3D, đi đúng 1–6 cạnh. Gặp ngã rẽ thì chọn đường; đi hết số bước mới xử lý ô dừng.
 4. Ô dừng có thể nhận tiền, mất tiền, mở lựa chọn cá nhân, thử thách hoặc sự kiện chung. Ô nghỉ không đổi ví và không mở thẻ dài.
-5. Khách chờ vẫn góp vốn, đặt/tự hủy đơn, thả tim, nhận lì xì và bỏ phiếu rẽ đường. Họ chưa có sprite trên map.
+5. Khách chờ vẫn góp vốn, đặt/tự hủy đơn, thả tim, nhận lì xì và bỏ phiếu rẽ đường. Họ được vẽ bằng đám đông chibi nhẹ ở sân chờ, không có thêm bộ điều khiển đua như 20 quân đang chơi.
 6. Người thứ ba hoàn thành ba vòng đường khóa ván. Hiện bục 8 giây, rồi mở sảnh giữ ghế 15 giây.
 7. Tối đa 12 người cũ đầu tiên đạt 30 tim mới giữ ghế. Các ghế còn lại lấy từ đầu hàng chờ; nếu đủ người thì ít nhất 8 khách chờ lên bàn.
 8. Người cũ không giữ ghế nối cuối hàng. Sinh map/đích mới, reset toàn bộ ví về 1.000 rồi mở ván tiếp theo.
@@ -24,6 +24,10 @@ MONEY là điểm nguyên trong game. Mỗi tài khoản có ví riêng; góp v�
 ## 2. Map, xúc xắc và ngã rẽ
 
 Map runtime có 138 ô: 96 ô đường chính và 42 ô nhánh. Sáu ngã rẽ đều có hai tuyến đi 8 cạnh trước khi nhập đường; cả 64 tổ hợp tuyến đều cần 96 cạnh cho một vòng. Ba vòng tương ứng **288 cạnh thực sự đã đi**. Các nhánh có bố trí loại ô khác nhau, nên lựa chọn ảnh hưởng chuyện gặp trên đường. Bằng số cạnh không có nghĩa bằng chiều dài hình học: tuyến dài hơn có thể mất nhiều thời gian đi hơn.
+
+Mỗi tuyến đủ một vòng có đúng **60/96 ô thường (62,5%)**; toàn bộ graph có **87/138 ô thường**. Mẫu ô được bốc lại theo seed trong tập thỏa ràng buộc: mọi ba ô liên tiếp trên mỗi tuyến đều có ít nhất một ô thường. Vì vậy không có chuỗi sự kiện kéo dài liên tục, đồng thời không phải cứ đổi seed là bốc độc lập toàn bộ ô. Gạch dùng tiếp tuyến đường để xoay đúng hướng, không xếp vuông cứng ở các khúc cong.
+
+Tám sân chờ được đặt theo seed, mỗi sân có 25 vị trí nền và lối nối ra phố, tránh đường đua/công trình. Vị trí của khách còn chờ được giữ khi đầu hàng nhận ghế; đông hơn 200 khách thì dùng các lớp billboard nhỏ trong cùng sân. Đám đông dùng atlas/instancing chung, không sinh thêm runner hay xúc xắc; chỉ 20 quân đang chơi chạy luật đua.
 
 Vạch đích được chọn theo seed ở phần dưới map, trên ô bắt buộc mọi tuyến đi qua. Mọi quân xuất phát cùng tiến độ ở vạch này. Vị trí lệch hình để tránh chồng quân không cộng hoặc trừ bước. Vạch giữ nguyên trong ván; chỉ ván mới sinh lại map và đích. Cùng seed tạo lại được bố cục và các lựa chọn sự kiện xác định theo seed; kết quả xúc xắc thật vẫn được sinh riêng.
 
@@ -59,14 +63,14 @@ Loại ô được gắn lúc tạo map; thẻ cụ thể được chọn khi qu
 | `event` — chuyện phố | Hai cách xử lý, mỗi cách có kết quả riêng | Có |
 | `invest` — đầu tư | Thẻ cá nhân hoặc phiên góp vốn chung nếu đủ điều kiện | Có |
 | `trade` — buôn bán | Thẻ cá nhân; riêng TRADE01 có thể mở shop chung | Có |
-| `rest` — ô thường/nghỉ | 0 MONEY, một nhịp đi dạo, không hiện thẻ dài | Không |
+| `rest` — ô thường/nghỉ | 0 MONEY, đi tiếp, không thẻ dài và MC im lặng | Không |
 | `minigame` — thử tài | Câu hỏi hai phương án, đúng có thưởng | Có |
 
 Đặt quân đầu ván hoặc đi qua ga không nhận thưởng ga. Chỉ điểm dừng cuối lần lắc mới chốt giao dịch. Chạm đích đủ ba vòng được xử lý như hoàn thành cuộc đua, không mở thêm sự kiện ô đích trước khi xếp bục.
 
 ### Tỷ trọng sinh loại ô
 
-Đường chính lấy ngẫu nhiên từ túi `[gain×3, loss×2, event×2, invest×1, trade×1, rest×3, minigame×1]`, tổng 13 phần. Vì vậy ô nghỉ có trọng số 3/13 ở bước bốc này, **không phải cam kết đúng 3/13 toàn map**. Hai ô ga và một số ô nhận tiền/nghỉ được đặt cố định. Các đường nhánh dùng chuỗi loại ô được thiết kế riêng, nên tỷ lệ cuối cùng thay đổi theo seed và tuyến đi.
+Mask ô thường được chọn theo seed từ các mẫu hợp lệ, bảo đảm 60/96 ô thường trên **mọi** tổ hợp rẽ và 87/138 ô thường trong graph. Hai ga được giữ, nhánh thay thế giữ cùng số ô thường với đoạn bị thay. Sau đó mới bốc loại cho các ô có hoạt động từ túi `[gain×3, loss×2, event×2, invest×1, trade×1, minigame×1]`, có bước bảo đảm các nhóm sự kiện đều xuất hiện. Trọng số túi này chỉ áp dụng cho ô có hoạt động; không dùng tỷ lệ ô nghỉ 3/13 của bản cũ.
 
 ### Chọn thẻ trong loại ô
 
@@ -228,7 +232,27 @@ Chỉ xét những quân đang sẵn sàng lắc; không cắt ngang quân đang
 
 Sau khi được chọn, tiêu thụ một credit nếu có và đặt điểm ưu tiên tim về 0. Tối đa giữ hai credit hoa hồng. Scheduler ghi những ID đã phục vụ; khi tất cả ID đang xét đều đã được phục vụ thì bắt đầu chu kỳ tiếp theo. Vì tập đủ điều kiện thay đổi khi quân di chuyển, đây là cơ chế chống chiếm lượt trong bộ chọn, không phải cam kết mọi người có đúng cùng số lượt trong một khoảng thời gian thực.
 
+**Runtime LIVE:** hoa hồng được quyền vượt dấu “đã phục vụ” của chu kỳ cho lần lắc hợp lệ kế tiếp. Đợi xúc xắc đang hiển thị quay/hiện kết quả xong; khi quân người tặng thật sự sẵn sàng, server cho lắc và đưa camera tới quân đó. Chỉ tiêu thụ một credit khi dispatch thành công, không tiêu thụ lúc mới chọn ứng viên. Không cắt ngang quân đang đi, không lắc lại cùng lần và không khóa các lần lắc/chuyển động nền của 20 quân. Khách chưa có ghế giữ credit đến khi có quân; quà không cấp ghế.
+
 Khách chờ nhận credit được giữ để dùng khi có quân hợp lệ sau này. Hoa hồng không cấp ghế, không thay mặt số xúc xắc, không sửa chart, không tăng trọng số phiếu rẽ. MC xác nhận ngắn khi cần; phần vui chơi, lựa chọn và hàng chờ không phụ thuộc gửi quà.
+
+### Bảy quà có icon thật và luật hiện tại
+
+Nhận diện theo ID đã xác minh hoặc alias tên chuẩn hóa khớp chính xác trong [gift-catalog.js](../../web/src/gift-catalog.js); ID khớp được ưu tiên hơn tên. Giá xu chỉ để hiển thị, không dùng để suy ra quà. Heart Me được xác minh là ID 7934, không gán một quà khác chỉ vì cùng mức 9 xu trong ảnh tham khảo.
+
+| Quà | ID mặc định | Tác dụng |
+| --- | --- | --- |
+| Rose / Hoa hồng | 5655 | Credit lắc hợp lệ kế tiếp, tối đa hai credit chưa dùng |
+| Heart Me | 7934 | Hiệu ứng tim |
+| Doughnut | 5879 | Giấy màu |
+| Hand Heart | 5660, 5924 | Lì xì MONEY cả phố |
+| Hearts | 5586 | Dải tim |
+| Corgi | 6267 | Corgi ghé chào |
+| Money Gun | 7168 | Vệt sáng ăn mừng |
+
+Các hiệu ứng ngoài Rose/Hand Heart không sửa ví, số xúc xắc, bước/vòng hay ghế. Icon lấy từ CDN TikTok đã xác minh, có bản local dự phòng và manifest nguồn. Combo xử lý delta đã chốt một lần; không cộng lại tổng combo ở từng gói. Feed giữ 40 biên nhận gần nhất, tổng quà của từng tài khoản giữ trong phiên server; hiệu ứng ngắn có giới hạn.
+
+Hand Heart tạo **quỹ ảo riêng 1.000–5.000 MONEY**, chia theo công thức hạng ở mục 7 cho tất cả tài khoản đang hiện diện/đã vào ván, gồm khách chờ, tại lúc trả. Mỗi biên nhận combo chốt chỉ yêu cầu một quỹ, không nhân quỹ theo `count`. Nếu có modal, pause, bục hoặc chưa đủ khoảng giãn 30 giây, giữ tối đa một yêu cầu chờ và gộp các yêu cầu thêm. Quỹ không trừ tiền thật hoặc ví người tặng, không thay/đổ đầy/xóa thanh tim lì xì đang có; tổng trả bằng đúng quỹ, ghi ledger chống trùng. Quỹ chờ nhận danh sách người đủ điều kiện khi thực sự trả.
 
 ### Giữ ghế sau top 3
 
@@ -269,8 +293,8 @@ Game chuẩn hóa dấu tiếng Việt, khoảng trắng và chữ hoa/thường
 | `P001`, `MUA P001` | Khách chờ đã được chốt danh sách shop | Đặt một đơn ở quầy P001 |
 | `BOM P001`, `TRẢ P001` | Chính khách đã đặt | Tự hủy trong pha trả đơn |
 | Tim/hoa hồng | Gói sự kiện riêng từ nguồn nhập | Không đọc chuỗi chat “tim”/“hoa hồng” thành quà thật |
-| `CHƠI` | Dự kiến người xem mới | **Chưa tự đăng ký từ bình luận**; local hiện tạo sẵn tài khoản |
-| `1`, `2` | Hướng nhập cho MC/LIVE | **Chưa tự ánh xạ trong controller chat hiện tại**; adapter phải dùng `commandMap` của cue để đổi sang ID lựa chọn |
+| `CHƠI` | Người xem mới | LIVE đăng ký ghế/hàng chờ; bản offline tạo sẵn tài khoản |
+| `1`, `2` | Chủ quân đang có lựa chọn | LIVE room ánh xạ sang phương án của đúng quân người gửi; controller offline dùng ID/nhãn lựa chọn |
 
 Lệnh phải khớp chủ và pha đang mở; lệnh cá nhân khi đang pause/đã kết thúc ván bị từ chối. Tim giữ ghế được nhận trong sảnh đang mở. **Giới hạn:** controller hiện chưa bắt buộc `matchId/eventInstanceId` từ nguồn nhập. Một gói cũ chưa từng nhận, đến trễ đúng lúc cùng chủ mở cửa mới, vẫn có thể bị nhận; adapter LIVE phải kiểm tra cửa và thời điểm, không chỉ ID gói trùng.
 
@@ -296,15 +320,19 @@ Thu phí/nhập hàng làm ví giảm và bank tăng; thưởng/lì xì làm ví
 
 Ví dụ khóa nghiệp vụ: `investment-…:join:P021:revision`, `investment-…:settle:P021`, `shop-…:inventory`, `shop-…:settlement`, `envelope-…:payout:P021`. Mỗi lệnh gửi lại từ mạng phải giữ nguyên ID gói gốc. Một hành động đổi ý thật sự cần ID mới; không tạo ID mới cho mỗi lần retry của cùng gói.
 
-**Hiện trạng:** ví, ledger và các tập ID chống trùng nằm trong bộ nhớ trình duyệt. Reset ván xóa ledger của ván nhưng giữ tập ID gói đã thấy; tải lại trang làm mất toàn bộ trạng thái. Chưa có SQLite, giao dịch server hoặc phục hồi sau mất kết nối. Khi làm server cần khóa theo ván/cửa/ID người tham gia và giao dịch lưu trữ nguyên tử; không lấy ví do client gửi làm số dư đáng tin cậy.
+**Hiện trạng:** bản offline giữ ví/ledger trong trình duyệt; LIVE Studio giữ chúng trong bộ nhớ server Node, overlay chỉ đọc snapshot. Reset ván xóa ledger của ván nhưng giữ ID gói đã thấy. Reload overlay không reset ván; restart server hiện mở phòng mới, chưa phục hồi toàn bộ ví/roster/tiến độ. Cấu hình và biên nhận chống trùng của adapter được ghi nguyên tử vào `web/runtime/`; chưa có SQLite/checkpoint bền vững cho cả ván. Mất nguồn TikTok tạm thời pause và giữ người/ví, không coi là mọi người rời. Không lấy ví do client gửi làm số dư đáng tin cậy.
 
-Luồng kết thúc ván bình thường được hold bảo vệ. API nội bộ `resetForMatch({manual:false})` chưa phải rào chặn tuyệt đối: nếu cưỡng bức gọi khi startup còn mở và đồng thời có thanh lì xì đang gom, nhánh chuyển tiếp thanh có thể cho phép hủy/hoàn startup. Khi tách server, cần chặn reset tự động trong mọi pha chưa chốt, chỉ cho hủy qua thao tác điều khiển rõ ràng.
+Luồng kết thúc ván bình thường được hold bảo vệ. API nội bộ `resetForMatch({manual:false})` chưa phải rào chặn tuyệt đối: nếu cưỡng bức gọi khi startup còn mở và đồng thời có thanh lì xì đang gom, nhánh chuyển tiếp thanh có thể cho phép hủy/hoàn startup. Không gọi trực tiếp nhánh reset nội bộ khi còn cửa chưa chốt; thao tác hủy phải qua điều khiển rõ ràng và luật hoàn tiền.
 
 Nguồn: [community.js](../../web/src/community.js), [community-controller.js](../../web/src/community-controller.js), [shop.js](../../web/src/shop.js).
 
 ## 11. MC, SFX và VFX đọc dữ kiện từ đâu?
 
-[mc-v5.json](../../assets/scripts/mc-v5.json) là bộ **358 cue, 50 ID thẻ nền**, chỉ chứa kịch bản và thông số. [Kịch bản dễ đọc](11-mc-community-script.md) trình bày lời dẫn; repo MC riêng đảm nhận giọng/TTS. Game không tạo giọng mới trong nhánh này.
+[mc-v5.json](../../assets/scripts/mc-v5.json) là bộ **358 cue, 50 ID thẻ nền**, giữ kịch bản/thông số để biên tập. [Kịch bản dễ đọc](11-mc-community-script.md) là bản tham khảo dài. LIVE Studio hiện đã có TTS tiếng Việt, dùng lời runtime ngắn; không đọc toàn bộ pack dài hay chat người xem vào mỗi lượt.
+
+Lời tự động chỉ một câu gọn: `Minh ra 4, đi 4 ô.`, `Minh: Chó giữ chiếc dép. -35.`, hoặc `Minh: 1 Đợi cô chủ, 2 Mua bánh.` Kết quả giữ tiêu đề nguyên nhân ngắn (tối đa tám từ) và delta thực tế, không đọc lại phần nội dung thẻ hoặc toàn bộ số dư. Ô thường/nghỉ không phát cue. Góp vốn/shop đọc lệnh ngắn khi mở, đổi pha và net khi chốt; lì xì đọc quỹ/số người, không đọc danh sách 100 tên. Hàng giọng bỏ cue hết hạn, tên không phù hợp dùng lời chào chung.
+
+Nhạc hiện chỉ có **Cờ Tý Phí LIVE Theme (Alt Take)**, nguồn [assets/co-ty-phu/audio](../../assets/co-ty-phu/audio), bản phát [assets/audio/music/co-ty-phi-live-theme-alt-take.m4a](../../assets/audio/music/co-ty-phi-live-theme-alt-take.m4a). Một bài lặp, âm lượng riêng và hạ khi MC nói; không dùng playlist nhạc boss raid.
 
 Mỗi cue có `id`, `eventId`, `phase`, `line`, `variables`, `sfx`, `trigger`; một số có `commandMap`, độ ưu tiên, cooldown hoặc chỉ đọc ở giây cụ thể. Dùng `renderMCLine(id, values, {strict:true})` để phát hiện thiếu biến trước khi gửi TTS. Thay dữ kiện từ snapshot/giao dịch đã chốt, không nhìn chart rồi tự đoán lời/lỗ.
 
@@ -318,9 +346,9 @@ renderMCLine('shop.settle', {
 
 Ở ví dụ này `salesDelta=30` là khoản cộng khi chốt, còn **net cả vụ = −50** vì đã trả 80 lúc mở. Khi đọc tổng lời/lỗ phải dùng đúng trường, không gọi +30 là lời ròng. `renderMCLine` hiện chọn SFX của `shop.settle` theo `salesDelta`, trong khi controller chọn theo net cả vụ. Adapter cho bản tin cuối phải lấy net/SFX đã chốt của runtime, hoặc ghi đè SFX theo `result.net`; nếu chỉ dùng nguyên kết quả render ở ví dụ trên sẽ phát âm tăng tiền dù cả vụ đang lỗ.
 
-### Runtime cue và thư viện cue cần adapter
+### Runtime cue và thư viện kịch bản tham khảo
 
-`CommunityController.mcCues` phát text cùng các ID phiên như `investment-….chart`, `shop-….returns`. Chúng không trùng toàn bộ ID cố định trong MC pack. Cần một lớp ánh xạ pha + dữ kiện sang cue chuẩn, và bổ sung cầu nối cho thẻ cá nhân. Không coi 358 cue đã tự động nối hết vào một dịch vụ MC đang chạy.
+`CommunityController.mcCues` phát text ngắn cùng các ID phiên như `investment-….chart`, `shop-….returns`. LIVE room phát ID duy nhất cho từng lần, nối thẻ cá nhân và gửi cue chuẩn qua SSE; server TTS chỉ nhận lại đúng cue đã phát. Các ID phiên không trùng toàn bộ ID cố định của MC pack. Nếu tích hợp repo MC riêng, ánh xạ pha/dữ kiện theo bảng dưới; không bật lại toàn bộ câu dài của pack trong runtime ngắn.
 
 | Nguồn runtime | Cue thư viện / hướng ánh xạ |
 | --- | --- |
@@ -376,13 +404,13 @@ npm run build
 
 Browser test dùng Python + Playwright và một server phục vụ bản build ở port 4174: `python tests/community-browser.py`. Có thể đặt `WEB_PREVIEW_URL` để dùng địa chỉ khác. Bộ này kiểm tra đủ ba vòng/top 3, 12+8 ghép trận, khách chờ, shop, chart, lì xì xen shop, chống lệnh trùng và xuất ảnh. Tại mốc bàn giao: 124 kiểm tra Node và 37 kiểm tra browser đạt; đây là kiểm tra mô phỏng, chưa phải benchmark vừa game vừa phát LIVE.
 
-### Cần triển khai trước khi nhận người xem thật
+### Phần đã có và phần còn cần xác minh trước LIVE thật
 
-- Adapter TikTok nhận ID tài khoản ổn định, ID bình luận, tim mới và quà đã hoàn tất; xử lý gói trùng/reconnect. `CHƠI` phải đăng ký tài khoản và nối vào hàng chờ bằng một thao tác rõ ràng.
-- Server chốt luật và thời gian; hạn nhập của người thật không phụ thuộc camera. Không dùng chức năng debug hoặc giả định client là nguồn số dư đáng tin.
+- Đã có adapter TikTok chuẩn hóa ID ổn định, bình luận/tim/quà chốt, chống trùng và reconnect; LIVE room đăng ký qua sự kiện vào hoặc `CHƠI`. Chưa xác minh trên phòng TikTok thật của chủ dự án; connector không bảo đảm tín hiệu rời riêng từng người.
+- Server đã chốt luật và thời gian; hạn nhập người thật 10 giây, không phụ thuộc camera. Cần thử nguồn thật trên máy phát; không dùng nút demo như bằng chứng đã nhận người thật.
 - SQLite hoặc kho dữ liệu lưu ván, tài khoản, ledger, lệnh đã xử lý và checkpoint. Quy định rõ lúc mất nguồn thì pause cửa đang mở, nối lại ra sao và xử lý ván đã chốt.
-- Cầu nối MC: ánh xạ cue runtime, truyền dữ kiện kết quả, kiểm soát hàng đợi đọc và hủy câu cũ.
-- Màn thử tải với luồng bình luận/tim thật trên máy phát; đo FPS và thời gian xử lý, không chỉ đếm tài khoản. Giữ khách chờ ở dữ liệu nhẹ; không sinh thêm sprite cho từng khách.
+- Đã có cầu nối MC/TTS, xác thực cue, hàng giọng giới hạn và bỏ câu cũ. Vẫn cần kiểm tra Internet, autoplay và đường âm thanh trong LIVE Studio.
+- Thử tải luồng bình luận/tim thật trên máy phát; đo FPS và thời gian xử lý. Khách chờ dùng đám đông atlas/instancing nhẹ ở tám sân; không tạo thêm runner như 20 quân đang chơi.
 - Nếu cần mini game thao tác, xây màn tương tác riêng; hiện MINI01–04 là câu hỏi. Chưa có thanh lý tài sản sở hữu lâu dài, sổ SQLite hoặc cân bằng mùa giải.
 
 ### Bản đồ mã nguồn để làm tiếp
@@ -394,6 +422,7 @@ Browser test dùng Python + Playwright và một server phục vụ bản build 
 | [parallel-race.js](../../web/src/parallel-race.js) | Các quân đồng thời, hold chung, camera, hoàn thành theo thời điểm |
 | [layouts.js](../../web/src/layouts.js), [race.js](../../web/src/race.js) | Map/nhánh, vòng đường, đích và top 3 |
 | [community.js](../../web/src/community.js) | Tài khoản, escrow/bank, góp vốn, tim/quà, lì xì, sổ chống trùng |
+| [gift-catalog.js](../../web/src/gift-catalog.js), [server/room.mjs](../../web/server/room.mjs) | Danh tính quà, ưu tiên lắc/camera và quỹ quà cả phố |
 | [shop.js](../../web/src/shop.js) | Shop nhận/tự hủy đơn và chốt tiền chủ |
 | [community-controller.js](../../web/src/community-controller.js) | Lệnh, đồng bộ ví, cửa chung và hàng đợi kết quả |
 | [matchmaking.js](../../web/src/matchmaking.js) | Tim giữ ghế, FIFO, roster ván kế |

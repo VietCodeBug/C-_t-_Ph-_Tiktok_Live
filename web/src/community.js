@@ -267,6 +267,21 @@ export class CommunityGame {
     return this.accounts.get(id).money + (this.investment?.phase !== 'settled' ? this.investment?.contributors.get(id)?.stake || 0 : 0);
   }
 
+  awardGiftEnvelope(eventId, seed, eligibleIds = [], { minPot=1000,maxPot=5000 } = {}) {
+    const key=`gift-envelope:${String(eventId||'')}`;
+    if(!eventId||this.seenInputs.has(key)||!integer(minPot)||!integer(maxPot,minPot))return null;
+    const ranked=[...new Set(eligibleIds.map(String))].filter(id=>this.accounts.has(id)).sort((a,b)=>this._netWorth(b)-this._netWorth(a)||this.accounts.get(a).order-this.accounts.get(b).order);
+    if(!ranked.length)return null;
+    this.seenInputs.add(key);
+    const pot=minPot+Math.floor(communityRandom(seed,eventId,'gift-envelope-pot')*(maxPot-minPot+1));
+    const payouts=allocateRankedPot(ranked,pot).map(share=>{
+      const before=this.accounts.get(share.id).money;
+      this._move(share.id,share.amount,'Lì xì quà cả phố',`${key}:payout:${share.id}`,{eventId:String(eventId),type:'gift-red-envelope'});
+      return {...share,before,after:this.accounts.get(share.id).money};
+    });
+    return {id:key,eventId:String(eventId),source:'gift',pot,payouts,totalPaid:payouts.reduce((sum,payout)=>sum+payout.amount,0)};
+  }
+
   _settleRedEnvelope() {
     const event = this.redEnvelope;
     if (!event || event.phase !== 'collecting' || event.result) return false;
@@ -308,6 +323,19 @@ export class CommunityGame {
   }
 
   takeNext(eligibleIds) { return this.nextOrder(eligibleIds); }
+
+  // LIVE can show an already-served donor's next real roll without resetting
+  // the fair cycle. Call consumeRosePriority only after a roll was accepted.
+  peekRosePriority(eligibleIds = []) {
+    const eligible=[...new Set(eligibleIds.map(String))].filter(id=>this.accounts.get(id)?.roseCredits>0);
+    return eligible.sort((a,b)=>this.accounts.get(a).rosePriorityAt-this.accounts.get(b).rosePriorityAt||this.accounts.get(a).order-this.accounts.get(b).order)[0]??null;
+  }
+  consumeRosePriority(id) {
+    const account=this.accounts.get(String(id));if(!account?.roseCredits)return false;
+    account.roseCredits--;account.turnsTaken++;account.likeBoost=0;this.served.add(account.id);
+    if(account.roseCredits)account.rosePriorityAt=++this.inputSequence;
+    return true;
+  }
 
   closeInvestment(eventId = this.investment?.id) {
     if (!this.investment || this.investment.id !== eventId || this.investment.phase !== 'settled') return false;

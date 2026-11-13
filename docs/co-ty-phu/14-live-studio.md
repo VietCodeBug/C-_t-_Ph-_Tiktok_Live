@@ -32,16 +32,16 @@ npm run live
 
 ## 2. Thử trước khi mở LIVE thật
 
-Mở trực tiếp `/demo`: khi phòng demo còn trống, server tạo 20 người mô phỏng một lần rồi chạy. Mở lại hoặc mở hai tab không tự nhân thành 40 người. Trong Admin, chọn **Phòng mô phỏng** để xem bàn đó; bấm **Một người mới vào** hoặc **20 người vào** khi muốn thêm người và thử hàng chờ.
+Mở trực tiếp `/demo`: khi phòng demo còn trống, server tạo 20 người mô phỏng một lần rồi chạy. Mở lại hoặc mở hai tab không tự nhân thành 40 người. Trong Admin, chọn **Phòng mô phỏng** để xem bàn đó; bấm **Một người mới vào**, **20 người vào** hoặc **+80 khách chờ** khi muốn thử sân chờ. Chọn một trong bảy quà ở danh sách rồi bấm **Tặng quà thử** để xem đúng hiệu ứng. Hand Heart đang chờ lúc pause sẽ chia quỹ sau khi tiếp tục. Dùng `/demo?overview=1` khi muốn xem toàn cảnh map và các sân chờ; `/demo` giữ camera tự động.
 
 Các link **Mở Demo**, **Mở LIVE**, **Quản lý** nằm ngoài khung 9:16 khi xem bình thường, kể cả trên màn hình dọc. Dùng `?capture=1` hoặc fragment `#tiktok.studio` để ẩn dải điều hướng khi lấy hình phát. Trên bản LIVE không còn nhãn TikTok LIVE/trạng thái kết nối ở góc trên; trạng thái nguồn xem tại Admin. Bản demo vẫn có nhãn nhỏ MÔ PHỎNG.
 
-Trong khung phát, **bên trái là top MONEY** của người trong bàn và khách chờ; **bên phải là quà vừa nhận**. Feed chỉ hiện quà đã chốt, chống lặp combo; ghi nhận quà không tự cộng MONEY. Dòng hoa hồng giải thích quyền ưu tiên lắc đang có, không tạo thêm tác dụng cho các quà khác.
+Trong khung phát, **bên trái là top MONEY** của người trong bàn và khách chờ; **bên phải là bảy icon quà TikTok thật và quà vừa nhận**. Feed chỉ hiện combo đã chốt, chống lặp; bản thân biên nhận không cộng MONEY. Hoa hồng cấp ưu tiên lắc; Hand Heart có luật lì xì ảo cả phố; các quà còn lại chỉ có hiệu ứng như mô tả ở mục 6.
 
 Kiểm tra lần lượt:
 
 - Người mới có tên, quân và lời chào; camera tới lượt lắc chào rồi trả về lượt đang chơi tiếp.
-- Khi đủ 20 ghế, người tiếp theo vào hàng chờ và không sinh thêm sprite.
+- Khi đủ 20 ghế, người tiếp theo vào hàng chờ, hiện trong sân bằng đám đông nhẹ; không sinh thêm runner đua.
 - Chọn một người, gửi `LẮC`, `TRÁI`, `PHẢI` hoặc `1`/`2` ở cửa thích hợp.
 - Cho một người rời; đầu hàng chờ được nhận ghế, bắt đầu tiến độ đua của chính mình. Những quân khác giữ nguyên vị trí và tiền.
 - Thử các ô nhận tiền, mất tiền, góp vốn, shop, nghỉ và thử tài.
@@ -64,7 +64,13 @@ Username mặc định để trống và server không tự kết nối khi kh�
 
 ## 4. Người mới, lượt lắc chào và camera
 
-Mỗi người có một ID TikTok ổn định và mã ghế game dạng `P001`. Nickname chỉ dùng hiển thị/đọc; đổi tên không tạo ví mới. Khung 20 quân dùng 20 mẫu nhân vật sẵn có; người chờ chỉ là bản ghi dữ liệu.
+Mỗi người có một ID TikTok ổn định và mã ghế game dạng `P001`. Nickname chỉ dùng hiển thị/đọc; đổi tên không tạo ví mới. Khung 20 quân dùng 20 mẫu nhân vật sẵn có. Khách chờ có dữ liệu ví/hàng và hình chibi nhẹ trong sân, không có bộ điều khiển đua riêng.
+
+### Map và sân chờ
+
+Map có 138 node, mỗi tuyến một vòng đi 96 cạnh; ba vòng là 288 cạnh thật. **60/96 ô trên mọi tuyến là ô thường (62,5%)**, tổng graph **87/138 ô thường**. Seed chọn lại mẫu loại ô trong các ràng buộc này; mọi ba ô liên tiếp đều gặp ít nhất một ô thường. Gạch xoay theo tiếp tuyến của đường cong. Ô thường không mở sự kiện tiền và MC không đọc câu nghỉ.
+
+Tám sân chờ có **25 vị trí nền mỗi sân**, đường vào riêng và khoảng tránh công trình/đường đua. Khách giữ vị trí khi người đầu hàng lên ghế; đông hơn 200 thì bố trí các lớp billboard nhỏ trong cùng sân. Các hình dùng atlas/instancing chung, không biến khách chờ thành hàng trăm nhân vật đua đầy đủ. Khi nhận ghế mới có runner và tiến độ ba vòng của riêng mình.
 
 Mặc định **tự xếp ghế khi nhận sự kiện người vào**. Nếu còn ghế, người đó được tạo quân; nếu đầy, nối cuối hàng chờ. Có thể tắt trong Admin để chỉ đăng ký khi người xem gõ `CHƠI`.
 
@@ -108,17 +114,34 @@ Mất mạng nguồn khác với người xem chủ động rời: server pause 
 | `BOM P001`, `TRẢ P001` | Tự hủy đúng đơn trong pha đổi ý |
 | `RỜI` | Xin rời bàn/hàng chờ |
 | Gói tim thật | Ưu tiên lắc có trần, thanh lì xì và bộ đếm giữ ghế đúng cửa |
-| Hoa hồng đã chốt | Tối đa hai credit ưu tiên lắc hợp lệ; không mua ghế hoặc sửa số xúc xắc |
+| Hoa hồng đã chốt | Tối đa hai credit; lần lắc hợp lệ kế tiếp được đưa lên camera sau khi xúc xắc đang hiển thị kết thúc |
+| Hand Heart đã chốt | Quỹ MONEY ảo cả phố gồm khách chờ; có hàng chờ/giãn quỹ khi bận |
 
 Sự kiện bình luận/tim/quà dùng ID gói để chống trùng. Combo quà xử lý phần đã chốt, không tính lại tổng combo ở mỗi lần cập nhật; gói chốt trùng và gói cũ từ phòng khác được lọc. Gói quà đã mua vẫn được ghi nhận ưu tiên trong lúc nguồn đang pause; nó không tự unpause ván.
 
-Mã hoa hồng mặc định là `5655`. Có thể cấu hình `gifts.roseIds` qua settings API nếu khu vực dùng mã khác; không suy ra mọi quà 1 xu đều là hoa hồng.
+Mã hoa hồng mặc định là `5655`. Có thể cấu hình `gifts.roseIds` qua settings API nếu khu vực dùng mã khác. Nhận diện dùng ID hoặc alias tên chuẩn hóa khớp chính xác; ID đã biết thắng tên nếu hai trường mâu thuẫn. Không suy ra quà từ mức xu. Icon nguồn thật và metadata nằm trong [manifest](../../assets/ui/tiktok-gifts/manifest.json), luật trong [gift-catalog.js](../../web/src/gift-catalog.js).
+
+| Quà | ID đã xác minh | Luật |
+| --- | --- | --- |
+| Rose / Hoa hồng | 5655 | Ưu tiên lắc hợp lệ kế tiếp, tối đa hai credit chờ |
+| Heart Me | 7934 | Hiệu ứng trái tim |
+| Doughnut | 5879 | Giấy màu |
+| Hand Heart | 5660, 5924 | Lì xì MONEY cả phố |
+| Hearts | 5586 | Dải tim |
+| Corgi | 6267 | Corgi ghé chào |
+| Money Gun | 7168 | Vệt sáng ăn mừng |
+
+Heart Me được xác minh theo tên/ID, không gán nhầm một quà “Hear Me Out” theo con số 9 trong ảnh tham khảo. Icon của biên nhận có thể dùng URL HTTPS CDN TikTok đã lọc; luôn có bản icon local dự phòng.
+
+Hoa hồng **không ngắt xúc xắc đang được camera chiếu**. Khi hết pha quay/kết quả, người tặng có quân sẵn sàng được lắc và theo camera, kể cả đã phục vụ trong chu kỳ trước; chỉ mất một credit khi dispatch thật sự thành công. Quân đang đi không bị lắc lại. Người chờ giữ credit đến khi có ghế, quà không cấp ghế. Các lần lắc/chuyển động nền của 20 quân vẫn đồng thời.
+
+Hand Heart yêu cầu một quỹ ảo **1.000–5.000 MONEY**, chia cho mọi tài khoản đang hiện diện/đã vào ván, gồm người chờ, theo hạng ví cộng vốn đang giữ. Tổng phần trả bằng đúng quỹ; không trừ ví người tặng. Nếu có modal, đang pause, ở bục hoặc chưa qua 30 giây từ quỹ quà trước, giữ tối đa một yêu cầu và gộp các yêu cầu thêm. Mỗi biên nhận combo chốt yêu cầu một quỹ, không nhân theo số lượng combo. Danh sách nhận được xét lúc trả; quỹ quà riêng không thay, tự lấp hay xóa thanh tim đang gom. Các quà hiệu ứng khác không đổi MONEY, bước/vòng hoặc mặt xúc xắc.
 
 ## 7. MC và microphone của người dẫn
 
 Logic lấy từ repo nguồn là **giọng MC/TTS đầu ra**, không phải nhận dạng tiếng nói hoặc thu microphone. Mic thật của streamer chọn trực tiếp trong LIVE Studio; game không tự mở mic, không ghi âm và không thêm vòng monitor mic.
 
-MC chỉ đọc lời game tạo ra: chào tên, hướng dẫn và kết quả đã chốt. Không đọc nguyên văn chat. Tên được làm sạch; tên không phù hợp được chào chung. Lời chào đông được gộp, có cooldown, hàng đọc giới hạn và bỏ câu đã cũ để giọng không trễ hàng phút so với ván.
+MC chỉ đọc lời game tạo ra bằng **một câu ngắn**: `Minh ra 4, đi 4 ô.`, `Minh: Chó giữ chiếc dép. -35.`, `Minh: 1 Đợi cô chủ, 2 Mua bánh.` Kết quả giữ tiêu đề nguyên nhân tối đa tám từ và số tiền ròng; không đọc lại phần nội dung thẻ hoặc toàn bộ số dư. Ô thường/nghỉ im lặng. Startup/shop chỉ đọc lệnh, đổi pha và net kết quả; lì xì đọc quỹ/số người, không đọc 100 tên. Không đọc nguyên văn chat. Tên được làm sạch; tên không phù hợp được chào chung. Chào đông được gộp, có cooldown, hàng đọc giới hạn và bỏ câu cũ để giọng không trễ hơn game.
 
 - Giọng chính: Edge TTS, tiếng Việt Hoài My/Nam Minh. Không có khóa TTS bắt buộc trong thư viện này, nhưng cần Internet và dịch vụ hoạt động.
 - Có giọng trực tuyến dự phòng từ logic repo nguồn và fallback tiếng Việt cài trong trình duyệt. Giọng dự phòng có thể không giữ đúng giới tính/tốc độ đã chọn; lỗi có thông báo, caption vẫn hiện.
@@ -130,7 +153,7 @@ Cần bấm mở âm thanh sau khi tạo lại nguồn/trình duyệt nếu auto
 
 ### Nhạc nền
 
-Hai bài trong playlist media của repo nguồn được chép nguyên vào [assets/audio/music](../../assets/audio/music/README.md). Game phát lần lượt rồi lặp playlist; không cần repo boss raid nằm cạnh dự án để chạy lại. Manifest giữ SHA-256 và commit nguồn, build sẽ kiểm tra đúng file.
+Chỉ phát một bài gốc **Cờ Tý Phí LIVE Theme (Alt Take)**, lấy từ [assets/co-ty-phu/audio](../../assets/co-ty-phu/audio), chép nguyên byte thành [assets/audio/music/co-ty-phi-live-theme-alt-take.m4a](../../assets/audio/music/co-ty-phi-live-theme-alt-take.m4a). Bản build phục vụ ở `/runtime/music/co-ty-phi-live-theme-alt-take.m4a` và lặp lại bài này. Manifest ghi nguồn/hash để kiểm tra bản chép; không dùng hai bài nhạc mượn từ repo boss raid.
 
 Bấm **Bật âm thanh** để mở cả nhạc và MC trong cùng thao tác. Có nút nhạc riêng trên khung phát; Admin có **Bật nhạc nền** và thanh âm lượng độc lập. Nhạc mặc định 14%; khi MC đang đọc, nhạc tạm còn 25% mức đã chọn rồi trở lại. Tắt MC không tắt nhạc, và tắt nhạc không tắt MC. Trong cùng một chế độ, tab vừa được bật âm thanh sẽ giữ quyền phát để tránh hai bản nhạc chồng nhau.
 
@@ -156,7 +179,7 @@ Nguồn tham chiếu: [tiktok-live-boss-raid](https://github.com/VietCodeBug/tik
 
 Các phần được đọc/điều chỉnh: `server/tiktok.js`, `server/webcast.js`, adapter nền trong `reference/threejs-base`, `server/tts.js`, `server/state-writer.js`, `src/raid-audio.js` và `src/speech-policy.js`. Chúng được viết lại thành các module độc lập của Cờ Tý Phí, bỏ phụ thuộc engine boss.
 
-Bản tích hợp giữ thêm đúng hai bài nhạc nền trong playlist media theo yêu cầu. Không nhập boss, lính/súng, sát thương, kỹ năng, HP, video quà, nhạc MVP/chiến đấu hoặc submodule nghiên cứu của boss raid. Nhà/map/sprite/thẻ của game cờ được giữ để tiếp tục phát triển.
+Nhạc phát hiện tại là bài gốc của **Cờ Tý Phí** nêu trên; không dùng nhạc boss raid. Không nhập boss, lính/súng, sát thương, kỹ năng, HP, video quà hoặc submodule nghiên cứu của boss raid. Nhà/map/sprite/thẻ của game cờ được giữ để tiếp tục phát triển.
 
 | File | Trách nhiệm |
 | --- | --- |
@@ -170,6 +193,8 @@ Bản tích hợp giữ thêm đúng hai bài nhạc nền trong playlist media 
 | [src/live-audio.js](../../web/src/live-audio.js), [live-speech-policy.js](../../web/src/live-speech-policy.js) | Hàng đọc, chào gộp, quyền âm thanh và lọc lời |
 | [src/live-music.js](../../web/src/live-music.js) | Nhạc nền, playlist, bật tiếng, âm lượng và duck khi MC đọc |
 | [src/live-rails.js](../../web/src/live-rails.js) | Chuẩn hóa top MONEY và quà gần nhất cho hai cột khung phát |
+| [src/gift-catalog.js](../../web/src/gift-catalog.js) | ID/alias quà, icon thật và luật ưu tiên/hiệu ứng/lì xì |
+| [src/waiting-areas.js](../../web/src/waiting-areas.js), [waiting-crowd.js](../../web/src/waiting-crowd.js) | Tám sân/25 vị trí nền, giữ chỗ và đám đông chờ nhẹ |
 | [server/admin.html](../../web/server/admin.html) | Giao diện điều khiển và phòng mô phỏng |
 
 ## 11. Kiểm tra khi phát triển tiếp
@@ -185,4 +210,4 @@ Nếu có Python + Playwright/Chromium, chạy `python tests/live-browser.py` tr
 
 Tests kiểm tra chuẩn hóa sự kiện, ID, combo, reconnect, không coi tổng người xem giảm là rời cụ thể, giữ ghế lúc mất nguồn, FIFO, giữ tiến độ quân còn lại, ví/escrow, MC/TTS, cách ly LIVE/DEMO và API. Browser test kiểm tra thêm trang Admin, khung 9:16, lên hình/lắc chào, hàng chờ/thay ghế và hiển thị sự kiện. Test provider giọng dùng một câu mẫu không có dữ liệu người xem; không thay cho kiểm tra kết nối TikTok thật.
 
-Mốc kiểm tra bản có nhạc và hai cột thông tin: **197 kiểm tra Node, 34 kiểm tra browser đạt, production build thành công**. Browser đã phát trực tiếp hai file M4A, chuyển bài, giảm nhạc khi MC nói, kiểm tra bật/tắt độc lập, Demo tự có 20 người và cách ly LIVE. Hai M4A cũng được giải mã toàn bộ để kiểm tra file. Ở mốc tích hợp MC trước, Edge và giọng dự phòng đều tạo được MP3 tiếng Việt và đã giải mã kiểm tra. LIVE thật chưa được kết nối vì chủ phòng chưa mở buổi phát.
+Các kiểm thử mới bao gồm 60 ô thường trên mọi tuyến, hướng tiếp tuyến gạch, sân/vị trí chờ, nhận diện quà không dựa giá, credit hoa hồng chỉ tiêu thụ khi lắc thành công và 20 quân vẫn lắc nền đồng thời, quỹ quà bảo toàn tiền/cách ly thanh tim, MC ngắn/ô thường im lặng. Khi chạy browser, kiểm tra bài **Alt Take duy nhất**, autoplay, giảm nhạc lúc MC nói, Demo tự có 20 người và cách ly LIVE. Báo cáo cũ có hai M4A là mốc lịch sử, không mô tả playlist hiện tại. Edge và giọng dự phòng từng tạo MP3 tiếng Việt và đã được giải mã kiểm tra; LIVE thật vẫn chưa được kết nối vì chủ phòng chưa mở buổi phát.

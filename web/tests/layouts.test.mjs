@@ -35,11 +35,15 @@ for (const id of Object.keys(NEIGHBORHOODS)) {
       assert.equal(byId.size, 138, 'node IDs must be unique');
       assert.equal(layout.nodes.filter(n => n.station).length, 2);
       assert.equal(layout.nodes.filter(n => n.fork).length, 6);
+      assert.equal(layout.nodes.filter(n=>n.typeIndex===6).length,87,'63% of all physical nodes are genuinely quiet');
+      assert.equal(new Set(layout.nodes.map(n=>n.typeIndex)).size,8,'all event categories remain available');
       const edges = new Map(), reverse = new Map(layout.nodes.map(n => [n.id, []]));
       for (const node of layout.nodes) {
         assert.equal(node.position.length, 3);
         assert.ok(node.position.every(Number.isFinite));
         assert.equal(node.position[1], 0);
+        assert.ok(Math.abs(Math.hypot(...node.heading)-1)<1e-10,'road tangent is normalized');
+        assert.ok(Math.abs(Math.sin(node.yaw)-node.heading[0])<1e-10&&Math.abs(Math.cos(node.yaw)-node.heading[2])<1e-10,'tile yaw follows its street tangent');
         assert.equal(node.next.length, node.fork ? 2 : 1);
         assert.ok(Number.isInteger(node.typeIndex) && node.typeIndex >= 0 && node.typeIndex <= 7);
         assert.equal(node.typeIndex === 0, node.station);
@@ -65,6 +69,9 @@ for (const id of Object.keys(NEIGHBORHOODS)) {
         assert.equal(path.indexOf('C48'), 48, 'stations must stay 48 steps apart on each route');
         assert.equal(path.length - 1 - path.indexOf('C48'), 48);
         assert.equal(new Set(path.slice(0, -1)).size, 96, 'a route cannot repeat a tile before the finish');
+        const stops=path.slice(0,-1).map(id=>byId.get(id));
+        assert.equal(stops.filter(node=>node.typeIndex===6).length,60,'every branch combination has62.5% quiet stops');
+        assert.ok(stops.every((node,index)=>[node,stops[(index+1)%96],stops[(index+2)%96]].some(stop=>stop.typeIndex===6)),'every three consecutive stops contain a genuine quiet tile');
         path.forEach(n => covered.add(n));
       }
       assert.equal(covered.size, 138, 'all generated branch tiles must occur on a playable route');

@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import {graphSegments,riverAt} from './waiting-areas.js';
+export {graphSegments} from './waiting-areas.js';
 
 // One seed drives scenery as well as the playable graph: a round can be replayed.
 function randomFor(seed) {
@@ -9,18 +11,6 @@ function randomFor(seed) {
     value ^= value + Math.imul(value ^ value >>> 7, 61 | value);
     return ((value ^ value >>> 14) >>> 0) / 4294967296;
   };
-}
-
-export function graphSegments(layout) {
-  const nodes = new Map(layout.nodes.map(node => [node.id, node]));
-  const seen = new Set(), segments = [];
-  for (const node of layout.nodes) for (const id of node.next || []) {
-    const key = [node.id, id].sort().join(':');
-    if (seen.has(key) || !nodes.has(id)) continue;
-    seen.add(key);
-    segments.push([node.position, nodes.get(id).position]);
-  }
-  return segments;
 }
 
 function pointSegment(x, z, a, b) {
@@ -38,8 +28,10 @@ export function buildNeighborhood(world, layout, add, decor) {
   };
   const segments = graphSegments(layout);
   const roadDistance = (x, z) => Math.min(...segments.map(([a, b]) => pointSegment(x, z, a, b)));
-  const occupied = [];
-  const clear = (x, z, radius = 1) => roadDistance(x, z) > radius + 1.15 && occupied.every(lot => Math.hypot(lot.x - x, lot.z - z) > lot.radius + radius);
+  const occupied = (layout.waitingAreas||[]).map(area=>({x:area.position[0],z:area.position[2],radius:area.reserveRadius,kind:'waiting'}));
+  const waitingPaths=(layout.waitingAreas||[]).map(area=>area.path);
+  const clear = (x, z, radius = 1) => roadDistance(x, z) > radius + 1.15 && occupied.every(lot => Math.hypot(lot.x - x, lot.z - z) > lot.radius + radius)
+    &&waitingPaths.every(([a,b])=>pointSegment(x,z,a,b)>radius+.5);
   const reserve = (x, z, radius) => occupied.push({ x, z, radius });
   const materials = new Map();
   const material = color => {
@@ -50,6 +42,7 @@ export function buildNeighborhood(world, layout, add, decor) {
     const result = new THREE.Mesh(geometry, material(color));
     result.position.set(x, y, z); result.scale.set(sx, sy, sz); result.rotation.y = yaw;
     result.userData.transientGeometry = true;
+    if(world.acceptSceneryPlacement&&!world.acceptSceneryPlacement(result,'procedural')){geometry.dispose();return null;}
     decor.add(result); return result;
   };
   const box = (x, y, z, w, h, d, color, yaw = 0) => mesh(new THREE.BoxGeometry(w, h, d), color, x, y, z, 1, 1, 1, yaw);
@@ -72,15 +65,15 @@ export function buildNeighborhood(world, layout, add, decor) {
     disk(x, -.045, z, 1.13, .07, '#e1d7be', 20);
     const colors = ['#e8d6a4', '#c5d9b5', '#e0bca7', '#d5c6db', '#b5cdd2', '#dfc89d', '#d4d7bc', '#cec7e2'];
     const index = node.station ? 0 : node.typeIndex ?? node.eventIndex ?? (Number(node.id.replace(/\D/g, '')) % 5) + 1;
-    box(x, .005, z, 1.4, .065, 1.4, colors[index]);
+    const yaw=node.yaw??0;
+    box(x, .0075, z, 1.4, .065, 1.4, index===6?'#ded5bd':colors[index],yaw);
     // A slim embedded curb is enough to distinguish a playable stop.
-    for (const sign of [-1, 1]) box(x + sign * .68, .045, z, .035, .035, 1.36, '#f7f0db');
+    for (const sign of [-1, 1]) box(x + Math.cos(yaw)*sign*.68, .045, z-Math.sin(yaw)*sign*.68, .035, .035, 1.36, '#f7f0db',yaw);
   }
 
   const width = bounds.maxX - bounds.minX, length = bounds.maxZ - bounds.minZ;
   const centerX = (bounds.maxX + bounds.minX) / 2, centerZ = (bounds.maxZ + bounds.minZ) / 2;
-  const riverX = bounds.maxX + 5.0;
-  const riverCenter = z => riverX + Math.sin(z * .095 + 1) * 1.2 + Math.sin(z * .23) * .35;
+  const riverCenter = z => riverAt({...layout,bounds},z).center;
   const waterWidth = layout.theme === 'riverside' ? 5.2 : 3.7;
   const riverStart = bounds.minZ - 35, riverEnd = bounds.maxZ + 35;
   function ribbon(halfWidth, color, y, water = false) {
@@ -123,7 +116,8 @@ export function buildNeighborhood(world, layout, add, decor) {
     const x = pos.getX(i) + centerX, z = pos.getZ(i) + centerZ;
     const noise = Math.sin(x * .31 + z * .08) * .5 + Math.cos(z * .25 - x * .17) * .32;
     const nearRoad = roadDistance(x, z) < 3;
-    pos.setXYZ(i, x, nearRoad ? -.23 : -.36 + noise * .10, z);
+    const nearCourt=(layout.waitingAreas||[]).some(area=>Math.hypot(x-area.position[0],z-area.position[2])<area.radius+.6)||waitingPaths.some(([a,b])=>pointSegment(x,z,a,b)<.8);
+    pos.setXYZ(i, x, nearRoad||nearCourt ? -.23 : -.36 + noise * .10, z);
     const c = low.clone().lerp(high, .5 + noise * .4 + random() * .10);
     groundColors.push(c.r, c.g, c.b);
   }
@@ -172,6 +166,23 @@ export function buildNeighborhood(world, layout, add, decor) {
     const cable = new THREE.Line(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 30 }, (_, i) => { const at = a.clone().lerp(b, i / 29); at.y -= Math.sin(i / 29 * Math.PI) * .32; return at; })), new THREE.LineBasicMaterial({ color: '#726951' }));
     world.town.add(cable);
   };
+
+  // Actual waiting footprints are reserved before any houses, stalls or trees.
+  // Plain paving stays clear for billboards; benches and signs sit outside slots.
+  for(const area of layout.waitingAreas||[]){
+    const[x,,z]=area.position;
+    disk(x,-.09,z,area.radius+.14,.08,'#b9b69a',40);
+    disk(x,-.035,z,area.radius,.07,'#d9cfb1',40);
+    strip(area.path[0],area.path[1],.9,.035,-.05,'#d4c9ad');
+    for(const offset of[-1.5,-.75,0,.75,1.5]){
+      box(x+offset,.002,z,.012,.004,3.8,'#bfb79d');
+      box(x,.002,z+offset,3.8,.004,.012,'#bfb79d');
+    }
+    for(const side of[-1,1])add('bench',x+side*(area.radius+.65),z,.75,-side*Math.PI/2);
+    add('plant_pot',x-area.radius-.55,z-1.5,.7);
+    add('plant_pot',x+area.radius+.55,z+1.5,.7);
+    sign('SÂN HẸN KHU PHỐ',x,z+area.radius+.65,0,'#667354');
+  }
 
   // Small courtyards give the center a neighborhood scale. Placement is checked
   // against every graph edge, including newly generated fork branches.

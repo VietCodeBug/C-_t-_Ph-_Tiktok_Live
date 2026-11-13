@@ -5,6 +5,7 @@ export const SEAT_COLORS = ['#ff887d', '#83c9f4', '#ffd267', '#8adfc3', '#ab9bf3
 
 const sharedImages = new Map();
 const imageScale = new WeakMap();
+export const spriteImageScale = image => imageScale.get(image) || 1;
 let decoding = 0;
 const decodeQueue = [];
 export async function loadImage(url, { atlas = false } = {}) {

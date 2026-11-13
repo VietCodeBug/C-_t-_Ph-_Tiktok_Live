@@ -12,6 +12,13 @@ const integer = (value, fallback = 0, maximum = 1000000) => Number.isFinite(Numb
   ? Math.max(0, Math.min(maximum, Math.floor(Number(value)))) : fallback;
 const roomId = value => /^[1-9]\d{0,30}$/.test(String(value ?? '')) ? String(value) : '';
 const digest = value => createHash('sha256').update(value).digest('hex').slice(0, 24);
+export function officialGiftIcon(value) {
+  try {
+    const url=new URL(String(value??''));
+    return url.protocol==='https:'&&/(^|\.)(?:tiktokcdn(?:-us|-eu|-in)?\.com|byteoversea\.com|ibytedtos\.com|byteimg\.com|ttwstatic\.com)$/.test(url.hostname)?url.href:'';
+  } catch { return ''; }
+}
+const imageUrl = image => typeof image==='string'?image:image?.urlList?.[0]||image?.url_list?.[0]||image?.url||'';
 const timestamp = value => {
   const number = Number(value);
   return Number.isFinite(number) && number > 0 ? number * (number < 1e12 ? 1000 : 1) : 0;
@@ -65,6 +72,7 @@ export function normalizeWebcast(type, payload, currentRoom, { now = Date.now() 
     Object.assign(event, {
       count, giftId, groupId, giftType: rawType == null ? undefined : Number(rawType),
       giftName: text(gift.name || gift.giftName || extended.name || payload.giftName, 80),
+      giftIcon: officialGiftIcon(imageUrl(gift.icon)||imageUrl(gift.image)||imageUrl(extended.icon)||imageUrl(extended.image)||payload.giftPictureUrl||payload.giftIcon),
       diamondCount: integer(gift.diamondCount ?? gift.diamond_count ?? extended.diamondCount ?? extended.diamond_count ?? payload.diamondCount),
       repeatEnd: [true, 1, '1'].includes(payload.repeatEnd), hasRepeatEnd: Object.hasOwn(payload, 'repeatEnd'),
     });

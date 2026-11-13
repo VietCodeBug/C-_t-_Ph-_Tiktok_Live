@@ -1,0 +1,275 @@
+{
+  "date": "2026-11-13",
+  "branch": "web/third-person-v23",
+  "status": "PASS",
+  "unitTests": {
+    "passed": 226,
+    "failed": 0
+  },
+  "browserChecks": 44,
+  "realTikTokConnectionTested": false,
+  "music": {
+    "name": "Cờ Tý Phí LIVE Theme (Alt Take)",
+    "sha256": "958513f7c2698fd573abfe59447f32efefcb379b44e7a3b603d34bd98e39547f",
+    "bytes": 3455260
+  },
+  "screenshots": [
+    "live-waiting-courtyards.png",
+    "live-map-envelope.png"
+  ],
+  "checks": [
+    {
+      "name": "production-shaped server starts disconnected without synthetic LIVE players",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "empty LIVE overlay has zero render actors and a waiting invitation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LIVE canvas uses9:16 without horizontal overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LIVE broadcast removes the TikTok badge and connection label",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Demo and LIVE links are discoverable outside the game frame",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "top players sit left and gift rail sits right as requested",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gift guide displays seven actual locally packaged TikTok icons",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "verified-shaped arrival creates two named actors with their own wallets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "welcome camera selects the new player and displays a real3D die",
+      "passed": true,
+      "detail": {
+        "phase": "roll",
+        "dice": {
+          "phase": "roll",
+          "elapsed": 0.1856811999999991,
+          "value": 0,
+          "sequence": 1,
+          "seat": "P001",
+          "paused": true
+        },
+        "spotlight": {
+          "seat": "P001",
+          "userId": "qa-user-1",
+          "userName": "Khách phố 1",
+          "avatar": "",
+          "kind": "roll",
+          "startedAt": 21.773630000000153,
+          "elapsed": 1.2541765999999994,
+          "expiresAt": 45.189578000000246,
+          "until": 45.189578000000246,
+          "returnSeat": "P001",
+          "queued": false,
+          "queuedCount": 1
+        },
+        "welcomeHidden": false
+      }
+    },
+    {
+      "name": "welcome die has no large white panel",
+      "passed": true,
+      "detail": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px"
+      }
+    },
+    {
+      "name": "welcome rolls exactly once then camera continues to another participant",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "100 arrivals produce20 sprites and80 lightweight waiting customers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "80 waiting customers have real distinct positions across eight central courtyards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "courtyards reserve 200 places without overlapping rendered houses and solid props",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "test source remains explicitly not a real TikTok connection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "gift rail shows a finalized combo once without changing game money",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rose receipts show the actual rose icon",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "top rail ranks active players and waiting customers from server wallets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "map-wide gift waits while paused and duplicate packets do not pay twice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Hand Heart pays a conserved virtual pot to all100 active and waiting participants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a map-wide gift shows its short nonblocking celebration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "a departing racer is replaced by the oldest waiting user without a ghost",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "replacement keeps every other wallet and race progress",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "replacement starts its own three-lap race at zero",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opening another overlay does not create another engine or charge money",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "operator page receives live roster and waiting counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "admin exposes direct Demo and LIVE preview links",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opening Demo automatically starts20 racers and leaves LIVE untouched",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reopening the demo start action does not duplicate preview accounts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "operator can choose all seven gifts and defaults to Rose",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the preview adds80 visible waiting customers without adding active racers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the chosen demo gift reaches its matching cosmetic effect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "demo overlay is visibly labeled and still capped20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "authoritative collective investment renders with a locked movement hold",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "group window clears the welcome banner and personal-card narration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audio unlock plays only a server-authorized MC packet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "the correct single Alt Take actually decodes and plays",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Alt Take loops itself as a single supplied track",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "MC temporarily lowers background music volume",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "switching MC off leaves background music playing at its own volume",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "background toggle does not switch MC off",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "capture mode hides preview navigation while retaining both side rails",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "server reports no runtime errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "pages have no JavaScript errors or asset failures",
+      "passed": true,
+      "detail": {
+        "errors": [],
+        "requests": []
+      }
+    }
+  ],
+  "errors": [],
+  "requests_failed": []
+}

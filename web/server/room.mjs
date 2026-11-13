@@ -6,10 +6,14 @@ import { createTownLayouts } from '../src/layouts.js';
 import { CommunityController } from '../src/community-controller.js';
 import { MatchmakingQueue } from '../src/matchmaking.js';
 import { sanitizeWelcomeName } from '../src/live-speech-policy.js';
+import { GIFT_CATALOG, resolveGift } from '../src/gift-catalog.js';
+import { officialGiftIcon } from './tiktok.mjs';
 
 const clean = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g,'d').replace(/Đ/g,'D').trim().replace(/\s+/g,' ').toUpperCase();
 const text = (value, limit=64) => String(value ?? '').replace(/[\u0000-\u001f\u007f]/g,'').trim().slice(0,limit);
 const seed32 = () => randomBytes(4).readUInt32LE();
+const spokenName = member => (sanitizeWelcomeName(member?.name)||member?.seat||'Bạn').split(/\s+/).slice(-2).join(' ');
+const shortChoice = label => text(label,80).split(/\s+/).slice(0,4).join(' ');
 const actorFor = member => ({ accountId:member.id,seat:member.seat,data:{id:`ch${String((member.order%20)+1).padStart(2,'0')}`,name:member.name},
   group:new THREE.Group(),position:new THREE.Vector3(),heading:new THREE.Vector3(),money:member.money??1000,images:new Map(),distance:0,
   setClip(clip){this.clip=clip;},loadClip(){},update(){},frame:0,facing:'S' });
@@ -29,6 +33,7 @@ export class LiveRoom extends EventEmitter {
     this.clock=0;this.revision=0;this.memberSequence=0;this.cueSequence=0;this.match=1;
     this.connection={status:'idle',host:null,roomId:null};this.sourcePaused=false;this.operatorPaused=false;
     this.spotlight=null;this.introQueue=[];this.pendingLeaves=new Set();this.announcements=[];this.gifts=[];
+    this.giftEffects=[];this.pendingGiftEnvelope=null;this.lastGiftEnvelopeAt=-Infinity;
     this.matchmaking=new MatchmakingQueue([],{seats:this.options.maxPlayers,reserved:Math.floor(this.options.maxPlayers*.6)});
     this.phase='waiting';this.busy=false;this.timer=null;this.operations=Promise.resolve();this.lastPublishedAt=-1;
     this.seenBoardCues=new Set();this.waitingWelcome={count:0,names:[]};this.lastWaitingWelcome=-10;
@@ -94,11 +99,42 @@ export class LiveRoom extends EventEmitter {
     if(event.finalized!==true||!Number.isSafeInteger(count)||count<1||count>1000000||!/^[A-Za-z0-9_:-]{1,80}$/.test(giftId))return false;
     const unitCoins=Number(event.diamondCount),coins=Number.isFinite(unitCoins)&&unitCoins>0?Math.floor(unitCoins)*count:0;
     const receipt={id:packet,eventId:packet,userId:member.id,seat:member.seat,name:member.name,giftId,giftName:text(event.giftName,80)||`Quà ${giftId}`,count,at:this.clock};
+    const giftIcon=officialGiftIcon(event.giftIcon);if(giftIcon)receipt.giftIcon=giftIcon;
+    const rule=resolveGift(event,{roseIds:[...this.roseIds]});if(rule){receipt.giftKey=rule.key;receipt.effect=rule.effect;}
     if(Number.isSafeInteger(coins)&&coins>0)receipt.coins=coins;
     this.gifts.unshift(receipt);if(this.gifts.length>40)this.gifts.length=40;
     member.giftCount=Math.min(Number.MAX_SAFE_INTEGER,(member.giftCount??0)+count);
     member.giftCoins=Math.min(Number.MAX_SAFE_INTEGER,(member.giftCoins??0)+(receipt.coins??0));
     // This feed acknowledges received gifts. MONEY and gift benefits remain owned by the existing game rules.
+    return true;
+  }
+  addGiftEffect(member,event,packet,rule,extra={}){
+    this.giftEffects.unshift({id:`effect:${packet}`,eventId:packet,giftKey:rule.key,effect:rule.effect,userId:member.id,seat:member.seat,name:member.name,count:Number(event.count),at:this.clock,expiresAt:this.clock+(rule.effect==='red-envelope'?8:4),...extra});
+    if(this.giftEffects.length>12)this.giftEffects.length=12;
+  }
+  applyGiftRule(member,event,packet){
+    const rule=resolveGift(event,{roseIds:[...this.roseIds]});if(!rule)return;
+    if(rule.effect==='priority'){
+      if(member.enrolled&&this.community)this.community.game.receiveRose(member.seat,packet,Number(event.count));
+      this.addGiftEffect(member,event,packet,rule);return;
+    }
+    if(rule.effect==='red-envelope'){
+      if(!this.pendingGiftEnvelope)this.pendingGiftEnvelope={memberId:member.id,event:{...event},packet,rule};
+      this.processGiftEnvelope();return;
+    }
+    this.addGiftEffect(member,event,packet,rule);
+  }
+  processGiftEnvelope(){
+    const pending=this.pendingGiftEnvelope;
+    if(!pending||!this.community||this.sourcePaused||this.operatorPaused||this.community.modal||this.demo?.race.over||this.clock-this.lastGiftEnvelopeAt<30)return false;
+    const eligible=[...this.members.values()].filter(member=>member.present&&member.enrolled&&!member.pendingLeave).map(member=>member.seat);
+    this.community.syncFromRace();
+    const result=this.community.game.awardGiftEnvelope(pending.packet,this.seed,eligible);
+    if(!result)return false;
+    this.community.syncToRace();this.lastGiftEnvelopeAt=this.clock;this.pendingGiftEnvelope=null;
+    const member=this.members.get(pending.memberId);
+    this.addGiftEffect(member,pending.event,pending.packet,pending.rule,{pot:result.pot,participants:result.payouts.length,totalPaid:result.totalPaid});
+    this.announce('gift.envelope',`Lì xì ${result.pot}, chia ${result.payouts.length} người!`,{priority:2,ttl:8});
     return true;
   }
   syncLobby(){
@@ -130,9 +166,30 @@ export class LiveRoom extends EventEmitter {
     this.community.matchmaking=this.matchmaking;
     const scheduler=this.demo.chooseNextPlayer;
     this.demo.chooseNextPlayer=(eligible,last,game)=>{
+      const rose=this.community.game.peekRosePriority(eligible.map(index=>this.demo.players[index].seat));
+      if(rose){this.roseDispatchCandidate=rose;return this.demo.players.findIndex(player=>player.seat===rose);}
       const index=this.spotlight&&this.demo.players.findIndex(player=>player.seat===this.spotlight.seat);
       return Number.isInteger(index)&&eligible.includes(index)?index:scheduler(eligible,last,game);
     };
+    const dispatch=this.demo.dispatch.bind(this.demo);
+    this.demo.dispatch=()=>{
+      this.roseDispatchCandidate=null;
+      const visibleBusy=['roll','roll-result'].includes(this.demo.runners[this.demo.active]?.phase),temporarilyHeld=[];
+      if(visibleBusy)for(const player of this.demo.players)if(this.community.game.accounts.get(player.seat)?.roseCredits&&!this.demo.heldSeats.has(player.seat)){
+        this.demo.holdPlayer(player.seat,true);temporarilyHeld.push(player.seat);
+      }
+      let accepted;try{accepted=dispatch();}finally{for(const seat of temporarilyHeld)this.demo.holdPlayer(seat,false);}
+      const seat=this.roseDispatchCandidate,index=this.demo.lastDispatched;
+      if(accepted&&seat&&this.demo.players[index]?.seat===seat&&this.community.game.consumeRosePriority(seat)){
+        if(this.spotlight?.kind==='welcome'&&this.spotlight.seat!==seat&&!this.introQueue.includes(this.spotlight.seat))this.introQueue.unshift(this.spotlight.seat);
+        const member=this.bySeat(seat),returnSeat=this.demo.players[this.demo.active]?.seat;
+        this.demo.select(index);
+        this.spotlight={seat,userId:member?.id,userName:member?.name,avatar:member?.avatar,kind:'rose',startedAt:this.clock,elapsed:0,expiresAt:this.clock+10,until:this.clock+10,returnSeat};
+      }
+      return accepted;
+    };
+    const nextTurn=this.demo.nextTurn.bind(this.demo);
+    this.demo.nextTurn=()=>['roll','roll-result'].includes(this.demo.runners[this.demo.active]?.phase)?false:nextTurn();
     this.applyPause();this.phase='race';
   }
   async enroll(member,{greet=true}={}) {
@@ -226,7 +283,7 @@ export class LiveRoom extends EventEmitter {
       if(event.type==='member'||event.type==='join'){
         const wasPresent=member.present;member.present=true;
         if(this.options.autoJoinOnEnter)return this.enroll(member,{greet:!wasPresent});
-        if(!wasPresent)this.announce('member.arrive',`Chào ${sanitizeWelcomeName(member.name)||'bạn mới'}! Gõ CHƠI để cùng vào khu phố.`,{priority:0,ttl:12});
+        if(!wasPresent)this.announce('member.arrive',`Chào ${spokenName(member)}! Gõ CHƠI để vào phố.`,{priority:0,ttl:12});
         this.publish();return true;
       }
       if(event.type==='leave')return this.leave(member,event.reason??'source');
@@ -235,7 +292,7 @@ export class LiveRoom extends EventEmitter {
       // appear in the feed; only the existing rose rule grants turn priority.
       if(event.type==='gift'){
         if(!this.recordGift(member,event,packet))return false;
-        if(this.roseIds.has(String(event.giftId))&&member.enrolled&&this.community)this.community.game.receiveRose(member.seat,packet,event.count);
+        this.applyGiftRule(member,event,packet);
         this.publish();return true;
       }
       if(!member.present||!member.enrolled||member.pendingLeave||!this.community||this.sourcePaused)return false;
@@ -247,11 +304,16 @@ export class LiveRoom extends EventEmitter {
 
   updateSpotlight(dt=0){
     if(!this.demo||this.demo.paused||this.demo.globalHold||this.demo.race.over)return;
+    if(['roll','roll-result'].includes(this.demo.runners[this.demo.active]?.phase))return;
+    const readyRose=this.demo.players.some((player,index)=>!player.finished&&this.demo.runners[index]?.phase==='overview'&&this.community.game.accounts.get(player.seat)?.roseCredits);
+    if(readyRose)return;
     if(this.spotlight){
       const current=this.spotlight,index=this.demo.players.findIndex(player=>player.seat===current.seat),runner=this.demo.runners[index];
       if(!runner){this.spotlight=null;return;}
       current.elapsed=(current.elapsed??0)+dt;
-      if(current.kind==='welcome'&&current.elapsed>=1.2){
+      if(current.kind==='rose'){
+        this.spotlight=null;
+      }else if(current.kind==='welcome'&&current.elapsed>=1.2){
         this.demo.holdPlayer(current.seat,false);this.demo.requestRollFor(index);current.kind='roll';current.expiresAt=this.clock+15;current.until=current.expiresAt;
       }else if(current.kind==='roll'&&!['overview','roll','roll-result'].includes(runner.phase)){
         let next=this.demo.players.findIndex(player=>player.seat===current.returnSeat&&!player.finished);
@@ -265,7 +327,7 @@ export class LiveRoom extends EventEmitter {
     if(!member)return;
     const index=this.demo.players.findIndex(player=>player.seat===member.seat),returnSeat=this.demo.players[this.demo.active]?.seat;
     this.demo.select(index);this.spotlight={seat:member.seat,userId:member.id,userName:member.name,avatar:member.avatar,kind:'welcome',startedAt:this.clock,elapsed:0,expiresAt:this.clock+16,until:this.clock+16,returnSeat,queued:this.introQueue.length};
-    this.announce('member.seated',`Chào ${sanitizeWelcomeName(member.name)||'bạn mới'}, ghế ${member.seat}! Mời bạn lắc xúc xắc mở màn, rồi cả phố cùng đi ba vòng.`,{priority:2,ttl:15});
+    this.announce('member.seated',`Chào ${spokenName(member)}, mời lắc xúc xắc!`,{priority:2,ttl:15});
   }
   observeBoard(){
     // The collective controller owns narration while its modal is open. The
@@ -273,16 +335,16 @@ export class LiveRoom extends EventEmitter {
     if(this.community?.modal)return;
     const state=this.demo?.snapshot(),member=state&&this.bySeat(state.players[state.active]?.seat);
     if(!state||!member)return;
-    const name=sanitizeWelcomeName(member.name)||member.seat;
+    const name=spokenName(member);
     const once=(key,fn)=>{if(this.seenBoardCues.has(key))return;this.seenBoardCues.add(key);fn();};
-    if(state.phase==='roll-result')once(`dice:${state.dice.sequence}`,()=>this.announce('race.roll-result',`${name} lắc được ${state.dice.value} bước!`,{ttl:8}));
-    if(state.branch)once(`fork:${member.seat}:${state.turn}:${state.branch.nodeId}`,()=>this.announce('race.fork',`${name}, gõ TRÁI hoặc PHẢI trong mười giây để chọn đường.`,{priority:2,ttl:10}));
+    if(state.phase==='roll-result')once(`dice:${state.dice.sequence}`,()=>this.announce('race.roll-result',`${name} ra ${state.dice.value}, đi ${state.dice.value} ô.`,{ttl:8}));
+    if(state.branch)once(`fork:${member.seat}:${state.turn}:${state.branch.nodeId}`,()=>this.announce('race.fork',`${name}: TRÁI hay PHẢI?`,{priority:2,ttl:10}));
     const event=state.event;
-    if(event&&!event.result?.community){
-      if(!event.result)once(`event:${event.sequence}:open`,()=>this.announce(`event.${event.id}.open`,`${name}, ${event.mc||event.body}${event.choices.length?' '+event.choices.map((choice,index)=>`Gõ ${index+1}: ${choice.label}.`).join(' '):''}`,{priority:2,ttl:10}));
-      if(event.result)once(`event:${event.sequence}:result`,()=>this.announce(`event.${event.id}.result`,event.category==='rest'?`${name} ghé ô bình yên, ví giữ nguyên.`:`${name}, ${event.choices.length?'':`${event.mc||event.body} `}${event.result.delta>0?'nhận':event.result.delta<0?'mất':'không đổi'} ${Math.abs(event.result.delta)} MONEY; ví hiện ${event.result.after}.`,{priority:1,ttl:10}));
+    if(event&&!event.result?.community&&!['rest','quiet'].includes(event.category)){
+      if(!event.result&&event.choices.length)once(`event:${event.sequence}:open`,()=>this.announce(`event.${event.id}.open`,`${name}: ${event.choices.slice(0,2).map((choice,index)=>`${index+1} ${shortChoice(choice.label)}`).join(', ')}.`,{priority:2,ttl:10}));
+      if(event.result)once(`event:${event.sequence}:result`,()=>this.announce(`event.${event.id}.result`,`${name}: ${text(event.title,100).split(/\s+/).slice(0,8).join(' ')}. ${event.result.delta>0?'+':''}${event.result.delta}.`,{priority:1,ttl:10}));
     }
-    for(const entry of state.race?.finishers??[])once(`finish:${entry.seat}`,()=>this.announce('race.finish',`${sanitizeWelcomeName(entry.name)||entry.seat} đã đi đủ ba vòng và về đích thứ ${entry.rank}!`,{priority:3,ttl:15}));
+    for(const entry of state.race?.finishers??[])once(`finish:${entry.seat}`,()=>this.announce('race.finish',`${spokenName(entry)} về đích hạng ${entry.rank}!`,{priority:3,ttl:15}));
   }
   tick(dt){
     if(!Number.isFinite(dt)||dt<0)throw new RangeError('Room tick must be nonnegative seconds');
@@ -290,11 +352,14 @@ export class LiveRoom extends EventEmitter {
     let left=Math.min(dt,3600);
     while(left>1e-9){const step=Math.min(left,1/this.options.tickRate);left-=step;this.clock+=step;
       if(this.demo){
-        this.updateSpotlight(step);this.demo.update(step);this.community.update(step);this.observeBoard();
+        for(const [index,player] of this.demo.players.entries())if(!player.finished&&this.demo.runners[index]?.phase==='overview'&&this.community.game.accounts.get(player.seat)?.roseCredits){
+          this.demo.holdPlayer(player.seat,false);this.demo.manualQueue.add(index);this.introQueue=this.introQueue.filter(seat=>seat!==player.seat);
+        }
+        this.updateSpotlight(step);this.demo.update(step);this.community.update(step);this.processGiftEnvelope();this.observeBoard();
         for(const player of this.demo.players){const member=this.bySeat(player.seat);if(member)member.money=player.money;}
         if(this.demo.race.over&&!['podium','reserving'].includes(this.phase)){
           this.spotlight=null;this.matchmaking.beginPodium(this.activeSeats(),{seats:this.options.maxPlayers,reserved:Math.floor(this.options.maxPlayers*.6)});this.phase='podium';
-          this.announce('race.podium',`${this.demo.race.finishers.length} người đã về đích! Xem bục tám giây rồi mở sảnh giữ ghế.`,{priority:3});
+          this.announce('race.podium','Đủ người về đích. Sắp mở giữ ghế.',{priority:3});
         }else if(['podium','reserving'].includes(this.phase)&&!this.demo.paused){
           this.matchmaking.tick(step);this.phase=this.matchmaking.phase;
           if(this.phase==='ready'){this.busy=true;this.enqueue(()=>this.newMatch()).catch(()=>{});break;}
@@ -302,7 +367,7 @@ export class LiveRoom extends EventEmitter {
       }
       if(this.waitingWelcome.count&&this.clock-this.lastWaitingWelcome>=2){
         const batch=this.waitingWelcome,others=Math.max(0,batch.count-batch.names.length);
-        this.announce('member.waiting',`Chào ${batch.names.join(', ')}${others?` và ${others} bạn mới`:''}! Hàng ghế đang đầy; trong lúc chờ vẫn được góp vốn, mua hàng và nhận lì xì.`,{priority:0,ttl:12});
+        this.announce('member.waiting',`Chào ${batch.names[0]||'bạn mới'}${batch.count>1?` và ${batch.count-1} bạn`:''}! Đang chờ ghế.`,{priority:0,ttl:12});
         this.waitingWelcome={count:0,names:[]};this.lastWaitingWelcome=this.clock;
       }
       if(!this.sourcePaused){
@@ -329,7 +394,7 @@ export class LiveRoom extends EventEmitter {
     this.introQueue=[];this.spotlight=null;this.demo.heldSeats.clear();this.phase='race';this.applyPause();
     this.seenBoardCues.clear();
     for(const member of this.members.values())if(this.community.game.accounts.has(member.seat))member.money=this.community.game.accounts.get(member.seat).money;
-    this.updateFinishLimit();this.syncLobby();this.announce('race.start',`Ván mới bắt đầu, ${actors.length} người cùng đi ba vòng!`,{priority:2});this.publish();return true;
+    this.updateFinishLimit();this.syncLobby();this.announce('race.start',`Ván mới: ba vòng, ${actors.length} người.`,{priority:2});this.publish();return true;
   }
   async control(action,payload={}){
     return this.enqueue(async()=>{
@@ -357,7 +422,7 @@ export class LiveRoom extends EventEmitter {
         const packet=`demo:gift:${++this.cueSequence}`,giftId=String(payload.giftId??'5655');
         const event={finalized:true,giftId,giftName:payload.giftName??(giftId==='5655'?'Hoa hồng':`Quà ${giftId}`),diamondCount:payload.diamondCount,count:payload.count??1};
         if(!this.recordGift(member,event,packet))return false;
-        if(this.roseIds.has(giftId)&&member.enrolled&&this.community)this.community.game.receiveRose(member.seat,packet,event.count);
+        this.applyGiftRule(member,event,packet);
         this.publish();return true;
       }
       return false;
@@ -375,6 +440,7 @@ export class LiveRoom extends EventEmitter {
       game:this.demo?.players.length?this.demo.snapshot():null,community:this.community?.snapshot()??null,lobby:this.matchmaking.snapshot(),
       roster:active.map(seat=>this.bySeat(seat)).filter(Boolean).map(row),waiting:this.waitingSeats.map(seat=>this.bySeat(seat)).filter(Boolean).map(row),
       gifts:this.gifts.map(gift=>({...gift})),leaderboard,
+      giftCatalog:GIFT_CATALOG,giftEffects:this.giftEffects.filter(effect=>effect.expiresAt>this.clock).map(effect=>({...effect})),giftEnvelopePending:!!this.pendingGiftEnvelope,
       spotlight:this.spotlight?{...this.spotlight,queued:false,queuedCount:this.introQueue.length}:this.waitingSpotlight?.expiresAt>this.clock?{...this.waitingSpotlight}:null,announcements:this.announcements.filter(cue=>cue.expiresAt>this.clock).map(cue=>({...cue})),
       settings:{maxPlayers:this.options.maxPlayers,inactivitySeconds:this.options.inactivitySeconds,autoRollSeconds:this.options.autoRollSeconds,autoJoinOnEnter:this.options.autoJoinOnEnter},
       inactivityPolicy:'explicit-leave-or-activity-timeout',realTikTokConnected:this.mode==='live'&&this.connection.status==='connected'};

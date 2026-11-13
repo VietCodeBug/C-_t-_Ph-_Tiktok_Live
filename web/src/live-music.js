@@ -1,4 +1,4 @@
-const DEFAULT_TRACKS=['/runtime/music/pho-do-choi-01.m4a','/runtime/music/pho-do-choi-02.m4a'];
+const DEFAULT_TRACKS=[{name:'Cờ Tý Phí LIVE Theme (Alt Take)',url:'/runtime/music/co-ty-phi-live-theme-alt-take.m4a'}];
 const volumeOf=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):.14;
 const call=(fn,value)=>{try{fn?.(value);}catch{/* UI callbacks do not own playback. */}};
 function tracksOf(values,origin){

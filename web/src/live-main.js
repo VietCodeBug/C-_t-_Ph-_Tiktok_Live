@@ -11,6 +11,9 @@ import { CommunityView } from './community-view.js';
 import { LiveAudio } from './live-audio.js';
 import { LiveMusic } from './live-music.js';
 import { leaderboardRows, giftRows } from './live-rails.js';
+import { WaitingCrowd } from './waiting-crowd.js';
+import { giftGuideHTML, giftReceiptHTML, bindGiftImageFallback } from './live-gift-guide.js';
+import { LiveGiftEffects } from './live-gift-effects.js';
 import './gameplay.css';
 import './community.css';
 import './live.css';
@@ -29,7 +32,7 @@ $('#live-app').innerHTML = `
     <div class="live-turn" id="live-turn" hidden><div class="live-turn-seat" id="turn-seat"></div><div class="live-turn-person"><small id="turn-label">CAMERA ĐANG THEO</small><strong id="turn-name"></strong><span id="turn-action"></span></div><div class="live-wallet"><small>MONEY</small><b id="turn-money"></b></div></div>
     <section class="live-welcome" id="live-welcome" hidden aria-live="polite"><span class="welcome-icon">✦</span><div><small id="welcome-label">CẢ PHỐ CHÀO BẠN</small><b id="welcome-name"></b><span id="welcome-detail"></span></div></section>
     <aside class="live-side-rail live-money-rail" data-testid="top-players" aria-label="Xếp hạng MONEY"><h2><span>♛</span> TOP MONEY</h2><ol id="money-leaders"></ol><p class="rail-empty" id="money-empty">Chờ người chơi</p></aside>
-    <aside class="live-side-rail live-gift-rail" data-testid="gift-feed" aria-label="Quà vừa nhận"><h2><span>✦</span> QUÀ GHÉ PHỐ</h2><ol id="recent-gifts"></ol><p class="rail-empty" id="gift-empty">Lời cảm ơn<br>của cả phố</p><p class="gift-rule">🌹 Hoa hồng<br><span>Ưu tiên lượt hợp lệ</span></p></aside>
+    <aside class="live-side-rail live-gift-rail" data-testid="gift-feed" aria-label="Quà vừa nhận"><h2><span>✦</span> QUÀ GHÉ PHỐ</h2><ol id="recent-gifts"></ol><p class="rail-empty" id="gift-empty">Lời cảm ơn<br>của cả phố</p><div id="gift-guide">${giftGuideHTML({base})}</div></aside>
     <section class="live-branch" id="branch-bar" hidden><div><b>↔ CHỌN NGÕ NÀO?</b><span id="branch-time"></span></div><div id="branch-options"></div><small id="branch-votes"></small><div class="live-track"><i id="branch-track"></i></div></section>
     <section class="live-event" id="event-panel" hidden><div><span id="event-category"></span><span id="event-time"></span></div><h2 id="event-title"></h2><p id="event-body"></p><strong id="event-money"></strong><div id="event-options"></div></section>
     <section class="live-waiting" id="live-waiting"><span>✦</span><h1>Khu phố đang mở cửa</h1><p id="waiting-description">Gõ <b>CHƠI</b> để có quân của bạn.<br>Khách chờ vẫn góp vốn, đặt đơn và nhận lì xì.</p></section>
@@ -44,10 +47,12 @@ $('#live-app').innerHTML = `
 document.body.dataset.mode = mode;
 document.body.dataset.capture = String(capture);
 
-let current = null, world, pack, actors = [], bySeat = new Map(), dice, effects, cameos, presentation, communityView;
+let current = null, world, pack, actors = [], bySeat = new Map(), dice, effects, cameos, presentation, communityView, waitingCrowd, giftEffects;
 let mapKey = '', frameTime = 0, renderTime = 0, syncing = false, pending = null, connected = false, lastStateAt = 0, activeCaption = null;
 let demoStartRequested = false, demoStarting = false, railKey = '', musicManifestError = '';
+let forceOverview = query.get('overview') === '1';
 const targets = new Map();
+const disposeGiftFallback = bindGiftImageFallback($('#portrait'));
 const facade = {
   game: { accounts: new Map() }, selectedId: '',
   demo: { players: [], active: 0, setPaused() {}, select() {} },
@@ -100,11 +105,11 @@ async function startDemoIfEmpty(state){
 }
 function renderRails(){
   const leaders=leaderboardRows(current),gifts=giftRows(current);
-  const key=JSON.stringify([leaders.map(row=>[row.seat,row.name,row.money,row.rank]),gifts.map(row=>[row.key,row.name,row.giftName,row.count])]);
+  const key=JSON.stringify([leaders.map(row=>[row.seat,row.name,row.money,row.rank]),gifts.map(row=>[row.key,row.name,row.giftName,row.count,row.giftKey,row.giftIcon])]);
   if(key===railKey)return;railKey=key;
   $('#money-empty').hidden=leaders.length>0;$('#gift-empty').hidden=gifts.length>0;
   $('#money-leaders').innerHTML=leaders.map(row=>`<li class="money-leader" data-rank="${row.rank}" title="${esc(row.name)} · ${money(row.money)} MONEY"><b class="rail-rank">${row.rank}</b><div><strong>${esc(row.name)}</strong><span>${money(row.money)} <small>M</small></span></div></li>`).join('');
-  $('#recent-gifts').innerHTML=gifts.map(row=>`<li class="gift-receipt" data-gift="${esc(row.giftId||'')}" title="${esc(row.name)} · ${esc(row.giftName)} ×${row.count}"><span class="gift-mark">${String(row.giftId)==='5655'?'🌹':'✦'}</span><div><strong>${esc(row.name)}</strong><span>${esc(row.giftName)} <b>×${money(row.count)}</b></span></div></li>`).join('');
+  $('#recent-gifts').innerHTML=gifts.map(row=>giftReceiptHTML(row,{base})).join('');
 }
 
 async function makeActor(row) {
@@ -132,6 +137,7 @@ async function applyState(state) {
       }
       const roster = new Map((next.roster || []).map(row => [row.seat, row]));
       const rows = game?.players || [];
+      await waitingCrowd.setPeople(world.layout, next.waiting || []);
       const wanted = new Set(rows.map(row => row.seat));
       const additions = await Promise.all(rows.filter(row => !bySeat.has(row.seat)).map(async row => {
         const actor = await makeActor({ ...row, ...roster.get(row.seat) });
@@ -185,14 +191,14 @@ function renderHud() {
     const player = game.players[game.active];
     $('#turn-seat').textContent = player.seat; $('#turn-name').textContent = player.name;
     $('#turn-money').textContent = money(player.money);
-    $('#turn-label').textContent = game.globalHold ? 'SỰ KIỆN CẢ PHỐ' : current.spotlight ? 'CHÀO NGƯỜI MỚI' : 'CAMERA ĐANG THEO';
+    $('#turn-label').textContent = game.globalHold ? 'SỰ KIỆN CẢ PHỐ' : current.spotlight?.kind === 'rose' ? 'LƯỢT ƯU TIÊN HOA HỒNG' : current.spotlight ? 'CHÀO NGƯỜI MỚI' : 'CAMERA ĐANG THEO';
     $('#turn-action').textContent = game.globalHold ? 'Cả phố cùng tham gia sự kiện' : game.phase === 'roll' ? 'Đang lắc xúc xắc…' : game.phase === 'roll-result' ? `Ra ${game.roll}!` : game.phase === 'moving' ? `Đang đi · còn ${game.remaining} bước` : game.phase === 'fork-choice' ? 'Gõ TRÁI hoặc PHẢI' : game.phase === 'event-choice' ? 'Chọn phương án trên thẻ' : 'Gõ LẮC · hết giờ tự lắc';
   }
   const welcome = current.spotlight;
   $('#live-welcome').hidden = !welcome || over || !!current.community?.modal;
   if (welcome) {
     const queued = welcome.queued === true || welcome.kind === 'waiting';
-    $('#welcome-label').textContent = queued ? 'CHÀO KHÁCH ĐANG CHỜ' : 'CẢ PHỐ CHÀO BẠN';
+    $('#welcome-label').textContent = queued ? 'CHÀO KHÁCH ĐANG CHỜ' : welcome.kind === 'rose' ? 'LƯỢT ƯU TIÊN HOA HỒNG' : 'CẢ PHỐ CHÀO BẠN';
     $('#welcome-name').textContent = welcome.userName || welcome.name || welcome.seat;
     $('#welcome-detail').textContent = queued ? `Hàng chờ #${welcome.position || welcome.queuePosition || '…'} · vẫn chơi sự kiện cùng phố` : `${welcome.seat} · mời bạn lắc xúc xắc!`;
   }
@@ -239,7 +245,7 @@ function tick(now) {
       actor.update(game.paused || game.globalHold ? 0 : dt, world.camera, row.phase === 'moving' && !game.globalHold, index === game.active, now / 1000);
     }
     const fork = game.branch ? world.layout.nodes.find(node => node.id === game.branch.nodeId) : null;
-    world.updateCamera(dt, active, 'auto', game.phase === 'overview' || game.race?.over, fork);
+    world.updateCamera(dt, active, 'auto', forceOverview || game.phase === 'overview' || game.race?.over, fork);
     dice.update(game.dice || { phase: 'waiting', elapsed: 0, value: 0 });
     effects.update(dt, game, active); cameos.update(dt, game, active);
     presentation?.update(game);
@@ -249,6 +255,8 @@ function tick(now) {
     world.updateCamera(dt, dummy, 'overview', true); world.activeRing.visible = false;
     dice.update({ phase: 'waiting', value: 0, elapsed: 0 });
   }
+  waitingCrowd.update(dt, { ...current, paused: !!game?.paused || !!game?.globalHold });
+  giftEffects.update(dt, current, { actors, waiting: waitingCrowd.people });
   if (now - renderTime > 1000 / 30 - 1) { world.render(); renderTime = now; }
   updateCaption();
   if (connected && Date.now() - lastStateAt > 8000) showWarning('Đang chờ máy chủ · giữ nguyên hình và kết quả gần nhất');
@@ -257,13 +265,15 @@ function tick(now) {
 
 async function init() {
   try {
-    fetch(base+'music.json').then(response=>{if(!response.ok)throw new Error('Chưa tải được danh sách nhạc; đang dùng hai bản có sẵn.');return response.json();}).then(manifest=>{
+    fetch(base+'music.json').then(response=>{if(!response.ok)throw new Error('Chưa tải được danh sách nhạc; đang dùng bản Alt Take có sẵn.');return response.json();}).then(manifest=>{
       if(manifest?.tracks?.length)music.configure({playlist:manifest.tracks.map(track=>({...track,url:new URL(track.url,base).href}))});
     }).catch(error=>{musicManifestError=error.message;$('#music-toggle').title=musicManifestError;$('#music-toggle').dataset.manifest='unavailable';});
     pack = await fetch(base + 'actors.json').then(response => { if (!response.ok) throw new Error('Chưa có asset runtime; chạy npm run build trước'); return response.json(); });
     world = new TownWorld($('#game'), base);
     await world.loadModels(); await world.loadMap(createTownLayout('CHO_VIA_HE', 42));
     dice = new DiceOverlay($('#portrait'), base); effects = new TownEffects(world, $('#portrait'), base);
+    waitingCrowd = new WaitingCrowd(world, pack, base);
+    giftEffects = new LiveGiftEffects(world, $('#portrait'), { base, onGain: () => effects.sound('gain') });
     cameos = new EventCameos(world, base); await cameos.init();
     $('#live-loading').hidden = true;
     requestAnimationFrame(tick);
@@ -284,10 +294,12 @@ async function init() {
     stream.onerror = () => { connected = false; showWarning('Mất đường truyền tới máy chủ · đang tự nối lại'); };
     window.__TYPHI_LIVE__ = {
       ready: true, mode, snapshot: () => current, actors: () => actors.map(actor => ({ seat: actor.seat, position: actor.position.toArray(), name: actor.data.name })),
-      audio,music, stats: () => ({ actors: actors.length, calls: world.renderer.info.render.calls, triangles: world.renderer.info.render.triangles }),
-      dispose() { stream.close(); audio.dispose();music.dispose(); }
+      audio,music, waiting: () => waitingCrowd.snapshot(), gifts: () => giftEffects.snapshot(),
+      overview(value = true) { forceOverview = !!value; },
+      stats: () => ({ actors: actors.length, waiting: waitingCrowd.count, waitingBatches: waitingCrowd.count ? 2 : 0, waitingAreas: world.scene.userData.waitingAreaCount, waitingSlots: world.scene.userData.waitingSlotCount, waitingCollisions: world.scene.userData.waitingCollisionCount, calls: world.renderer.info.render.calls, triangles: world.renderer.info.render.triangles }),
+      dispose() { stream.close(); audio.dispose();music.dispose();waitingCrowd.dispose();giftEffects.dispose();disposeGiftFallback(); }
     };
-    window.addEventListener('pagehide', () => { stream.close(); audio.dispose();music.dispose(); }, { once: true });
+    window.addEventListener('pagehide', () => window.__TYPHI_LIVE__.dispose(), { once: true });
   } catch (error) {
     console.error(error); $('#loading-message').textContent = error.message;
     showWarning('Không mở được khung phát. Kiểm tra terminal và tải lại trang.');

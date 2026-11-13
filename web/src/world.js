@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { buildNeighborhood } from './neighborhood.js';
+import {waitingSlotConflicts} from './waiting-areas.js';
 
 const MODEL_NAMES = ['house_mint', 'house_blue', 'market_tent', 'street_stall', 'street_tree', 'bush_ball', 'flower_cart', 'street_umbrella', 'bench', 'lamp_street', 'plant_pot', 'market_banner', 'warehouse_a', 'warehouse_b', 'loading_dock', 'stack_boxes', 'delivery_gate', 'traffic_cone', 'gate_start', 'podium_1', 'trophy_gold', 'stool_plastic', 'trash_can', 'grass_patch'];
 const TILE_TYPES = [
@@ -130,10 +131,21 @@ export class TownWorld {
     });
     oldTextures.forEach(t => t.dispose()); oldMaterials.forEach(m => m.dispose()); oldGeometry.forEach(g => g.dispose());
     this.town.clear(); this.occluders = []; this.hiddenProps = new Set();
+    this.waitingSolidBounds=[];
+    this.acceptSceneryPlacement=(object,name)=>{
+      if(!layout.waitingAreas?.length)return true;
+      object.updateMatrixWorld(true);
+      const bounds=new THREE.Box3().setFromObject(object);
+      if(bounds.isEmpty()||bounds.max.y<=.08||bounds.min.y>1.8)return true;
+      const footprint={name,minX:bounds.min.x,maxX:bounds.max.x,minZ:bounds.min.z,maxZ:bounds.max.z,minY:bounds.min.y,maxY:bounds.max.y};
+      if(waitingSlotConflicts(layout,footprint).length)return false;
+      this.waitingSolidBounds.push(footprint);return true;
+    };
     const staticDecor = new THREE.Group();
     const add = (name, x, z, scale = 1, yaw = 0, y = 0, fade = false) => {
       const original = this.models.get(name); if (!original) return;
       const prop = original.clone(); prop.position.set(x, y, z); prop.scale.setScalar(scale); prop.rotation.y = yaw;
+      if(!this.acceptSceneryPlacement(prop,name))return;
       if (fade) {
         prop.material = original.material.clone(); prop.material.transparent = true;
         // These opaque-color buildings only use transparency to reveal a racer.
@@ -156,6 +168,10 @@ export class TownWorld {
     this.renderer.shadowMap.needsUpdate = true;
     this.scene.userData.mapSeed = layout.seed;
     this.scene.userData.nodeCount = layout.nodes.length;
+    this.scene.userData.waitingAreaCount=layout.waitingAreas?.length??0;
+    this.scene.userData.waitingSlotCount=layout.waitingAreas?.reduce((total,area)=>total+area.slots.length,0)??0;
+    this.scene.userData.waitingSolidBounds=this.waitingSolidBounds;
+    this.scene.userData.waitingCollisionCount=this.waitingSolidBounds.reduce((count,bounds)=>count+waitingSlotConflicts(layout,bounds).length,0);
   }
 
   addTileLabels(layout) {
@@ -182,7 +198,7 @@ export class TownWorld {
         textures.set(index, texture);
       }
       const geometry=new THREE.PlaneGeometry(1.25,1.25);
-      geometry.rotateX(-Math.PI/2);geometry.translate(n.position[0],.043,n.position[2]);
+      geometry.rotateX(-Math.PI/2);geometry.rotateY(n.yaw??0);geometry.translate(n.position[0],.043,n.position[2]);
       if(!planes.has(index))planes.set(index,[]);planes.get(index).push(geometry);
     }
     for(const[index,geometries]of planes){

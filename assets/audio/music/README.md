@@ -1,7 +1,7 @@
-# Nhạc nền Phố Đồ Chơi
+# Cờ Tý Phí LIVE Theme (Alt Take)
 
-Hai tệp M4A được chép nguyên byte theo yêu cầu từ playlist trong `content/media.json` của [repo TikTok LIVE nguồn](https://github.com/VietCodeBug/tiktok-live-boss-raid/tree/e0fc25472e896759cba8ce11c19bad15149e5b7c/content/media). Tên trong dự án cờ được đổi thành `pho-do-choi-01.m4a` và `pho-do-choi-02.m4a`; đây là tên hiển thị nội bộ, không phải tên nghệ sĩ/tác phẩm được xác minh.
+Nhạc nền đúng của game là **Cờ Tý Phí LIVE Theme (Alt Take)**, lấy nguyên byte từ file Alt Take đã có trong `assets/co-ty-phu/audio/`. Bản dùng khi build được đặt tên ASCII `co-ty-phi-live-theme-alt-take.m4a` để tránh lỗi đường dẫn tiếng Việt trên Windows.
 
-`playlist.json` giữ đường dẫn nguồn, commit, dung lượng và SHA-256. `npm run prepare:assets` chép hai bài sang `web/public/runtime/music/` và manifest sang `runtime/music.json`; không cần repo nguồn nằm cạnh dự án khi cài lại.
+`playlist.json` giữ đường dẫn nguồn, dung lượng và SHA-256. `sourceCommit: null` nghĩa là bản nhạc lấy từ asset người dùng cung cấp trong workspace, không gán nhầm nguồn sang repo boss raid. File được giải mã kiểm tra, không chỉnh sửa nội dung nhạc.
 
-Game phát nối tiếp rồi lặp playlist, có bật/tắt và âm lượng nhạc riêng. Nút bật âm thanh trong khung game cấp quyền phát; lúc MC nói, nhạc được hạ xuống rồi trả về âm lượng đã chọn. Không nhập video quà, nhạc MVP hoặc âm thanh chiến đấu của dự án nguồn.
+`npm run prepare:assets` kiểm tra hash và chép bản này sang `runtime/music/`; game lặp đúng Alt Take. Hai bài từ dự án tham chiếu trước được thay khỏi playlist/source; prepare dọn bản copy runtime cũ. Nhạc có bật/tắt, âm lượng riêng và tự nhỏ xuống khi MC nói.

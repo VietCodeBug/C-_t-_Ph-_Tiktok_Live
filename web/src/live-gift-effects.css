@@ -1,0 +1,31 @@
+.live-gift-effects{position:absolute;inset:0;z-index:34;overflow:hidden;pointer-events:none;container-type:inline-size}
+.gift-fx-item{position:absolute;left:50%;top:46%;width:0;height:0;pointer-events:none;color:#f8e9bc;font-family:'Nunito Variable',sans-serif}
+.gift-fx-core{position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:12cqw;transform:translate(-50%,-75%);animation:gift-fx-core-life var(--gift-life) ease-out both}
+.gift-fx-icon{display:block;width:8.5cqw;height:8.5cqw;object-fit:contain;filter:drop-shadow(0 3px 5px #18352255)}
+.gift-fx-tag{max-width:30cqw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:3px 7px;border:1px solid #d9c58c70;border-radius:20px;background:#234d38d9;color:#fff1c9;font-size:2.2cqw;font-weight:900;text-shadow:0 1px 2px #142b22}
+.gift-fx-note{padding:2px 5px;border-radius:5px;background:#425434d9;color:#eed89c;font-size:1.65cqw;white-space:nowrap}
+.gift-fx-particle{position:absolute;left:0;top:0;display:block;width:1.2cqw;height:2.4cqw;border-radius:2px;background:var(--gift-color);transform-origin:center;animation:gift-fx-scatter calc(var(--gift-life)*.85) ease-out var(--gift-delay) both;box-shadow:0 1px 3px #17352320}
+.gift-fx-priority .gift-fx-particle,.gift-fx-pulse .gift-fx-particle,.gift-fx-trail .gift-fx-particle,.gift-fx-pet .gift-fx-particle{width:auto;height:auto;background:none;box-shadow:none;font-size:3.7cqw;line-height:1;color:var(--gift-color);text-shadow:0 2px 3px #183b2c25}
+.gift-fx-pulse .gift-fx-particle,.gift-fx-trail .gift-fx-particle{color:#ef92ab}
+.gift-fx-pulse .gift-fx-icon{animation:gift-fx-heart .7s ease-in-out 3}
+.gift-fx-trail .gift-fx-particle{font-size:4.2cqw;animation-name:gift-fx-heart-trail}
+.gift-fx-pet .gift-fx-icon{width:11cqw;height:11cqw;animation:gift-fx-corgi .55s ease-in-out 5}
+.gift-fx-pet .gift-fx-particle{font-size:4cqw;color:#cbb282}
+.gift-fx-confetti .gift-fx-icon{width:10cqw;height:10cqw}
+.gift-fx-spotlight:before{content:'';position:absolute;left:0;top:0;width:24cqw;height:31cqw;transform:translate(-50%,-94%);clip-path:polygon(0 0,100% 0,59% 100%,41% 100%);background:linear-gradient(#f2d26a00,#f2d26a57);animation:gift-fx-beam var(--gift-life) ease-out both}
+.gift-fx-spotlight .gift-fx-particle{width:2.5cqw;height:1.4cqw;background:#c9df9b;border:1px solid #eff2c0}
+.gift-fx-red-envelope{width:70%;height:auto;transform:translateX(-50%)}
+.gift-fx-red-envelope .gift-fx-core{position:relative;width:100%;min-height:10cqw;display:grid;grid-template-columns:9cqw 1fr;gap:1px 8px;align-items:center;padding:10px 13px;border:1px solid #e7c36d;border-radius:12px;background:linear-gradient(115deg,#823c32ed,#b5533bef,#784332ed);box-shadow:0 5px 20px #46302130;transform:none;animation-name:gift-fx-envelope-life}
+.gift-fx-red-envelope .gift-fx-icon{grid-row:1/4;width:8cqw;height:8cqw}
+.gift-fx-envelope-title{font-size:2.3cqw;line-height:1.2;letter-spacing:.8px;color:#ffe2a3}
+.gift-fx-envelope-money{font-size:4.2cqw;line-height:1.15;font-weight:1000;color:#ffe7a8}
+.gift-fx-envelope-count{font-size:2cqw;color:#f2d6b2}
+.gift-fx-red-envelope .gift-fx-particle{left:50%;top:4cqw;width:1.5cqw;height:2.7cqw}
+@keyframes gift-fx-core-life{0%{opacity:0;transform:translate(-50%,-65%) scale(.65)}12%,75%{opacity:1;transform:translate(-50%,-75%) scale(1)}100%{opacity:0;transform:translate(-50%,-105%) scale(.85)}}
+@keyframes gift-fx-scatter{0%{opacity:0;transform:translate(-50%,-50%) rotate(0) scale(.5)}10%,45%{opacity:.95}100%{opacity:0;transform:translate(var(--gift-dx),var(--gift-dy)) rotate(var(--gift-spin)) scale(.8)}}
+@keyframes gift-fx-heart-trail{0%{opacity:0;transform:translate(-50%,0) scale(.3)}15%,55%{opacity:.9}100%{opacity:0;transform:translate(var(--gift-dx),calc(var(--gift-dy) - 5cqw)) scale(.8)}}
+@keyframes gift-fx-heart{50%{transform:scale(1.18)}}
+@keyframes gift-fx-corgi{25%{transform:translateX(-1cqw) rotate(-7deg)}75%{transform:translateX(1cqw) rotate(7deg)}}
+@keyframes gift-fx-beam{0%,100%{opacity:0}18%,70%{opacity:.9}}
+@keyframes gift-fx-envelope-life{0%{opacity:0;transform:translateY(-8px) scale(.94)}10%,78%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.gift-fx-particle{display:none}.gift-fx-pulse .gift-fx-icon,.gift-fx-pet .gift-fx-icon{animation:none}.gift-fx-core,.gift-fx-red-envelope .gift-fx-core{animation-duration:var(--gift-life)}}

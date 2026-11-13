@@ -1,19 +1,46 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import {LiveMusic} from '../src/live-music.js';
 import {LiveAudio} from '../src/live-audio.js';
 
 const turn=()=>new Promise(resolve=>setImmediate(resolve));
 class Media{constructor(){this.plays=0;this.pauses=0;this.volume=1;}play(){this.plays++;return Promise.resolve();}pause(){this.pauses++;}load(){this.loads=(this.loads||0)+1;}}
-const playlist=[{name:'Phố 1',url:'music/pho-do-choi-01.m4a'},{name:'Phố 2',url:'music/pho-do-choi-02.m4a'}];
+// Playback mechanics use an explicit synthetic playlist, independent of the
+// real game's single Alt Take song and without reading/playing audio files.
+const playlist=[{name:'Synthetic A',url:'music/test-loop-a.m4a'},{name:'Synthetic B',url:'music/test-loop-b.m4a'}];
 class Channel{constructor(name){this.name=name;}postMessage(){}close(){}}
+
+test('default music is the original single Alt Take, with unchanged bytes and single-track replay',async()=>{
+  const manifest=JSON.parse(await fs.readFile(new URL('../../assets/audio/music/playlist.json',import.meta.url),'utf8'));
+  assert.equal(manifest.tracks.length,1);
+  const [track]=manifest.tracks;
+  assert.equal(track.name,'Cờ Tý Phí LIVE Theme (Alt Take)');
+  assert.equal(track.url,'music/co-ty-phi-live-theme-alt-take.m4a');
+  assert.equal(track.source,'assets/co-ty-phu/audio/Cờ Tý Phí LIVE Theme (Alt Take).m4a');
+  assert.equal(manifest.sourceKind,'user-supplied-game-audio');assert.equal(manifest.sourceCommit,null);
+  const packaged=await fs.readFile(new URL('../../assets/audio/music/'+track.url.slice('music/'.length),import.meta.url));
+  const digest=data=>createHash('sha256').update(data).digest('hex');
+  // This verified source digest catches a wrong replacement without making a
+  // fresh checkout depend on the ignored, duplicate Unicode-named source file.
+  assert.equal(track.bytes,3455260);assert.equal(packaged.length,track.bytes);
+  assert.equal(track.sha256,'958513f7c2698fd573abfe59447f32efefcb379b44e7a3b603d34bd98e39547f');
+  assert.equal(digest(packaged),track.sha256);
+  const media=new Media(),music=new LiveMusic({audio:media,env:{}});
+  try{assert.equal(media.plays,0);assert.equal(music.status.trackCount,1);assert.equal(music.status.track,'/runtime/'+track.url);
+    music.configure({playlist:manifest.tracks});assert.equal(music.status.trackName,track.name);
+    await music.unlock();media.onended();await turn();
+    assert.equal(music.status.index,0);assert.equal(music.status.playing,true);assert.equal(music.status.track,'/runtime/'+track.url);assert.equal(media.plays,2);
+  }finally{music.dispose();}
+});
 
 test('music waits for a gesture, plays manifest tracks in order and wraps when the playlist ends',async()=>{
   const media=new Media(),music=new LiveMusic({playlist,audio:media,env:{}});
   try{assert.equal(media.plays,0);assert.equal(media.preload,'none');music.configure({volume:.2});assert.equal(media.plays,0);
     assert.equal(await music.unlock(),true);assert.equal(music.status.playing,true);assert.equal(music.status.index,0);
-    media.onended();await turn();assert.equal(music.status.index,1);assert.match(media.src,/02\.m4a$/);
-    media.onended();await turn();assert.equal(music.status.index,0);assert.match(media.src,/01\.m4a$/);
+    media.onended();await turn();assert.equal(music.status.index,1);assert.match(media.src,/test-loop-b\.m4a$/);
+    media.onended();await turn();assert.equal(music.status.index,0);assert.match(media.src,/test-loop-a\.m4a$/);
   }finally{music.dispose();}
 });
 test('ducking restores the configured volume and muted music can be primed without enabling it',async()=>{

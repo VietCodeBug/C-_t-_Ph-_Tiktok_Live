@@ -24,6 +24,12 @@ test('provider string IDs stay exact and never fall back to mutable handles', ()
   assert.equal(normalizeWebcast('comment', packet('2', { user: { id: 7200012345678901234 }, content: 'CHƠI' }), ROOM), null);
   assert.equal(normalizeWebcast('comment', packet('3', { common: { roomId: '123' }, content: 'CHƠI' }), ROOM), null);
 });
+test('gift icons accept provider HTTPS CDN images and reject arbitrary or insecure URLs', () => {
+  const source=packet('icon', {giftId:'5655',giftType:1,repeatCount:1,repeatEnd:true,gift:{icon:{urlList:['https://p16-webcast.tiktokcdn.com/gift.webp']}}});
+  assert.equal(normalizeWebcast('gift',source,ROOM).giftIcon,'https://p16-webcast.tiktokcdn.com/gift.webp');
+  assert.equal(normalizeWebcast('gift',{...source,gift:{icon:{urlList:['https://tiktokcdn.com.evil.example/gift.webp']}}},ROOM).giftIcon,'');
+  assert.equal(normalizeWebcast('gift',{...source,gift:{icon:{urlList:['http://p16-webcast.tiktokcdn.com/gift.webp']}}},ROOM).giftIcon,'');
+});
 test('likes use packet deltas, duplicate receipts are ignored across restart', () => {
   const { adapter, events } = harness();
   assert.equal(adapter.ingest('likes', packet('like1', { likeCount: 30, totalLikeCount: 50000 }), ROOM), true);

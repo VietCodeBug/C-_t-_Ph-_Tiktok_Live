@@ -1,26 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "tracks": [
     {
-      "id": "pho-01",
-      "name": "Phố Đồ Chơi 01",
-      "url": "music/pho-do-choi-01.m4a",
+      "id": "co-ty-phi-live-alt-take",
+      "name": "Cờ Tý Phí LIVE Theme (Alt Take)",
+      "url": "music/co-ty-phi-live-theme-alt-take.m4a",
       "mime": "audio/mp4",
-      "bytes": 3436874,
-      "sha256": "89e60e24ba8b71cd2216565392793e415fc1ad827073f6dd46236ac5b17d9f3b",
-      "source": "content/media/raid-music-01.m4a"
-    },
-    {
-      "id": "pho-02",
-      "name": "Phố Đồ Chơi 02",
-      "url": "music/pho-do-choi-02.m4a",
-      "mime": "audio/mp4",
-      "bytes": 3567685,
-      "sha256": "5d7eb004440dbf28ed074e8e143ff1e360835b1672a04757fb08c4da25aaf86d",
-      "source": "content/media/raid-music-02.m4a"
+      "bytes": 3455260,
+      "sha256": "958513f7c2698fd573abfe59447f32efefcb379b44e7a3b603d34bd98e39547f",
+      "source": "assets/co-ty-phu/audio/Cờ Tý Phí LIVE Theme (Alt Take).m4a"
     }
   ],
-  "sourceRepository": "https://github.com/VietCodeBug/tiktok-live-boss-raid",
-  "sourceCommit": "e0fc25472e896759cba8ce11c19bad15149e5b7c",
-  "sourcePlaylist": "content/media.json"
+  "sourceKind": "user-supplied-game-audio",
+  "sourceCommit": null,
+  "repeat": "playlist"
 }

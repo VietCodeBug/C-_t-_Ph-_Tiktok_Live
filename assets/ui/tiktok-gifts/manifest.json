@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-11-13T08:44:01.396Z",
+  "catalogSource": "https://www.eulerstream.com/docs/tiktok-gifts-list",
+  "catalogDescription": "Public gift catalog published by the TikTokLive SDK provider; images downloaded directly from official TikTok webcast CDN without modification.",
+  "priceNote": "observedCoins is a dated catalog observation, not identity or a guaranteed regional price. Live diamondCount/config controls display.",
+  "gifts": [
+    {
+      "key": "money-gun",
+      "name": "Money Gun",
+      "giftIds": [
+        "7168"
+      ],
+      "observedCoins": 500,
+      "file": "money-gun.webp",
+      "url": "/runtime/gifts/money-gun.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/e0589e95a2b41970f0f30f6202f5fce6~tplv-obj.webp",
+      "sha256": "8818690442dd3a9b32a4620d4fe7ad6bd28f9260e6c6f0cca29084f278a8788c",
+      "bytes": 5160,
+      "mime": "image/webp"
+    },
+    {
+      "key": "corgi",
+      "name": "Corgi",
+      "giftIds": [
+        "6267"
+      ],
+      "observedCoins": 299,
+      "file": "corgi.webp",
+      "url": "/runtime/gifts/corgi.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/148eef0884fdb12058d1c6897d1e02b9~tplv-obj.webp",
+      "sha256": "07de22613a5f565d91195d22732d82bb054c771495762e64f0429a6f8eea771e",
+      "bytes": 4812,
+      "mime": "image/webp"
+    },
+    {
+      "key": "hearts",
+      "name": "Hearts",
+      "giftIds": [
+        "5586"
+      ],
+      "observedCoins": 199,
+      "file": "hearts.webp",
+      "url": "/runtime/gifts/hearts.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/934b5a10dee8376df5870a61d2ea5cb6.png~tplv-obj.webp",
+      "sha256": "db2d45089c6cf08879bf4063b97a497bb108a26f8825bfa5260d856ab01e5fc7",
+      "bytes": 11888,
+      "mime": "image/webp"
+    },
+    {
+      "key": "hand-heart",
+      "name": "Hand Heart",
+      "giftIds": [
+        "5660",
+        "5924"
+      ],
+      "observedCoins": 100,
+      "file": "hand-heart.webp",
+      "url": "/runtime/gifts/hand-heart.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/alisg/webcast-sg/resource/374dfe46d5b09ce1db19be06202d34f5.png~tplv-obj.webp",
+      "sha256": "3d83780371bb130b7a9c01aee73566cd9e723014d7a74abeebdbcfcbeea0796c",
+      "bytes": 10540,
+      "mime": "image/webp"
+    },
+    {
+      "key": "donut",
+      "name": "Doughnut",
+      "giftIds": [
+        "5879"
+      ],
+      "observedCoins": 30,
+      "file": "donut.webp",
+      "url": "/runtime/gifts/donut.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/4e7ad6bdf0a1d860c538f38026d4e812~tplv-obj.webp",
+      "sha256": "fce50b0b8dabb362f7f268cd8cd205f277112f17123cffce2e2574013577a1fb",
+      "bytes": 3682,
+      "mime": "image/webp"
+    },
+    {
+      "key": "heart-me",
+      "name": "Heart Me",
+      "giftIds": [
+        "7934"
+      ],
+      "observedCoins": 1,
+      "file": "heart-me.webp",
+      "url": "/runtime/gifts/heart-me.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/d56945782445b0b8c8658ed44f894c7b~tplv-resize:258:258.webp",
+      "sha256": "658b7a0a55d894e71503eb1da14767db4b2748d8e2412e0aede1f437191d7c29",
+      "bytes": 13474,
+      "mime": "image/webp"
+    },
+    {
+      "key": "rose",
+      "name": "Rose",
+      "giftIds": [
+        "5655"
+      ],
+      "observedCoins": 1,
+      "file": "rose.webp",
+      "url": "/runtime/gifts/rose.webp",
+      "sourceUrl": "https://p16-webcast.tiktokcdn.com/img/maliva/webcast-va/eba3a9bb85c33e017f3648eaf88d7189~tplv-obj.webp",
+      "sha256": "6a93376be38ca1f34569ea6c6910a3dda10b26de6ff610927b43091b6b244cce",
+      "bytes": 4904,
+      "mime": "image/webp"
+    }
+  ]
+}

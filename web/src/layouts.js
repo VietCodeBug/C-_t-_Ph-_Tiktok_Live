@@ -1,3 +1,4 @@
+import {createWaitingAreas} from './waiting-areas.js';
 // Runtime town variants. Source GLBs/24-node handoff remain untouched.
 export const NEIGHBORHOODS = {
   CHO_VIA_HE: { name: 'Chợ Vỉa Hè', theme: 'market', story: 'Phiên chợ sớm · cả phố cùng chốt đơn' },
@@ -23,6 +24,27 @@ const DISTRICTS = [
   { name: 'Đồi Hội Phố', story: 'Lên đồi dự hội · ngắm phố từ tháp đồng hồ' },
   { name: 'Xóm Vườn Mát', story: 'Hẻm cây xanh · đi chậm, giữ ví' }
 ];
+
+const quietPatternCache=new Map();
+function quietPattern(random,stationBlock,branchQuiet){
+  const key=`${stationBlock}:${branchQuiet}`;
+  if(!quietPatternCache.has(key)){
+    const patterns=[];
+    function choose(start,active){
+      if(active.length===6){
+        const set=new Set(active);
+        if(stationBlock&&(!set.has(0)||!set.has(1)||set.has(2)))return;
+        if(active.filter(i=>i>=5&&i<=11).length!==7-branchQuiet)return;
+        for(let i=0;i<13;i++)if(set.has(i)&&set.has(i+1)&&set.has(i+2))return;
+        patterns.push(Array.from({length:16},(_,i)=>!set.has(i)));return;
+      }
+      for(let i=start;i<15;i++)choose(i+1,[...active,i]);
+    }
+    choose(0,[]);quietPatternCache.set(key,patterns);
+  }
+  const patterns=quietPatternCache.get(key);return patterns[Math.floor(random()*patterns.length)];
+}
+function quietMask(random){return Array.from({length:6},(_,index)=>quietPattern(random,index===0||index===3,index%2?5:4)).flat();}
 
 // Resample a closed, gently rounded serpentine outline at equal walking lengths.
 // The waypoints create six deep street bends rather than another ellipse.
@@ -56,7 +78,7 @@ export function createTownLayout(id, seed = 1) {
   if (!config) throw new Error('Unknown neighborhood: ' + id);
   const random = seededRandom(seed);
   const positions = streetOutline(random);
-  const categoryBag = [1,1,1,2,2,3,3,4,5,6,6,6,7];
+  const quiet=quietMask(random),categoryBag=[1,1,1,2,2,3,3,4,5,7];
   const nodes = Array.from({ length: 96 }, (_, i) => {
     const district = DISTRICTS[Math.floor(i/24)];
     return {
@@ -64,11 +86,16 @@ export function createTownLayout(id, seed = 1) {
       position: positions[i], width: 2, next: [`C${String((i + 1) % 96).padStart(2, '0')}`],
       station: i === 0 || i === 48, fork: FORK_STARTS.includes(i),
       district: district.name, story: district.story,
-      typeIndex: i === 0 || i === 48 ? 0 : categoryBag[Math.floor(random()*categoryBag.length)]
+      typeIndex: i === 0 || i === 48 ? 0 : quiet[i]?6:categoryBag[Math.floor(random()*categoryBag.length)]
     };
   });
   nodes[1].typeIndex=nodes[49].typeIndex=1;
   nodes[2].typeIndex=nodes[50].typeIndex=6;
+  // Every map keeps all eight categories, while the event-free mask controls
+  // density independently. Stations and their introductory gain tiles stay put.
+  const eventIndices=nodes.map((node,index)=>({node,index})).filter(({node,index})=>!node.station&&node.typeIndex!==6&&index!==1&&index!==49).map(({index})=>index);
+  for(let i=eventIndices.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[eventIndices[i],eventIndices[j]]=[eventIndices[j],eventIndices[i]];}
+  [1,2,3,4,5,7].forEach((category,index)=>{nodes[eventIndices[index]].typeIndex=category;});
   // Both ways take eight edges. The inner lane bends away from the outer street.
   for (const [index,start] of FORK_STARTS.entries()) {
     const fork=index+1;
@@ -78,6 +105,7 @@ export function createTownLayout(id, seed = 1) {
     const inward=[(b[2]-a[2])/length,-(b[0]-a[0])/length];
     const depth=9.8+random()*.5;
     const branch = [];
+    let eventAt=0;
     for (let j = 1; j <= 7; j++) {
       const t = j / 8;
       branch.push({ id: `F0${fork}_${j}`, position: [
@@ -87,7 +115,7 @@ export function createTownLayout(id, seed = 1) {
       station: false, fork: false,
       district: index%2 ? 'Ngõ Vườn An Yên' : 'Hẻm Chợ Náo Nhiệt',
       story: index%2 ? 'Đường vòng qua vườn · nhặt tiền, nghỉ chân' : 'Lách qua sạp nhỏ · buôn bán và chuyện bất ngờ',
-      typeIndex: (index%2 ? [1,6,1,6,4,1,6] : [5,3,2,5,3,1,4])[j-1] });
+      typeIndex: nodes[start+j].typeIndex===6?6:(index%2?[1,4,1]:[5,2,3])[eventAt++] });
     }
     nodes[start].next.push(branch[0].id);
     nodes.push(...branch);
@@ -101,11 +129,19 @@ export function createTownLayout(id, seed = 1) {
       risk:k?(index%2?'Nhẹ nhàng':'Có lời, có phí'):'Chuyện phố ngẫu nhiên'
     }));
   }
-  return { ...config, id, seed: seed >>> 0, procedural: true, nodes,
+  const byId=new Map(nodes.map(node=>[node.id,node]));
+  for(const [index,node]of nodes.entries()){
+    const previous=index<96?nodes[(index+95)%96]:nodes.find(candidate=>candidate.next.includes(node.id));
+    const next=byId.get(node.next[0]),dx=next.position[0]-previous.position[0],dz=next.position[2]-previous.position[2],length=Math.hypot(dx,dz)||1;
+    node.heading=[dx/length,0,dz/length];node.yaw=Math.atan2(dx,dz);
+  }
+  const layout={ ...config, id, seed: seed >>> 0, procedural: true, nodes,
     districts:DISTRICTS, landmark:{name:'Đồi Hội Phố',position:[0,0,-34]},
     file: `generated-${id}-${seed >>> 0}`, tile_width: 2, lapSteps: 96,
     bounds: { minX: Math.min(...nodes.map(n => n.position[0])), maxX: Math.max(...nodes.map(n => n.position[0])),
       minZ: Math.min(...nodes.map(n => n.position[2])), maxZ: Math.max(...nodes.map(n => n.position[2])) } };
+  layout.waitingAreas=createWaitingAreas(layout);layout.quiet={perLap:60,lapNodes:96,total:nodes.filter(node=>node.typeIndex===6).length};
+  return layout;
 }
 
 export function createTownLayouts(seed) {
